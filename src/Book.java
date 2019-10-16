@@ -31,29 +31,7 @@ public class Book extends Media implements Medium {
     return ISBN;
   }
 
-  //Modifier method to mark book as unavailible.
-  public void makeBorrowed(){
-    if (copies < 1){
-      System.out.println("No copies for you to checkout.");
-    }
-    else{
-      copies--;
-    }
-  }
-  
-  //Modifier method to mark a book as availible.
-  public void makeReturned(){
-    copies++;
-  }
-  
 
-  //Accessor for title.
-  public Boolean getAvailability(){
-    if (copies < 1){
-      return false;
-    }
-    return true;
-  }
   
   public String toStringList(){
     return title + ", " + description +  ", " + author +  ", " + subject +  ", " + copies + ", " + genre + ", " + releaseYear + ", " + stars + ", " +comingSoon + ", " + ISBN;

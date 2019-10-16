@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class Library{
   
-  private ArrayList<Book> database = new ArrayList<>();                 //Holds all books.
+  private ArrayList<Media> database = new ArrayList<>();                 //Holds all books.
   private ArrayList<TeacherBorrow> teachers = new ArrayList<>();     //Holds all teachers.
   private ArrayList<ChildBorrow> children = new ArrayList<>();     //Holds all students.
   private ArrayList<AdultBorrow> adults = new ArrayList<>();     //Holds all students.
@@ -57,8 +57,8 @@ public class Library{
    * Return: String with status of book.
    */ 
   public void isAvailable(String input){
-    if(findBook(input) != null){
-      if(findBook(input).getAvailability())
+    if(findMedia(input) != null){
+      if(findMedia(input).getAvailability())
         System.out.println(input + " is available.");
       else
         System.out.println(input + " is not available.");
@@ -67,13 +67,15 @@ public class Library{
   
   /* 
    * Method to mark a book as borrowed if it is available.
-   * Params: Title or ISBN of a book and the name of the user.
+   * Params: Title of a book and the name of the user.
    */ 
-  public void borrowBook(String book, String borrower){
-    if(findBook(book) != null){
-      (findBook(book)).makeBorrowed();
-      String fileName = (findBook(book)).getTitle() + "Log.txt";
+  public void borrowBook(String Media, String borrower){
+    if(findMedia(Media) != null){
+      (findMedia(Media)).makeBorrowed();
+      String fileName = (findMedia(Media)).getTitle() + "Log.txt";
       String content = "Borrowed by:" + borrower;
+
+      //add a way to check it out
     }
   }
 
@@ -101,6 +103,8 @@ public class Library{
     }
   }
 
+  /*
+
   public void browseISBN(int ISBN){
     for(int i = 0; i < database.size(); i++){
       int bookISBN = (database.get(i)).getISBN();
@@ -109,18 +113,20 @@ public class Library{
       }
     }
   }
-  
-  /* 
+  */
+
+
+  /*
    * Finds book object based on String. Basically converts
    * from String to Book.
    * Param: String containing title or ISBN
    * Return: Book object with a title or ISBN matching the input.
-   */ 
-  public Book findBook(String input){
+   */
+  public Media findMedia(String input){
     for(int i = 0; i < database.size(); i++){
       String str = (database.get(i)).getTitle();     //Gets title of book at index.
-      int ISBN = (database.get(i)).getISBN();     //Gets ISBN of book at index.
-      if(input.equals(str) || input.equals(ISBN))
+
+      if(input.equals(str))
         return database.get(i);
     }
     return null;
