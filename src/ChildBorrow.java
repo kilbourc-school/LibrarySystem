@@ -1,4 +1,4 @@
 
-public class ChildBorrow implements BorrowBehavior {
+public class ChildBorrow extends Borrower implements BorrowBehavior{
     int borrowLimit =  3;
 }

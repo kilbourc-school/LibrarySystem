@@ -10,7 +10,7 @@ public abstract class Borrower {
   private String ID;
   private int birthday;
   BorrowBehavior  borrowBehavior;
-  
+  public Borrower(){};
   //Constructor. Params for name and ID of user.
   public Borrower(String name, String iD, int birthday){
     name = name;

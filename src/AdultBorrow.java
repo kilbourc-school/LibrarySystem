@@ -1,4 +1,4 @@
 
-public class AdultBorrow implements BorrowBehavior {
+public class AdultBorrow extends Borrower implements BorrowBehavior {
     int borrowLimit =  10;
 }
