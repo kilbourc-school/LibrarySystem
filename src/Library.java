@@ -11,7 +11,9 @@ import java.util.ArrayList;
 
 public class Library{
   
-  private ArrayList<Media> database = new ArrayList<>();                 //Holds all books.
+  private ArrayList<Media> database = new ArrayList<>();//Holds all books.
+  private ArrayList<Borrower> accounts = new ArrayList<>();     //Holds all teachers.
+
   private ArrayList<TeacherBorrow> teachers = new ArrayList<>();     //Holds all teachers.
   private ArrayList<ChildBorrow> children = new ArrayList<>();     //Holds all students.
   private ArrayList<AdultBorrow> adults = new ArrayList<>();     //Holds all students.
@@ -27,9 +29,19 @@ public class Library{
   //Prints out the teachers accounts
   public void displayTeachers(){
     for(int i = 0; i < teachers.size(); i++){
-      System.out.println(teachers.get(i));
+      System.out.println(teachers.get(i).borrowLimit);
     }
   }
+
+  //Prints out the teachers accounts
+  public void displayTeachersAccounts(){
+
+    for(int i = 0; i < accounts.size(); i++){
+      if (accounts.get(i).getBorrowLimit() == 50)
+      System.out.println(accounts.get(i));
+    }
+  }
+
   
   //Prints out the adult accounts
   public void displayAdults(){
