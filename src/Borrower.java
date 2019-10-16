@@ -1,4 +1,4 @@
-package csce247.LibraryCatalogSystem;
+
 /*
  * 
  * This is an abstract class that will

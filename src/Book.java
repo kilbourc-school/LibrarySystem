@@ -1,4 +1,3 @@
-package csce247.LibraryCatalogSystem;
 
 /*
  * This is a class for book objects, which have unique
