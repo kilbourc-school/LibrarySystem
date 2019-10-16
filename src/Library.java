@@ -13,7 +13,8 @@ public class Library{
   
   private ArrayList<Book> database = new ArrayList<>();                 //Holds all books.
   private ArrayList<TeacherBorrow> teachers = new ArrayList<>();     //Holds all teachers.
-  private ArrayList<Borrower> students = new ArrayList<>();     //Holds all students.
+  private ArrayList<ChildBorrow> children = new ArrayList<>();     //Holds all students.
+  private ArrayList<AdultBorrow> adults = new ArrayList<>();     //Holds all students.
   
 
   //Prints out the contents of the Library.
@@ -23,17 +24,24 @@ public class Library{
     }
   }
   
-  //Prints out the teachers.
+  //Prints out the teachers accounts
   public void displayTeachers(){
     for(int i = 0; i < teachers.size(); i++){
       System.out.println(teachers.get(i));
     }
   }
   
-  //Prints out the students.
-  public void displayStudents(){
-    for(int i = 0; i < students.size(); i++){
-      System.out.println(students.get(i));
+  //Prints out the adult accounts
+  public void displayAdults(){
+    for(int i = 0; i < adults.size(); i++){
+      System.out.println(adults.get(i));
+    }
+  }
+
+  //Prints out the children accounts
+  public void displayChildren(){
+    for(int i = 0; i < children.size(); i++){
+      System.out.println(children.get(i));
     }
   }
   
