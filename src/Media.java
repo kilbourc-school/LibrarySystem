@@ -46,7 +46,7 @@ public class Media {
     public boolean isComingSoon() {
         return comingSoon;
     }
-    //Modifier method to mark book as unavailible.
+    //Modifier method to mark book as unavailable.
     public void makeBorrowed(){
         if (copies < 1){
             System.out.println("No copies for you to checkout.");
@@ -64,9 +64,6 @@ public class Media {
 
     //Accessor for title.
     public Boolean getAvailability(){
-        if (copies < 1){
-            return false;
-        }
-        return true;
+        return copies >= 1;
     }
 }
