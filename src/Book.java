@@ -13,7 +13,7 @@ public class Book extends Media implements Medium {
    * Constructor. 
    * Params: Strings ISBN, title, author, genre.
    */ 
-  public Book(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int iSBN){
+  public Book(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int ISBN){
 
     this.title = title;
     this.description = description;
@@ -24,7 +24,7 @@ public class Book extends Media implements Medium {
     this.releaseYear = releaseYear;
     this.stars = stars;
     this.comingSoon = comingSoon;
-    this.ISBN = iSBN;
+    this.ISBN = ISBN;
   }
 
   public int getISBN() {
