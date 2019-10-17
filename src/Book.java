@@ -34,7 +34,7 @@ public class Book extends Media implements Medium {
 
 
   public String toStringList(){
-    return title + ", " + description +  ", " + author +  ", " + subject +  ", " + copies + ", " + genre + ", " + releaseYear + ", " + stars + ", " +comingSoon + ", " + ISBN;
+    return "book,"+ title + "," + description +  "," + author +  "," + subject +  "," + copies + "," + genre + "," + releaseYear + "," + stars + "," +comingSoon + "," + ISBN;
   }
 
   @Override
