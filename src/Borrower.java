@@ -5,11 +5,13 @@
  * be extended by teacher and student borrowers.
  */
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.*;
 
 public abstract class Borrower {
   private String name;
-  private Date birthday; 
+  private  LocalDate birthday;
   private String ID;
   private int phoneNum;
   private String email;
@@ -26,7 +28,7 @@ public abstract class Borrower {
   public Borrower(){ }
 
   //Constructor. Params for name and ID of user.
-  public Borrower(String name, String iD, Date birthday, int pn,
+  public Borrower(String name, String iD, LocalDate birthday, int pn,
                   String str1, String cty, String st, int zp,
                   String em, String pw, int cn){
     name = name;
@@ -46,14 +48,24 @@ public abstract class Borrower {
     return ID;
   }
 
-  public int getBirthday() {
-    return birthday;
+  public String getBirthday() {
+    return birthday.toString();
   }
 
   public void setBorrowBehavior(BorrowBehavior bb){
     borrowBehavior = bb;
   }
 
+  // check age vs current time for child age
+  // boolean or int years return, not sure which to use
+  public boolean checkAge(){
+      LocalDate today = LocalDate.now();
+      return (Period.between(birthday,today).getYears()>13);
 
+  }
+  public int checkAgeYear (){
+    LocalDate today = LocalDate.now();
+    return Period.between(birthday,today).getYears();
 
+  }
 }
