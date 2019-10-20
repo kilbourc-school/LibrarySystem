@@ -9,7 +9,6 @@
 
 
 /*
-
  * Constructor.
  * Params: Strings ISBN, title, author, genre.
  */
