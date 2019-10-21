@@ -12,8 +12,8 @@ import java.util.ArrayList;
 public class Library{
   
   private ArrayList<Book> database = new ArrayList<>();                 //Holds all books.
-  private ArrayList<TeacherBorrower> teachers = new ArrayList<>();     //Holds all teachers.
-  private ArrayList<NormalBorrower> students = new ArrayList<>();     //Holds all students.
+  private ArrayList<TeacherBorrow> teachers = new ArrayList<>();     //Holds all teachers.
+  private ArrayList<ChildBorrow> students = new ArrayList<>();     //Holds all students.
   
 
   //Prints out the contents of the Library.
