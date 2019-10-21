@@ -11,12 +11,14 @@ import java.util.ArrayList;
 
 public class Library{
   
+
   private ArrayList<Media> database = new ArrayList<>();//Holds all books.
   private ArrayList<Borrower> accounts = new ArrayList<>();     //Holds all teachers.
 
   private ArrayList<TeacherBorrow> teachers = new ArrayList<>();     //Holds all teachers.
   private ArrayList<ChildBorrow> children = new ArrayList<>();     //Holds all students.
   private ArrayList<AdultBorrow> adults = new ArrayList<>();     //Holds all students.
+
   
 
   //Prints out the contents of the Library.
