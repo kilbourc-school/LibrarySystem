@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Borrower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Borrower.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571255817947</updated>
       <workItem from="1571255820655" duration="7421000" />
+      <workItem from="1571671531948" duration="240000" />
     </task>
     <task id="LOCAL-00001" summary="fixed variable calls for book">
       <created>1571332438842</created>
@@ -82,6 +83,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed variable calls for book" />
     <MESSAGE value="added commas for file writing" />
-    <option name="LAST_COMMIT_MESSAGE" value="added commas for file writing" />
+    <MESSAGE value="Merge branch 'Scott-Borrower-Expansion'&#10;&#10;# Conflicts:&#10;#&#9;src/Borrower.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'Scott-Borrower-Expansion'&#10;&#10;# Conflicts:&#10;#&#9;src/Borrower.java" />
   </component>
 </project>
