@@ -1,3 +1,3 @@
-public class TeacherBorrow implements BorrowBehavior {
+public class TeacherBorrow extends Borrower implements BorrowBehavior {
     int borrowLimit =  50;
 }

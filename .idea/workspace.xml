@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/AdultBorrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdultBorrow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BorrowBehavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BorrowBehavior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Borrower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Borrower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChildBorrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChildBorrow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChildBorrower.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Media.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Medium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Medium.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NormalBorrower.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TeacherBorrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TeacherBorrow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TeacherBorrower.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +21,8 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -57,8 +46,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571255817947</updated>
-      <workItem from="1571255820655" duration="260000" />
+      <workItem from="1571255820655" duration="7421000" />
+      <workItem from="1571671531948" duration="516000" />
     </task>
+    <task id="LOCAL-00001" summary="fixed variable calls for book">
+      <created>1571332438842</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571332438842</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added commas for file writing">
+      <created>1571333027799</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571333027799</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -69,10 +74,18 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixed variable calls for book" />
+    <MESSAGE value="added commas for file writing" />
+    <MESSAGE value="Merge branch 'Scott-Borrower-Expansion'&#10;&#10;# Conflicts:&#10;#&#9;src/Borrower.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'Scott-Borrower-Expansion'&#10;&#10;# Conflicts:&#10;#&#9;src/Borrower.java" />
   </component>
 </project>

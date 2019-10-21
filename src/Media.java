@@ -1,6 +1,6 @@
 
 
-public class Media {
+public abstract class Media {
     String title;
     String description;
     String author;
@@ -45,5 +45,25 @@ public class Media {
 
     public boolean isComingSoon() {
         return comingSoon;
+    }
+    //Modifier method to mark book as unavailable.
+    public void makeBorrowed(){
+        if (copies < 1){
+            System.out.println("No copies for you to checkout.");
+        }
+        else{
+            copies--;
+        }
+    }
+
+    //Modifier method to mark a media as availible.
+    public void makeReturned(){
+        copies++;
+    }
+
+
+    //Accessor for title.
+    public Boolean getAvailability(){
+        return copies >= 1;
     }
 }

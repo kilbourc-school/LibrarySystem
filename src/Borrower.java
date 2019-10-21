@@ -17,12 +17,11 @@ public abstract class Borrower {
   private String email;
   private String password;
   private int cardNum;
-
-  //Use interface to modify borrow limits
-  BorrowBehavior  borrowBehavior;
-
   private String street1,city,state;
   private int zip;
+
+    //Use interface to modify borrow limits
+  BorrowBehavior  borrowBehavior;
 
   //Default builds an empty borrower
   public Borrower(){ }
@@ -31,10 +30,10 @@ public abstract class Borrower {
   public Borrower(String name, String iD, LocalDate birthday, int pn,
                   String str1, String cty, String st, int zp,
                   String em, String pw, int cn){
-    name = name;
+    this.name = name;
     ID = iD;
-    birthday = birthday;
-    phoneNum = pn;
+    this.birthday = birthday;
+    this.phoneNum = pn;
     street1 =str1; city=cty; state=st; zip = zp;
     email = em; password = pw; cardNum =cn;
 
@@ -56,6 +55,11 @@ public abstract class Borrower {
     borrowBehavior = bb;
   }
 
+  @Override
+  public String toString() {
+    return
+            "name=" + name + " ID=" + ID;
+  }
   // check age vs current time for child age
   // boolean or int years return, not sure which to use
   public boolean checkAge(){
@@ -66,6 +70,5 @@ public abstract class Borrower {
   public int checkAgeYear (){
     LocalDate today = LocalDate.now();
     return Period.between(birthday,today).getYears();
-
   }
 }
