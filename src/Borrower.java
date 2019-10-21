@@ -23,7 +23,6 @@ public abstract class Borrower {
     //Use interface to modify borrow limits
   BorrowBehavior  borrowBehavior;
 
-
   //Default builds an empty borrower
   public Borrower(){ }
 
