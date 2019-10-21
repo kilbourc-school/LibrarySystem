@@ -71,4 +71,7 @@ public abstract class Borrower {
     LocalDate today = LocalDate.now();
     return Period.between(birthday,today).getYears();
   }
+
+
+  public abstract int getBorrowLimit();
 }
