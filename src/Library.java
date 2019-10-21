@@ -11,27 +11,13 @@ import java.util.ArrayList;
 
 public class Library{
   
-
   private ArrayList<Media> database = new ArrayList<>();//Holds all books.
   private ArrayList<Borrower> accounts = new ArrayList<>();     //Holds all teachers.
-
-  private ArrayList<TeacherBorrow> teachers = new ArrayList<>();     //Holds all teachers.
-  private ArrayList<ChildBorrow> children = new ArrayList<>();     //Holds all students.
-  private ArrayList<AdultBorrow> adults = new ArrayList<>();     //Holds all students.
-
-  
 
   //Prints out the contents of the Library.
   public void displayBooks(){
     for(int i = 0; i < database.size(); i++){
       System.out.println(database.get(i));
-    }
-  }
-  
-  //Prints out the teachers accounts
-  public void displayTeachers(){
-    for(int i = 0; i < teachers.size(); i++){
-      System.out.println(teachers.get(i).borrowLimit);
     }
   }
 
@@ -44,20 +30,25 @@ public class Library{
     }
   }
 
-  
-  //Prints out the adult accounts
-  public void displayAdults(){
-    for(int i = 0; i < adults.size(); i++){
-      System.out.println(adults.get(i));
+  //Prints out the teachers accounts
+  public void displayAdultAccounts(){
+
+    for(int i = 0; i < accounts.size(); i++){
+      if (accounts.get(i).getBorrowLimit() == 10)
+        System.out.println(accounts.get(i));
     }
   }
 
-  //Prints out the children accounts
-  public void displayChildren(){
-    for(int i = 0; i < children.size(); i++){
-      System.out.println(children.get(i));
+  //Prints out the teachers accounts
+  public void displayChildAccounts(){
+
+    for(int i = 0; i < accounts.size(); i++){
+      if (accounts.get(i).getBorrowLimit() == 3)
+        System.out.println(accounts.get(i));
     }
   }
+
+
   
   //Modifier method to add a books to database.
   public void addBook(Book book){
