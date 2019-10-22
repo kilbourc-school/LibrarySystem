@@ -24,28 +24,36 @@ public class Library{
   //Prints out the teachers accounts
   public void displayTeachersAccounts(){
 
-    for(int i = 0; i < accounts.size(); i++){
-      if (accounts.get(i).getBorrowLimit() == 50)
-      System.out.println(accounts.get(i));
+    for (Borrower account : accounts) {
+      if (account.getBorrowLimit() == 50)
+        System.out.println(account);
     }
   }
 
   //Prints out the teachers accounts
   public void displayAdultAccounts(){
 
-    for(int i = 0; i < accounts.size(); i++){
-      if (accounts.get(i).getBorrowLimit() == 10)
-        System.out.println(accounts.get(i));
+    for (Borrower account : accounts) {
+      if (account.getBorrowLimit() == 10)
+        System.out.println(account);
     }
   }
 
   //Prints out the teachers accounts
   public void displayChildAccounts(){
 
-    for(int i = 0; i < accounts.size(); i++){
-      if (accounts.get(i).getBorrowLimit() == 3)
-        System.out.println(accounts.get(i));
+    for (Borrower account : accounts) {
+      if (account.getBorrowLimit() == 3)
+        System.out.println(account);
     }
+  }
+
+  public boolean verifyAccount(String email, String pass){
+
+    for (Borrower account : accounts) {
+      return account.getEmail().equals(email) && account.getPassword().equals(pass);
+    }
+    return false;
   }
 
 

@@ -39,6 +39,14 @@ public abstract class Borrower {
 
   }
 
+  public String getEmail() {
+    return email;
+  }
+
+  public String getPassword() {
+    return password;
+  }
+
   public String getName() {
     return name;
   }
