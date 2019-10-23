@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
+    <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="added file read in">
+      <change afterPath="$PROJECT_DIR$/src/AdminBorrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryDriver.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +21,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SIf1p1nwG8M2TxfF8PZHoMTgcX" />
@@ -34,6 +40,11 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -101,19 +112,19 @@
       <option name="project" value="LOCAL" />
       <updated>1571857483210</updated>
     </task>
-    <task id="LOCAL-00004" summary="combined account database">
-      <created>1571691992803</created>
+    <task id="LOCAL-00004" summary="added in creates for other media types.">
+      <created>1571857856972</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1571691992803</updated>
+      <updated>1571857856972</updated>
     </task>
-    <task id="LOCAL-00005" summary="frontend driver file added&#10;implemented barebones login verification">
-      <created>1571758174782</created>
+    <task id="LOCAL-00005" summary="added file read in">
+      <created>1571860162763</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1571758174782</updated>
+      <updated>1571860162763</updated>
     </task>
     <task id="LOCAL-00006" summary="begun basic adding of media to main method">
       <created>1571847122759</created>
@@ -122,7 +133,7 @@
       <option name="project" value="LOCAL" />
       <updated>1571847122759</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +164,8 @@
     <MESSAGE value="made media type AudioBooks" />
     <MESSAGE value="Merge branch 'master' of https://github.com/kilbourc-school/LibrarySystem&#10;&#10;# Conflicts:&#10;#&#9;src/Borrower.java&#10;#&#9;src/LibraryDriver.java" />
     <MESSAGE value="fixed small issues in EBook and Audiobook merge conflict" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed small issues in EBook and Audiobook merge conflict" />
+    <MESSAGE value="added in creates for other media types." />
+    <MESSAGE value="added file read in" />
+    <option name="LAST_COMMIT_MESSAGE" value="added file read in" />
   </component>
 </project>

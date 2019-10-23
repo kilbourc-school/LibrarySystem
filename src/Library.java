@@ -219,11 +219,14 @@ public class Library{
        if (Integer.parseInt(lineArray[0]) == 3) {
          accounts.add(new ChildBorrow(lineArray[1],lineArray[2], LocalDate.parse(lineArray[3]),Integer.parseInt(lineArray[4]),lineArray[5],lineArray[6],lineArray[7],Integer.parseInt(lineArray[8]),lineArray[9],lineArray[10],Integer.parseInt(lineArray[11]),Boolean.parseBoolean(lineArray[12])));
        }
-       if (Integer.parseInt(lineArray[0]) == 10) {
+       else if (Integer.parseInt(lineArray[0]) == 10) {
          accounts.add(new AdultBorrow(lineArray[1],lineArray[2], LocalDate.parse(lineArray[3]),Integer.parseInt(lineArray[4]),lineArray[5],lineArray[6],lineArray[7],Integer.parseInt(lineArray[8]),lineArray[9],lineArray[10],Integer.parseInt(lineArray[11]),Boolean.parseBoolean(lineArray[12])));
        }
-       if (Integer.parseInt(lineArray[0]) == 50) {
+       else if (Integer.parseInt(lineArray[0]) == 50) {
          accounts.add(new TeacherBorrow(lineArray[1],lineArray[2], LocalDate.parse(lineArray[3]),Integer.parseInt(lineArray[4]),lineArray[5],lineArray[6],lineArray[7],Integer.parseInt(lineArray[8]),lineArray[9],lineArray[10],Integer.parseInt(lineArray[11]),Boolean.parseBoolean(lineArray[12])));
+       }
+       else if (Boolean.parseBoolean(lineArray[12])) {
+         accounts.add(new AdminBorrow(lineArray[1],lineArray[2], LocalDate.parse(lineArray[3]),Integer.parseInt(lineArray[4]),lineArray[5],lineArray[6],lineArray[7],Integer.parseInt(lineArray[8]),lineArray[9],lineArray[10],Integer.parseInt(lineArray[11]),Boolean.parseBoolean(lineArray[12])));
        }
 
      }
