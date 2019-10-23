@@ -39,11 +39,22 @@ public abstract class Borrower {
 
   }
 
+<<<<<<< HEAD
   /**
    *
    * getters
    * @return
    */
+=======
+  public String getEmail() {
+    return email;
+  }
+
+  public String getPassword() {
+    return password;
+  }
+
+>>>>>>> Scott-Media-extension
   public String getName() {
     return name;
   }
