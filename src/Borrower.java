@@ -39,6 +39,11 @@ public abstract class Borrower {
 
   }
 
+  /**
+   *
+   * getters
+   * @return
+   */
   public String getName() {
     return name;
   }
@@ -72,6 +77,54 @@ public abstract class Borrower {
     return Period.between(birthday,today).getYears();
   }
 
-
   public abstract int getBorrowLimit();
+
+  /**
+   *
+   * Borrower Setters
+   */
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setBirthday(LocalDate birthday) {
+    this.birthday = birthday;
+  }
+
+  public void setID(String ID) {
+    this.ID = ID;
+  }
+
+  public void setPhoneNum(int phoneNum) {
+    this.phoneNum = phoneNum;
+  }
+
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
+  public void setCardNum(int cardNum) {
+    this.cardNum = cardNum;
+  }
+
+  public void setStreet1(String street1) {
+    this.street1 = street1;
+  }
+
+  public void setCity(String city) {
+    this.city = city;
+  }
+
+  public void setState(String state) {
+    this.state = state;
+  }
+
+  public void setZip(int zip) {
+    this.zip = zip;
+  }
 }
