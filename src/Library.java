@@ -52,6 +52,13 @@ public class Library{
         System.out.println(account);
     }
   }
+  public void displayAllAccounts(){
+
+    for (Borrower account : accounts) {
+        System.out.println(account);
+    }
+  }
+
 
   public boolean verifyAccount(String email, String pass){
 
@@ -115,6 +122,23 @@ public class Library{
 
     database.add(new Book(title,description,author,subject,copies,genre,releaseYear,stars,comingSoon,ISBN));
   }
+
+  public void addEBook(){
+    Scanner keyboard = new Scanner(System.in);
+    System.out.println("String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int ISBN");
+    String title = keyboard.nextLine();
+    String description = keyboard.nextLine();
+    String author = keyboard.nextLine();
+    String subject = keyboard.nextLine();
+    int copies = keyboard.nextInt();
+    String genre = keyboard.nextLine();
+    int releaseYear = keyboard.nextInt();
+    int stars = keyboard.nextInt();
+    boolean comingSoon = keyboard.nextBoolean();
+    int ISBN = keyboard.nextInt();
+
+    database.add(new Book(title,description,author,subject,copies,genre,releaseYear,stars,comingSoon,ISBN));
+  }
   
   /*
    * Method to determine if book in library is available.
@@ -129,22 +153,7 @@ public class Library{
         System.out.println(input + " is not available.");
     }
   }
-  
-  /* 
-   * Method to mark a book as borrowed if it is available.
-   * Params: Title of a book and the name of the user.
-   */ 
-  public void borrowBook(String Media, String borrower){
-    if(findMedia(Media) != null){
-      (findMedia(Media)).makeBorrowed();
-      String fileName = (findMedia(Media)).getTitle() + "Log.txt";
-      String content = "Borrowed by:" + borrower;
 
-      //add a way to check it out
-    }
-  }
-
-  
   /*
    * Method to display all books of a genre in the library.
    * Param: String with the genre of a book.

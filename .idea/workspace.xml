@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Borrower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Borrower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LibraryDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryDriver.java" afterDir="false" />
     </list>
@@ -49,6 +47,20 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="LibraryDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LibraryDriver" />
+      <module name="LibaryProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LibraryDriver" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -64,7 +76,7 @@
       <workItem from="1571689023869" duration="1480000" />
       <workItem from="1571756884285" duration="1349000" />
       <workItem from="1571780941412" duration="817000" />
-      <workItem from="1571846330945" duration="748000" />
+      <workItem from="1571846330945" duration="2595000" />
     </task>
     <task id="LOCAL-00001" summary="fixed variable calls for book">
       <created>1571332438842</created>
@@ -101,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571758174782</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="begun basic adding of media to main method">
+      <created>1571847122759</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571847122759</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +146,7 @@
     <MESSAGE value="added a get borrow limit for search checking to borrower interfaces" />
     <MESSAGE value="combined account database" />
     <MESSAGE value="frontend driver file added&#10;implemented barebones login verification" />
-    <option name="LAST_COMMIT_MESSAGE" value="frontend driver file added&#10;implemented barebones login verification" />
+    <MESSAGE value="begun basic adding of media to main method" />
+    <option name="LAST_COMMIT_MESSAGE" value="begun basic adding of media to main method" />
   </component>
 </project>
