@@ -66,4 +66,6 @@ public abstract class Media {
     public Boolean getAvailability(){
         return copies >= 1;
     }
+
+    public abstract String toStringList();
 }

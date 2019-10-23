@@ -11,32 +11,38 @@ import java.util.*;
 
 public abstract class Borrower {
   private String name;
-  private  LocalDate birthday;
+  private LocalDate birthday;
   private String ID;
   private int phoneNum;
   private String email;
   private String password;
   private int cardNum;
-  private String street1,city,state;
+  private String street1, city, state;
   private int zip;
   boolean isAdmin;
 
-    //Use interface to modify borrow limits
-  BorrowBehavior  borrowBehavior;
+  //Use interface to modify borrow limits
+  BorrowBehavior borrowBehavior;
 
   //Default builds an empty borrower
-  public Borrower(){ }
+  public Borrower() {
+  }
 
   //Constructor. Params for name and ID of user.
   public Borrower(String name, String iD, LocalDate birthday, int pn,
                   String str1, String cty, String st, int zp,
-                  String em, String pw, int cn, boolean isAdmin){
+                  String em, String pw, int cn, boolean isAdmin) {
     this.name = name;
     ID = iD;
     this.birthday = birthday;
     this.phoneNum = pn;
-    street1 =str1; city=cty; state=st; zip = zp;
-    email = em; password = pw; cardNum =cn;
+    street1 = str1;
+    city = cty;
+    state = st;
+    zip = zp;
+    email = em;
+    password = pw;
+    cardNum = cn;
     this.isAdmin = isAdmin;
 
   }
@@ -70,8 +76,8 @@ public abstract class Borrower {
   }
 
   /**
-   *
    * getters
+   *
    * @return
    */
 
@@ -96,7 +102,7 @@ public abstract class Borrower {
     return birthday.toString();
   }
 
-  public void setBorrowBehavior(BorrowBehavior bb){
+  public void setBorrowBehavior(BorrowBehavior bb) {
     borrowBehavior = bb;
   }
 
@@ -105,22 +111,23 @@ public abstract class Borrower {
     return
             "name=" + name + " ID=" + ID;
   }
+
   // check age vs current time for child age
   // boolean or int years return, not sure which to use
-  public boolean checkAge(){
-      LocalDate today = LocalDate.now();
-      return (Period.between(birthday,today).getYears()>13);
+  public boolean checkAge() {
+    LocalDate today = LocalDate.now();
+    return (Period.between(birthday, today).getYears() > 13);
 
   }
-  public int checkAgeYear (){
+
+  public int checkAgeYear() {
     LocalDate today = LocalDate.now();
-    return Period.between(birthday,today).getYears();
+    return Period.between(birthday, today).getYears();
   }
 
   public abstract int getBorrowLimit();
 
   /**
-   *
    * Borrower Setters
    */
 
@@ -167,4 +174,6 @@ public abstract class Borrower {
   public void setZip(int zip) {
     this.zip = zip;
   }
+
+  public abstract String toStringList();
 }

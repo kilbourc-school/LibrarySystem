@@ -1,11 +1,13 @@
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.nio.file.*;
+import java.util.StringJoiner;
 
 /*
  * 
@@ -209,7 +211,7 @@ public class Library{
 
  }
  public void readInAccounts() {
-   File file = new File("media.txt");
+   File file = new File("account.txt");
    Scanner scan;
    try {
      scan = new Scanner(file);
@@ -236,9 +238,26 @@ public class Library{
  }
 
   public void saveAccountsToFile(){
-
- }
+      try{
+        PrintWriter writer = new PrintWriter("account.txt");
+        for (Borrower borrower : accounts){
+          writer.println(borrower.toStringList());
+        }
+        writer.close();
+      } catch (FileNotFoundException e){
+        System.out.println("File not found.");
+      }
+    }
   public void saveMediaToFile(){
+    try{
+      PrintWriter writer = new PrintWriter("media.txt");
+      for (Media media : database){
+        writer.println(media.toStringList());
+      }
+      writer.close();
+    } catch (FileNotFoundException e){
+      System.out.println("File not found.");
+    }
 
   }
   /*
