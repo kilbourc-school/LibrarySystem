@@ -5,6 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LibraryDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DVD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AudioBooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AudioBooks.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +18,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package-info" />
         <option value="Class" />
       </list>
     </option>
@@ -32,8 +36,8 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -77,13 +81,15 @@
       <workItem from="1571756884285" duration="1349000" />
       <workItem from="1571780941412" duration="817000" />
       <workItem from="1571846330945" duration="2595000" />
+      <workItem from="1571255820655" duration="5856000" />
+      <workItem from="1571332870814" duration="2365000" />
     </task>
-    <task id="LOCAL-00001" summary="fixed variable calls for book">
-      <created>1571332438842</created>
+    <task id="LOCAL-00001" summary="made media type AudioBooks">
+      <created>1571333916280</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1571332438842</updated>
+      <updated>1571333916280</updated>
     </task>
     <task id="LOCAL-00002" summary="added commas for file writing">
       <created>1571333027799</created>
@@ -121,6 +127,14 @@
       <updated>1571847122759</updated>
     </task>
     <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00002" summary="made media type AudioBooks">
+      <created>1571333947774</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571333947774</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,5 +162,19 @@
     <MESSAGE value="frontend driver file added&#10;implemented barebones login verification" />
     <MESSAGE value="begun basic adding of media to main method" />
     <option name="LAST_COMMIT_MESSAGE" value="begun basic adding of media to main method" />
+    <MESSAGE value="made media type Audiobooks" />
+    <MESSAGE value="made media type AudioBooks" />
+    <option name="LAST_COMMIT_MESSAGE" value="made media type AudioBooks" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Book.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
