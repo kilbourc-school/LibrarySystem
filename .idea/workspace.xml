@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
+    <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="Merge branch 'master' of https://github.com/kilbourc-school/LibrarySystem&#10;&#10;# Conflicts:&#10;#&#9;src/Borrower.java&#10;#&#9;src/LibraryDriver.java">
+      <change afterPath="$PROJECT_DIR$/src/EBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Borrower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Borrower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LibraryDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DVD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AudioBooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AudioBooks.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,12 +88,12 @@
       <option name="project" value="LOCAL" />
       <updated>1571333916280</updated>
     </task>
-    <task id="LOCAL-00002" summary="added commas for file writing">
-      <created>1571333027799</created>
+    <task id="LOCAL-00002" summary="made media type AudioBooks">
+      <created>1571333947774</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1571333027799</updated>
+      <updated>1571333947774</updated>
     </task>
     <task id="LOCAL-00003" summary="added a get borrow limit for search checking to borrower interfaces">
       <created>1571691806264</created>
@@ -126,14 +123,6 @@
       <option name="project" value="LOCAL" />
       <updated>1571847122759</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
-    <task id="LOCAL-00002" summary="made media type AudioBooks">
-      <created>1571333947774</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1571333947774</updated>
-    </task>
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
@@ -161,10 +150,10 @@
     <MESSAGE value="combined account database" />
     <MESSAGE value="frontend driver file added&#10;implemented barebones login verification" />
     <MESSAGE value="begun basic adding of media to main method" />
-    <option name="LAST_COMMIT_MESSAGE" value="begun basic adding of media to main method" />
     <MESSAGE value="made media type Audiobooks" />
     <MESSAGE value="made media type AudioBooks" />
-    <option name="LAST_COMMIT_MESSAGE" value="made media type AudioBooks" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/kilbourc-school/LibrarySystem&#10;&#10;# Conflicts:&#10;#&#9;src/Borrower.java&#10;#&#9;src/LibraryDriver.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/kilbourc-school/LibrarySystem&#10;&#10;# Conflicts:&#10;#&#9;src/Borrower.java&#10;#&#9;src/LibraryDriver.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

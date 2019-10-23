@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class LibraryDriver {
@@ -15,7 +16,6 @@ public class LibraryDriver {
                 System.out.println("Sorry, that was an invalid input. please try again.");
             }
         }
-
 System.out.println("What would you like to do?");
         System.out.println("enter 1 to add media");
         System.out.println("enter 2 to see all accounts");
@@ -58,11 +58,5 @@ System.out.println("What would you like to do?");
         if (input == 5){
             currentLibrary.displayBooks();
         }
-
-
-
-
-
-
     }
 }
