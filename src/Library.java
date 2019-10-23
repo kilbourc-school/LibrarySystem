@@ -104,11 +104,11 @@ public class Library{
     boolean comingSoon = keyboard.nextBoolean();
     int ISBN = keyboard.nextInt();
 
-    database.add(new Book(title,description,author,subject,copies,genre,releaseYear,stars,comingSoon,ISBN));
+    database.add(new AudioBook(title,description,author,subject,copies,genre,releaseYear,stars,comingSoon,ISBN));
   }
   public void addDVD(){
     Scanner keyboard = new Scanner(System.in);
-    System.out.println("String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int ISBN");
+    System.out.println("String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon");
     String title = keyboard.nextLine();
     String description = keyboard.nextLine();
     String author = keyboard.nextLine();
@@ -118,14 +118,14 @@ public class Library{
     int releaseYear = keyboard.nextInt();
     int stars = keyboard.nextInt();
     boolean comingSoon = keyboard.nextBoolean();
-    int ISBN = keyboard.nextInt();
 
-    database.add(new Book(title,description,author,subject,copies,genre,releaseYear,stars,comingSoon,ISBN));
+
+    database.add(new DVD(title,description,author,subject,copies,genre,releaseYear,stars,comingSoon));
   }
 
   public void addEBook(){
     Scanner keyboard = new Scanner(System.in);
-    System.out.println("String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int ISBN");
+    System.out.println("String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, String narrator");
     String title = keyboard.nextLine();
     String description = keyboard.nextLine();
     String author = keyboard.nextLine();
@@ -135,9 +135,9 @@ public class Library{
     int releaseYear = keyboard.nextInt();
     int stars = keyboard.nextInt();
     boolean comingSoon = keyboard.nextBoolean();
-    int ISBN = keyboard.nextInt();
+    String narrator = keyboard.nextLine();
 
-    database.add(new Book(title,description,author,subject,copies,genre,releaseYear,stars,comingSoon,ISBN));
+    database.add(new EBook(title,description,author,subject,copies,genre,releaseYear,stars,comingSoon,narrator));
   }
   
   /*
@@ -176,7 +176,12 @@ public class Library{
       }
     }
   }
+ public void readInAccounts(){
 
+ }
+ public void readInMedia(){
+
+ }
   /*
 
   public void browseISBN(int ISBN){

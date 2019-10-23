@@ -4,7 +4,10 @@ import java.util.Scanner;
 public class LibraryDriver {
     public static void main(String[] args){
         Library currentLibrary = new Library();
+        currentLibrary.readInAccounts();
+        currentLibrary.readInMedia();
         Scanner keyboard = new Scanner(System.in);
+
         boolean login = false;
         while (!login){
         System.out.println("Enter your username and password");
