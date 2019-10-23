@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /*
  * 
@@ -10,9 +11,13 @@ import java.util.ArrayList;
  */
 
 public class Library{
-  
+  private Borrower currentUser;
   private ArrayList<Media> database = new ArrayList<>();//Holds all books.
   private ArrayList<Borrower> accounts = new ArrayList<>();     //Holds all teachers.
+
+  public Borrower getCurrentUser() {
+    return currentUser;
+  }
 
   //Prints out the contents of the Library.
   public void displayBooks(){
@@ -51,7 +56,10 @@ public class Library{
   public boolean verifyAccount(String email, String pass){
 
     for (Borrower account : accounts) {
-      return account.getEmail().equals(email) && account.getPassword().equals(pass);
+      if(account.getEmail().equals(email) && account.getPassword().equals(pass)) {
+        currentUser = account;
+        return true;
+      }
     }
     return false;
   }
@@ -59,10 +67,54 @@ public class Library{
 
   
   //Modifier method to add a books to database.
-  public void addBook(Book book){
-    database.add(book);
-  }
+  public void addBook(){
+    Scanner keyboard = new Scanner(System.in);
+    System.out.println("String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int ISBN");
+    String title = keyboard.nextLine();
+    String description = keyboard.nextLine();
+    String author = keyboard.nextLine();
+    String subject = keyboard.nextLine();
+    int copies = keyboard.nextInt();
+    String genre = keyboard.nextLine();
+    int releaseYear = keyboard.nextInt();
+    int stars = keyboard.nextInt();
+    boolean comingSoon = keyboard.nextBoolean();
+    int ISBN = keyboard.nextInt();
 
+    database.add(new Book(title,description,author,subject,copies,genre,releaseYear,stars,comingSoon,ISBN));
+  }
+  public void addAudioBook(){
+    Scanner keyboard = new Scanner(System.in);
+    System.out.println("String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int ISBN");
+    String title = keyboard.nextLine();
+    String description = keyboard.nextLine();
+    String author = keyboard.nextLine();
+    String subject = keyboard.nextLine();
+    int copies = keyboard.nextInt();
+    String genre = keyboard.nextLine();
+    int releaseYear = keyboard.nextInt();
+    int stars = keyboard.nextInt();
+    boolean comingSoon = keyboard.nextBoolean();
+    int ISBN = keyboard.nextInt();
+
+    database.add(new Book(title,description,author,subject,copies,genre,releaseYear,stars,comingSoon,ISBN));
+  }
+  public void addDVD(){
+    Scanner keyboard = new Scanner(System.in);
+    System.out.println("String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int ISBN");
+    String title = keyboard.nextLine();
+    String description = keyboard.nextLine();
+    String author = keyboard.nextLine();
+    String subject = keyboard.nextLine();
+    int copies = keyboard.nextInt();
+    String genre = keyboard.nextLine();
+    int releaseYear = keyboard.nextInt();
+    int stars = keyboard.nextInt();
+    boolean comingSoon = keyboard.nextBoolean();
+    int ISBN = keyboard.nextInt();
+
+    database.add(new Book(title,description,author,subject,copies,genre,releaseYear,stars,comingSoon,ISBN));
+  }
   
   /*
    * Method to determine if book in library is available.

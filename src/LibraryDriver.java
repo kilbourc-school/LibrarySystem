@@ -16,7 +16,25 @@ public class LibraryDriver {
             }
         }
 
-
+System.out.println("What would you like to do?");
+        System.out.println("enter 1 to add media");
+        System.out.println("enter 2 to do some other stuff man");
+        int input = keyboard.nextInt();
+        if (input == 1){
+            System.out.println("enter 1 to add a book");
+            System.out.println("enter 2 to add a audiobook");
+            System.out.println("enter 3 to add a dvd");
+            input = keyboard.nextInt();
+            if(input == 1) {
+                currentLibrary.addBook();
+            }
+            if(input == 2){
+                currentLibrary.addAudioBook();
+            }
+                if(input == 3){
+                    currentLibrary.addDVD();
+                }
+        }
 
 
 

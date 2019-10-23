@@ -19,6 +19,7 @@ public abstract class Borrower {
   private int cardNum;
   private String street1,city,state;
   private int zip;
+  boolean isAdmin;
 
     //Use interface to modify borrow limits
   BorrowBehavior  borrowBehavior;
@@ -29,14 +30,19 @@ public abstract class Borrower {
   //Constructor. Params for name and ID of user.
   public Borrower(String name, String iD, LocalDate birthday, int pn,
                   String str1, String cty, String st, int zp,
-                  String em, String pw, int cn){
+                  String em, String pw, int cn, boolean isAdmin){
     this.name = name;
     ID = iD;
     this.birthday = birthday;
     this.phoneNum = pn;
     street1 =str1; city=cty; state=st; zip = zp;
     email = em; password = pw; cardNum =cn;
+    this.isAdmin = isAdmin;
 
+  }
+
+  public boolean isAdmin() {
+    return isAdmin;
   }
 
   public String getEmail() {
