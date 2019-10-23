@@ -22,6 +22,9 @@ public class Library{
   private ArrayList<Media> database = new ArrayList<>();//Holds all books.
   private ArrayList<Borrower> accounts = new ArrayList<>();     //Holds all teachers.
 
+  public Library(){
+  }
+
   public Borrower getCurrentUser() {
     return currentUser;
   }
@@ -90,12 +93,14 @@ public class Library{
     String subject = keyboard.nextLine();
     int copies = keyboard.nextInt();
     String genre = keyboard.nextLine();
+    genre = keyboard.nextLine();
     int releaseYear = keyboard.nextInt();
     int stars = keyboard.nextInt();
     boolean comingSoon = keyboard.nextBoolean();
     int ISBN = keyboard.nextInt();
 
     database.add(new Book(title,description,author,subject,copies,genre,releaseYear,stars,comingSoon,ISBN));
+   displayBooks();
   }
   public void addAudioBook(){
     Scanner keyboard = new Scanner(System.in);
@@ -106,6 +111,7 @@ public class Library{
     String subject = keyboard.nextLine();
     int copies = keyboard.nextInt();
     String genre = keyboard.nextLine();
+    genre = keyboard.nextLine();
     int releaseYear = keyboard.nextInt();
     int stars = keyboard.nextInt();
     boolean comingSoon = keyboard.nextBoolean();
@@ -122,6 +128,7 @@ public class Library{
     String subject = keyboard.nextLine();
     int copies = keyboard.nextInt();
     String genre = keyboard.nextLine();
+    genre = keyboard.nextLine();
     int releaseYear = keyboard.nextInt();
     int stars = keyboard.nextInt();
     boolean comingSoon = keyboard.nextBoolean();
@@ -180,6 +187,19 @@ public class Library{
       String bookTitle = (database.get(i)).getTitle();
       if(title.equals(bookTitle)){
         System.out.println(database.get(i));
+      }
+    }
+  }
+
+  public void addCopyByTitle(String title, int copies){
+    for(int i = 0; i < database.size(); i++){
+      String bookTitle = (database.get(i)).getTitle();
+      if(title.equals(bookTitle)){
+        database.get(i).setCopies(copies);
+        break;
+      }
+      else{
+        System.out.println("not found");
       }
     }
   }

@@ -22,6 +22,10 @@ public abstract class Media {
         this.comingSoon = comingSoon;
     }
 
+    public void setCopies(int copies) {
+        this.copies = copies;
+    }
+
     public String getTitle() {
         return title;
     }

@@ -4,11 +4,11 @@ import java.util.Scanner;
 public class LibraryDriver {
     public static void main(String[] args){
         Library currentLibrary = new Library();
-        currentLibrary.readInAccounts();
-        currentLibrary.readInMedia();
+      //  currentLibrary.readInAccounts();
+        //currentLibrary.readInMedia();
         Scanner keyboard = new Scanner(System.in);
 
-        boolean login = false;
+  /*      boolean login = false;
         while (!login){
         System.out.println("Enter your username and password");
         String username = keyboard.nextLine();
@@ -19,6 +19,7 @@ public class LibraryDriver {
                 System.out.println("Sorry, that was an invalid input. please try again.");
             }
         }
+        */
 System.out.println("What would you like to do?");
         System.out.println("enter 1 to add media");
         System.out.println("enter 2 to see all accounts");
@@ -26,7 +27,8 @@ System.out.println("What would you like to do?");
         System.out.println("enter 4 to search by genre");
         System.out.println("enter 5 to display all books");
         int input = keyboard.nextInt();
-        if (input == 1 && currentLibrary.getCurrentUser().isAdmin){
+        if (input == 1 ){
+            //&& currentLibrary.getCurrentUser().isAdmin
             System.out.println("enter 1 to add a book");
             System.out.println("enter 2 to add a audiobook");
             System.out.println("enter 3 to add a dvd");
