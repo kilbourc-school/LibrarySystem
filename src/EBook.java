@@ -1,10 +1,10 @@
 public class EBook extends Media implements Medium {
-        String orator;
+        String narrator;
         /*
          * Constructor.
          * Params: Strings ISBN, title, author, genre.
          */
-        public EBook(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, String orator){
+        public EBook(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, String narrator){
 
             this.title = title;
             this.description = description;
@@ -15,21 +15,21 @@ public class EBook extends Media implements Medium {
             this.releaseYear = releaseYear;
             this.stars = stars;
             this.comingSoon = comingSoon;
-            this.orator = orator;
+            this.narrator = narrator;
         }
 
         public String getOrator() {
-            return orator;
+            return narrator;
         }
 
         public String toStringList(){
-            return "ebook,"+ title + "," + description +  "," + author +  "," + subject +  "," + copies + "," + genre + "," + releaseYear + "," + stars + "," +comingSoon + "," + orator;
+            return "EBook,"+ title + "," + description +  "," + author +  "," + subject +  "," + copies + "," + genre + "," + releaseYear + "," + stars + "," +comingSoon + "," + narrator;
         }
 
         @Override
         //Converts object to String.
         public String toString(){
-            return title + " by: " + author + " genre: " + genre + " orator: " + orator + " copies: " + copies;
+            return title + " by: " + author + " genre: " + genre + " narrator: " + narrator + " copies: " + copies;
         }
 
 
