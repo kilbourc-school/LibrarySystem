@@ -29,7 +29,7 @@ public class DVD extends Media implements Medium {
 
 
     public String toStringList(){
-        return "book,"+ title + "," + description +  "," + author +  "," + subject +  "," + copies + "," + genre + "," + releaseYear + "," + stars + "," +comingSoon + ",";
+        return "DVD,"+ title + "," + description +  "," + author +  "," + subject +  "," + copies + "," + genre + "," + releaseYear + "," + stars + "," +comingSoon + ",";
     }
 
     @Override

@@ -1,6 +1,11 @@
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.nio.file.*;
 
 /*
  * 
@@ -176,12 +181,63 @@ public class Library{
       }
     }
   }
- public void readInAccounts(){
-
- }
  public void readInMedia(){
+     File file = new File("media.txt");
+     Scanner scan;
+     try {
+       scan = new Scanner(file);
+       while (scan.hasNextLine()) {
+         String line = scan.nextLine();
+         String[] lineArray = line.split(",");
+       if(lineArray[0].equals("Book")){
+         database.add(new Book(lineArray[1],lineArray[2],lineArray[3],lineArray[4],Integer.parseInt(lineArray[5]),lineArray[6],Integer.parseInt(lineArray[7]),Integer.parseInt(lineArray[8]),Boolean.parseBoolean(lineArray[9]),Integer.parseInt(lineArray[10])));
+       }
+       else if(lineArray[0].equals("AudioBook")){
+         database.add(new AudioBook(lineArray[1],lineArray[2],lineArray[3],lineArray[4],Integer.parseInt(lineArray[5]),lineArray[6],Integer.parseInt(lineArray[7]),Integer.parseInt(lineArray[8]),Boolean.parseBoolean(lineArray[9]),Integer.parseInt(lineArray[10])));
+         }
+       else if(lineArray[0].equals("DVD")){
+         database.add(new DVD(lineArray[1],lineArray[2],lineArray[3],lineArray[4],Integer.parseInt(lineArray[5]),lineArray[6],Integer.parseInt(lineArray[7]),Integer.parseInt(lineArray[8]),Boolean.parseBoolean(lineArray[9])));
+         }
+       else if(lineArray[0].equals("EBook")){
+         database.add(new EBook(lineArray[1],lineArray[2],lineArray[3],lineArray[4],Integer.parseInt(lineArray[5]),lineArray[6],Integer.parseInt(lineArray[7]),Integer.parseInt(lineArray[8]),Boolean.parseBoolean(lineArray[9]),lineArray[10]));
+         }
+       }
+       } catch (FileNotFoundException e) {
+       e.printStackTrace();
+
+     }
 
  }
+ public void readInAccounts() {
+   File file = new File("media.txt");
+   Scanner scan;
+   try {
+     scan = new Scanner(file);
+     while (scan.hasNextLine()) {
+       String line = scan.nextLine();
+       String[] lineArray = line.split(",");
+       if (Integer.parseInt(lineArray[0]) == 3) {
+         accounts.add(new ChildBorrow(lineArray[1],lineArray[2], LocalDate.parse(lineArray[3]),Integer.parseInt(lineArray[4]),lineArray[5],lineArray[6],lineArray[7],Integer.parseInt(lineArray[8]),lineArray[9],lineArray[10],Integer.parseInt(lineArray[11]),Boolean.parseBoolean(lineArray[12])));
+       }
+       if (Integer.parseInt(lineArray[0]) == 10) {
+         accounts.add(new AdultBorrow(lineArray[1],lineArray[2], LocalDate.parse(lineArray[3]),Integer.parseInt(lineArray[4]),lineArray[5],lineArray[6],lineArray[7],Integer.parseInt(lineArray[8]),lineArray[9],lineArray[10],Integer.parseInt(lineArray[11]),Boolean.parseBoolean(lineArray[12])));
+       }
+       if (Integer.parseInt(lineArray[0]) == 50) {
+         accounts.add(new TeacherBorrow(lineArray[1],lineArray[2], LocalDate.parse(lineArray[3]),Integer.parseInt(lineArray[4]),lineArray[5],lineArray[6],lineArray[7],Integer.parseInt(lineArray[8]),lineArray[9],lineArray[10],Integer.parseInt(lineArray[11]),Boolean.parseBoolean(lineArray[12])));
+       }
+
+     }
+   } catch (FileNotFoundException e) {
+     e.printStackTrace();
+   }
+ }
+
+  public void saveAccountsToFile(){
+
+ }
+  public void saveMediaToFile(){
+
+  }
   /*
 
   public void browseISBN(int ISBN){

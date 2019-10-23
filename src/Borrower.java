@@ -41,6 +41,30 @@ public abstract class Borrower {
 
   }
 
+  public int getPhoneNum() {
+    return phoneNum;
+  }
+
+  public int getCardNum() {
+    return cardNum;
+  }
+
+  public String getStreet1() {
+    return street1;
+  }
+
+  public String getCity() {
+    return city;
+  }
+
+  public String getState() {
+    return state;
+  }
+
+  public int getZip() {
+    return zip;
+  }
+
   public boolean isAdmin() {
     return isAdmin;
   }
