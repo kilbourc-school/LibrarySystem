@@ -257,6 +257,18 @@ public class Library{
    }
  }
 
+ public void addAdminAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin){
+   accounts.add(new AdminBorrow(name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin));
+ }
+  public void addTeacherAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin){
+    accounts.add(new TeacherBorrow(name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin));
+  }
+  public void addAdultAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin){
+    accounts.add(new AdultBorrow(name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin));
+  }
+  public void addChildAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin){
+    accounts.add(new ChildBorrow(name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin));
+  }
   public void saveAccountsToFile(){
       try{
         PrintWriter writer = new PrintWriter("account.txt");
