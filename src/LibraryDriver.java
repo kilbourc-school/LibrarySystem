@@ -5,13 +5,14 @@ import java.util.Scanner;
 public class LibraryDriver {
     public static void main(String[] args){
         Library currentLibrary = new Library();
-      //  currentLibrary.readInAccounts();
-        //currentLibrary.readInMedia();
+      currentLibrary.readInAccounts();
+        currentLibrary.readInMedia();
         Scanner keyboard = new Scanner(System.in);
 
-  /*      boolean login = false;
+        boolean login = false;
         while (!login){
         System.out.println("Enter your username and password");
+        currentLibrary.displayAllAccounts();
         String username = keyboard.nextLine();
         String password = keyboard.nextLine();
       if (currentLibrary.verifyAccount(username,password)){
@@ -20,7 +21,7 @@ public class LibraryDriver {
                 System.out.println("Sorry, that was an invalid input. please try again.");
             }
         }
-        */
+
   while (true) {
       System.out.println("What would you like to do?");
       System.out.println("enter 1 to add media");
@@ -28,7 +29,7 @@ public class LibraryDriver {
       System.out.println("enter 3 to search by title");
       System.out.println("enter 4 to search by genre");
       System.out.println("enter 5 to display all books");
-      System.out.println("enter 6 to do the fix thingy");
+      System.out.println("enter 6 save to file");
       int input = keyboard.nextInt();
       if (input == 1) {
           //&& currentLibrary.getCurrentUser().isAdmin
@@ -67,19 +68,6 @@ public class LibraryDriver {
           currentLibrary.displayBooks();
       }
       if (input == 6) {
-          String name = "user";
-          String iD = "user";
-          LocalDate birthday = null;
-          int pn = 1;
-          String str1 = "street";
-          String cty = "city";
-          String st = "state";
-          int zp = 1;
-          String em = "email@email";
-          String pw = "pass";
-          int cn = 1;
-          boolean isAdmin = true;
-          currentLibrary.addAdminAccount(name, iD, LocalDate.now(), pn, str1, cty, st, zp, em, pw, cn, isAdmin);
           currentLibrary.saveAccountsToFile();
           currentLibrary.saveMediaToFile();
       }

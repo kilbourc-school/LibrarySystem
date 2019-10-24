@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
+    <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="added account and media file writing">
+      <change afterPath="$PROJECT_DIR$/account.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Books.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Students.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Teachers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryDriver.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +35,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -141,7 +143,28 @@
       <option name="project" value="LOCAL" />
       <updated>1571861338361</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added account and media file writing">
+      <created>1571863500994</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1571863500994</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added amount of copies edit&#10;added contructor to library&#10;commented out login requirements for testing purposes">
+      <created>1571864207154</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1571864207154</updated>
+    </task>
+    <task id="LOCAL-00010" summary="implemented the exported txt files. fixed admin borrow toStringList">
+      <created>1571935756709</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1571935756709</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +184,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="fixed variable calls for book" />
     <MESSAGE value="added commas for file writing" />
     <MESSAGE value="Merge branch 'Scott-Borrower-Expansion'&#10;&#10;# Conflicts:&#10;#&#9;src/Borrower.java" />
@@ -176,6 +200,8 @@
     <MESSAGE value="added file read in" />
     <MESSAGE value="added admin read in for account" />
     <MESSAGE value="added account and media file writing" />
-    <option name="LAST_COMMIT_MESSAGE" value="added account and media file writing" />
+    <MESSAGE value="added amount of copies edit&#10;added contructor to library&#10;commented out login requirements for testing purposes" />
+    <MESSAGE value="implemented the exported txt files. fixed admin borrow toStringList" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented the exported txt files. fixed admin borrow toStringList" />
   </component>
 </project>
