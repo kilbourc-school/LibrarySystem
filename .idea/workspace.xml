@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="added account and media file writing">
-      <change afterPath="$PROJECT_DIR$/account.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media.txt" afterDir="false" />
+    <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="Made javadoc comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBorrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminBorrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdultBorrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdultBorrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AudioBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AudioBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Borrower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Borrower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChildBorrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChildBorrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DVD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TeacherBorrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TeacherBorrow.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,6 +99,7 @@
       <workItem from="1571846330945" duration="2595000" />
       <workItem from="1571255820655" duration="5856000" />
       <workItem from="1571332870814" duration="2365000" />
+      <workItem from="1572294832080" duration="198000" />
     </task>
     <task id="LOCAL-00001" summary="made media type AudioBooks">
       <created>1571333916280</created>
@@ -202,6 +209,7 @@
     <MESSAGE value="added account and media file writing" />
     <MESSAGE value="added amount of copies edit&#10;added contructor to library&#10;commented out login requirements for testing purposes" />
     <MESSAGE value="implemented the exported txt files. fixed admin borrow toStringList" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented the exported txt files. fixed admin borrow toStringList" />
+    <MESSAGE value="Made javadoc comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made javadoc comments" />
   </component>
 </project>

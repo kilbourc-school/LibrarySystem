@@ -10,6 +10,9 @@ import java.time.Period;
 import java.util.*;
 
 public abstract class Borrower {
+  /*
+  Variables for class created
+   */
   private String name;
   private LocalDate birthday;
   private String ID;
