@@ -1,6 +1,6 @@
 
 
-public abstract class Media {
+public abstract class Media implements Medium {
     String title;
     String description;
     String author;
