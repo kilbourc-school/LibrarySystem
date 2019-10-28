@@ -13,19 +13,11 @@ public class Book extends Media implements Medium {
    * Constructor. 
    * Params: Strings ISBN, title, author, genre.
    */ 
-  public Book(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int iSBN){
-
-    this.title = title;
-    this.description = description;
-    this.author = author;
-    this.subject = subject;
-    this.copies = copies;
-    this.genre = genre;
-    this.releaseYear = releaseYear;
-    this.stars = stars;
-    this.comingSoon = comingSoon;
-    this.ISBN = iSBN;
+  public Book(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int ISBN){
+    super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon);
+    this.ISBN = ISBN;
   }
+
 
   public int getISBN() {
     return ISBN;
@@ -34,7 +26,7 @@ public class Book extends Media implements Medium {
 
 
   public String toStringList(){
-    return "book,"+ title + "," + description +  "," + author +  "," + subject +  "," + copies + "," + genre + "," + releaseYear + "," + stars + "," +comingSoon + "," + ISBN;
+    return "Book,"+ title + "," + description +  "," + author +  "," + subject +  "," + copies + "," + genre + "," + releaseYear + "," + stars + "," +comingSoon + "," + ISBN;
   }
 
   @Override

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
+    <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="added account and media file writing">
+      <change afterPath="$PROJECT_DIR$/account.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryDriver.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,24 +14,40 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="media-type-extender" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SIf1p1nwG8M2TxfF8PZHoMTgcX" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -41,6 +61,20 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="LibraryDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LibraryDriver" />
+      <module name="LibaryProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LibraryDriver" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -51,16 +85,86 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571255817947</updated>
-      <workItem from="1571255820655" duration="6446000" />
+      <workItem from="1571255820655" duration="7421000" />
+      <workItem from="1571671531948" duration="626000" />
+      <workItem from="1571689023869" duration="1480000" />
+      <workItem from="1571756884285" duration="1349000" />
+      <workItem from="1571780941412" duration="817000" />
+      <workItem from="1571846330945" duration="2595000" />
+      <workItem from="1571255820655" duration="5856000" />
+      <workItem from="1571332870814" duration="2365000" />
     </task>
-    <task id="LOCAL-00001" summary="fixed variable calls for book">
-      <created>1571332438842</created>
+    <task id="LOCAL-00001" summary="made media type AudioBooks">
+      <created>1571333916280</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1571332438842</updated>
+      <updated>1571333916280</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="made media type AudioBooks">
+      <created>1571333947774</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571333947774</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixed small issues in EBook and Audiobook merge conflict">
+      <created>1571857483210</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571857483210</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added in creates for other media types.">
+      <created>1571857856972</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571857856972</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added file read in">
+      <created>1571860162763</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1571860162763</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added admin read in for account">
+      <created>1571860719539</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571860719539</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added account and media file writing">
+      <created>1571861338360</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571861338361</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added account and media file writing">
+      <created>1571863500994</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1571863500994</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added amount of copies edit&#10;added contructor to library&#10;commented out login requirements for testing purposes">
+      <created>1571864207154</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1571864207154</updated>
+    </task>
+    <task id="LOCAL-00010" summary="implemented the exported txt files. fixed admin borrow toStringList">
+      <created>1571935756709</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1571935756709</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -71,14 +175,33 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="fixed variable calls for book" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed variable calls for book" />
+    <MESSAGE value="added commas for file writing" />
+    <MESSAGE value="Merge branch 'Scott-Borrower-Expansion'&#10;&#10;# Conflicts:&#10;#&#9;src/Borrower.java" />
+    <MESSAGE value="added a get borrow limit for search checking to borrower interfaces" />
+    <MESSAGE value="combined account database" />
+    <MESSAGE value="frontend driver file added&#10;implemented barebones login verification" />
+    <MESSAGE value="begun basic adding of media to main method" />
+    <MESSAGE value="made media type Audiobooks" />
+    <MESSAGE value="made media type AudioBooks" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/kilbourc-school/LibrarySystem&#10;&#10;# Conflicts:&#10;#&#9;src/Borrower.java&#10;#&#9;src/LibraryDriver.java" />
+    <MESSAGE value="fixed small issues in EBook and Audiobook merge conflict" />
+    <MESSAGE value="added in creates for other media types." />
+    <MESSAGE value="added file read in" />
+    <MESSAGE value="added admin read in for account" />
+    <MESSAGE value="added account and media file writing" />
+    <MESSAGE value="added amount of copies edit&#10;added contructor to library&#10;commented out login requirements for testing purposes" />
+    <MESSAGE value="implemented the exported txt files. fixed admin borrow toStringList" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented the exported txt files. fixed admin borrow toStringList" />
   </component>
 </project>

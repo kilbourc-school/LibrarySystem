@@ -1,5 +1,13 @@
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.nio.file.*;
+import java.util.StringJoiner;
 
 /*
  * 
@@ -10,14 +18,16 @@ import java.util.ArrayList;
  */
 
 public class Library{
-  
+  private Borrower currentUser;
   private ArrayList<Media> database = new ArrayList<>();//Holds all books.
   private ArrayList<Borrower> accounts = new ArrayList<>();     //Holds all teachers.
 
-  private ArrayList<TeacherBorrow> teachers = new ArrayList<>();     //Holds all teachers.
-  private ArrayList<ChildBorrow> children = new ArrayList<>();     //Holds all students.
-  private ArrayList<AdultBorrow> adults = new ArrayList<>();     //Holds all students.
-  
+  public Library(){
+  }
+
+  public Borrower getCurrentUser() {
+    return currentUser;
+  }
 
   //Prints out the contents of the Library.
   public void displayBooks(){
@@ -25,43 +35,96 @@ public class Library{
       System.out.println(database.get(i));
     }
   }
-  
-  //Prints out the teachers accounts
-  public void displayTeachers(){
-    for(int i = 0; i < teachers.size(); i++){
-      System.out.println(teachers.get(i).borrowLimit);
-    }
-  }
 
   //Prints out the teachers accounts
   public void displayTeachersAccounts(){
 
-    for(int i = 0; i < accounts.size(); i++){
-      if (accounts.get(i).getBorrowLimit() == 50)
-      System.out.println(accounts.get(i));
+    for (Borrower account : accounts) {
+      if (account.getBorrowLimit() == 50)
+        System.out.println(account);
     }
   }
 
-  
-  //Prints out the adult accounts
-  public void displayAdults(){
-    for(int i = 0; i < adults.size(); i++){
-      System.out.println(adults.get(i));
+  //Prints out the teachers accounts
+  public void displayAdultAccounts(){
+
+    for (Borrower account : accounts) {
+      if (account.getBorrowLimit() == 10)
+        System.out.println(account);
     }
   }
 
-  //Prints out the children accounts
-  public void displayChildren(){
-    for(int i = 0; i < children.size(); i++){
-      System.out.println(children.get(i));
+  //Prints out the teachers accounts
+  public void displayChildAccounts(){
+
+    for (Borrower account : accounts) {
+      if (account.getBorrowLimit() == 3)
+        System.out.println(account);
     }
   }
+  public void displayAllAccounts(){
+
+    for (Borrower account : accounts) {
+        System.out.println(account);
+    }
+  }
+
+
+  public boolean verifyAccount(String email, String pass){
+
+    for (Borrower account : accounts) {
+      if(account.getEmail().equals(email) && account.getPassword().equals(pass)) {
+        currentUser = account;
+        return true;
+      }
+    }
+    return false;
+  }
+
+  public String[] addMediaBase(){
+    Scanner keyboard = new Scanner(System.in);
+    String[] media = new String[9];
+    media[0] = keyboard.nextLine(); //title
+    media[1] = keyboard.nextLine();  //description
+    media[2] = keyboard.nextLine(); //author
+    media[3] = keyboard.nextLine(); //subject
+    media[4] = keyboard.nextLine(); //copies
+    media[5] = keyboard.nextLine(); //genre
+    media[6] = keyboard.nextLine(); //releaseYear
+    media[7] = keyboard.nextLine(); //stars
+    media[8] = keyboard.nextLine(); //comingSoon
+    return media;
+  }
+
   
   //Modifier method to add a books to database.
-  public void addBook(Book book){
-    database.add(book);
+  public void addBook(){
+    Scanner keyboard = new Scanner(System.in);
+    System.out.println("String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int ISBN");
+   String[] taco = addMediaBase();
+    int ISBN = keyboard.nextInt();
+    database.add(new Book(taco[0],taco[1],taco[2],taco[3],Integer.parseInt(taco[4]),taco[5],Integer.parseInt(taco[6]),Integer.parseInt(taco[7]),Boolean.parseBoolean(taco[8]),ISBN));
+  }
+  public void addAudioBook(){
+    Scanner keyboard = new Scanner(System.in);
+    System.out.println("String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int ISBN");
+    String[] taco = addMediaBase();
+    int ISBN = keyboard.nextInt();
+    database.add(new AudioBook(taco[0],taco[1],taco[2],taco[3],Integer.parseInt(taco[4]),taco[5],Integer.parseInt(taco[6]),Integer.parseInt(taco[7]),Boolean.parseBoolean(taco[8]),ISBN));
+
+  }
+  public void addDVD(){
+    String[] taco = addMediaBase();
+    database.add(new DVD(taco[0],taco[1],taco[2],taco[3],Integer.parseInt(taco[4]),taco[5],Integer.parseInt(taco[6]),Integer.parseInt(taco[7]),Boolean.parseBoolean(taco[8])));
   }
 
+  public void addEBook(){
+    Scanner keyboard = new Scanner(System.in);
+    System.out.println("String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, String narrator");
+    String[] taco = addMediaBase();
+    String narrator = keyboard.nextLine();
+    database.add(new EBook(taco[0],taco[1],taco[2],taco[3],Integer.parseInt(taco[4]),taco[5],Integer.parseInt(taco[6]),Integer.parseInt(taco[7]),Boolean.parseBoolean(taco[8]),narrator));
+  }
   
   /*
    * Method to determine if book in library is available.
@@ -76,22 +139,7 @@ public class Library{
         System.out.println(input + " is not available.");
     }
   }
-  
-  /* 
-   * Method to mark a book as borrowed if it is available.
-   * Params: Title of a book and the name of the user.
-   */ 
-  public void borrowBook(String Media, String borrower){
-    if(findMedia(Media) != null){
-      (findMedia(Media)).makeBorrowed();
-      String fileName = (findMedia(Media)).getTitle() + "Log.txt";
-      String content = "Borrowed by:" + borrower;
 
-      //add a way to check it out
-    }
-  }
-
-  
   /*
    * Method to display all books of a genre in the library.
    * Param: String with the genre of a book.
@@ -115,6 +163,110 @@ public class Library{
     }
   }
 
+  public void addCopyByTitle(String title, int copies){
+    for(int i = 0; i < database.size(); i++){
+      String bookTitle = (database.get(i)).getTitle();
+      if(title.equals(bookTitle)){
+        database.get(i).setCopies(copies);
+        break;
+      }
+      else{
+        System.out.println("not found");
+      }
+    }
+  }
+ public void readInMedia(){
+     File file = new File("media.txt");
+     Scanner scan;
+     try {
+       scan = new Scanner(file);
+       while (scan.hasNextLine()) {
+         String line = scan.nextLine();
+         String[] lineArray = line.split(",");
+       if(lineArray[0].equals("Book")){
+         database.add(new Book(lineArray[1],lineArray[2],lineArray[3],lineArray[4],Integer.parseInt(lineArray[5]),lineArray[6],Integer.parseInt(lineArray[7]),Integer.parseInt(lineArray[8]),Boolean.parseBoolean(lineArray[9]),Integer.parseInt(lineArray[10])));
+       }
+       else if(lineArray[0].equals("AudioBook")){
+         database.add(new AudioBook(lineArray[1],lineArray[2],lineArray[3],lineArray[4],Integer.parseInt(lineArray[5]),lineArray[6],Integer.parseInt(lineArray[7]),Integer.parseInt(lineArray[8]),Boolean.parseBoolean(lineArray[9]),Integer.parseInt(lineArray[10])));
+         }
+       else if(lineArray[0].equals("DVD")){
+         database.add(new DVD(lineArray[1],lineArray[2],lineArray[3],lineArray[4],Integer.parseInt(lineArray[5]),lineArray[6],Integer.parseInt(lineArray[7]),Integer.parseInt(lineArray[8]),Boolean.parseBoolean(lineArray[9])));
+         }
+       else if(lineArray[0].equals("EBook")){
+         database.add(new EBook(lineArray[1],lineArray[2],lineArray[3],lineArray[4],Integer.parseInt(lineArray[5]),lineArray[6],Integer.parseInt(lineArray[7]),Integer.parseInt(lineArray[8]),Boolean.parseBoolean(lineArray[9]),lineArray[10]));
+         }
+       }
+       } catch (FileNotFoundException e) {
+       e.printStackTrace();
+
+     }
+
+ }
+ public void readInAccounts() {
+   File file = new File("account.txt");
+   System.out.println("working 1");
+   Scanner scan;
+   try  {System.out.println("working 2");
+
+     scan = new Scanner(file);
+     while (scan.hasNextLine()) {
+       System.out.println("working 3");
+       String line = scan.nextLine();
+       String[] lineArray = line.split(",");
+       if (Integer.parseInt(lineArray[0]) == 3) {
+         accounts.add(new ChildBorrow(lineArray[1],lineArray[2], LocalDate.parse(lineArray[3]),Integer.parseInt(lineArray[4]),lineArray[5],lineArray[6],lineArray[7],Integer.parseInt(lineArray[8]),lineArray[9],lineArray[10],Integer.parseInt(lineArray[11]),Boolean.parseBoolean(lineArray[12])));
+       }
+       else if (Integer.parseInt(lineArray[0]) == 10) {
+         accounts.add(new AdultBorrow(lineArray[1],lineArray[2], LocalDate.parse(lineArray[3]),Integer.parseInt(lineArray[4]),lineArray[5],lineArray[6],lineArray[7],Integer.parseInt(lineArray[8]),lineArray[9],lineArray[10],Integer.parseInt(lineArray[11]),Boolean.parseBoolean(lineArray[12])));
+       }
+       else if (Integer.parseInt(lineArray[0]) == 50) {
+         accounts.add(new TeacherBorrow(lineArray[1],lineArray[2], LocalDate.parse(lineArray[3]),Integer.parseInt(lineArray[4]),lineArray[5],lineArray[6],lineArray[7],Integer.parseInt(lineArray[8]),lineArray[9],lineArray[10],Integer.parseInt(lineArray[11]),Boolean.parseBoolean(lineArray[12])));
+       }
+       else if (Boolean.parseBoolean(lineArray[12])) {
+         accounts.add(new AdminBorrow(lineArray[1],lineArray[2], LocalDate.parse(lineArray[3]),Integer.parseInt(lineArray[4]),lineArray[5],lineArray[6],lineArray[7],Integer.parseInt(lineArray[8]),lineArray[9],lineArray[10],Integer.parseInt(lineArray[11]),Boolean.parseBoolean(lineArray[12])));
+       }
+
+     }
+   } catch (FileNotFoundException e) {
+     e.printStackTrace();
+   }
+ }
+
+ public void addAdminAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin){
+   accounts.add(new AdminBorrow(name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin));
+ }
+  public void addTeacherAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin){
+    accounts.add(new TeacherBorrow(name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin));
+  }
+  public void addAdultAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin){
+    accounts.add(new AdultBorrow(name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin));
+  }
+  public void addChildAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin){
+    accounts.add(new ChildBorrow(name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin));
+  }
+  public void saveAccountsToFile(){
+      try{
+        PrintWriter writer = new PrintWriter("account.txt");
+        for (Borrower borrower : accounts){
+          writer.println(borrower.toStringList());
+        }
+        writer.close();
+      } catch (FileNotFoundException e){
+        System.out.println("File not found.");
+      }
+    }
+  public void saveMediaToFile(){
+    try{
+      PrintWriter writer = new PrintWriter("media.txt");
+      for (Media media : database){
+        writer.println(media.toStringList());
+      }
+      writer.close();
+    } catch (FileNotFoundException e){
+      System.out.println("File not found.");
+    }
+
+  }
   /*
 
   public void browseISBN(int ISBN){

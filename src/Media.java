@@ -1,6 +1,6 @@
 
 
-public class Media {
+public abstract class Media {
     String title;
     String description;
     String author;
@@ -10,6 +10,21 @@ public class Media {
     int releaseYear;
     int stars;
     boolean comingSoon;
+    public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon){
+        this.title = title;
+        this.description = description;
+        this.author = author;
+        this.subject = subject;
+        this.copies = copies;
+        this.genre = genre;
+        this.releaseYear = releaseYear;
+        this.stars = stars;
+        this.comingSoon = comingSoon;
+    }
+
+    public void setCopies(int copies) {
+        this.copies = copies;
+    }
 
     public String getTitle() {
         return title;
@@ -66,4 +81,6 @@ public class Media {
     public Boolean getAvailability(){
         return copies >= 1;
     }
+
+    public abstract String toStringList();
 }
