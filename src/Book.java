@@ -8,7 +8,7 @@
 public class Book extends Media implements Medium {
   int ISBN;
 
-
+  public Book(){}
   /* 
    * Constructor. 
    * Params: Strings ISBN, title, author, genre.
@@ -18,6 +18,9 @@ public class Book extends Media implements Medium {
     this.ISBN = ISBN;
   }
 
+  public void setISBN(int ISBN) {
+    this.ISBN = ISBN;
+  }
 
   public int getISBN() {
     return ISBN;

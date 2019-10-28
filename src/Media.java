@@ -10,6 +10,9 @@ public abstract class Media {
     int releaseYear;
     int stars;
     boolean comingSoon;
+
+    public Media(){}
+
     public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon){
         this.title = title;
         this.description = description;
@@ -20,6 +23,38 @@ public abstract class Media {
         this.releaseYear = releaseYear;
         this.stars = stars;
         this.comingSoon = comingSoon;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public void setReleaseYear(int releaseYear) {
+        this.releaseYear = releaseYear;
+    }
+
+    public void setStars(int stars) {
+        this.stars = stars;
+    }
+
+    public void setComingSoon(boolean comingSoon) {
+        this.comingSoon = comingSoon;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public void setCopies(int copies) {

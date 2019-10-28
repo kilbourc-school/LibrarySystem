@@ -81,22 +81,35 @@ public class Library{
     return false;
   }
 
-  public String[] addMediaBase(){
+
+  public void adminAddBook(){
     Scanner keyboard = new Scanner(System.in);
-    String[] media = new String[9];
-    media[0] = keyboard.nextLine(); //title
-    media[1] = keyboard.nextLine();  //description
-    media[2] = keyboard.nextLine(); //author
-    media[3] = keyboard.nextLine(); //subject
-    media[4] = keyboard.nextLine(); //copies
-    media[5] = keyboard.nextLine(); //genre
-    media[6] = keyboard.nextLine(); //releaseYear
-    media[7] = keyboard.nextLine(); //stars
-    media[8] = keyboard.nextLine(); //comingSoon
-    return media;
+
+    Book book = new Book(); //null Book
+
+    System.out.print("Title: ");
+    book.setTitle(keyboard.nextLine());
+    System.out.print("Author: ");
+    book.setAuthor(keyboard.nextLine());
+    System.out.print("Description: ");
+    book.setDescription(keyboard.nextLine());
+    System.out.print("Subject: ");
+    book.setSubject(keyboard.nextLine());
+    System.out.print("Genre: ");
+    book.setGenre(keyboard.nextLine());
+    System.out.print("Number of Copies: ");
+    book.setCopies(Integer.parseInt(keyboard.nextLine()));
+    System.out.print("Release Year: ");
+    book.setReleaseYear(Integer.parseInt(keyboard.nextLine()));
+    System.out.print("Rating: ");
+    book.setStars(Integer.parseInt(keyboard.nextLine()));
+    System.out.print("ISBN: ");
+    book.setISBN(Integer.parseInt(keyboard.nextLine()));
+
+    database.add(book);
   }
 
-  
+ /*
   //Modifier method to add a books to database.
   public void addBook(){
     Scanner keyboard = new Scanner(System.in);
@@ -105,6 +118,8 @@ public class Library{
     int ISBN = keyboard.nextInt();
     database.add(new Book(taco[0],taco[1],taco[2],taco[3],Integer.parseInt(taco[4]),taco[5],Integer.parseInt(taco[6]),Integer.parseInt(taco[7]),Boolean.parseBoolean(taco[8]),ISBN));
   }
+  */
+
   public void addAudioBook(){
     Scanner keyboard = new Scanner(System.in);
     System.out.println("String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int ISBN");
