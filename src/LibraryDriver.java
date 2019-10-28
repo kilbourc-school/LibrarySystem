@@ -31,6 +31,7 @@ public class LibraryDriver {
       System.out.println("enter 5 to display all books");
       System.out.println("enter 6 save to file");
       int input = keyboard.nextInt();
+      String fix = keyboard.nextLine();
       if (input == 1) {
           //&& currentLibrary.getCurrentUser().isAdmin
           System.out.println("enter 1 to add a book");

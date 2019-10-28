@@ -108,8 +108,7 @@ public abstract class Borrower {
 
   @Override
   public String toString() {
-    return
-            "name=" + name + " ID=" + ID;
+    return "Name= " + name + " Email= " + getEmail() + "ID= " + getID();
   }
 
   // check age vs current time for child age
