@@ -1,4 +1,6 @@
-public abstract class Media implements Medium {
+
+
+public abstract class Media {
     String title;
     String description;
     String author;
@@ -8,8 +10,10 @@ public abstract class Media implements Medium {
     int releaseYear;
     int stars;
     boolean comingSoon;
-
-    public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon) {
+    /*
+    Setters
+     */
+    public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon){
         this.title = title;
         this.description = description;
         this.author = author;
@@ -20,7 +24,15 @@ public abstract class Media implements Medium {
         this.stars = stars;
         this.comingSoon = comingSoon;
     }
-
+    /*
+    Setters
+     */
+    public void setCopies(int copies) {
+        this.copies = copies;
+    }
+    /*
+    Getters
+     */
     public String getTitle() {
         return title;
     }
@@ -41,10 +53,6 @@ public abstract class Media implements Medium {
         return copies;
     }
 
-    public void setCopies(int copies) {
-        this.copies = copies;
-    }
-
     public String getGenre() {
         return genre;
     }
@@ -60,25 +68,30 @@ public abstract class Media implements Medium {
     public boolean isComingSoon() {
         return comingSoon;
     }
-
-    //Modifier method to mark book as unavailable.
-    public void makeBorrowed() {
-        if (getAvailability()) {
-            copies--;
-
-        } else {
+    /*
+    /Modifier method to mark book as unavailable.
+     */
+    public void makeBorrowed(){
+        if (copies < 1){
             System.out.println("No copies for you to checkout.");
+        }
+        else{
+            copies--;
         }
     }
 
-    //Modifier method to mark a media as availible.
-    public void makeReturned() {
+    /*
+    /Modifier method to mark a media as availible.
+     */
+    public void makeReturned(){
         copies++;
     }
 
 
-    //Accessor for title.
-    public Boolean getAvailability() {
+    /*
+    /Accessor for title.
+     */
+    public Boolean getAvailability(){
         return copies >= 1;
     }
 
