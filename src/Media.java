@@ -41,12 +41,26 @@ public abstract class Media {
         this.genre = genre;
     }
 
-    public void setReleaseYear(int releaseYear) {
-        this.releaseYear = releaseYear;
+    public void setReleaseYear(String releaseYear) {
+        int x= 0;
+        try{
+            x= Integer.parseInt(releaseYear);
+        }
+        catch(Exception e){
+            System.out.println("Input not of type int, year set to 0");
+        }
+        this.releaseYear = x;
     }
 
-    public void setStars(int stars) {
-        this.stars = stars;
+    public void setStars(String stars) {
+        int x= 0;
+        try{
+            x= Integer.parseInt(stars);
+        }
+        catch(Exception e){
+            System.out.println("Input not of type int, stars set to 0");
+        }
+        this.stars = x;
     }
 
     public void setComingSoon(boolean comingSoon) {
@@ -57,8 +71,15 @@ public abstract class Media {
         this.title = title;
     }
 
-    public void setCopies(int copies) {
-        this.copies = copies;
+    public void setCopies(String copies) {
+        int x= 1;
+        try{
+            x= Integer.parseInt(copies);
+        }
+        catch(Exception e){
+            System.out.println("Input not of type int, copies set to 1");
+        }
+        this.copies = x;
     }
 
     public String getTitle() {

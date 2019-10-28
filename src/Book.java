@@ -18,8 +18,15 @@ public class Book extends Media implements Medium {
     this.ISBN = ISBN;
   }
 
-  public void setISBN(int ISBN) {
-    this.ISBN = ISBN;
+  public void setISBN(String ISBN) {
+    int x= 0;
+    try{
+      x= Integer.parseInt(ISBN);
+    }
+    catch(Exception e){
+      System.out.println("Input not of type int, ISBN set to 0");
+    }
+    this.ISBN = x;
   }
 
   public int getISBN() {

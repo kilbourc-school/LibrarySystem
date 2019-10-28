@@ -98,13 +98,13 @@ public class Library{
     System.out.print("Genre: ");
     book.setGenre(keyboard.nextLine());
     System.out.print("Number of Copies: ");
-    book.setCopies(Integer.parseInt(keyboard.nextLine()));
+    book.setCopies(keyboard.nextLine());
     System.out.print("Release Year: ");
-    book.setReleaseYear(Integer.parseInt(keyboard.nextLine()));
+    book.setReleaseYear(keyboard.nextLine());
     System.out.print("Rating: ");
-    book.setStars(Integer.parseInt(keyboard.nextLine()));
+    book.setStars(keyboard.nextLine());
     System.out.print("ISBN: ");
-    book.setISBN(Integer.parseInt(keyboard.nextLine()));
+    book.setISBN(keyboard.nextLine());
 
     database.add(book);
   }
@@ -119,7 +119,7 @@ public class Library{
     database.add(new Book(taco[0],taco[1],taco[2],taco[3],Integer.parseInt(taco[4]),taco[5],Integer.parseInt(taco[6]),Integer.parseInt(taco[7]),Boolean.parseBoolean(taco[8]),ISBN));
   }
   */
-
+/*
   public void addAudioBook(){
     Scanner keyboard = new Scanner(System.in);
     System.out.println("String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int ISBN");
@@ -178,7 +178,7 @@ public class Library{
     }
   }
 
-  public void addCopyByTitle(String title, int copies){
+  public void addCopyByTitle(String title, String copies){
     for(int i = 0; i < database.size(); i++){
       String bookTitle = (database.get(i)).getTitle();
       if(title.equals(bookTitle)){
