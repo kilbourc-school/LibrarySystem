@@ -10,9 +10,6 @@ public abstract class Media {
     int releaseYear;
     int stars;
     boolean comingSoon;
-    /*
-    Setters
-     */
     public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon){
         this.title = title;
         this.description = description;
@@ -25,14 +22,71 @@ public abstract class Media {
         this.comingSoon = comingSoon;
     }
     /*
-    Setters
-     */
+           Setters
+            */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public void setReleaseYear(String releaseYear) {
+        int x= 0;
+        try{
+            x= Integer.parseInt(releaseYear);
+        }
+        catch(Exception e){
+            System.out.println("Input not of type int, year set to 0");
+        }
+        this.releaseYear = x;
+    }
+
+    public void setStars(String stars) {
+        int x= 0;
+        try{
+            x= Integer.parseInt(stars);
+        }
+        catch(Exception e){
+            System.out.println("Input not of type int, stars set to 0");
+        }
+        this.stars = x;
+    }
+
+    public void setComingSoon(boolean comingSoon) {
+        this.comingSoon = comingSoon;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setCopies(String copies) {
+        int x= 1;
+        try{
+            x= Integer.parseInt(copies);
+        }
+        catch(Exception e){
+            System.out.println("Input not of type int, copies set to 1");
+        }
+        this.copies = x;
+    }
+
     public void setCopies(int copies) {
         this.copies = copies;
     }
     /*
-    Getters
-     */
+       Getters
+        */
     public String getTitle() {
         return title;
     }
@@ -68,9 +122,7 @@ public abstract class Media {
     public boolean isComingSoon() {
         return comingSoon;
     }
-    /*
-    /Modifier method to mark book as unavailable.
-     */
+    //Modifier method to mark book as unavailable.
     public void makeBorrowed(){
         if (copies < 1){
             System.out.println("No copies for you to checkout.");
@@ -80,17 +132,13 @@ public abstract class Media {
         }
     }
 
-    /*
-    /Modifier method to mark a media as availible.
-     */
+    //Modifier method to mark a media as availible.
     public void makeReturned(){
         copies++;
     }
 
 
-    /*
-    /Accessor for title.
-     */
+    //Accessor for title.
     public Boolean getAvailability(){
         return copies >= 1;
     }

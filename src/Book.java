@@ -7,6 +7,8 @@
 
 public class Book extends Media implements Medium {
   int ISBN;
+
+
   /* 
    * Constructor. 
    * Params: Strings ISBN, title, author, genre.
@@ -16,23 +18,29 @@ public class Book extends Media implements Medium {
     this.ISBN = ISBN;
   }
 
-  /*
-   returns ISBN value
-   */
+    public void setISBN(String ISBN) {
+        int x= 0;
+        try{
+            x= Integer.parseInt(ISBN);
+        }
+        catch(Exception e){
+            System.out.println("Input not of type int, ISBN set to 0");
+        }
+        this.ISBN = x;
+    }
+
   public int getISBN() {
     return ISBN;
   }
-  /*
-  converts objects into strings
-   */
+    /*
+     converts objects into strings
+      */
   public String toStringList(){
     return "Book,"+ title + "," + description +  "," + author +  "," + subject +  "," + copies + "," + genre + "," + releaseYear + "," + stars + "," +comingSoon + "," + ISBN;
   }
 
   @Override
-  /*
-  converts objects
-   */
+  //Converts object to String.
   public String toString(){
     return title + " by: " + author + " genre: " + genre + " ISBN: " + ISBN + " copies: " + copies;
   }
