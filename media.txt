@@ -1,2 +1,0 @@
-Book,title,description,author,subject,5,genre,1019,5,true,10
-Book,title,description,author,subject,5,genre,1988,5,true,1988

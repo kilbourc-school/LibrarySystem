@@ -1,11 +1,13 @@
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class LibraryDriver {
     public static void main(String[] args) {
         Library currentLibrary = new Library();
-        currentLibrary.readInAccounts();
-        currentLibrary.readInMedia();
         Scanner keyboard = new Scanner(System.in);
+        currentLibrary.readInMedia();
+        currentLibrary.readInAccounts();
+
 
         boolean login = false;
         while (!login) {
@@ -28,6 +30,7 @@ public class LibraryDriver {
             System.out.println("enter 4 to search by genre");
             System.out.println("enter 5 to display all books");
             System.out.println("enter 6 save to file");
+            System.out.println("enter 7 to add a account");
             int input = keyboard.nextInt();
             String fix = keyboard.nextLine();
             if (input == 1) {
@@ -69,6 +72,9 @@ public class LibraryDriver {
             if (input == 6) {
                 currentLibrary.saveAccountsToFile();
                 currentLibrary.saveMediaToFile();
+            }
+            if (input == 7) {
+                currentLibrary.addAdminAccount("name","id", LocalDate.now(),803511,"street","city","state",29045,"admin@admin","admin",1199,true);
             }
         }
     }

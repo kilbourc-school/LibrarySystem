@@ -178,7 +178,19 @@ public class Library {
                 } else if (Integer.parseInt(lineArray[0]) == 50) {
                     db.getAccountsDatabase().add(new TeacherBorrow(lineArray[1], lineArray[2], LocalDate.parse(lineArray[3]), Integer.parseInt(lineArray[4]), lineArray[5], lineArray[6], lineArray[7], Integer.parseInt(lineArray[8]), lineArray[9], lineArray[10], Integer.parseInt(lineArray[11]), Boolean.parseBoolean(lineArray[12])));
                 } else if (Boolean.parseBoolean(lineArray[12])) {
-                    db.getAccountsDatabase().add(new AdminBorrow(lineArray[1], lineArray[2], LocalDate.parse(lineArray[3]), Integer.parseInt(lineArray[4]), lineArray[5], lineArray[6], lineArray[7], Integer.parseInt(lineArray[8]), lineArray[9], lineArray[10], Integer.parseInt(lineArray[11]), Boolean.parseBoolean(lineArray[12])));
+                    db.getAccountsDatabase().add(
+                            new AdminBorrow(lineArray[1]
+                                    , lineArray[2],
+                                    LocalDate.parse(lineArray[3]),
+                                    Integer.parseInt(lineArray[4]),
+                                    lineArray[5],
+                                    lineArray[6],
+                                    lineArray[7],
+                                    Integer.parseInt(lineArray[8]),
+                                    lineArray[9],
+                                    lineArray[10],
+                                    Integer.parseInt(lineArray[11]),
+                                    Boolean.parseBoolean(lineArray[12])));
                 }
 
             }

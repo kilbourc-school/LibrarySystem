@@ -26,6 +26,6 @@ public class ChildBorrow extends Borrower implements BorrowBehavior{
     Converts objects to strings
     */
     public String toStringList(){
-        return borrowLimit+getName()+","+getID()+","+getBirthday()+","+getPassword()+","+getStreet1()+","+getCity()+","+getState()+","+getZip()+","+getEmail()+","+getPassword()+","+getCardNum()+","+isAdmin;
+        return borrowLimit+getName()+","+getID()+","+getBirthday()+","+getPhoneNum()+","+getStreet1()+","+getCity()+","+getState()+","+getZip()+","+getEmail()+","+getPassword()+","+getCardNum()+","+isAdmin;
     }
 }
