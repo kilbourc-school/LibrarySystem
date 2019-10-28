@@ -41,7 +41,7 @@ public class LibraryDriver {
                 System.out.println("enter 3 to add a ebook");
                 input = keyboard.nextInt();
                 if (input == 1) {
-                    currentLibrary.addBook();
+                    currentLibrary.adminAddBook();
                 }
                 if (input == 2) {
                     currentLibrary.addAudioBook();
@@ -74,7 +74,7 @@ public class LibraryDriver {
                 currentLibrary.saveMediaToFile();
             }
             if (input == 7) {
-                currentLibrary.addAdminAccount("name","id", LocalDate.now(),803511,"street","city","state",29045,"admin@admin","admin",1199,true);
+                currentLibrary.addAdminAccount("name", "id", LocalDate.now(), 803511, "street", "city", "state", 29045, "admin@admin", "admin", 1199, true);
             }
         }
     }

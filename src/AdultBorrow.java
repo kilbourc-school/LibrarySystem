@@ -4,7 +4,8 @@ public class AdultBorrow extends Borrower implements BorrowBehavior {
     /*
     Amount set for how many books an AdultBorrower can checkout
      */
-    int borrowLimit =  10;
+    int borrowLimit = 10;
+
     /*
      Constructor for Adult Borrow
      Parameters:name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin
@@ -12,10 +13,11 @@ public class AdultBorrow extends Borrower implements BorrowBehavior {
     */
     public AdultBorrow(String name, String iD, LocalDate birthday, int pn,
                        String str1, String cty, String st, int zp,
-                       String em, String pw, int cn, boolean isAdmin){
+                       String em, String pw, int cn, boolean isAdmin) {
         super(name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin);
 
     }
+
     /*
     returns borrowLimit value
      */
@@ -26,7 +28,7 @@ public class AdultBorrow extends Borrower implements BorrowBehavior {
     /*
     Converts objects into strings
      */
-    public String toStringList(){
-        return borrowLimit+getName()+","+getID()+","+getBirthday()+","+getPassword()+","+getStreet1()+","+getCity()+","+getState()+","+getZip()+","+getEmail()+","+getPassword()+","+getCardNum()+","+isAdmin;
+    public String toStringList() {
+        return borrowLimit + getName() + "," + getID() + "," + getBirthday() + "," + getPassword() + "," + getStreet1() + "," + getCity() + "," + getState() + "," + getZip() + "," + getEmail() + "," + getPassword() + "," + getCardNum() + "," + isAdmin;
     }
 }
