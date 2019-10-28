@@ -63,11 +63,12 @@ public abstract class Media {
     }
     //Modifier method to mark book as unavailable.
     public void makeBorrowed(){
-        if (copies < 1){
-            System.out.println("No copies for you to checkout.");
+        if (getAvailability()){
+            copies--;
+
         }
         else{
-            copies--;
+            System.out.println("No copies for you to checkout.");
         }
     }
 
