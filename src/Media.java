@@ -1,5 +1,3 @@
-
-
 public abstract class Media implements Medium {
     String title;
     String description;
@@ -10,7 +8,8 @@ public abstract class Media implements Medium {
     int releaseYear;
     int stars;
     boolean comingSoon;
-    public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon){
+
+    public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon) {
         this.title = title;
         this.description = description;
         this.author = author;
@@ -20,10 +19,6 @@ public abstract class Media implements Medium {
         this.releaseYear = releaseYear;
         this.stars = stars;
         this.comingSoon = comingSoon;
-    }
-
-    public void setCopies(int copies) {
-        this.copies = copies;
     }
 
     public String getTitle() {
@@ -46,6 +41,10 @@ public abstract class Media implements Medium {
         return copies;
     }
 
+    public void setCopies(int copies) {
+        this.copies = copies;
+    }
+
     public String getGenre() {
         return genre;
     }
@@ -61,25 +60,25 @@ public abstract class Media implements Medium {
     public boolean isComingSoon() {
         return comingSoon;
     }
+
     //Modifier method to mark book as unavailable.
-    public void makeBorrowed(){
-        if (getAvailability()){
+    public void makeBorrowed() {
+        if (getAvailability()) {
             copies--;
 
-        }
-        else{
+        } else {
             System.out.println("No copies for you to checkout.");
         }
     }
 
     //Modifier method to mark a media as availible.
-    public void makeReturned(){
+    public void makeReturned() {
         copies++;
     }
 
 
     //Accessor for title.
-    public Boolean getAvailability(){
+    public Boolean getAvailability() {
         return copies >= 1;
     }
 
