@@ -142,14 +142,14 @@ public class Library {
 
         database.add(dvd);
     }
-    public void addDVD() {
+    public void addEBook() {
         Scanner keyboard = new Scanner(System.in);
-        DVD dvd = new Library().adminAddMedia(); //null Book
+        EBook ebook = new Library().adminAddMedia(); //null Book
 
         System.out.print("ISBN: ");
-        book.setISBN(keyboard.nextLine());
+        ebook.setISBN(keyboard.nextLine());
 
-        database.add(book);
+        database.add(ebook);
     }
 
     /*
