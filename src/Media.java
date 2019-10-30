@@ -1,4 +1,4 @@
-public class Media {
+public abstract class Media {
     String title;
     String description;
     String author;
@@ -8,9 +8,7 @@ public class Media {
     int releaseYear;
     int stars;
     boolean comingSoon;
-
-    public Media(){};
-
+public Media(){};
     public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon) {
         this.title = title;
         this.description = description;
@@ -26,7 +24,7 @@ public class Media {
     /*
        Getters
         */
-    public  String getTitle() {
+    public String getTitle() {
         return title;
     }
 
@@ -34,7 +32,7 @@ public class Media {
         this.title = title;
     }
 
-    public  String getDescription() {
+    public String getDescription() {
         return description;
     }
 

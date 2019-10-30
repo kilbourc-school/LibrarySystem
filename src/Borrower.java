@@ -47,7 +47,9 @@ public abstract class Borrower {
         this.isAdmin = isAdmin;
 
     }
-
+    /*
+      Getters
+     */
     public int getPhoneNum() {
         return phoneNum;
     }
@@ -167,13 +169,19 @@ public abstract class Borrower {
         return (Period.between(birthday, today).getYears() > 13);
 
     }
-
+    /*
+     checks age year for child age
+     */
     public int checkAgeYear() {
         LocalDate today = LocalDate.now();
         return Period.between(birthday, today).getYears();
     }
-
+    /*
+     getBorrowedlimit  method from medium interface
+     */
     public abstract int getBorrowLimit();
-
+     /*
+     toString method from medium interface
+      */
     public abstract String toStringList();
 }
