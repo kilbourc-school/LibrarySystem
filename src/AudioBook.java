@@ -27,28 +27,15 @@ public class AudioBook extends Media implements Medium {
         this.stars = media.getStars();
         this.comingSoon = media.isComingSoon();
     }
-    public void setISBN(String ISBN) {
-        int x = 0;
-        try {
-            x = Integer.parseInt(ISBN);
-        } catch (Exception e) {
-            System.out.println("Input not of type int, ISBN set to 0");
-        }
-        this.ISBN = x;
-    }
-
-    /*
-    Returns ISBN Value
-     */
-    public int getISBN() {
-        return ISBN;
-    }
 
     /*
     Converts objects to strings
     */
     public String toStringList() {
         return "AudioBook," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + narrator;
+    }
+    public void setNarrator(String nar){
+        this.narrator = nar;
     }
     public String getNarrator() {
         return narrator;

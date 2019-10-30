@@ -6,21 +6,36 @@ public class EBook extends Media implements Medium {
      * Params: String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, String narrator
        super: title, description, author, subject, copies, genre, releaseYear, stars, comingSoon (calls from borrower)
      */
-    public EBook(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, String narrator) {
+    public EBook(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int ISBN) {
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon);
-        this.narrator = narrator;
+        this.ISBN = ISBN;
     }
 
     /*
     Returns narrator string
      */
+    public void setISBN(String ISBN) {
+        int x = 0;
+        try {
+            x = Integer.parseInt(ISBN);
+        } catch (Exception e) {
+            System.out.println("Input not of type int, ISBN set to 0");
+        }
+        this.ISBN = x;
+    }
 
+    /*
+    Returns ISBN Value
+     */
+    public int getISBN() {
+        return ISBN;
+    }
 
     /*
     Converts objects into strings
      */
     public String toStringList() {
-        return "EBook," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + narrator;
+        return "EBook," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + ISBN;
     }
 
     @Override
@@ -28,7 +43,7 @@ public class EBook extends Media implements Medium {
         /Converts object to String.
          */
     public String toString() {
-        return title + " by: " + author + " genre: " + genre + " narrator: " + narrator + " copies: " + copies;
+        return title + " by: " + author + " genre: " + genre + " ISBN: " + ISBN + " copies: " + copies;
     }
 
 
