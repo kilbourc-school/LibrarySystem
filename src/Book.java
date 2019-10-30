@@ -10,11 +10,15 @@ public class Book extends Media implements Medium {
 
 
     /*
-     * Constructor.
-     * Params: Strings ISBN, title, author, genre.
-     */
+      * Constructor.
+      * Params: String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int iSBN){
+     title, description, author, subject, copies, genre, releaseYear, stars, comingSoon
+      */
     public Book(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int ISBN) {
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon);
+        /*
+        sets isbn
+         */
         this.ISBN = ISBN;
     }
 
@@ -44,7 +48,9 @@ public class Book extends Media implements Medium {
     }
 
     @Override
-    //Converts object to String.
+    /*
+    /Converts object to String.
+     */
     public String toString() {
         return title + " by: " + author + " genre: " + genre + " ISBN: " + ISBN + " copies: " + copies;
     }
