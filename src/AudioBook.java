@@ -12,7 +12,7 @@ public class AudioBook extends Media implements Medium {
      * Params: String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int iSBN){
     title, description, author, subject, copies, genre, releaseYear, stars, comingSoon
      */
-    public AudioBook(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int iSBN) {
+    public AudioBook(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, String narrator) {
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon);
         this.narrator = narrator;
     }

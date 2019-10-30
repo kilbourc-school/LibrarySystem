@@ -10,6 +10,17 @@ public class EBook extends Media implements Medium {
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon);
         this.ISBN = ISBN;
     }
+    public EBook(Media media){
+        this.title = media.getTitle();
+        this.description = media.getDescription();
+        this.author = media.getAuthor();
+        this.subject = media.getSubject();
+        this.copies = media.getCopies();
+        this.genre = media.getGenre();
+        this.releaseYear = media.getReleaseYear();
+        this.stars = media.getStars();
+        this.comingSoon = media.isComingSoon();
+    }
 
     /*
     Returns narrator string

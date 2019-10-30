@@ -132,19 +132,23 @@ public class Library {
         AudioBook audioBook = new AudioBook(media);
 
         System.out.print("ISBN: ");
-        audioBook.setISBN(keyboard.nextLine());
+        audioBook.setNarrator(keyboard.nextLine());
 
         database.add(audioBook);
     }
     public void addDVD() {
         Scanner keyboard = new Scanner(System.in);
-        DVD dvd = new Library().adminAddMedia(); //null Book
+        Media media = new Media();
+        Library.adminAddMedia(media);
+        DVD dvd = new DVD(media);//null Book
 
         database.add(dvd);
     }
     public void addEBook() {
         Scanner keyboard = new Scanner(System.in);
-        EBook ebook = new Library().adminAddMedia(); //null Book
+        Media media = new Media();
+        Library.adminAddMedia(media);
+        EBook ebook = new EBook(media); //null Book
 
         System.out.print("ISBN: ");
         ebook.setISBN(keyboard.nextLine());
@@ -212,11 +216,11 @@ public class Library {
                 if (lineArray[0].equals("Book")) {
                     database.add(new Book(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), Integer.parseInt(lineArray[10])));
                 } else if (lineArray[0].equals("AudioBook")) {
-                    database.add(new AudioBook(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), Integer.parseInt(lineArray[10])));
+                    database.add(new AudioBook(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), lineArray[10]));
                 } else if (lineArray[0].equals("DVD")) {
                     database.add(new DVD(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9])));
                 } else if (lineArray[0].equals("EBook")) {
-                    database.add(new EBook(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), lineArray[10]));
+                    database.add(new EBook(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), Integer.parseInt(lineArray[10])));
                 }
             }
         } catch (FileNotFoundException e) {
