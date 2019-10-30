@@ -21,7 +21,7 @@ public class EBook extends Media implements Medium {
     /*
     Converts objects into strings
      */
-    public String toStringList() {
+    public void toStringList() {
         return "EBook," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + narrator;
     }
 

@@ -92,33 +92,56 @@ public class Library {
         media[8] = keyboard.nextLine(); //comingSoon
         return media;
     }
-
-    public void adminAddBook() {
+    public Media adminAddMedia(){
         Scanner keyboard = new Scanner(System.in);
-
-        Book book = new Book(); //null Book
+        Media media = new Media(); //null Book
 
         System.out.print("Title: ");
-        book.setTitle(keyboard.nextLine());
+        media.setTitle(keyboard.nextLine());
         System.out.print("Author: ");
-        book.setAuthor(keyboard.nextLine());
+        media.setAuthor(keyboard.nextLine());
         System.out.print("Description: ");
-        book.setDescription(keyboard.nextLine());
+        media.setDescription(keyboard.nextLine());
         System.out.print("Subject: ");
-        book.setSubject(keyboard.nextLine());
+        media.setSubject(keyboard.nextLine());
         System.out.print("Genre: ");
-        book.setGenre(keyboard.nextLine());
+        media.setGenre(keyboard.nextLine());
         System.out.print("Number of Copies: ");
-        book.setCopies(keyboard.nextLine());
+        media.setCopies(keyboard.nextLine());
         System.out.print("Release Year: ");
-        book.setReleaseYear(keyboard.nextLine());
+        media.setReleaseYear(keyboard.nextLine());
         System.out.print("Rating: ");
-        book.setStars(keyboard.nextLine());
+        media.setStars(keyboard.nextLine());
+        return media;
+    }
+    public void adminAddBook() {
+        Scanner keyboard = new Scanner(System.in);
+        Book book = new Book(Library.adminAddMedia());
+
         System.out.print("ISBN: ");
         book.setISBN(keyboard.nextLine());
 
         database.add(book);
     }
+ /*   public void adminAddAudioBook() {
+        Scanner keyboard = new Scanner(System.in);
+        Book book = new Library().adminAddMedia(); //null Book
+
+        System.out.print("ISBN: ");
+        book.setISBN(keyboard.nextLine());
+
+        database.add(book);
+    }
+    public void adminAddDVD() {
+        Scanner keyboard = new Scanner(System.in);
+        AudioBook book = new Library().adminAddMedia(); //null Book
+
+        System.out.print("ISBN: ");
+        book.setISBN(keyboard.nextLine());
+
+        database.add(book);
+    }
+*/
 
 
     //Modifier method to add a books to database.

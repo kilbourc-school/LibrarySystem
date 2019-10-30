@@ -16,6 +16,15 @@ public class AudioBook extends Media implements Medium {
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon);
         this.ISBN = iSBN;
     }
+    public void setISBN(String ISBN) {
+        int x = 0;
+        try {
+            x = Integer.parseInt(ISBN);
+        } catch (Exception e) {
+            System.out.println("Input not of type int, ISBN set to 0");
+        }
+        this.ISBN = x;
+    }
 
     /*
     Returns ISBN Value
@@ -27,7 +36,7 @@ public class AudioBook extends Media implements Medium {
     /*
     Converts objects to strings
     */
-    public String toStringList() {
+    public void toStringList() {
         return "AudioBook," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + ISBN;
     }
 

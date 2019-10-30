@@ -21,7 +21,7 @@ public class DVD extends Media implements Medium {
     /*
      converts objects into strings
      */
-    public String toStringList() {
+    public void toStringList() {
         return "DVD," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + ",";
     }
 

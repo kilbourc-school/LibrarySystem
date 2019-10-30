@@ -1,4 +1,4 @@
-public abstract class Media {
+public class Media {
     String title;
     String description;
     String author;
@@ -8,7 +8,9 @@ public abstract class Media {
     int releaseYear;
     int stars;
     boolean comingSoon;
-public Media(){};
+
+    public Media(){};
+
     public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon) {
         this.title = title;
         this.description = description;
@@ -24,7 +26,7 @@ public Media(){};
     /*
        Getters
         */
-    public String getTitle() {
+    public  String getTitle() {
         return title;
     }
 
@@ -32,7 +34,7 @@ public Media(){};
         this.title = title;
     }
 
-    public String getDescription() {
+    public  String getDescription() {
         return description;
     }
 
@@ -141,5 +143,5 @@ public Media(){};
         return copies >= 1;
     }
 
-    public abstract String toStringList();
+    public String toStringList(){ return " ";}
 }
