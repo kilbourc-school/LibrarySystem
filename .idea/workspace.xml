@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Borrower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Borrower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Medium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Medium.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="LibrarySystem" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -25,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Scott-Update-addMedia" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,6 +70,7 @@
         <item itemvalue="Application.LibraryDriver" />
         <item itemvalue="Application.LibraryDriver" />
         <item itemvalue="Application.LibraryDriver" />
+        <item itemvalue="Application.LibraryDriver" />
       </list>
     </recent_temporary>
   </component>
@@ -96,6 +93,7 @@
       <workItem from="1571255820655" duration="5856000" />
       <workItem from="1571332870814" duration="2365000" />
       <workItem from="1572292202646" duration="1417000" />
+      <workItem from="1572309243769" duration="654000" />
     </task>
     <task id="LOCAL-00001" summary="made media type AudioBooks">
       <created>1571333916280</created>
@@ -181,28 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572296174358</updated>
     </task>
-    <task id="LOCAL-00013" summary="made comments for database">
-      <created>1572409052100</created>
+    <task id="LOCAL-00013" summary="encapsulated database">
+      <created>1572296523326</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1572409052100</updated>
+      <updated>1572296523326</updated>
     </task>
-    <task id="LOCAL-00014" summary="made comments for book &amp; borrower">
-      <created>1572409301774</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1572409301774</updated>
-    </task>
-    <task id="LOCAL-00015" summary="made comments for child, teacher, adult, and adminborrow">
-      <created>1572409524987</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1572409524987</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,9 +225,6 @@
     <MESSAGE value="added amount of copies edit&#10;added contructor to library&#10;commented out login requirements for testing purposes" />
     <MESSAGE value="implemented the exported txt files. fixed admin borrow toStringList" />
     <MESSAGE value="encapsulated database" />
-    <MESSAGE value="made comments for database" />
-    <MESSAGE value="made comments for book &amp; borrower" />
-    <MESSAGE value="made comments for child, teacher, adult, and adminborrow" />
-    <option name="LAST_COMMIT_MESSAGE" value="made comments for child, teacher, adult, and adminborrow" />
+    <option name="LAST_COMMIT_MESSAGE" value="encapsulated database" />
   </component>
 </project>
