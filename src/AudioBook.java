@@ -36,7 +36,7 @@ public class AudioBook extends Media implements Medium {
     /*
     Converts objects to strings
     */
-    public void toStringList() {
+    public String toStringList() {
         return "AudioBook," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + ISBN;
     }
 

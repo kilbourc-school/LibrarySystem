@@ -16,16 +16,16 @@ public class Book extends Media implements Medium {
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon);
         this.ISBN = ISBN;
     }
-    public Book(Media){
-        this.title = Media.getTitle();
-        this.description = Media.getDescription();
-        this.author = Media.getAuthor();
-        this.subject = Media.getSubject();
-        this.copies = Media.getCopies();
-        this.genre = Media.getGenre();
-        this.releaseYear = Media.getReleaseYear();
-        this.stars = Media.getStars();
-        this.comingSoon = Media.isComingSoon();
+    public Book(Media media){
+        this.title = media.getTitle();
+        this.description = media.getDescription();
+        this.author = media.getAuthor();
+        this.subject = media.getSubject();
+        this.copies = media.getCopies();
+        this.genre = media.getGenre();
+        this.releaseYear = media.getReleaseYear();
+        this.stars = media.getStars();
+        this.comingSoon = media.isComingSoon();
     }
 
     public Book() {

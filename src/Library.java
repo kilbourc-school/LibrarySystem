@@ -92,9 +92,8 @@ public class Library {
         media[8] = keyboard.nextLine(); //comingSoon
         return media;
     }
-    public Media adminAddMedia(){
+    private static Media adminAddMedia(Media media){
         Scanner keyboard = new Scanner(System.in);
-        Media media = new Media(); //null Book
 
         System.out.print("Title: ");
         media.setTitle(keyboard.nextLine());
@@ -116,14 +115,17 @@ public class Library {
     }
     public void adminAddBook() {
         Scanner keyboard = new Scanner(System.in);
-        Book book = new Book(Library.adminAddMedia());
+        Media media = new Media();
+        Library.adminAddMedia(media);
+        Book book = new Book(media);
 
         System.out.print("ISBN: ");
         book.setISBN(keyboard.nextLine());
 
         database.add(book);
     }
- /*   public void adminAddAudioBook() {
+/*
+    public void adminAddAudioBook() {
         Scanner keyboard = new Scanner(System.in);
         Book book = new Library().adminAddMedia(); //null Book
 
@@ -140,9 +142,7 @@ public class Library {
         book.setISBN(keyboard.nextLine());
 
         database.add(book);
-    }
-*/
-
+    }*/
 
     //Modifier method to add a books to database.
     public void addBook() {
