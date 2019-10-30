@@ -177,7 +177,7 @@ public abstract class Borrower {
         return Period.between(birthday, today).getYears();
     }
     /*
-     getBorrowedlimit method from medium interface
+     getBorrowedlimit  method from medium interface
      */
     public abstract int getBorrowLimit();
      /*

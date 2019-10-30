@@ -21,15 +21,21 @@ public class Book extends Media implements Medium {
          */
         this.ISBN = ISBN;
     }
-
+    /*
+     calls super from book
+     */
     public Book() {
         super();
     }
-
+    /*
+    returns isbn value
+     */
     public int getISBN() {
         return ISBN;
     }
-
+    /*
+     sets isbn
+     */
     public void setISBN(String ISBN) {
         int x = 0;
         try {
