@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Borrower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Borrower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Medium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Medium.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +188,21 @@
       <option name="project" value="LOCAL" />
       <updated>1572409052100</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="made comments for book &amp; borrower">
+      <created>1572409301774</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1572409301774</updated>
+    </task>
+    <task id="LOCAL-00015" summary="made comments for child, teacher, adult, and adminborrow">
+      <created>1572409524987</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1572409524987</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +242,8 @@
     <MESSAGE value="implemented the exported txt files. fixed admin borrow toStringList" />
     <MESSAGE value="encapsulated database" />
     <MESSAGE value="made comments for database" />
-    <option name="LAST_COMMIT_MESSAGE" value="made comments for database" />
+    <MESSAGE value="made comments for book &amp; borrower" />
+    <MESSAGE value="made comments for child, teacher, adult, and adminborrow" />
+    <option name="LAST_COMMIT_MESSAGE" value="made comments for child, teacher, adult, and adminborrow" />
   </component>
 </project>
