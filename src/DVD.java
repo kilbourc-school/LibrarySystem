@@ -16,7 +16,17 @@ public class DVD extends Media implements Medium {
     public DVD(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon) {
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon);
     }
-
+    public DVD(Media media){
+        this.title = media.getTitle();
+        this.description = media.getDescription();
+        this.author = media.getAuthor();
+        this.subject = media.getSubject();
+        this.copies = media.getCopies();
+        this.genre = media.getGenre();
+        this.releaseYear = media.getReleaseYear();
+        this.stars = media.getStars();
+        this.comingSoon = media.isComingSoon();
+    }
 
     /*
      converts objects into strings
