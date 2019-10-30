@@ -45,7 +45,7 @@ public class AudioBook extends Media implements Medium {
         /Converts object to String.
          */
     public String toString() {
-        return title + " by: " + author + " genre: " + genre + " ISBN: " + ISBN + " copies: " + copies;
+        return title + " by: " + author + " genre: " + genre + " narrator: " + narrator + " copies: " + copies;
     }
 }
 
