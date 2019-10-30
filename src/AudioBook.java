@@ -16,6 +16,17 @@ public class AudioBook extends Media implements Medium {
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon);
         this.ISBN = iSBN;
     }
+    public AudioBook(Media media){
+        this.title = media.getTitle();
+        this.description = media.getDescription();
+        this.author = media.getAuthor();
+        this.subject = media.getSubject();
+        this.copies = media.getCopies();
+        this.genre = media.getGenre();
+        this.releaseYear = media.getReleaseYear();
+        this.stars = media.getStars();
+        this.comingSoon = media.isComingSoon();
+    }
     public void setISBN(String ISBN) {
         int x = 0;
         try {

@@ -113,7 +113,7 @@ public class Library {
         media.setStars(keyboard.nextLine());
         return media;
     }
-    public void adminAddBook() {
+    public void addBook() {
         Scanner keyboard = new Scanner(System.in);
         Media media = new Media();
         Library.adminAddMedia(media);
@@ -124,17 +124,19 @@ public class Library {
 
         database.add(book);
     }
-/*
-    public void adminAddAudioBook() {
+
+    public void addAudioBook() {
         Scanner keyboard = new Scanner(System.in);
-        Book book = new Library().adminAddMedia(); //null Book
+        Media media = new Media();
+        Library.adminAddMedia(media);
+        AudioBook audioBook = new AudioBook(media);
 
         System.out.print("ISBN: ");
-        book.setISBN(keyboard.nextLine());
+        audioBook.setISBN(keyboard.nextLine());
 
-        database.add(book);
+        database.add(audioBook);
     }
-    public void adminAddDVD() {
+    public void addDVD() {
         Scanner keyboard = new Scanner(System.in);
         AudioBook book = new Library().adminAddMedia(); //null Book
 
@@ -142,37 +144,15 @@ public class Library {
         book.setISBN(keyboard.nextLine());
 
         database.add(book);
-    }*/
-
-    //Modifier method to add a books to database.
-    public void addBook() {
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int ISBN");
-        String[] taco = addMediaBase();
-        int ISBN = keyboard.nextInt();
-        database.add(new Book(taco[0], taco[1], taco[2], taco[3], Integer.parseInt(taco[4]), taco[5], Integer.parseInt(taco[6]), Integer.parseInt(taco[7]), Boolean.parseBoolean(taco[8]), ISBN));
     }
-
-    public void addAudioBook() {
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int ISBN");
-        String[] taco = addMediaBase();
-        int ISBN = keyboard.nextInt();
-        database.add(new AudioBook(taco[0], taco[1], taco[2], taco[3], Integer.parseInt(taco[4]), taco[5], Integer.parseInt(taco[6]), Integer.parseInt(taco[7]), Boolean.parseBoolean(taco[8]), ISBN));
-
-    }
-
     public void addDVD() {
-        String[] taco = addMediaBase();
-        database.add(new DVD(taco[0], taco[1], taco[2], taco[3], Integer.parseInt(taco[4]), taco[5], Integer.parseInt(taco[6]), Integer.parseInt(taco[7]), Boolean.parseBoolean(taco[8])));
-    }
-
-    public void addEBook() {
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, String narrator");
-        String[] taco = addMediaBase();
-        String narrator = keyboard.nextLine();
-        database.add(new EBook(taco[0], taco[1], taco[2], taco[3], Integer.parseInt(taco[4]), taco[5], Integer.parseInt(taco[6]), Integer.parseInt(taco[7]), Boolean.parseBoolean(taco[8]), narrator));
+        DVD dvd = new Library().adminAddMedia(); //null Book
+
+        System.out.print("ISBN: ");
+        book.setISBN(keyboard.nextLine());
+
+        database.add(book);
     }
 
     /*

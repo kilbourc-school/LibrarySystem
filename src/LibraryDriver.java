@@ -41,7 +41,7 @@ public class LibraryDriver {
                 System.out.println("enter 3 to add a ebook");
                 input = keyboard.nextInt();
                 if (input == 1) {
-                    currentLibrary.adminAddBook();
+                    currentLibrary.addBook();
                 }
                 if (input == 2) {
                     currentLibrary.addAudioBook();
