@@ -1,4 +1,7 @@
 public abstract class Media {
+    /*
+    variable attributes
+     */
     String title;
     String description;
     String author;
@@ -10,6 +13,9 @@ public abstract class Media {
     boolean comingSoon;
 public Media(){};
     public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon) {
+       /*
+       setters
+        */
         this.title = title;
         this.description = description;
         this.author = author;
