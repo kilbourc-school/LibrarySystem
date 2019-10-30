@@ -5,7 +5,7 @@
  */
 
 public class AudioBook extends Media implements Medium {
-    private int ISBN;
+    String narrator;
 
     /*
      * Constructor.
@@ -14,7 +14,7 @@ public class AudioBook extends Media implements Medium {
      */
     public AudioBook(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int iSBN) {
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon);
-        this.ISBN = iSBN;
+        this.narrator = narrator;
     }
     public AudioBook(Media media){
         this.title = media.getTitle();
@@ -48,9 +48,11 @@ public class AudioBook extends Media implements Medium {
     Converts objects to strings
     */
     public String toStringList() {
-        return "AudioBook," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + ISBN;
+        return "AudioBook," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + narrator;
     }
-
+    public String getNarrator() {
+        return narrator;
+    }
     @Override
         /*
         /Converts object to String.

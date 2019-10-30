@@ -1,6 +1,6 @@
 public class EBook extends Media implements Medium {
-    String narrator;
 
+    private int ISBN;
     /*
      * Constructor.
      * Params: String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, String narrator
@@ -14,9 +14,7 @@ public class EBook extends Media implements Medium {
     /*
     Returns narrator string
      */
-    public String getOrator() {
-        return narrator;
-    }
+
 
     /*
     Converts objects into strings
