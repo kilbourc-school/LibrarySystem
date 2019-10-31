@@ -87,7 +87,7 @@ Media currentMedia = currentLibrary.getBookFromTitle(title);
 currentMedia.checkOutBook(currentMedia,currentLibrary.getCurrentUser().getID(), copies);
             }
 
-            if (input == 8) {
+            if (input == 9) {
                 System.out.println("Enter media title you wish to check in");
                 String title = keyboard.nextLine();
                 Media currentMedia = currentLibrary.getBookFromTitle(title);
