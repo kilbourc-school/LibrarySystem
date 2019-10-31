@@ -30,42 +30,42 @@ public class Media {
     }
 
     public void checkOutBook(Media media, Long iD) {
-        if (isCheckedOut(media)) {
-            addToWaitListBorrowerIDs(iD);
+        if (isAllCheckedOut(media)) {
             System.out.println("Sorry, book is currently checked out.");
+            addToWaitListBorrowerIDs(iD);
+        }
+        else {
+            currentBorrowerID.add(iD);
+            copies--;
         }
 
-    }
-
-    public LinkedList getWaitListBorrowerIDs() {
-        return waitListBorrowerIDs;
     }
 
     public void setWaitListBorrowerIDs(LinkedList waitListBorrowerIDs) {
         this.waitListBorrowerIDs = waitListBorrowerIDs;
     }
 
-    public Long getCurrentBorrowerID() {
-        return currentBorrowerID.peek();
-    }
-
     public void setCurrentBorrowerID(Long currentBorrowerID) {
         this.currentBorrowerID.add(currentBorrowerID);
     }
 
-    public boolean isCheckedOut(Media media) {
-        return media.currentBorrowerID.peek() > 0;
+    public boolean isAllCheckedOut(Media media) {
+       if (copies == 0)
+          return true;
+       else
+           return false;
 
     }
-
-    public Long getWaitListBorrowerIDFirst() {
-        return waitListBorrowerIDs.peek();
-    }
-
-    public void assignFromWaitList() {
+public void checkInMedia(Media media, Long iD){
+        media.currentBorrowerID.remove(iD);
+        media.assignFromWaitList();
+}
+    private void assignFromWaitList() {
         if (waitListBorrowerIDs.peek() != null) {
             currentBorrowerID.add(waitListBorrowerIDs.pop());
         }
+        else
+            copies++;
     }
 
     public void addToWaitListBorrowerIDs(Long borrowerID) {

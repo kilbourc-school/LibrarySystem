@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/LibraryDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryDriver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Media.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -97,7 +96,7 @@
       <workItem from="1572292202646" duration="1417000" />
       <workItem from="1572309243769" duration="654000" />
       <workItem from="1572460370355" duration="3836000" />
-      <workItem from="1572544726058" duration="1117000" />
+      <workItem from="1572544726058" duration="1506000" />
     </task>
     <task id="LOCAL-00001" summary="made media type AudioBooks">
       <created>1571333916280</created>
@@ -204,7 +203,21 @@
       <option name="project" value="LOCAL" />
       <updated>1572545156572</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="currentCheckout changed to a list, as multiple people can have the book checked out.">
+      <created>1572545864505</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1572545864505</updated>
+    </task>
+    <task id="LOCAL-00017" summary="optomized imports">
+      <created>1572545901023</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1572545901023</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +259,8 @@
     <MESSAGE value="merged in comments branch and encapsulated media branch to master" />
     <MESSAGE value="encapsulated databas&#10;changed variable iD in borrowers to Long instead of String." />
     <MESSAGE value="encapsulated databas&#10;changed variable iD in borrowers to Long instead of String.&#10;begun addition of ability to checkout to media" />
-    <option name="LAST_COMMIT_MESSAGE" value="encapsulated databas&#10;changed variable iD in borrowers to Long instead of String.&#10;begun addition of ability to checkout to media" />
+    <MESSAGE value="currentCheckout changed to a list, as multiple people can have the book checked out." />
+    <MESSAGE value="optomized imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="optomized imports" />
   </component>
 </project>
