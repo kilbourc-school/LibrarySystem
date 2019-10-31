@@ -14,63 +14,9 @@ public class Media {
     private LinkedList<Long> waitListBorrowerIDs;
 
 
-
-    public void checkOutBook(Media media, Long iD){
-        if(isCheckedOut(media)) {
-            addToWaitListBorrowerIDs(iD);
-            System.out.println("Sorry, book is currently checked out.");
-        }
-
-        }
-    public void setCurrentBorrowerID(Long currentBorrowerID) {
-        this.currentBorrowerID.add(currentBorrowerID);
+    public Media() {
     }
 
-    public LinkedList getWaitListBorrowerIDs() {
-        return waitListBorrowerIDs;
-    }
-
-    public Long getCurrentBorrowerID() {
-        return currentBorrowerID.peek();
-    }
-public boolean isCheckedOut(Media media){
-        if(media.currentBorrowerID.peek() > 0)
-            return true;
-        else
-            return false;
-
-}
-    public Long getWaitListBorrowerIDFirst(){
-        return waitListBorrowerIDs.peek();
-    }
-
-
-
-public void assignFromWaitList(){
-        if (waitListBorrowerIDs.peek() != null){
-            currentBorrowerID.add(waitListBorrowerIDs.pop());
-        }
-}
-
-
-
-
-
-    public void setWaitListBorrowerIDs(LinkedList waitListBorrowerIDs) {
-        this.waitListBorrowerIDs = waitListBorrowerIDs;
-    }
-
-
-    public void addToWaitListBorrowerIDs(Long borrowerID){
-        if (waitListBorrowerIDs.size() <= 10) {
-            this.waitListBorrowerIDs.add(borrowerID);
-            System.out.println("you have been placed on the waitlist");
-        }
-        else
-            System.out.println("wait list is full. you were not placed on the waitlist");
-    }
-
-    public Media(){}
     public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon) {
         this.title = title;
         this.description = description;
@@ -81,6 +27,53 @@ public void assignFromWaitList(){
         this.releaseYear = releaseYear;
         this.stars = stars;
         this.comingSoon = comingSoon;
+    }
+
+    public void checkOutBook(Media media, Long iD) {
+        if (isCheckedOut(media)) {
+            addToWaitListBorrowerIDs(iD);
+            System.out.println("Sorry, book is currently checked out.");
+        }
+
+    }
+
+    public LinkedList getWaitListBorrowerIDs() {
+        return waitListBorrowerIDs;
+    }
+
+    public void setWaitListBorrowerIDs(LinkedList waitListBorrowerIDs) {
+        this.waitListBorrowerIDs = waitListBorrowerIDs;
+    }
+
+    public Long getCurrentBorrowerID() {
+        return currentBorrowerID.peek();
+    }
+
+    public void setCurrentBorrowerID(Long currentBorrowerID) {
+        this.currentBorrowerID.add(currentBorrowerID);
+    }
+
+    public boolean isCheckedOut(Media media) {
+        return media.currentBorrowerID.peek() > 0;
+
+    }
+
+    public Long getWaitListBorrowerIDFirst() {
+        return waitListBorrowerIDs.peek();
+    }
+
+    public void assignFromWaitList() {
+        if (waitListBorrowerIDs.peek() != null) {
+            currentBorrowerID.add(waitListBorrowerIDs.pop());
+        }
+    }
+
+    public void addToWaitListBorrowerIDs(Long borrowerID) {
+        if (waitListBorrowerIDs.size() <= 10) {
+            this.waitListBorrowerIDs.add(borrowerID);
+            System.out.println("you have been placed on the waitlist");
+        } else
+            System.out.println("wait list is full. you were not placed on the waitlist");
     }
 
     /*
@@ -97,7 +90,6 @@ public void assignFromWaitList(){
     public String getDescription() {
         return description;
     }
-
 
 
     /*

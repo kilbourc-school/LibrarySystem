@@ -24,12 +24,13 @@ public class Database {
         }
     }
 
-   /*
-    Returns mediaDatabase values
-    */
+    /*
+     Returns mediaDatabase values
+     */
     public ArrayList<Medium> getMediaDatabase() {
         return MediaDatabase;
     }
+
     /*
      returns AccountsDatabase Values
      */
@@ -67,6 +68,7 @@ public class Database {
                 System.out.println(account);
         }
     }
+
     /*
     prints out all accounts
      */

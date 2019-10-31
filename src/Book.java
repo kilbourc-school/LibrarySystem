@@ -17,7 +17,8 @@ public class Book extends Media implements Medium {
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon);
         this.ISBN = ISBN;
     }
-    public Book(Media media){
+
+    public Book(Media media) {
         this.title = media.getTitle();
         this.description = media.getDescription();
         this.author = media.getAuthor();
@@ -28,15 +29,18 @@ public class Book extends Media implements Medium {
         this.stars = media.getStars();
         this.comingSoon = media.isComingSoon();
     }
+
     public Book() {
         super();
     }
+
     /*
     returns isbn value
      */
     public int getISBN() {
         return ISBN;
     }
+
     /*
      sets isbn
      */

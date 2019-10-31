@@ -16,7 +16,8 @@ public class AudioBook extends Media implements Medium {
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon);
         this.narrator = narrator;
     }
-    public AudioBook(Media media){
+
+    public AudioBook(Media media) {
         this.title = media.getTitle();
         this.description = media.getDescription();
         this.author = media.getAuthor();
@@ -34,12 +35,15 @@ public class AudioBook extends Media implements Medium {
     public String toStringList() {
         return "AudioBook," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + narrator;
     }
-    public void setNarrator(String nar){
-        this.narrator = nar;
-    }
+
     public String getNarrator() {
         return narrator;
     }
+
+    public void setNarrator(String nar) {
+        this.narrator = nar;
+    }
+
     @Override
         /*
         /Converts object to String.

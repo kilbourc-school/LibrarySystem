@@ -1,8 +1,4 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /*
@@ -14,17 +10,42 @@ import java.util.Scanner;
  */
 
 public class Library {
+    Database libraryDatabase = new Database();
     private Borrower currentUser;
-Database libraryDatabase = new Database();
+
     public Library() {
     }
 
-    public void saveAccountsToFile(){
+    private static Media adminAddMedia(Media media) {
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.print("Title: ");
+        media.setTitle(keyboard.nextLine());
+        System.out.print("Author: ");
+        media.setAuthor(keyboard.nextLine());
+        System.out.print("Description: ");
+        media.setDescription(keyboard.nextLine());
+        System.out.print("Subject: ");
+        media.setSubject(keyboard.nextLine());
+        System.out.print("Genre: ");
+        media.setGenre(keyboard.nextLine());
+        System.out.print("Number of Copies: ");
+        media.setCopies(keyboard.nextLine());
+        System.out.print("Release Year: ");
+        media.setReleaseYear(keyboard.nextLine());
+        System.out.print("Rating: ");
+        media.setStars(keyboard.nextLine());
+        return media;
+    }
+
+    public void saveAccountsToFile() {
         libraryDatabase.saveAccountsToFile();
     }
-    public void saveMediaToFile(){
+
+    public void saveMediaToFile() {
         libraryDatabase.saveMediaToFile();
     }
+
     public Borrower getCurrentUser() {
         return currentUser;
     }
@@ -70,7 +91,6 @@ Database libraryDatabase = new Database();
         }
     }
 
-
     public boolean verifyAccount(String email, String pass) {
 
         for (Borrower account : libraryDatabase.getAccountsDatabase()) {
@@ -96,27 +116,7 @@ Database libraryDatabase = new Database();
         media[8] = keyboard.nextLine(); //comingSoon
         return media;
     }
-    private static Media adminAddMedia(Media media){
-        Scanner keyboard = new Scanner(System.in);
 
-        System.out.print("Title: ");
-        media.setTitle(keyboard.nextLine());
-        System.out.print("Author: ");
-        media.setAuthor(keyboard.nextLine());
-        System.out.print("Description: ");
-        media.setDescription(keyboard.nextLine());
-        System.out.print("Subject: ");
-        media.setSubject(keyboard.nextLine());
-        System.out.print("Genre: ");
-        media.setGenre(keyboard.nextLine());
-        System.out.print("Number of Copies: ");
-        media.setCopies(keyboard.nextLine());
-        System.out.print("Release Year: ");
-        media.setReleaseYear(keyboard.nextLine());
-        System.out.print("Rating: ");
-        media.setStars(keyboard.nextLine());
-        return media;
-    }
     public void addBook() {
         Scanner keyboard = new Scanner(System.in);
         Media media = new Media();
@@ -140,6 +140,7 @@ Database libraryDatabase = new Database();
 
         libraryDatabase.getMediaDatabase().add(audioBook);
     }
+
     public void addDVD() {
         Scanner keyboard = new Scanner(System.in);
         Media media = new Media();
@@ -148,6 +149,7 @@ Database libraryDatabase = new Database();
 
         libraryDatabase.getMediaDatabase().add(dvd);
     }
+
     public void addEBook() {
         Scanner keyboard = new Scanner(System.in);
         Media media = new Media();
@@ -212,15 +214,19 @@ Database libraryDatabase = new Database();
     public void readInMedia() {
         libraryDatabase.readInMedia();
     }
-    public void readInAccounts(){
+
+    public void readInAccounts() {
         libraryDatabase.readInAccounts();
     }
-    public void addAdminAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin){
+
+    public void addAdminAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin) {
         libraryDatabase.addAdminAccount(name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin);
     }
+
     public void addTeacherAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin) {
         libraryDatabase.addTeacherAccount(name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin);
     }
+
     public void addAdultAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin) {
         libraryDatabase.getAccountsDatabase().add(new AdultBorrow(name, Long.parseLong(iD), birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin));
     }
