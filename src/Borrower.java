@@ -17,7 +17,7 @@ public abstract class Borrower {
      */
     private String name;
     private LocalDate birthday;
-    private String ID;
+    private Long ID;
     private int phoneNum;
     private String email;
     private String password;
@@ -30,7 +30,7 @@ public abstract class Borrower {
     }
 
     //Constructor. Params for name and ID of user.
-    public Borrower(String name, String iD, LocalDate birthday, int pn,
+    public Borrower(String name, Long iD, LocalDate birthday, int pn,
                     String str1, String cty, String st, int zp,
                     String em, String pw, int cn, boolean isAdmin) {
         this.name = name;
@@ -137,11 +137,11 @@ public abstract class Borrower {
         this.name = name;
     }
 
-    public String getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(String ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

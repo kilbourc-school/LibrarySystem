@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 public class Media {
     String title;
     String description;
@@ -8,7 +10,40 @@ public class Media {
     int releaseYear;
     int stars;
     boolean comingSoon;
-public Media(){};
+    int currentBorrowerID = 0;
+    LinkedList<Integer> waitListBorrowerIDs;
+
+
+    public void setCurrentBorrowerID(int currentBorrowerID) {
+        this.currentBorrowerID = currentBorrowerID;
+    }
+
+    public LinkedList getWaitListBorrowerIDs() {
+        return waitListBorrowerIDs;
+    }
+
+    public int getCurrentBorrowerID() {
+        return currentBorrowerID;
+    }
+
+    public int getWaitListBorrowerIDFirst(){
+        return waitListBorrowerIDs.peek();
+    }
+
+public void assignFromWaitList(){
+        if (waitListBorrowerIDs.peek() != null){
+            currentBorrowerID = waitListBorrowerIDs.pop();
+        }
+}
+    public void setWaitListBorrowerIDs(LinkedList waitListBorrowerIDs) {
+        this.waitListBorrowerIDs = waitListBorrowerIDs;
+    }
+    public void addToWaitListBorrowerIDs(int borrowerID){
+        if (waitListBorrowerIDs.size() <= 10)
+        this.waitListBorrowerIDs.add(borrowerID);
+    }
+
+    public Media(){}
     public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon) {
         this.title = title;
         this.description = description;
@@ -35,6 +70,8 @@ public Media(){};
     public String getDescription() {
         return description;
     }
+
+
 
     /*
            Setters
@@ -130,7 +167,7 @@ public Media(){};
         }
     }
 
-    //Modifier method to mark a media as availible.
+    //Modifier method to mark a media as available.
     public void makeReturned() {
         copies++;
     }
@@ -141,5 +178,15 @@ public Media(){};
         return copies >= 1;
     }
 
-    public String toStringList(){ return " ";}
+    public String toStringList() {
+        String wait = "";
+        for (int i = 0; i < waitListBorrowerIDs.size(); i++) {
+            wait = wait + waitListBorrowerIDs.pop();
+        }
+        if (wait.equals(""))
+            return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + "fillme" + "," + currentBorrowerID;
+
+        else
+            return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + wait + "," + currentBorrowerID;
+    }
 }
