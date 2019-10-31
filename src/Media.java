@@ -10,8 +10,8 @@ public class Media {
     int releaseYear;
     int stars;
     boolean comingSoon;
-    private LinkedList<iDandCopies> currentBorrowerID;
-    private LinkedList<iDandCopies> waitListBorrowerIDs;
+    LinkedList<iDandCopies> currentBorrowerID;
+    LinkedList<iDandCopies> waitListBorrowerIDs;
 
 
     public Media() {
