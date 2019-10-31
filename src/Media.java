@@ -10,37 +10,64 @@ public class Media {
     int releaseYear;
     int stars;
     boolean comingSoon;
-    int currentBorrowerID = 0;
-    LinkedList<Integer> waitListBorrowerIDs;
+    private LinkedList<Long> currentBorrowerID;
+    private LinkedList<Long> waitListBorrowerIDs;
 
 
-    public void setCurrentBorrowerID(int currentBorrowerID) {
-        this.currentBorrowerID = currentBorrowerID;
+
+    public void checkOutBook(Media media, Long iD){
+        if(isCheckedOut(media)) {
+            addToWaitListBorrowerIDs(iD);
+            System.out.println("Sorry, book is currently checked out.");
+        }
+
+        }
+    public void setCurrentBorrowerID(Long currentBorrowerID) {
+        this.currentBorrowerID.add(currentBorrowerID);
     }
 
     public LinkedList getWaitListBorrowerIDs() {
         return waitListBorrowerIDs;
     }
 
-    public int getCurrentBorrowerID() {
-        return currentBorrowerID;
+    public Long getCurrentBorrowerID() {
+        return currentBorrowerID.peek();
     }
+public boolean isCheckedOut(Media media){
+        if(media.currentBorrowerID.peek() > 0)
+            return true;
+        else
+            return false;
 
-    public int getWaitListBorrowerIDFirst(){
+}
+    public Long getWaitListBorrowerIDFirst(){
         return waitListBorrowerIDs.peek();
     }
 
+
+
 public void assignFromWaitList(){
         if (waitListBorrowerIDs.peek() != null){
-            currentBorrowerID = waitListBorrowerIDs.pop();
+            currentBorrowerID.add(waitListBorrowerIDs.pop());
         }
 }
+
+
+
+
+
     public void setWaitListBorrowerIDs(LinkedList waitListBorrowerIDs) {
         this.waitListBorrowerIDs = waitListBorrowerIDs;
     }
-    public void addToWaitListBorrowerIDs(int borrowerID){
-        if (waitListBorrowerIDs.size() <= 10)
-        this.waitListBorrowerIDs.add(borrowerID);
+
+
+    public void addToWaitListBorrowerIDs(Long borrowerID){
+        if (waitListBorrowerIDs.size() <= 10) {
+            this.waitListBorrowerIDs.add(borrowerID);
+            System.out.println("you have been placed on the waitlist");
+        }
+        else
+            System.out.println("wait list is full. you were not placed on the waitlist");
     }
 
     public Media(){}

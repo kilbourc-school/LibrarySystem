@@ -76,6 +76,13 @@ public class LibraryDriver {
             if (input == 7) {
                 currentLibrary.addAdminAccount("name", "id", LocalDate.now(), 803511, "street", "city", "state", 29045, "admin@admin", "admin", 1199, true);
             }
+            if (input == 8) {
+                System.out.println("Enter book title you wish to check out");
+                String title = keyboard.nextLine();
+                System.out.println("enter how many copies you wish to check out");
+                int copies = keyboard.nextInt();
+
+            }
         }
     }
 }
