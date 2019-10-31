@@ -5,6 +5,8 @@
  * and availibility.
  */
 
+import java.util.LinkedList;
+
 public class DVD extends Media implements Medium {
 
 
@@ -34,6 +36,10 @@ public class DVD extends Media implements Medium {
      */
     public String toStringList() {
         return "DVD," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + ",";
+    }
+
+    public DVD(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs) {
+        super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon, currentBorrowerID, waitListBorrowerIDs);
     }
 
     @Override

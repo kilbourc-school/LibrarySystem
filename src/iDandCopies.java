@@ -22,4 +22,9 @@ public class iDandCopies {
     public void setCopies(int copies) {
         this.copies = copies;
     }
+
+    @Override
+    public String toString() {
+        return "." + iD + "/" + copies;
+    }
 }

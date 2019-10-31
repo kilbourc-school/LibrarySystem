@@ -3,6 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Database {
@@ -86,16 +87,30 @@ public class Database {
         try {
             scan = new Scanner(file);
             while (scan.hasNextLine()) {
+                LinkedList<iDandCopies> current = new LinkedList<>();
+                LinkedList<iDandCopies> wait =  new LinkedList<>();
                 String line = scan.nextLine();
                 String[] lineArray = line.split(",");
+                String[] currentCheckOut = lineArray[10].split(".");
+                String[] waitCheckOut = lineArray[11].split(".");
+
+                for (int i=0;i<currentCheckOut.length;i++){
+                    String[] splitCurrentCheckout = currentCheckOut[i].split("/");
+                    current.add(new iDandCopies(Long.parseLong(splitCurrentCheckout[0]),Integer.parseInt(splitCurrentCheckout[0]));
+                }
+
+                for (int i=0;i<waitCheckOut.length;i++){
+                    String[] splitWaitCheckout = waitCheckOut[i].split("/");
+                    current.add(new iDandCopies(Long.parseLong(splitWaitCheckout[0]),Integer.parseInt(splitWaitCheckout[0]));
+                }
                 if (lineArray[0].equals("Book")) {
-                    getMediaDatabase().add(new Book(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), Integer.parseInt(lineArray[10])));
+                    getMediaDatabase().add(new Book(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), Integer.parseInt(lineArray[10])),current,wait);
                 } else if (lineArray[0].equals("AudioBook")) {
-                    getMediaDatabase().add(new AudioBook(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), lineArray[10]));
+                    getMediaDatabase().add(new AudioBook(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), lineArray[10]),current,wait);
                 } else if (lineArray[0].equals("DVD")) {
-                    getMediaDatabase().add(new DVD(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9])));
+                    getMediaDatabase().add(new DVD(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9])),current,wait);
                 } else if (lineArray[0].equals("EBook")) {
-                    getMediaDatabase().add(new EBook(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), Integer.parseInt(lineArray[10])));
+                    getMediaDatabase().add(new EBook(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), Integer.parseInt(lineArray[10])),current,wait);
                 }
             }
         } catch (FileNotFoundException e) {

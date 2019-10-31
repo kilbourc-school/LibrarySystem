@@ -29,6 +29,20 @@ public class Media {
         this.comingSoon = comingSoon;
     }
 
+    public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs) {
+        this.title = title;
+        this.description = description;
+        this.author = author;
+        this.subject = subject;
+        this.copies = copies;
+        this.genre = genre;
+        this.releaseYear = releaseYear;
+        this.stars = stars;
+        this.comingSoon = comingSoon;
+        this.currentBorrowerID = currentBorrowerID;
+        this.waitListBorrowerIDs = waitListBorrowerIDs;
+    }
+
     public void checkOutBook(Media media, Long iD, int copies) {
         if (isAllCheckedOut(media)) {
             System.out.println("Sorry, book is currently checked out.");
@@ -208,13 +222,21 @@ public void checkInMedia(Media media, Long iD, int copies){
 
     public String toStringList() {
         String wait = "";
+        String current = "";
         for (int i = 0; i < waitListBorrowerIDs.size(); i++) {
-            wait = wait + waitListBorrowerIDs.pop();
+            wait += waitListBorrowerIDs.peek().toString();
+            waitListBorrowerIDs.pop();
         }
-        if (wait.equals(""))
-            return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + "fillme" + "," + currentBorrowerID;
+        for (int i = 0; i < currentBorrowerID.size(); i++) {
+            current += currentBorrowerID.peek().toString();
+            currentBorrowerID.pop();
+        }
+        if (wait.equals("") && current.equals(""))
+            return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + "x" + "," + 0;
 
+        else if (wait.equals("") && !current.equals(""))
+            return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + "x" + "," + current;
         else
-            return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + wait + "," + currentBorrowerID;
+            return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + wait + "," + current;
     }
 }
