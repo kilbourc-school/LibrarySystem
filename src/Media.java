@@ -10,8 +10,8 @@ public class Media {
     int releaseYear;
     int stars;
     boolean comingSoon;
-    private LinkedList<Long> currentBorrowerID;
-    private LinkedList<Long> waitListBorrowerIDs;
+    private LinkedList<iDandCopies> currentBorrowerID;
+    private LinkedList<iDandCopies> waitListBorrowerIDs;
 
 
     public Media() {
@@ -29,14 +29,18 @@ public class Media {
         this.comingSoon = comingSoon;
     }
 
-    public void checkOutBook(Media media, Long iD) {
+    public void checkOutBook(Media media, Long iD, int copies) {
         if (isAllCheckedOut(media)) {
             System.out.println("Sorry, book is currently checked out.");
-            addToWaitListBorrowerIDs(iD);
+            addToWaitListBorrowerIDs(iD,copies);
         }
-        else {
-            currentBorrowerID.add(iD);
-            copies--;
+        else if ((this.copies - copies) > 0) {
+                currentBorrowerID.add(new iDandCopies(iD, copies));
+                this.copies = this.copies - copies;
+            }
+        else{
+            System.out.println("Sorry, not enough books are in right now. Being placed on waitlist.");
+            addToWaitListBorrowerIDs(iD,copies);
         }
 
     }
@@ -45,32 +49,37 @@ public class Media {
         this.waitListBorrowerIDs = waitListBorrowerIDs;
     }
 
-    public void setCurrentBorrowerID(Long currentBorrowerID) {
-        this.currentBorrowerID.add(currentBorrowerID);
+    public void setCurrentBorrowerID(Long currentBorrowerID, int copies) {
+        this.currentBorrowerID.add(new iDandCopies(currentBorrowerID,copies));
     }
 
     public boolean isAllCheckedOut(Media media) {
-       if (copies == 0)
+       if (media.getCopies() == 0)
           return true;
        else
            return false;
 
     }
-public void checkInMedia(Media media, Long iD){
-        media.currentBorrowerID.remove(iD);
-        media.assignFromWaitList();
-}
-    private void assignFromWaitList() {
-        if (waitListBorrowerIDs.peek() != null) {
-            currentBorrowerID.add(waitListBorrowerIDs.pop());
+public void checkInMedia(Media media, Long iD, int copies){
+        if (currentBorrowerID.contains(new iDandCopies(iD, copies))) {
+            currentBorrowerID.remove(new iDandCopies(iD, copies));
+            assignFromWaitList(copies);
         }
-        else
-            copies++;
+}
+    private void assignFromWaitList(int copies) {
+        if (waitListBorrowerIDs.peek() != null) {
+            int extraCopies = waitListBorrowerIDs.peek().getCopies() - copies;
+            currentBorrowerID.add(waitListBorrowerIDs.pop());
+            this.copies += extraCopies;
+        }
+        else{
+            this.copies += copies;
+        }
     }
 
-    public void addToWaitListBorrowerIDs(Long borrowerID) {
+    public void addToWaitListBorrowerIDs(Long borrowerID, int copies) {
         if (waitListBorrowerIDs.size() <= 10) {
-            this.waitListBorrowerIDs.add(borrowerID);
+            this.waitListBorrowerIDs.add(new iDandCopies(borrowerID, copies));
             System.out.println("you have been placed on the waitlist");
         } else
             System.out.println("wait list is full. you were not placed on the waitlist");

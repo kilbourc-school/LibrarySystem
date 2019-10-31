@@ -74,7 +74,13 @@ public class Library {
                 System.out.println(account);
         }
     }
-
+public Media getBookFromTitle(String title){
+    for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
+        if (libraryDatabase.getMediaDatabase().get(i).getTitle().equals(title))
+        return libraryDatabase.getMediaDatabase().get(i);
+    }
+    return null;
+}
     //Prints out the teachers accounts
     public void displayChildAccounts() {
 
@@ -254,7 +260,7 @@ public class Library {
      * Param: String containing title or ISBN
      * Return: Book object with a title or ISBN matching the input.
      */
-    public Medium findMedia(String input) {
+    public Media findMedia(String input) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
             String str = (libraryDatabase.getMediaDatabase().get(i)).getTitle();     //Gets title of book at index.
 

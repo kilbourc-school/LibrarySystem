@@ -9,7 +9,7 @@ public class Database {
     /*
     /Holds all books.
      */
-    private ArrayList<Medium> MediaDatabase = new ArrayList<>();
+    private ArrayList<Media> MediaDatabase = new ArrayList<>();
     /*
     /Holds all teachers.
      */
@@ -27,7 +27,7 @@ public class Database {
     /*
      Returns mediaDatabase values
      */
-    public ArrayList<Medium> getMediaDatabase() {
+    public ArrayList<Media> getMediaDatabase() {
         return MediaDatabase;
     }
 
@@ -164,8 +164,8 @@ public class Database {
     public void saveMediaToFile() {
         try {
             PrintWriter writer = new PrintWriter("media.txt");
-            for (Medium medium : getMediaDatabase()) {
-                writer.println(medium.toStringList());
+            for (Media media : getMediaDatabase()) {
+                writer.println(media.toStringList());
             }
             writer.close();
         } catch (FileNotFoundException e) {

@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/iDandCopies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryDriver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Media.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -96,7 +100,7 @@
       <workItem from="1572292202646" duration="1417000" />
       <workItem from="1572309243769" duration="654000" />
       <workItem from="1572460370355" duration="3836000" />
-      <workItem from="1572544726058" duration="1506000" />
+      <workItem from="1572544726058" duration="2458000" />
     </task>
     <task id="LOCAL-00001" summary="made media type AudioBooks">
       <created>1571333916280</created>
@@ -217,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572545901023</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="added in checkin / checkout of book. still need to fix file I/O for recent media changes">
+      <created>1572546257909</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1572546257909</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +272,7 @@
     <MESSAGE value="encapsulated databas&#10;changed variable iD in borrowers to Long instead of String.&#10;begun addition of ability to checkout to media" />
     <MESSAGE value="currentCheckout changed to a list, as multiple people can have the book checked out." />
     <MESSAGE value="optomized imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="optomized imports" />
+    <MESSAGE value="added in checkin / checkout of book. still need to fix file I/O for recent media changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added in checkin / checkout of book. still need to fix file I/O for recent media changes" />
   </component>
 </project>

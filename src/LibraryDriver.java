@@ -31,6 +31,8 @@ public class LibraryDriver {
             System.out.println("enter 5 to display all books");
             System.out.println("enter 6 save to file");
             System.out.println("enter 7 to add a account");
+            System.out.println("enter 8 to check out media");
+            System.out.println("enter 9 to check in media");
             int input = keyboard.nextInt();
             String fix = keyboard.nextLine();
             if (input == 1) {
@@ -77,11 +79,21 @@ public class LibraryDriver {
                 currentLibrary.addAdminAccount("name", "id", LocalDate.now(), 803511, "street", "city", "state", 29045, "admin@admin", "admin", 1199, true);
             }
             if (input == 8) {
-                System.out.println("Enter book title you wish to check out");
+                System.out.println("Enter media title you wish to check out");
                 String title = keyboard.nextLine();
                 System.out.println("enter how many copies you wish to check out");
                 int copies = keyboard.nextInt();
+Media currentMedia = currentLibrary.getBookFromTitle(title);
+currentMedia.checkOutBook(currentMedia,currentLibrary.getCurrentUser().getID(), copies);
+            }
 
+            if (input == 8) {
+                System.out.println("Enter media title you wish to check in");
+                String title = keyboard.nextLine();
+                Media currentMedia = currentLibrary.getBookFromTitle(title);
+                System.out.println("Enter how many copies you wish to return");
+                int copies = keyboard.nextInt();
+                currentMedia.checkInMedia(currentMedia, currentLibrary.getCurrentUser().getID(), copies);
             }
         }
     }
