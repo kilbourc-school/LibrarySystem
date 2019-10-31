@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AudioBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/AudioBook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Borrower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Borrower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/DVD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/DVD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/EBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/EBook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/LibraryDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/LibraryDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AudioBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AudioBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DVD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Media.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/iDandCopies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iDandCopies.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +97,7 @@
       <workItem from="1572292202646" duration="1417000" />
       <workItem from="1572309243769" duration="654000" />
       <workItem from="1572460370355" duration="3836000" />
-      <workItem from="1572544726058" duration="3610000" />
+      <workItem from="1572544726058" duration="3856000" />
     </task>
     <task id="LOCAL-00001" summary="made media type AudioBooks">
       <created>1571333916280</created>
@@ -254,7 +239,21 @@
       <option name="project" value="LOCAL" />
       <updated>1572547749944</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added in File I/O for changed check in and out">
+      <created>1572548788631</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1572548788631</updated>
+    </task>
+    <task id="LOCAL-00022" summary="fixed errors in File I/O">
+      <created>1572548987507</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1572548987507</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,9 +274,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Merge branch 'Scott-Borrower-Expansion'&#10;&#10;# Conflicts:&#10;#&#9;src/Borrower.java" />
-    <MESSAGE value="added a get borrow limit for search checking to borrower interfaces" />
-    <MESSAGE value="combined account database" />
     <MESSAGE value="frontend driver file added&#10;implemented barebones login verification" />
     <MESSAGE value="begun basic adding of media to main method" />
     <MESSAGE value="made media type Audiobooks" />
@@ -300,6 +296,9 @@
     <MESSAGE value="added a front end check in / checkout of books" />
     <MESSAGE value="added a front end check in / checkout of media by title" />
     <MESSAGE value="fixed front end error" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed front end error" />
+    <MESSAGE value="fixed file I/O for the check in and out" />
+    <MESSAGE value="added in File I/O for changed check in and out" />
+    <MESSAGE value="fixed errors in File I/O" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed errors in File I/O" />
   </component>
 </project>
