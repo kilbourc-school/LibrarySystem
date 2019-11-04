@@ -27,6 +27,10 @@ public class Media {
         this.releaseYear = releaseYear;
         this.stars = stars;
         this.comingSoon = comingSoon;
+        this.currentBorrowerID = new LinkedList<>();
+        this.waitListBorrowerIDs = new LinkedList<>();
+        currentBorrowerID.add(new iDandCopies((long) 0,0));
+        waitListBorrowerIDs.add((new iDandCopies((long) 0,0)));
     }
 
     public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs) {
