@@ -17,26 +17,18 @@ public class Book extends Media implements Medium {
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon);
         this.ISBN = ISBN;
     }
-    public Book(Media media){
-        this.title = media.getTitle();
-        this.description = media.getDescription();
-        this.author = media.getAuthor();
-        this.subject = media.getSubject();
-        this.copies = media.getCopies();
-        this.genre = media.getGenre();
-        this.releaseYear = media.getReleaseYear();
-        this.stars = media.getStars();
-        this.comingSoon = media.isComingSoon();
-    }
+
     public Book() {
         super();
     }
+
     /*
     returns isbn value
      */
     public int getISBN() {
         return ISBN;
     }
+
     /*
      sets isbn
      */
@@ -49,6 +41,13 @@ public class Book extends Media implements Medium {
         }
         this.ISBN = x;
     }
+
+    public void setExtra() {
+        System.out.print("ISBN: ");
+        this.setISBN(keyboard.nextLine());
+    }
+
+}
 
     /*
      converts objects into strings
