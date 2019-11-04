@@ -34,9 +34,10 @@ public class AudioBook extends Media implements Medium {
         this.releaseYear = media.getReleaseYear();
         this.stars = media.getStars();
         this.comingSoon = media.isComingSoon();
-        this.currentBorrowerID = media.currentBorrowerID;
-        this.waitListBorrowerIDs = media.waitListBorrowerIDs;
-    }
+        this.currentBorrowerID = new LinkedList<>();
+        this.waitListBorrowerIDs = new LinkedList<>();
+        currentBorrowerID.add(new iDandCopies((long) 0,0));
+        waitListBorrowerIDs.add((new iDandCopies((long) 0,0)));    }
 
     /*
     Converts objects to strings

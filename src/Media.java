@@ -52,7 +52,7 @@ public class Media {
             System.out.println("Sorry, book is currently checked out.");
             addToWaitListBorrowerIDs(iD,copies);
         }
-        else if ((this.copies - copies) > 0) {
+        else if ((this.copies - copies) >= 0) {
                 currentBorrowerID.add(new iDandCopies(iD, copies));
                 this.copies = this.copies - copies;
             }
@@ -76,12 +76,13 @@ public class Media {
           return true;
        else
            return false;
-
     }
 public void checkInMedia(Media media, Long iD, int copies){
         if (currentBorrowerID.contains(new iDandCopies(iD, copies))) {
+            System.out.println("found iD");
             currentBorrowerID.remove(new iDandCopies(iD, copies));
             assignFromWaitList(copies);
+            media.setCopies(media.getCopies()+copies);
         }
 }
     private void assignFromWaitList(int copies) {
@@ -239,11 +240,21 @@ public void checkInMedia(Media media, Long iD, int copies){
                 currentBorrowerID.pop();
             }
         }
-        if (wait.equals("") && current.equals(""))
-            return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + "x" + "," + 0;
-
-        else if (wait.equals("") && !current.equals(""))
-            return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + "x" + "," + current;
+        if (wait.equals("") && current.equals("")) {
+            LinkedList<iDandCopies> waitlink = new LinkedList<>();
+            LinkedList<iDandCopies> currlink = new LinkedList<>();
+            waitlink.add(new iDandCopies((long)0,0));
+            currlink.add(new iDandCopies((long)0,0));
+            for (int i = 0; i < waitlink.size(); i++) {
+                current += waitlink.peek().toString();
+                waitlink.pop();
+            }
+            return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + current + "," + 0;
+        }
+        else if (!wait.equals("") && current.equals("")) {
+            LinkedList<iDandCopies> waitlink = new LinkedList<>();
+            return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + waitlink +"," + 0;
+        }
         else
             return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + wait + "," + current;
     }
