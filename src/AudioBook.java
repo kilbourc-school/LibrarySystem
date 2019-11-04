@@ -34,6 +34,8 @@ public class AudioBook extends Media implements Medium {
         this.releaseYear = media.getReleaseYear();
         this.stars = media.getStars();
         this.comingSoon = media.isComingSoon();
+        this.currentBorrowerID = media.currentBorrowerID;
+        this.waitListBorrowerIDs = media.waitListBorrowerIDs;
     }
 
     /*

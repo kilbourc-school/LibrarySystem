@@ -227,13 +227,17 @@ public void checkInMedia(Media media, Long iD, int copies){
     public String toStringList() {
         String wait = "";
         String current = "";
-        for (int i = 0; i < waitListBorrowerIDs.size(); i++) {
-            wait += waitListBorrowerIDs.peek().toString();
-            waitListBorrowerIDs.pop();
+        if (waitListBorrowerIDs!= null) {
+            for (int i = 0; i < waitListBorrowerIDs.size(); i++) {
+                wait += waitListBorrowerIDs.peek().toString();
+                waitListBorrowerIDs.pop();
+            }
         }
-        for (int i = 0; i < currentBorrowerID.size(); i++) {
-            current += currentBorrowerID.peek().toString();
-            currentBorrowerID.pop();
+        if(currentBorrowerID != null) {
+            for (int i = 0; i < currentBorrowerID.size(); i++) {
+                current += currentBorrowerID.peek().toString();
+                currentBorrowerID.pop();
+            }
         }
         if (wait.equals("") && current.equals(""))
             return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + "x" + "," + 0;
