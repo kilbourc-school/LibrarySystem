@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media.txt" beforeDir="false" afterPath="$PROJECT_DIR$/media.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AudioBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/AudioBook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/DVD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/DVD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/EBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/EBook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Media.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -107,7 +100,7 @@
       <workItem from="1572292202646" duration="1417000" />
       <workItem from="1572309243769" duration="654000" />
       <workItem from="1572460370355" duration="3836000" />
-      <workItem from="1572544726058" duration="10638000" />
+      <workItem from="1572544726058" duration="11065000" />
     </task>
     <task id="LOCAL-00001" summary="made media type AudioBooks">
       <created>1571333916280</created>
@@ -291,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572896736097</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fixed all check out.">
+      <created>1572899751262</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1572899751263</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +312,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Merge branch 'master' of https://github.com/kilbourc-school/LibrarySystem&#10;&#10;# Conflicts:&#10;#&#9;src/Borrower.java&#10;#&#9;src/LibraryDriver.java" />
     <MESSAGE value="fixed small issues in EBook and Audiobook merge conflict" />
     <MESSAGE value="added in creates for other media types." />
     <MESSAGE value="added file read in" />
@@ -337,6 +336,7 @@
     <MESSAGE value="edited book constructor to never have null Linked Lists" />
     <MESSAGE value="added other media types linked list constructor fix" />
     <MESSAGE value="more work with linked lists" />
-    <option name="LAST_COMMIT_MESSAGE" value="more work with linked lists" />
+    <MESSAGE value="fixed all check out." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed all check out." />
   </component>
 </project>

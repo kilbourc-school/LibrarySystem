@@ -53,10 +53,14 @@ public class Media {
             addToWaitListBorrowerIDs(iD,copies);
         }
         else if ((this.copies - copies) >= 0) {
+            if(currentBorrowerID==null)
+                currentBorrowerID = new LinkedList<>();
                 currentBorrowerID.add(new iDandCopies(iD, copies));
                 this.copies = this.copies - copies;
             }
         else{
+            if(waitListBorrowerIDs==null)
+                waitListBorrowerIDs = new LinkedList<>();
             System.out.println("Sorry, not enough books are in right now. Being placed on waitlist.");
             addToWaitListBorrowerIDs(iD,copies);
         }
@@ -78,9 +82,10 @@ public class Media {
            return false;
     }
 public void checkInMedia(Media media, Long iD, int copies){
-        if (currentBorrowerID.contains(new iDandCopies(iD, copies))) {
+    iDandCopies found = new iDandCopies(iD,copies);
+        if (currentBorrowerID.contains(found)) {
             System.out.println("found iD");
-            currentBorrowerID.remove(new iDandCopies(iD, copies));
+            currentBorrowerID.remove(found);
             assignFromWaitList(copies);
             media.setCopies(media.getCopies()+copies);
         }
