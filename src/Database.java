@@ -123,14 +123,10 @@ public class Database {
 
     public void readInAccounts() {
         File file = new File("account.txt");
-        System.out.println("working 1");
         Scanner scan;
         try {
-            System.out.println("working 2");
-
             scan = new Scanner(file);
             while (scan.hasNextLine()) {
-                System.out.println("working 3");
                 String line = scan.nextLine();
                 String[] lineArray = line.split(",");
                 if (Integer.parseInt(lineArray[0]) == 3) {
