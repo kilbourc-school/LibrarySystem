@@ -226,36 +226,23 @@ public void checkInMedia(Media media, Long iD, int copies){
     }
 
     public String toStringList() {
-        String wait = "";
-        String current = "";
-        if (waitListBorrowerIDs!= null) {
-            for (int i = 0; i < waitListBorrowerIDs.size(); i++) {
-                wait += waitListBorrowerIDs.peek().toString();
-                waitListBorrowerIDs.pop();
+
+        String current = ".0/0";
+        if (currentBorrowerID.peek() != null)
+        if(!(currentBorrowerID.size() <= 1)) {
+            current = "";
+            for (int i = 0; i <= currentBorrowerID.size(); i++) {
+                current += currentBorrowerID.pop().toString();
             }
         }
-        if(currentBorrowerID != null) {
-            for (int i = 0; i < currentBorrowerID.size(); i++) {
-                current += currentBorrowerID.peek().toString();
-                currentBorrowerID.pop();
+        String wait = ".0/0";
+        if (waitListBorrowerIDs.peek() != null)
+            if(!(waitListBorrowerIDs.size() <= 1)) {
+                wait = "";
+                for (int i = 0; i <= waitListBorrowerIDs.size(); i++) {
+                    wait += waitListBorrowerIDs.pop().toString();
+                }
             }
-        }
-        if (wait.equals("") && current.equals("")) {
-            LinkedList<iDandCopies> waitlink = new LinkedList<>();
-            LinkedList<iDandCopies> currlink = new LinkedList<>();
-            waitlink.add(new iDandCopies((long)0,0));
-            currlink.add(new iDandCopies((long)0,0));
-            for (int i = 0; i < waitlink.size(); i++) {
-                current += waitlink.peek().toString();
-                waitlink.pop();
-            }
-            return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + current + "," + 0;
-        }
-        else if (!wait.equals("") && current.equals("")) {
-            LinkedList<iDandCopies> waitlink = new LinkedList<>();
-            return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + waitlink +"," + 0;
-        }
-        else
-            return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + wait + "," + current;
+            return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + current + "," + wait;
     }
 }
