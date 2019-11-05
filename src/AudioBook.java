@@ -4,7 +4,7 @@
  * and availibility.
  */
 
-public class AudioBook extends Media implements Medium {
+public class AudioBook extends Media{
     String narrator;
 
     /*
@@ -26,11 +26,6 @@ public class AudioBook extends Media implements Medium {
     */
     public String toStringList() {
         return "AudioBook," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + narrator;
-    }
-
-    @Override
-    public boolean isComingSoon() {
-        return false;
     }
 
     public void setNarrator(String nar){

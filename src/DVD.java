@@ -5,7 +5,7 @@
  * and availibility.
  */
 
-public class DVD extends Media implements Medium {
+public class DVD extends Media{
 
 
     /*
@@ -16,16 +16,9 @@ public class DVD extends Media implements Medium {
     public DVD(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon) {
         super(title, description, author,subject,copies, genre, releaseYear,stars, comingSoon);
     }
+
     public DVD(){
-        setTitle();
-        setDescription();
-        setAuthor();
-        setSubject();
-        setCopies();
-        setGenre();
-        setReleaseYear();
-        setStars();
-        comingSoon = true;
+       super();
     }
 
     /*
@@ -33,11 +26,6 @@ public class DVD extends Media implements Medium {
      */
     public String toStringList() {
         return "DVD," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + ",";
-    }
-
-    @Override
-    public boolean isComingSoon() {
-        return false;
     }
 
     @Override

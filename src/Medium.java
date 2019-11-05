@@ -1,5 +1,8 @@
 public interface Medium {
-    /*
+    /**                                 *
+     *          UNUSED AS OF NOW        *
+     *                                  */
+    /*                                  
     interface for all methods
      */
     void makeBorrowed();

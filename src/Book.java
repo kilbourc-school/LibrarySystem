@@ -5,10 +5,8 @@
  * and availibility.
  */
 
-public class Book extends Media implements Medium {
+public class Book extends Media{
     int ISBN;
-
-
     /*
      * Constructor.
      * Params: Strings ISBN, title, author, genre.
@@ -57,10 +55,6 @@ public class Book extends Media implements Medium {
         return "Book," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + ISBN;
     }
 
-    @Override
-    public boolean isComingSoon() {
-        return false;
-    }
 
     @Override
     //Converts object to String.

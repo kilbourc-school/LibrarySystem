@@ -84,6 +84,7 @@ public abstract class Media {
     public void setSubject(String subject) {
         this.subject = subject;
     }
+
     public void setSubject() {
         System.out.print("Subject: ");
         this.setSubject(keyboard.nextLine());
