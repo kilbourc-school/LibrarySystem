@@ -83,12 +83,13 @@ public class Media {
     }
 public void checkInMedia(Media media, Long iD, int copies){
     iDandCopies found = new iDandCopies(iD,copies);
-        if (currentBorrowerID.contains(found)) {
-            System.out.println("found iD");
+
             currentBorrowerID.remove(found);
             assignFromWaitList(copies);
+            System.out.println("before set"+media.getCopies());
             media.setCopies(media.getCopies()+copies);
-        }
+            System.out.println("after set"+media.getCopies());
+
 }
     private void assignFromWaitList(int copies) {
         if (waitListBorrowerIDs.peek() != null) {

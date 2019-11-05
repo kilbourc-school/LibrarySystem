@@ -91,6 +91,7 @@ currentMedia.checkOutBook(currentMedia,currentLibrary.getCurrentUser().getID(), 
                 System.out.println("Enter media title you wish to check in");
                 String title = keyboard.nextLine();
                 Media currentMedia = currentLibrary.getBookFromTitle(title);
+                System.out.println(currentMedia.getTitle());
                 System.out.println("Enter how many copies you wish to return");
                 int copies = keyboard.nextInt();
                 currentMedia.checkInMedia(currentMedia, currentLibrary.getCurrentUser().getID(), copies);
