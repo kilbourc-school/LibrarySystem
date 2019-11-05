@@ -10,6 +10,7 @@ public class LibraryDriver {
 
         boolean login = false;
         boolean exit = false;
+
         while (!exit) {
             while(!login) {
                 System.out.println("Enter your username and password");

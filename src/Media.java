@@ -15,6 +15,9 @@ public abstract class Media {
     int stars;
     boolean comingSoon;
 
+    /**
+     * Default constructor with all share variable for all media types
+     */
     Media(){
         setTitle();
         setDescription();
@@ -26,6 +29,20 @@ public abstract class Media {
         setStars();
         isComingSoon(releaseYear);
     }
+
+    /**
+     * Constructor for read in from toString .txt files
+     *
+     * @param title
+     * @param description
+     * @param author
+     * @param subject
+     * @param copies
+     * @param genre
+     * @param releaseYear
+     * @param stars
+     * @param comingSoon
+     */
     Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon){
         this.title = title;
         this.description=description;

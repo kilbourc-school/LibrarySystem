@@ -99,7 +99,7 @@ public class Library {
         database.add(ebook);
     }
 
-    /*
+    /**
      * Method to determine if book in library is available.
      * Param: String with title or ISBN of book.
      * Return: String with status of book.
@@ -113,7 +113,7 @@ public class Library {
         }
     }
 
-    /*
+    /**
      * Method to display all books of a genre in the library.
      * Param: String with the genre of a book.
      * Return: List of books in the same genre.
@@ -130,6 +130,8 @@ public class Library {
     public void browseTitle(String title) {
         for (int i = 0; i < database.size(); i++) {
             String bookTitle = (database.get(i)).getTitle();
+
+        //    bookTitle.toLowerCase().contains(title.toLowerCase()); for searching titles?
             if (title.equals(bookTitle)) {
                 System.out.println(database.get(i));
             }
