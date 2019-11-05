@@ -178,6 +178,9 @@ public Media getBookFromTitle(String title){
     public void addAdultAccount(String name, Long iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin) {
         libraryDatabase.getAccountsDatabase().add(new AdultBorrow(name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin));
     }
+    public void addAdultAccount(Borrower adultBorrower){
+        libraryDatabase.getAccountsDatabase().add(adultBorrower);
+    }
 
     public void addChildAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin) {
         libraryDatabase.getAccountsDatabase().add(new ChildBorrow(name, Long.parseLong(iD), birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin));
