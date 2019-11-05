@@ -1,4 +1,8 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /*
@@ -97,6 +101,7 @@ public Media getBookFromTitle(String title){
         }
     }
 
+
     public boolean verifyAccount(String email, String pass) {
 
         for (Borrower account : libraryDatabase.getAccountsDatabase()) {
@@ -133,42 +138,24 @@ public Media getBookFromTitle(String title){
         book.setISBN(keyboard.nextLine());
 
         libraryDatabase.getMediaDatabase().add(book);
+        Book book = new Book();
+        libraryDatabase.getMediaDatabase().add(book);
     }
 
-    public void addAudioBook() {
-        Scanner keyboard = new Scanner(System.in);
-        Media media = new Media();
-        Library.adminAddMedia(media);
-        AudioBook audioBook = new AudioBook(media);
-
-        System.out.print("ISBN: ");
-        audioBook.setNarrator(keyboard.nextLine());
-
+    public void addAudioBook(){
+        AudioBook audioBook = new AudioBook();
         libraryDatabase.getMediaDatabase().add(audioBook);
     }
-
     public void addDVD() {
-        Scanner keyboard = new Scanner(System.in);
-        Media media = new Media();
-        Library.adminAddMedia(media);
-        DVD dvd = new DVD(media);//null Book
-
+        DVD dvd = new DVD();
         libraryDatabase.getMediaDatabase().add(dvd);
     }
-
     public void addEBook() {
-        Scanner keyboard = new Scanner(System.in);
-        Media media = new Media();
-        Library.adminAddMedia(media);
-        EBook ebook = new EBook(media); //null Book
-
-        System.out.print("ISBN: ");
-        ebook.setISBN(keyboard.nextLine());
-
+        EBook ebook = new EBook(); //null Book
         libraryDatabase.getMediaDatabase().add(ebook);
     }
 
-    /*
+    /**
      * Method to determine if book in library is available.
      * Param: String with title or ISBN of book.
      * Return: String with status of book.
@@ -240,6 +227,7 @@ public Media getBookFromTitle(String title){
     public void addChildAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin) {
         libraryDatabase.getAccountsDatabase().add(new ChildBorrow(name, Long.parseLong(iD), birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin));
     }
+
 
   /*
 

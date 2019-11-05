@@ -7,7 +7,7 @@
 
 import java.util.LinkedList;
 
-public class DVD extends Media implements Medium {
+public class DVD extends Media{
 
 
     /*
@@ -19,20 +19,9 @@ public class DVD extends Media implements Medium {
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon);
     }
 
-    public DVD(Media media) {
-        this.title = media.getTitle();
-        this.description = media.getDescription();
-        this.author = media.getAuthor();
-        this.subject = media.getSubject();
-        this.copies = media.getCopies();
-        this.genre = media.getGenre();
-        this.releaseYear = media.getReleaseYear();
-        this.stars = media.getStars();
-        this.comingSoon = media.isComingSoon();
-        this.currentBorrowerID = new LinkedList<>();
-        this.waitListBorrowerIDs = new LinkedList<>();
-        currentBorrowerID.add(new iDandCopies((long) 0,0));
-        waitListBorrowerIDs.add((new iDandCopies((long) 0,0)));    }
+    public DVD(){
+       super();
+    }
 
     /*
      converts objects into strings

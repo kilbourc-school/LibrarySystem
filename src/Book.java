@@ -6,8 +6,7 @@
  */
 
 import java.util.LinkedList;
-
-public class Book extends Media implements Medium {
+public class Book extends Media{
     int ISBN;
 
 
@@ -24,34 +23,16 @@ public class Book extends Media implements Medium {
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon, currentBorrowerID, waitListBorrowerIDs);
         this.ISBN = ISBN;
     }
-
-    public Book(Media media) {
-        this.title = media.getTitle();
-        this.description = media.getDescription();
-        this.author = media.getAuthor();
-        this.subject = media.getSubject();
-        this.copies = media.getCopies();
-        this.genre = media.getGenre();
-        this.releaseYear = media.getReleaseYear();
-        this.stars = media.getStars();
-        this.comingSoon = media.isComingSoon();
-        this.currentBorrowerID = new LinkedList<>();
-        this.waitListBorrowerIDs = new LinkedList<>();
-        currentBorrowerID.add(new iDandCopies((long) 0,0));
-        waitListBorrowerIDs.add((new iDandCopies((long) 0,0)));
-    }
-
     public Book() {
         super();
+        setISBN();
     }
-
     /*
     returns isbn value
      */
     public int getISBN() {
         return ISBN;
     }
-
     /*
      sets isbn
      */
@@ -63,6 +44,11 @@ public class Book extends Media implements Medium {
             System.out.println("Input not of type int, ISBN set to 0");
         }
         this.ISBN = x;
+    }
+
+    public void setISBN() {
+        System.out.print("ISBN: ");
+        this.setISBN(keyboard.nextLine());
     }
 
     /*

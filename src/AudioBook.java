@@ -3,10 +3,8 @@
  * attributes like titles, authors, physical states,
  * and availibility.
  */
-
 import java.util.LinkedList;
-
-public class AudioBook extends Media implements Medium {
+public class AudioBook extends Media{
     String narrator;
 
     /*
@@ -38,6 +36,10 @@ public class AudioBook extends Media implements Medium {
         this.waitListBorrowerIDs = new LinkedList<>();
         currentBorrowerID.add(new iDandCopies((long) 0,0));
         waitListBorrowerIDs.add((new iDandCopies((long) 0,0)));    }
+    public AudioBook(){
+        super();
+        setNarrator();
+    }
 
     /*
     Converts objects to strings
@@ -45,15 +47,18 @@ public class AudioBook extends Media implements Medium {
     public String toStringList() {
         return "AudioBook," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + narrator;
     }
-
-    public String getNarrator() {
-        return narrator;
-    }
-
     public void setNarrator(String nar) {
         this.narrator = nar;
     }
 
+    public void setNarrator(){
+        System.out.print("ISBN: ");
+        this.setNarrator(keyboard.nextLine());
+    }
+
+    public String getNarrator() {
+        return narrator;
+    }
     @Override
         /*
         /Converts object to String.
