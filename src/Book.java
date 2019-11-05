@@ -27,15 +27,7 @@ public class Book extends Media implements Medium {
     }
 
     public Book() {
-        setTitle();
-        setDescription();
-        setAuthor();
-        setSubject();
-        setCopies();
-        setGenre();
-        setReleaseYear();
-        setStars();
-        comingSoon = true;
+        super();
         setISBN();
     }
 
@@ -64,13 +56,18 @@ public class Book extends Media implements Medium {
         this.setISBN(keyboard.nextLine());
     }
 
-}
+
 
     /*
      converts objects into strings
       */
     public String toStringList() {
         return "Book," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + ISBN;
+    }
+
+    @Override
+    public boolean isComingSoon() {
+        return false;
     }
 
     @Override

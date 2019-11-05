@@ -24,7 +24,7 @@ public class AudioBook extends Media implements Medium {
         this.comingSoon=comingSoon;
         this.narrator = narrator;
     }
-    public AudioBook({
+    public AudioBook(){
         setTitle();
         setDescription();
         setAuthor();
@@ -43,6 +43,12 @@ public class AudioBook extends Media implements Medium {
     public String toStringList() {
         return "AudioBook," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + narrator;
     }
+
+    @Override
+    public boolean isComingSoon() {
+        return false;
+    }
+
     public void setNarrator(String nar){
         this.narrator = nar;
     }

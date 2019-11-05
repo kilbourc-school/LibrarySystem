@@ -84,27 +84,18 @@ public class Library {
         database.add(book);
     }
 
-    public void addAudioBook();
+    public void addAudioBook(){
         AudioBook audioBook = new AudioBook();
         database.add(audioBook);
     }
-    public void addDVD() {
-        Scanner keyboard = new Scanner(System.in);
-        Media media = new Media();
-        Library.adminAddMedia(media);
-        DVD dvd = new DVD(media);//null Book
 
+    public void addDVD() {
+        DVD dvd = new DVD();
         database.add(dvd);
     }
+
     public void addEBook() {
-        Scanner keyboard = new Scanner(System.in);
-        Media media = new Media();
-        Library.adminAddMedia(media);
-        EBook ebook = new EBook(media); //null Book
-
-        System.out.print("ISBN: ");
-        ebook.setISBN(keyboard.nextLine());
-
+        EBook ebook = new EBook(); //null Book
         database.add(ebook);
     }
 

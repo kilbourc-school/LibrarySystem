@@ -12,9 +12,22 @@ public abstract class Media {
     int releaseYear;
     int stars;
     boolean comingSoon;
+
+    Media(){
+        setTitle();
+        setDescription();
+        setAuthor();
+        setSubject();
+        setCopies();
+        setGenre();
+        setReleaseYear();
+        setStars();
+        comingSoon = true;
+    }
      /*
        Getters
         */
+
     public String getTitle() {
         return title;
     }
@@ -135,7 +148,6 @@ public abstract class Media {
         this.setStars(keyboard.nextLine());
     }
 
-    public abstract void setExtra();
     //Modifier method to mark book as unavailable.
     public void makeBorrowed() {
         if (copies < 1) {

@@ -7,19 +7,29 @@ public class EBook extends Media implements Medium {
        super: title, description, author, subject, copies, genre, releaseYear, stars, comingSoon (calls from borrower)
      */
     public EBook(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int ISBN) {
-        super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon);
+        this.title = title;
+        this.description=description;
+        this.author=author;
+        this.subject=subject;
+        this.copies=copies;
+        this.genre=genre;
+        this.releaseYear=releaseYear;
+        this.stars=stars;
+        this.comingSoon=comingSoon;
         this.ISBN = ISBN;
+
     }
-    public EBook(Media media){
-        this.title = media.getTitle();
-        this.description = media.getDescription();
-        this.author = media.getAuthor();
-        this.subject = media.getSubject();
-        this.copies = media.getCopies();
-        this.genre = media.getGenre();
-        this.releaseYear = media.getReleaseYear();
-        this.stars = media.getStars();
-        this.comingSoon = media.isComingSoon();
+    public EBook(){
+        setTitle();
+        setDescription();
+        setAuthor();
+        setSubject();
+        setCopies();
+        setGenre();
+        setReleaseYear();
+        setStars();
+        comingSoon = true;
+        setISBN();
     }
 
     /*
@@ -34,7 +44,10 @@ public class EBook extends Media implements Medium {
         }
         this.ISBN = x;
     }
-
+    public void setISBN() {
+        System.out.print("ISBN: ");
+        this.setISBN(keyboard.nextLine());
+    }
     /*
     Returns ISBN Value
      */
@@ -47,6 +60,11 @@ public class EBook extends Media implements Medium {
      */
     public String toStringList() {
         return "EBook," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + ISBN;
+    }
+
+    @Override
+    public boolean isComingSoon() {
+        return false;
     }
 
     @Override

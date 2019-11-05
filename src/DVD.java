@@ -14,18 +14,26 @@ public class DVD extends Media implements Medium {
        super: title, description, author, subject, copies, genre, releaseYear, stars, comingSoon (calls from borrower)
      */
     public DVD(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon) {
-        super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon);
+        this.title = title;
+        this.description=description;
+        this.author=author;
+        this.subject=subject;
+        this.copies=copies;
+        this.genre=genre;
+        this.releaseYear=releaseYear;
+        this.stars=stars;
+        this.comingSoon=comingSoon;
     }
-    public DVD(Media media){
-        this.title = media.getTitle();
-        this.description = media.getDescription();
-        this.author = media.getAuthor();
-        this.subject = media.getSubject();
-        this.copies = media.getCopies();
-        this.genre = media.getGenre();
-        this.releaseYear = media.getReleaseYear();
-        this.stars = media.getStars();
-        this.comingSoon = media.isComingSoon();
+    public DVD(){
+        setTitle();
+        setDescription();
+        setAuthor();
+        setSubject();
+        setCopies();
+        setGenre();
+        setReleaseYear();
+        setStars();
+        comingSoon = true;
     }
 
     /*
@@ -33,6 +41,11 @@ public class DVD extends Media implements Medium {
      */
     public String toStringList() {
         return "DVD," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + ",";
+    }
+
+    @Override
+    public boolean isComingSoon() {
+        return false;
     }
 
     @Override
