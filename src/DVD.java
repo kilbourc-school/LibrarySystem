@@ -7,7 +7,7 @@
 
 import java.util.LinkedList;
 
-public class DVD extends Media{
+public class DVD extends Media {
 
 
     /*
@@ -19,8 +19,9 @@ public class DVD extends Media{
     public DVD(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs) {
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon, currentBorrowerID, waitListBorrowerIDs);
     }
-    public DVD(){
-       super();
+
+    public DVD() {
+        super();
     }
 
     /*
@@ -29,7 +30,6 @@ public class DVD extends Media{
     public String toStringList() {
         return "DVD," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + ",";
     }
-
 
 
     @Override

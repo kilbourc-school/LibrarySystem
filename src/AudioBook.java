@@ -3,8 +3,10 @@
  * attributes like titles, authors, physical states,
  * and availibility.
  */
+
 import java.util.LinkedList;
-public class AudioBook extends Media{
+
+public class AudioBook extends Media {
     String narrator;
 
     /*
@@ -34,9 +36,11 @@ public class AudioBook extends Media{
         this.comingSoon = media.isComingSoon();
         this.currentBorrowerID = new LinkedList<>();
         this.waitListBorrowerIDs = new LinkedList<>();
-        currentBorrowerID.add(new iDandCopies((long) 0,0));
-        waitListBorrowerIDs.add((new iDandCopies((long) 0,0)));    }
-    public AudioBook(){
+        currentBorrowerID.add(new iDandCopies((long) 0, 0));
+        waitListBorrowerIDs.add((new iDandCopies((long) 0, 0)));
+    }
+
+    public AudioBook() {
         super();
         setNarrator();
     }
@@ -47,11 +51,8 @@ public class AudioBook extends Media{
     public String toStringList() {
         return "AudioBook," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + narrator;
     }
-    public void setNarrator(String nar) {
-        this.narrator = nar;
-    }
 
-    public void setNarrator(){
+    public void setNarrator() {
         System.out.print("ISBN: ");
         this.setNarrator(keyboard.nextLine());
     }
@@ -59,6 +60,11 @@ public class AudioBook extends Media{
     public String getNarrator() {
         return narrator;
     }
+
+    public void setNarrator(String nar) {
+        this.narrator = nar;
+    }
+
     @Override
         /*
         /Converts object to String.

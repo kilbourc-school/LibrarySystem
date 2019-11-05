@@ -5,7 +5,7 @@ public interface Medium {
 
     /**
      * interface for all methods
-     * */
+     */
     void makeBorrowed();
 
     void makeReturned();
