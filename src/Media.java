@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Scanner;
 
 public abstract class Media {
@@ -22,7 +24,7 @@ public abstract class Media {
         setGenre();
         setReleaseYear();
         setStars();
-        comingSoon = true;
+        isComingSoon(releaseYear);
     }
     Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon){
         this.title = title;
@@ -181,4 +183,10 @@ public abstract class Media {
     }
 
     public String toStringList(){ return " ";}
+
+    private Boolean isComingSoon(int releaseYear){
+        LocalDate today = LocalDate.now();
+        return ( (releaseYear - today.getYear()) < 1);
+
+    }
 }
