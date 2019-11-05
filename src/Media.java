@@ -16,13 +16,6 @@ public abstract class Media {
     boolean comingSoon;
     LinkedList<iDandCopies> currentBorrowerID;
     LinkedList<iDandCopies> waitListBorrowerIDs;
-
-
-    public Media() {
-    }
-
-    public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon) {
-
     /**
      * Default constructor with all share variable for all media types
      */
@@ -145,9 +138,6 @@ public void checkInMedia(Media media, Long iD, int copies){
         */
     public String getTitle() {
         return title;
-    }
-    public String getAuthor() {
-        return author;
     }
 
     public String getDescription() {
@@ -287,8 +277,6 @@ public void checkInMedia(Media media, Long iD, int copies){
         return copies >= 1;
     }
 
-    public String toStringList(){ return " ";}
-
     private Boolean isComingSoon(int releaseYear){
         LocalDate today = LocalDate.now();
         return ( (releaseYear - today.getYear()) < 1);
@@ -313,5 +301,9 @@ public void checkInMedia(Media media, Long iD, int copies){
                 }
             }
             return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + current + "," + wait;
+    }
+
+    public boolean isComingSoon() {
+        return comingSoon;
     }
 }

@@ -129,6 +129,8 @@ public Media getBookFromTitle(String title){
     }
 
     public void addBook() {
+       /* CHECK ME
+
         Scanner keyboard = new Scanner(System.in);
         Media media = new Media();
         Library.adminAddMedia(media);
@@ -138,6 +140,7 @@ public Media getBookFromTitle(String title){
         book.setISBN(keyboard.nextLine());
 
         libraryDatabase.getMediaDatabase().add(book);
+        */
         Book book = new Book();
         libraryDatabase.getMediaDatabase().add(book);
     }
