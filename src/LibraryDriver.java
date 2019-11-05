@@ -16,7 +16,7 @@ public class LibraryDriver {
         while (!exit) {
 
             while (!login) {
-
+                String fix = keyboard.nextLine(); //clear next int
                 System.out.print("\n\nPlease login with your Library user email: ");
 
                 String username = keyboard.nextLine();
@@ -122,6 +122,7 @@ public class LibraryDriver {
                 switch (input){
                     case 1:
                         System.out.println("Searching function to be added");
+                        search();
                         break;
                     case 0:
                         login = false;
@@ -130,5 +131,8 @@ public class LibraryDriver {
 
             }
         }
+    }
+    public static void search(){
+
     }
 }
