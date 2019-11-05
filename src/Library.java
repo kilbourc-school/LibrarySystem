@@ -5,8 +5,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/*
- *
+/**
  * This is the class that acts as the library, holding
  * the books and allowing interactions with the books
  * using methods to add, remove, borrow, return, and
@@ -160,7 +159,7 @@ public Media getBookFromTitle(String title){
         }
     }
 
-    /*
+    /**
      * Method to display all books of a genre in the library.
      * Param: String with the genre of a book.
      * Return: List of books in the same genre.
@@ -221,20 +220,8 @@ public Media getBookFromTitle(String title){
     }
 
 
-  /*
 
-  public void browseISBN(int ISBN){
-    for(int i = 0; i < database.size(); i++){
-      int bookISBN = (database.get(i)).getISBN();
-      if(ISBN == bookISBN){
-        System.out.println(database.get(i));
-      }
-    }
-  }
-  */
-
-
-    /*
+    /**
      * Finds book object based on String. Basically converts
      * from String to Book.
      * Param: String containing title or ISBN
