@@ -84,9 +84,7 @@ public class LibraryDriver {
                 }
                 if (input == 7) {
                     AdultBorrow borrower = new AdultBorrow();
-              //      currentLibrary.addAdultAccount(borrower.getName(), borrower.getID(), borrower.getBirthday(), borrower.getPhoneNum(), borrower.getStreet1(), borrower.getCity(), borrower.getState(), borrower.getZip(), borrower.getEmail(), borrower.getPassword(), borrower.getCardNum(), borrower.isAdmin);
                     currentLibrary.addAdultAccount(borrower);
-               //     currentLibrary.addAdminAccount("name", "id", LocalDate.now(), 803511, "street", "city", "state", 29045, "admin@admin", "admin", 1199, true);
                 }
                 if (input == 0) {
                     currentLibrary.saveAccountsToFile();

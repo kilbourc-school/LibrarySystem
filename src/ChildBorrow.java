@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class ChildBorrow extends Borrower implements BorrowBehavior {
+public class ChildBorrow extends Borrower {
     /*
    Amount set for how many books an ChildBorrower can checkout
     */

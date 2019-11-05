@@ -14,7 +14,6 @@ public abstract class Borrower {
     boolean isAdmin;
 
     //Use interface to modify borrow limits
-    BorrowBehavior borrowBehavior;
     /*
     Variables for class created
      */
@@ -211,10 +210,6 @@ public abstract class Borrower {
 
     public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
-    }
-
-    public void setBorrowBehavior(BorrowBehavior bb) {
-        borrowBehavior = bb;
     }
 
     @Override
