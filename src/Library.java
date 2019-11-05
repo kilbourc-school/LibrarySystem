@@ -129,18 +129,6 @@ public Media getBookFromTitle(String title){
     }
 
     public void addBook() {
-       /* CHECK ME
-
-        Scanner keyboard = new Scanner(System.in);
-        Media media = new Media();
-        Library.adminAddMedia(media);
-        Book book = new Book(media);
-
-        System.out.print("ISBN: ");
-        book.setISBN(keyboard.nextLine());
-
-        libraryDatabase.getMediaDatabase().add(book);
-        */
         Book book = new Book();
         libraryDatabase.getMediaDatabase().add(book);
     }
