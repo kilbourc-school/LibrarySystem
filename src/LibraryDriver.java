@@ -16,7 +16,7 @@ public class LibraryDriver {
         while (!exit) {
 
             while (!login) {
-                String fix = keyboard.nextLine(); //clear next int
+
                 System.out.print("\n\nPlease login with your Library user email: ");
 
                 String username = keyboard.nextLine();
@@ -36,7 +36,7 @@ public class LibraryDriver {
  * Admin login
  */
             while (login  && currentLibrary.getCurrentUser().isAdmin()) {
-                System.out.println("\n\nWelcome  Administrator "+ currentLibrary.getCurrentUser().getName() + ",\n\tWhat would you like to do?");
+                System.out.println("\n\nWelcome  Administrator "+ currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?\n");
                 System.out.println("1: Add media\n2: See all accounts\n3: Search by title\n4: Search by genre" +
                         "\n5: Display all books\n6: Save to file\n7: Add an account");
                 System.out.println("0: Logout");
@@ -48,6 +48,7 @@ public class LibraryDriver {
                     System.out.println("Which media type would you like to add?");
                     System.out.println("1: Book\n2: Audio Book\n3: DVD\n4: eBook");
                     input = keyboard.nextInt();
+                    fix = keyboard.nextLine();
                     if (input == 1) {
                         currentLibrary.addBook();
                     }
@@ -116,16 +117,18 @@ public class LibraryDriver {
              * User login
              */
             while (login && !currentLibrary.getCurrentUser().isAdmin()) {
-                System.out.println("\n\nWelcome User "+ currentLibrary.getCurrentUser().getName() + ",\n\tWhat would you like to do?");
+                System.out.println("\n\nWelcome User "+ currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
                 System.out.println("1: Search Library\n0:Logout");
                 int input = keyboard.nextInt();
+                String fix = keyboard.nextLine();
                 switch (input){
                     case 1:
-                        System.out.println("Searching function to be added");
                         search();
                         break;
                     case 0:
                         login = false;
+                        break;
+                    default:
                         break;
                 }
 
@@ -133,6 +136,6 @@ public class LibraryDriver {
         }
     }
     public static void search(){
-
+        System.out.println("Searching function to be added");
     }
 }

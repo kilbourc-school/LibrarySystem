@@ -5,7 +5,7 @@ public class ChildBorrow extends Borrower implements BorrowBehavior {
    Amount set for how many books an ChildBorrower can checkout
     */
     int borrowLimit = 3;
-    Borrower parent;
+   // Borrower parent;
 
     /*
     Constructor for Child Borrow
@@ -22,7 +22,7 @@ public class ChildBorrow extends Borrower implements BorrowBehavior {
     public ChildBorrow(Borrower parent){
         super();
         isAdmin = false;
-        this.parent= parent;
+//        this.parent= parent;
     }
 
     /*
