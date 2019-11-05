@@ -175,13 +175,14 @@ public Media getBookFromTitle(String title){
     }
 
     public void browseTitle(String title) {
-        for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
-            String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
-            if (title.equals(bookTitle)) {
-                System.out.println(libraryDatabase.getMediaDatabase().get(i));
+            for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
+                String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
+
+                if (bookTitle.toLowerCase().contains(title.toLowerCase())) {
+                    System.out.println(libraryDatabase.getMediaDatabase().get(i));
+                }
             }
         }
-    }
 
     public void addCopyByTitle(String title, int copies) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
