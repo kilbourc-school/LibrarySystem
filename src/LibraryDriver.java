@@ -8,7 +8,6 @@ public class LibraryDriver {
         currentLibrary.readInMedia();
         currentLibrary.readInAccounts();
 
-
         boolean login = false;
         while (!login) {
             System.out.println("Enter your username and password");
@@ -24,21 +23,22 @@ public class LibraryDriver {
 
         while (true) {
             System.out.println("What would you like to do?");
-            System.out.println("enter 1 to add media");
-            System.out.println("enter 2 to see all accounts");
-            System.out.println("enter 3 to search by title");
-            System.out.println("enter 4 to search by genre");
-            System.out.println("enter 5 to display all books");
-            System.out.println("enter 6 save to file");
-            System.out.println("enter 7 to add a account");
+            System.out.println("1: Add media");
+            System.out.println("2: See all accounts");
+            System.out.println("3: Search by title");
+            System.out.println("4: Search by genre");
+            System.out.println("5: Display all books");
+            System.out.println("6: Save to file");
+            System.out.println("7: Add an account");
             int input = keyboard.nextInt();
             String fix = keyboard.nextLine();
             if (input == 1) {
                 //&& currentLibrary.getCurrentUser().isAdmin
-                System.out.println("enter 1 to add a book");
-                System.out.println("enter 2 to add a audiobook");
-                System.out.println("enter 3 to add a dvd");
-                System.out.println("enter 3 to add a ebook");
+                System.out.println("Which media type would you like to add?");
+                System.out.println("1: Book");
+                System.out.println("2: Audio Book");
+                System.out.println("3: DVD");
+                System.out.println("4: eBook");
                 input = keyboard.nextInt();
                 if (input == 1) {
                     currentLibrary.addBook();
@@ -57,12 +57,12 @@ public class LibraryDriver {
                 currentLibrary.displayAllAccounts();
             }
             if (input == 3) {
-                System.out.println("enter the book title");
+                System.out.println("Enter the book title");
                 String title = keyboard.nextLine();
                 currentLibrary.browseTitle(title);
             }
             if (input == 4) {
-                System.out.println("enter the book genre");
+                System.out.println("Enter the book genre");
                 String genre = keyboard.nextLine();
                 currentLibrary.browseGenre(genre);
             }
