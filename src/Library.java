@@ -131,8 +131,7 @@ public class Library {
         for (int i = 0; i < database.size(); i++) {
             String bookTitle = (database.get(i)).getTitle();
 
-        //    bookTitle.toLowerCase().contains(title.toLowerCase()); for searching titles?
-            if (title.equals(bookTitle)) {
+            if (bookTitle.toLowerCase().contains(title.toLowerCase())) {
                 System.out.println(database.get(i));
             }
         }
