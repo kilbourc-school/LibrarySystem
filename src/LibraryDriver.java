@@ -13,8 +13,8 @@ public class LibraryDriver {
 
         while (!exit) {
             while(!login) {
-                currentLibrary.displayAllAccounts();
-                System.out.print("\n\nEnter your user email: ");
+                System.out.print("********** Welcome to CSCE 247 Library Project **********");
+                System.out.print("\n\nPlease login with your Library user email: ");
 
                 String username = keyboard.nextLine();
                 if (username.equalsIgnoreCase("exit")) {
@@ -30,8 +30,8 @@ public class LibraryDriver {
                 }
             }
 
-            while (login) {
-                System.out.println("Welcome "+ currentLibrary.getCurrentUser().getName() +", what would you like to do?");
+            while (login /* && currentLibrary.getCurrentUser().isAdmin()*/) {
+                System.out.println("\n\nWelcome "+/* Administrator +*/ currentLibrary.getCurrentUser().getName() +",\n\tWhat would you like to do?");
                 System.out.println("1: Add media\n2: See all accounts\n3: Search by title\n4: Search by genre"+
                                     "\n5: Display all books\n6: Save to file\n7: Add an account");
                 System.out.println("0: Logout");
