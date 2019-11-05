@@ -14,15 +14,7 @@ public class DVD extends Media implements Medium {
        super: title, description, author, subject, copies, genre, releaseYear, stars, comingSoon (calls from borrower)
      */
     public DVD(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon) {
-        this.title = title;
-        this.description=description;
-        this.author=author;
-        this.subject=subject;
-        this.copies=copies;
-        this.genre=genre;
-        this.releaseYear=releaseYear;
-        this.stars=stars;
-        this.comingSoon=comingSoon;
+        super(title, description, author,subject,copies, genre, releaseYear,stars, comingSoon);
     }
     public DVD(){
         setTitle();
