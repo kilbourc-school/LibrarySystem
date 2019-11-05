@@ -6,7 +6,8 @@
  */
 
 import java.util.LinkedList;
-public class Book extends Media{
+
+public class Book extends Media {
     int ISBN;
 
 
@@ -23,16 +24,19 @@ public class Book extends Media{
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon, currentBorrowerID, waitListBorrowerIDs);
         this.ISBN = ISBN;
     }
+
     public Book() {
         super();
         setISBN();
     }
+
     /*
     returns isbn value
      */
     public int getISBN() {
         return ISBN;
     }
+
     /*
      sets isbn
      */

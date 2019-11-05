@@ -1,8 +1,4 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /*
@@ -78,13 +74,15 @@ public class Library {
                 System.out.println(account);
         }
     }
-public Media getBookFromTitle(String title){
-    for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
-        if (libraryDatabase.getMediaDatabase().get(i).getTitle().equals(title))
-        return libraryDatabase.getMediaDatabase().get(i);
+
+    public Media getBookFromTitle(String title) {
+        for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
+            if (libraryDatabase.getMediaDatabase().get(i).getTitle().equals(title))
+                return libraryDatabase.getMediaDatabase().get(i);
+        }
+        return null;
     }
-    return null;
-}
+
     //Prints out the teachers accounts
     public void displayChildAccounts() {
 
@@ -133,14 +131,16 @@ public Media getBookFromTitle(String title){
         libraryDatabase.getMediaDatabase().add(book);
     }
 
-    public void addAudioBook(){
+    public void addAudioBook() {
         AudioBook audioBook = new AudioBook();
         libraryDatabase.getMediaDatabase().add(audioBook);
     }
+
     public void addDVD() {
         DVD dvd = new DVD();
         libraryDatabase.getMediaDatabase().add(dvd);
     }
+
     public void addEBook() {
         EBook ebook = new EBook(); //null Book
         libraryDatabase.getMediaDatabase().add(ebook);
@@ -175,14 +175,14 @@ public Media getBookFromTitle(String title){
     }
 
     public void browseTitle(String title) {
-            for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
-                String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
+        for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
+            String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
 
-                if (bookTitle.toLowerCase().contains(title.toLowerCase())) {
-                    System.out.println(libraryDatabase.getMediaDatabase().get(i));
-                }
+            if (bookTitle.toLowerCase().contains(title.toLowerCase())) {
+                System.out.println(libraryDatabase.getMediaDatabase().get(i));
             }
         }
+    }
 
     public void addCopyByTitle(String title, int copies) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {

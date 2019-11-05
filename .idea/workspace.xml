@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
-    </list>
+    <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -326,7 +324,21 @@
       <option name="project" value="LOCAL" />
       <updated>1572985781251</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="updated browse by title">
+      <created>1572987905938</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1572987905938</updated>
+    </task>
+    <task id="LOCAL-00034" summary="teaching moment about merging">
+      <created>1572988106523</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1572988106523</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,8 +359,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added account and media file writing" />
-    <MESSAGE value="added amount of copies edit&#10;added contructor to library&#10;commented out login requirements for testing purposes" />
     <MESSAGE value="implemented the exported txt files. fixed admin borrow toStringList" />
     <MESSAGE value="encapsulated database" />
     <MESSAGE value="merged in comments branch and encapsulated media branch to master" />
@@ -372,6 +382,8 @@
     <MESSAGE value="removed error check messages" />
     <MESSAGE value="merged checkout branch master" />
     <MESSAGE value="merged Scott's abstraction / UI updates branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged Scott's abstraction / UI updates branch" />
+    <MESSAGE value="updated browse by title" />
+    <MESSAGE value="teaching moment about merging" />
+    <option name="LAST_COMMIT_MESSAGE" value="teaching moment about merging" />
   </component>
 </project>
