@@ -78,62 +78,14 @@ public class Library {
         return false;
     }
 
-    public String[] addMediaBase() {
-        Scanner keyboard = new Scanner(System.in);
-        String[] media = new String[9];
-        media[0] = keyboard.nextLine(); //title
-        media[1] = keyboard.nextLine();  //description
-        media[2] = keyboard.nextLine(); //author
-        media[3] = keyboard.nextLine(); //subject
-        media[4] = keyboard.nextLine(); //copies
-        media[5] = keyboard.nextLine(); //genre
-        media[6] = keyboard.nextLine(); //releaseYear
-        media[7] = keyboard.nextLine(); //stars
-        media[8] = keyboard.nextLine(); //comingSoon
-        return media;
-    }
-    private static Media adminAddMedia(Media media){
-        Scanner keyboard = new Scanner(System.in);
-
-        System.out.print("Title: ");
-        media.setTitle(keyboard.nextLine());
-        System.out.print("Author: ");
-        media.setAuthor(keyboard.nextLine());
-        System.out.print("Description: ");
-        media.setDescription(keyboard.nextLine());
-        System.out.print("Subject: ");
-        media.setSubject(keyboard.nextLine());
-        System.out.print("Genre: ");
-        media.setGenre(keyboard.nextLine());
-        System.out.print("Number of Copies: ");
-        media.setCopies(keyboard.nextLine());
-        System.out.print("Release Year: ");
-        media.setReleaseYear(keyboard.nextLine());
-        System.out.print("Rating: ");
-        media.setStars(keyboard.nextLine());
-        return media;
-    }
     public void addBook() {
         Scanner keyboard = new Scanner(System.in);
-        Media media = new Media();
-        Library.adminAddMedia(media);
-        Book book = new Book(media);
-
-        System.out.print("ISBN: ");
-        book.setISBN(keyboard.nextLine());
-
+        Book book = new Book();
         database.add(book);
     }
 
-    public void addAudioBook() {
-        Scanner keyboard = new Scanner(System.in);
-        Media media = new Media();
-        Library.adminAddMedia(media);
-        AudioBook audioBook = new AudioBook(media);
-
-        System.out.print("ISBN: ");
-        audioBook.setNarrator(keyboard.nextLine());
-
+    public void addAudioBook();
+        AudioBook audioBook = new AudioBook();
         database.add(audioBook);
     }
     public void addDVD() {

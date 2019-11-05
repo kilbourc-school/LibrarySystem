@@ -13,19 +13,28 @@ public class AudioBook extends Media implements Medium {
     title, description, author, subject, copies, genre, releaseYear, stars, comingSoon
      */
     public AudioBook(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, String narrator) {
-        super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon);
+        this.title = title;
+        this.description=description;
+        this.author=author;
+        this.subject=subject;
+        this.copies=copies;
+        this.genre=genre;
+        this.releaseYear=releaseYear;
+        this.stars=stars;
+        this.comingSoon=comingSoon;
         this.narrator = narrator;
     }
-    public AudioBook(Media media){
-        this.title = media.getTitle();
-        this.description = media.getDescription();
-        this.author = media.getAuthor();
-        this.subject = media.getSubject();
-        this.copies = media.getCopies();
-        this.genre = media.getGenre();
-        this.releaseYear = media.getReleaseYear();
-        this.stars = media.getStars();
-        this.comingSoon = media.isComingSoon();
+    public AudioBook({
+        setTitle();
+        setDescription();
+        setAuthor();
+        setSubject();
+        setCopies();
+        setGenre();
+        setReleaseYear();
+        setStars();
+        comingSoon = true;
+        setNarrator();
     }
 
     /*
@@ -37,6 +46,12 @@ public class AudioBook extends Media implements Medium {
     public void setNarrator(String nar){
         this.narrator = nar;
     }
+
+    public void setNarrator(){
+        System.out.print("ISBN: ");
+        this.setNarrator(keyboard.nextLine());
+    }
+
     public String getNarrator() {
         return narrator;
     }

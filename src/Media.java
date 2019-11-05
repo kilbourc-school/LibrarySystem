@@ -11,9 +11,7 @@ public abstract class Media {
     String genre;
     int releaseYear;
     int stars;
-
-    
-
+    boolean comingSoon;
      /*
        Getters
         */
