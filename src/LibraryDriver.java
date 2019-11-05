@@ -9,11 +9,16 @@ public class LibraryDriver {
         currentLibrary.readInAccounts();
 
         boolean login = false;
-        while (!login) {
+        boolean exit = false;
+        while (!exit) {
             while(!login) {
                 System.out.println("Enter your username and password");
                 currentLibrary.displayAllAccounts();
                 String username = keyboard.nextLine();
+                if (username.equalsIgnoreCase("exit")) {
+                    exit = true;
+                    break; //exit program
+                }
                 String password = keyboard.nextLine();
                 if (currentLibrary.verifyAccount(username, password)) {
                     login = true;

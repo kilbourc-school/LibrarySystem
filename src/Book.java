@@ -46,8 +46,6 @@ public class Book extends Media{
         this.setISBN(keyboard.nextLine());
     }
 
-
-
     /*
      converts objects into strings
       */
