@@ -159,11 +159,12 @@ public abstract class Borrower {
 
     @Override
     public String toString() {
-        return "Name= " + name + " Email= " + getEmail() + "ID= " + getID();
+        return "Name= " + name + "\t Email= " + getEmail() + "\tID= " + getID();
     }
 
     // check age vs current time for child age
     // boolean or int years return, not sure which to use
+
     public boolean checkAge() {
         LocalDate today = LocalDate.now();
         return (Period.between(birthday, today).getYears() > 13);
