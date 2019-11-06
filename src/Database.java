@@ -63,6 +63,8 @@ public class Database {
                     getMediaDatabase().add(new DVD(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait));
                 } else if (lineArray[0].equals("EBook")) {
                     getMediaDatabase().add(new EBook(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait, Integer.parseInt(lineArray[12])));
+                } else if (lineArray[0].equals("Magazine")) {
+                    getMediaDatabase().add(new Magazine(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait, Integer.parseInt(lineArray[12]),Integer.parseInt(lineArray[13]));
                 }
             }
         } catch (FileNotFoundException e) {
