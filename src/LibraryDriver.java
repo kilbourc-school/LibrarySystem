@@ -35,8 +35,8 @@ public class LibraryDriver {
 /**
  * Admin login
  */
-            while (login /* && currentLibrary.getCurrentUser().isAdmin()*/) {
-                System.out.println("\n\nWelcome " +/* Administrator +*/ currentLibrary.getCurrentUser().getName() + ",\n\tWhat would you like to do?");
+            while (login  && currentLibrary.getCurrentUser().isAdmin()) {
+                System.out.println("\n\nWelcome  Administrator "+ currentLibrary.getCurrentUser().getName() + ",\n\tWhat would you like to do?");
                 System.out.println("1: Add media\n2: See all accounts\n3: Search by title\n4: Search by genre" +
                         "\n5: Display all books\n6: Save to file\n7: Add an account");
                 System.out.println("0: Logout");
@@ -82,6 +82,9 @@ public class LibraryDriver {
                     currentLibrary.saveMediaToFile();
                 }
                 if (input == 7) {
+                    AdultBorrow borrower = new AdultBorrow();
+                    currentLibrary.addAdultAccount(borrower.getName(), borrower.getID().toString(), borrower.getBirthday(), borrower.getPhoneNum(), borrower.getStreet1(), borrower.getCity(), borrower.getState(), borrower.getZip(), borrower.getEmail(), borrower.getPassword(), borrower.getCardNum(), borrower.isAdmin);
+
                     currentLibrary.addAdminAccount("name", "id", LocalDate.now(), 803511, "street", "city", "state", 29045, "admin@admin", "admin", 1199, true);
                 }
                 if (input == 0) {
@@ -112,7 +115,18 @@ public class LibraryDriver {
             /**
              * User login
              */
-            while (login /* && currentLibrary.getCurrentUser().isAdmin()*/) {
+            while (login && !currentLibrary.getCurrentUser().isAdmin()) {
+                System.out.println("\n\nWelcome User "+ currentLibrary.getCurrentUser().getName() + ",\n\tWhat would you like to do?");
+                System.out.println("1: Search Library\n0:Logout");
+                int input = keyboard.nextInt();
+                switch (input){
+                    case 1:
+                        System.out.println("Searching function to be added");
+                        break;
+                    case 0:
+                        login = false;
+                        break;
+                }
 
             }
         }

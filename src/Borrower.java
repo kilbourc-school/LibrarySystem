@@ -201,8 +201,8 @@ public abstract class Borrower {
         this.ID = ID;
     }
 
-    public String getBirthday() {
-        return birthday.toString();
+    public LocalDate getBirthday() {
+        return birthday;
     }
 
     public void setBirthday(LocalDate birthday) {
