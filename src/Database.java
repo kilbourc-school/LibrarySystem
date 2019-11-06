@@ -62,13 +62,14 @@ public class Database {
                     rating.add(new Ratings(Integer.parseInt(splitRatingSplit[0]),splitRatingSplit[1]));
                 }
                 if (lineArray[0].equals("Book")) {
-                    getMediaDatabase().add(new Book(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait, rating, Integer.parseInt(lineArray[13])));
+
+                    getMediaDatabase().add(new Book(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait, rating, lineArray[13]));
                 } else if (lineArray[0].equals("AudioBook")) {
                     getMediaDatabase().add(new AudioBook(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait, rating, lineArray[13]));
                 } else if (lineArray[0].equals("DVD")) {
                     getMediaDatabase().add(new DVD(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait, rating));
                 } else if (lineArray[0].equals("EBook")) {
-                    getMediaDatabase().add(new EBook(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait, rating, Integer.parseInt(lineArray[13])));
+                    getMediaDatabase().add(new EBook(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait, rating, lineArray[13]));
                 } else if (lineArray[0].equals("Magazine")) {
                     getMediaDatabase().add(new Magazine(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait,rating, Integer.parseInt(lineArray[13]),Integer.parseInt(lineArray[14])));
                 }
@@ -120,7 +121,6 @@ public class Database {
         try {
             PrintWriter writer = new PrintWriter("media.txt");
             for (Media media : getMediaDatabase()) {
-                System.out.println(media.toStringList());
                 writer.println(media.toStringList());
             }
             writer.close();

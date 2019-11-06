@@ -8,7 +8,7 @@
 import java.util.LinkedList;
 
 public class Book extends Media {
-    int ISBN;
+    String ISBN;
     int checkOutLimit = 21;//subtract from current date based on expected date for if late
 
 
@@ -16,7 +16,7 @@ public class Book extends Media {
      * Constructor.
      * Params: Strings ISBN, title, author, genre.
      */
-    public Book(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs, LinkedList<Ratings> ratings, int ISBN) {
+    public Book(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs, LinkedList<Ratings> ratings, String ISBN) {
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon, currentBorrowerID, waitListBorrowerIDs, ratings);
         this.ISBN = ISBN;
     }
@@ -38,7 +38,7 @@ public class Book extends Media {
     /*
         returns isbn value
          */
-    public int getISBN() {
+    public String getISBN() {
         return ISBN;
     }
 
@@ -46,13 +46,7 @@ public class Book extends Media {
      sets isbn
      */
     public void setISBN(String ISBN) {
-        int x = 0;
-        try {
-            x = Integer.parseInt(ISBN);
-        } catch (Exception e) {
-            System.out.println("Input not of type int, ISBN set to 0");
-        }
-        this.ISBN = x;
+        this.ISBN = ISBN;
     }
 
     public void setISBN() {
