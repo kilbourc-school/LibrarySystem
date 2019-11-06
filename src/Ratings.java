@@ -22,4 +22,9 @@ public class Ratings {
     public void setComment(String comment) {
         this.comment = comment;
     }
+
+    @Override
+    public String toString() {
+        return "rating: " + rating + " comment:" + comment;
+    }
 }

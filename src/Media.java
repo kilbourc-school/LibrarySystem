@@ -80,6 +80,10 @@ public abstract class Media {
         return null;
     }
 
+    public void addRating(int stars, String comment) {
+       this.ratings.add(new Ratings(stars,comment));
+    }
+
     public void checkOutMedia(Media media, Borrower currentBorrower, int copies) {
         if (isEnoughMedia(media, copies)) {
             System.out.println("Sorry, book is currently checked out.");

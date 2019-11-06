@@ -1,35 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="encapsulated database">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AdminBorrow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/AdminBorrow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AdultBorrow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/AdultBorrow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AudioBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/AudioBook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Borrower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Borrower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/ChildBorrow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/ChildBorrow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/DVD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/DVD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/EBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/EBook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/LibraryDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/LibraryDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Medium.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Medium.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/TeacherBorrow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/TeacherBorrow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
+    <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryDriver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ratings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ratings.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="LibrarySystem" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="javadoc" />
+        <entry key="$PROJECT_DIR$" value="Scott-Branch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,6 +36,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -64,6 +46,9 @@
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -92,6 +77,7 @@
         <item itemvalue="Application.LibraryDriver" />
         <item itemvalue="Application.LibraryDriver" />
         <item itemvalue="Application.LibraryDriver" />
+        <item itemvalue="Application.LibraryDriver" />
       </list>
     </recent_temporary>
   </component>
@@ -114,6 +100,10 @@
       <workItem from="1571255820655" duration="5856000" />
       <workItem from="1571332870814" duration="2365000" />
       <workItem from="1572292202646" duration="1417000" />
+      <workItem from="1572309243769" duration="654000" />
+      <workItem from="1572460370355" duration="3836000" />
+      <workItem from="1572544726058" duration="12370000" />
+      <workItem from="1573068787276" duration="1280000" />
     </task>
     <task id="LOCAL-00001" summary="made media type AudioBooks">
       <created>1571333916280</created>
@@ -199,7 +189,231 @@
       <option name="project" value="LOCAL" />
       <updated>1572296174358</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="encapsulated database">
+      <created>1572296523326</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1572296523326</updated>
+    </task>
+    <task id="LOCAL-00014" summary="merged in comments branch and encapsulated media branch to master">
+      <created>1572460436324</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1572460436324</updated>
+    </task>
+    <task id="LOCAL-00015" summary="encapsulated databas&#10;changed variable iD in borrowers to Long instead of String.&#10;begun addition of ability to checkout to media">
+      <created>1572545156572</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1572545156572</updated>
+    </task>
+    <task id="LOCAL-00016" summary="currentCheckout changed to a list, as multiple people can have the book checked out.">
+      <created>1572545864505</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1572545864505</updated>
+    </task>
+    <task id="LOCAL-00017" summary="optomized imports">
+      <created>1572545901023</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1572545901023</updated>
+    </task>
+    <task id="LOCAL-00018" summary="added in checkin / checkout of book. still need to fix file I/O for recent media changes">
+      <created>1572546257909</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1572546257909</updated>
+    </task>
+    <task id="LOCAL-00019" summary="added a front end check in / checkout of media by title">
+      <created>1572547633773</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1572547633773</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fixed front end error">
+      <created>1572547749944</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1572547749944</updated>
+    </task>
+    <task id="LOCAL-00021" summary="added in File I/O for changed check in and out">
+      <created>1572548788631</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1572548788631</updated>
+    </task>
+    <task id="LOCAL-00022" summary="fixed errors in File I/O">
+      <created>1572548987507</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1572548987507</updated>
+    </task>
+    <task id="LOCAL-00023" summary="changed toString method to look better">
+      <created>1572549053928</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1572549053928</updated>
+    </task>
+    <task id="LOCAL-00024" summary="edited book constructor to never have null Linked Lists">
+      <created>1572879335782</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1572879335782</updated>
+    </task>
+    <task id="LOCAL-00025" summary="added other media types linked list constructor fix">
+      <created>1572891310322</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1572891310322</updated>
+    </task>
+    <task id="LOCAL-00026" summary="more work with linked lists">
+      <created>1572896736097</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1572896736097</updated>
+    </task>
+    <task id="LOCAL-00027" summary="fixed all check out.">
+      <created>1572899751262</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1572899751263</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fixed all check out.">
+      <created>1572900102549</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1572900102549</updated>
+    </task>
+    <task id="LOCAL-00029" summary="removed working 1 2 3 print messages">
+      <created>1572900403455</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1572900403455</updated>
+    </task>
+    <task id="LOCAL-00030" summary="removed error check messages">
+      <created>1572983186384</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1572983186384</updated>
+    </task>
+    <task id="LOCAL-00031" summary="merged checkout branch master">
+      <created>1572984807097</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1572984807097</updated>
+    </task>
+    <task id="LOCAL-00032" summary="merged Scott's abstraction / UI updates branch">
+      <created>1572985781251</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1572985781251</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Encapsulated Borrowers">
+      <created>1573010223354</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1573010223354</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Created add user function">
+      <created>1573011350586</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1573011350586</updated>
+    </task>
+    <task id="LOCAL-00035" summary="fixed nextInt errors">
+      <created>1573011587096</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1573011587096</updated>
+    </task>
+    <task id="LOCAL-00036" summary="can now add adult account">
+      <created>1573012828088</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1573012828088</updated>
+    </task>
+    <task id="LOCAL-00037" summary="merged add Fines">
+      <created>1573000258635</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1573000258635</updated>
+    </task>
+    <task id="LOCAL-00038" summary="code reformat">
+      <created>1573000313180</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1573000313180</updated>
+    </task>
+    <task id="LOCAL-00039" summary="added front end">
+      <created>1573000794183</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1573000794183</updated>
+    </task>
+    <task id="LOCAL-00040" summary="added due dates">
+      <created>1573001904461</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1573001904461</updated>
+    </task>
+    <task id="LOCAL-00041" summary="added due dates">
+      <created>1573003069401</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1573003069401</updated>
+    </task>
+    <task id="LOCAL-00042" summary="fixed null file writing">
+      <created>1573068949783</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1573068949783</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fixed text issue">
+      <created>1573069250298</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1573069250298</updated>
+    </task>
+    <task id="LOCAL-00044" summary="merged scott branch">
+      <created>1573071159212</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1573071159212</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,24 +434,31 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixed variable calls for book" />
-    <MESSAGE value="added commas for file writing" />
-    <MESSAGE value="Merge branch 'Scott-Borrower-Expansion'&#10;&#10;# Conflicts:&#10;#&#9;src/Borrower.java" />
-    <MESSAGE value="added a get borrow limit for search checking to borrower interfaces" />
-    <MESSAGE value="combined account database" />
-    <MESSAGE value="frontend driver file added&#10;implemented barebones login verification" />
-    <MESSAGE value="begun basic adding of media to main method" />
-    <MESSAGE value="made media type Audiobooks" />
-    <MESSAGE value="made media type AudioBooks" />
-    <MESSAGE value="Merge branch 'master' of https://github.com/kilbourc-school/LibrarySystem&#10;&#10;# Conflicts:&#10;#&#9;src/Borrower.java&#10;#&#9;src/LibraryDriver.java" />
-    <MESSAGE value="fixed small issues in EBook and Audiobook merge conflict" />
-    <MESSAGE value="added in creates for other media types." />
-    <MESSAGE value="added file read in" />
-    <MESSAGE value="added admin read in for account" />
-    <MESSAGE value="added account and media file writing" />
-    <MESSAGE value="added amount of copies edit&#10;added contructor to library&#10;commented out login requirements for testing purposes" />
-    <MESSAGE value="implemented the exported txt files. fixed admin borrow toStringList" />
-    <MESSAGE value="encapsulated database" />
-    <option name="LAST_COMMIT_MESSAGE" value="encapsulated database" />
+    <MESSAGE value="added a front end check in / checkout of media by title" />
+    <MESSAGE value="fixed front end error" />
+    <MESSAGE value="fixed file I/O for the check in and out" />
+    <MESSAGE value="added in File I/O for changed check in and out" />
+    <MESSAGE value="fixed errors in File I/O" />
+    <MESSAGE value="changed toString method to look better" />
+    <MESSAGE value="edited book constructor to never have null Linked Lists" />
+    <MESSAGE value="added other media types linked list constructor fix" />
+    <MESSAGE value="more work with linked lists" />
+    <MESSAGE value="fixed all check out." />
+    <MESSAGE value="removed working 1 2 3 print messages" />
+    <MESSAGE value="removed error check messages" />
+    <MESSAGE value="merged checkout branch master" />
+    <MESSAGE value="merged Scott's abstraction / UI updates branch" />
+    <MESSAGE value="Encapsulated Borrowers" />
+    <MESSAGE value="Created add user function" />
+    <MESSAGE value="fixed nextInt errors" />
+    <MESSAGE value="can now add adult account" />
+    <MESSAGE value="merged add Fines" />
+    <MESSAGE value="code reformat" />
+    <MESSAGE value="added front end" />
+    <MESSAGE value="added due dates" />
+    <MESSAGE value="fixed null file writing" />
+    <MESSAGE value="fixed text issue" />
+    <MESSAGE value="merged scott branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="merged scott branch" />
   </component>
 </project>
