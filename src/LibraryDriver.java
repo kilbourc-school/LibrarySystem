@@ -156,7 +156,7 @@ public class LibraryDriver {
                         System.out.println("enter how many copies you wish to check out");
                         int copies = keyboard.nextInt();
                         Media currentMedia = currentLibrary.getBookFromTitle(title);
-                        currentMedia.checkOutBook(currentMedia, currentLibrary.getCurrentUser().getID(), copies);
+                        currentMedia.checkOutMedia(currentMedia, currentLibrary.getCurrentUser(), copies);
                         break;
                     case 3:
                         System.out.println("Enter media title you wish to check in");
