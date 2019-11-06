@@ -168,6 +168,8 @@ public class LibraryDriver {
                         break;
 
                     case 0:
+                        currentLibrary.saveAccountsToFile();
+                        currentLibrary.saveMediaToFile();
                         login = false;
                         break;
                     default:

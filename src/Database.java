@@ -12,18 +12,10 @@ public class Database {
      */
     ArrayList<Media> MediaDatabase = new ArrayList<>();
     /*
-    /Holds all teachers.
+    /Holds all accounts.
      */
     ArrayList<Borrower> AccountsDatabase = new ArrayList<>();
 
-    /*
-    /Prints out the contents of the Library.
-     */
-    public void displayBooks() {
-        for (int i = 0; i < MediaDatabase.size(); i++) {
-            System.out.println(MediaDatabase.get(i));
-        }
-    }
 
     /*
      Returns mediaDatabase values
@@ -37,47 +29,6 @@ public class Database {
      */
     public ArrayList<Borrower> getAccountsDatabase() {
         return AccountsDatabase;
-    }
-
-    /*
-    /Prints out the teachers accounts
-     */
-    public void displayTeachersAccounts() {
-
-        for (Borrower account : AccountsDatabase) {
-            if (account.getBorrowLimit() == 50)
-                System.out.println(account);
-        }
-    }
-
-    /*
-    /Prints out the teachers accounts
-     */
-    public void displayAdultAccounts() {
-
-        for (Borrower account : AccountsDatabase) {
-            if (account.getBorrowLimit() == 10)
-                System.out.println(account);
-        }
-    }
-
-    //Prints out the teachers accounts
-    public void displayChildAccounts() {
-
-        for (Borrower account : AccountsDatabase) {
-            if (account.getBorrowLimit() == 3)
-                System.out.println(account);
-        }
-    }
-
-    /*
-    prints out all accounts
-     */
-    public void displayAllAccounts() {
-
-        for (Borrower account : AccountsDatabase) {
-            System.out.println(account);
-        }
     }
 
 
@@ -143,22 +94,6 @@ public class Database {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-    }
-
-    public void addAdminAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, boolean isAdmin, double fines) {
-        getAccountsDatabase().add(new AdminBorrow(name, Long.parseLong(iD), birthday, pn, str1, cty, st, zp, em, pw, isAdmin, fines));
-    }
-
-    public void addTeacherAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, boolean isAdmin, double fines) {
-        getAccountsDatabase().add(new TeacherBorrow(name, Long.parseLong(iD), birthday, pn, str1, cty, st, zp, em, pw, isAdmin, fines));
-    }
-
-    public void addAdultAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, boolean isAdmin, double fines) {
-        getAccountsDatabase().add(new AdultBorrow(name, Long.parseLong(iD), birthday, pn, str1, cty, st, zp, em, pw, isAdmin, fines));
-    }
-
-    public void addChildAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, boolean isAdmin, double fines) {
-        getAccountsDatabase().add(new ChildBorrow(name, Long.parseLong(iD), birthday, pn, str1, cty, st, zp, em, pw, isAdmin, fines));
     }
 
     public void saveAccountsToFile() {
