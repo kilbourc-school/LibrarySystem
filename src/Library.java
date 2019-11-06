@@ -154,7 +154,7 @@ public class Library {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
             String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
             if (title.equals(bookTitle)) {
-                libraryDatabase.getMediaDatabase().get(i).setCopies(copies);
+                libraryDatabase.getMediaDatabase().get(i).setCopies(libraryDatabase.getMediaDatabase().get(i).getCopies()+copies);
                 break;
             } else {
                 System.out.println("not found");

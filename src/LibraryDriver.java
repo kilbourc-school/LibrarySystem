@@ -52,7 +52,7 @@ public class LibraryDriver {
             while (login && currentLibrary.getCurrentUser().isAdmin()) {
                 System.out.println("\n\nWelcome  Administrator " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?\n");
                 System.out.println("1: Add media\n2: See all accounts\n3: Search by title\n4: Search by genre" +
-                        "\n5: Display all books\n6: Save to file\n7: Add an account");
+                        "\n5: Display all books\n6: Save to file\n7: Add an account\n8:Add Copies to existing book");
                 System.out.println("0: Logout");
 
                 int input = keyboard.nextInt();
@@ -107,6 +107,13 @@ public class LibraryDriver {
                         System.out.println("Invalid Input");
                     }
 
+                }else if (input == 8){
+                    System.out.println("Enter the book title");
+                    String title = keyboard.nextLine();
+                    System.out.println("Please enter the amount the copies changes by (+/-):");
+                    int copies = keyboard.nextInt();
+                    fix = keyboard.nextLine();
+                    currentLibrary.addCopyByTitle(title,copies);
                 }
 
 
