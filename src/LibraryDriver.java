@@ -160,7 +160,7 @@ public class LibraryDriver {
                         System.out.println(currentMedia.getTitle());
                         System.out.println("Enter how many copies you wish to return");
                         copies = keyboard.nextInt();
-                        currentMedia.checkInMedia(currentMedia, currentLibrary.getCurrentUser().getID(), copies);
+                        currentMedia.checkInMedia(currentMedia, currentLibrary.getCurrentUser().getID(),copies,currentMedia.getDueDate(currentMedia,currentLibrary.getCurrentUser()));
                         break;
                     case 4:
                         System.out.println("Fines have been paid.");

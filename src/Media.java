@@ -88,6 +88,7 @@ public abstract class Media {
               return media.currentBorrowerID.get(i).dueDate;
           }
        }
+       return null;
     }
 
     public void checkOutMedia(Media media, Borrower currentBorrower, int copies) {
