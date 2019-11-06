@@ -9,6 +9,9 @@ import java.util.LinkedList;
 public class AudioBook extends Media {
     String narrator;
 
+
+    int checkoutLimit = 21;//subtract from current date based on expected date for if late
+
     /*
      * Constructor.
      * Params: String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int iSBN){
@@ -38,6 +41,17 @@ public class AudioBook extends Media {
         this.waitListBorrowerIDs = new LinkedList<>();
         currentBorrowerID.add(new iDandCopies((long) 0, 0));
         waitListBorrowerIDs.add((new iDandCopies((long) 0, 0)));
+    }
+
+
+
+    @Override
+    public int getCheckoutLimit() {
+        return checkoutLimit;
+    }
+
+    public void setCheckoutLimit(int checkoutLimit) {
+        this.checkoutLimit = checkoutLimit;
     }
 
     public AudioBook() {

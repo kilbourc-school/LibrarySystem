@@ -9,6 +9,7 @@ import java.util.LinkedList;
 
 public class Book extends Media {
     int ISBN;
+    int checkOutLimit = 21;//subtract from current date based on expected date for if late
 
 
     /*
@@ -30,9 +31,17 @@ public class Book extends Media {
         setISBN();
     }
 
+    public int getCheckoutLimit() {
+        return checkOutLimit;
+    }
+
+    public void setCheckOutLimit(int checkOutLimit) {
+        this.checkOutLimit = checkOutLimit;
+    }
+
     /*
-    returns isbn value
-     */
+        returns isbn value
+         */
     public int getISBN() {
         return ISBN;
     }

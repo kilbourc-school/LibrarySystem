@@ -8,9 +8,10 @@
 import java.util.LinkedList;
 
 public class DVD extends Media {
+    int checkoutLimit = 21;//subtract from current date based on expected date for if late
 
 
-    /*
+/*
      * Constructor.
      * Params: String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, String narrator
        super: title, description, author, subject, copies, genre, releaseYear, stars, comingSoon (calls from borrower)
@@ -31,7 +32,14 @@ public class DVD extends Media {
         return "DVD," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + ",";
     }
 
+    @Override
+    public int getCheckoutLimit() {
+        return checkoutLimit;
+    }
 
+    public void setCheckoutLimit(int checkoutLimit) {
+        this.checkoutLimit = checkoutLimit;
+    }
     @Override
     /*
     Converts object to String.

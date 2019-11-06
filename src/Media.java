@@ -112,7 +112,10 @@ public abstract class Media {
             addToWaitListBorrowerIDs(currentBorrower.getID(), copies);
         }
 
+        System.out.println("The check out date of this media is "+(LocalDate.now().plusDays(media.getCheckoutLimit())));
+
     }
+  public abstract int getCheckoutLimit();
 
     public void setWaitListBorrowerIDs(LinkedList waitListBorrowerIDs) {
         this.waitListBorrowerIDs = waitListBorrowerIDs;
