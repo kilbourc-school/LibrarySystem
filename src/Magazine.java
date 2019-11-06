@@ -24,6 +24,7 @@ public class Magazine extends Media {
     public int getIssue() {
         return issue;
     }
+
     public void setIssue(){
         System.out.print("Issue #: ");
         this.setIssue(keyboard.nextInt());
@@ -35,6 +36,7 @@ public class Magazine extends Media {
     public int getVolume() {
         return volume;
     }
+
     public void setVolume(){
         System.out.print("Volume #: ");
         this.setIssue(keyboard.nextInt());
@@ -44,7 +46,17 @@ public class Magazine extends Media {
         this.volume = volume;
     }
 
+    /**
+     * .txt read in
+     * @return
+     */
     public String toStringList() {
         return "Magazine," + super.toStringList() + "," + volume+','+issue;
+    }
+    /**
+     * object string override
+     */
+    public String toString() {
+        return title + " by: " + author + " genre: " + genre + " Volume: " + volume+ " Issue: " + issue +" copies: " + copies;
     }
 }
