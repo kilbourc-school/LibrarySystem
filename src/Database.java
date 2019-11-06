@@ -135,7 +135,7 @@ public class Database {
                     getAccountsDatabase().add(new AdultBorrow(lineArray[1], Long.parseLong(lineArray[2]), LocalDate.parse(lineArray[3]), Integer.parseInt(lineArray[4]), lineArray[5], lineArray[6], lineArray[7], Integer.parseInt(lineArray[8]), lineArray[9], lineArray[10], Boolean.parseBoolean(lineArray[11]), Double.parseDouble(lineArray[12])));
                 } else if (Integer.parseInt(lineArray[0]) == 50) {
                     getAccountsDatabase().add(new TeacherBorrow(lineArray[1], Long.parseLong(lineArray[2]), LocalDate.parse(lineArray[3]), Integer.parseInt(lineArray[4]), lineArray[5], lineArray[6], lineArray[7], Integer.parseInt(lineArray[8]), lineArray[9], lineArray[10], Boolean.parseBoolean(lineArray[11]), Double.parseDouble(lineArray[12])));
-                } else if (Boolean.parseBoolean(lineArray[12])) {
+                } else if (Boolean.parseBoolean(lineArray[11])) {
                     getAccountsDatabase().add(new AdminBorrow(lineArray[1], Long.parseLong(lineArray[2]), LocalDate.parse(lineArray[3]), Integer.parseInt(lineArray[4]), lineArray[5], lineArray[6], lineArray[7], Integer.parseInt(lineArray[8]), lineArray[9], lineArray[10], Boolean.parseBoolean(lineArray[11]), Double.parseDouble(lineArray[12])));
                 }
 

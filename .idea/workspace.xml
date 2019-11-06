@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="" />
+    <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account.txt" beforeDir="false" afterPath="$PROJECT_DIR$/account.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AdultBorrow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/AdultBorrow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Borrower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Borrower.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/ChildBorrow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/ChildBorrow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/LibraryDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/LibraryDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/TeacherBorrow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/TeacherBorrow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -352,7 +364,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573012828088</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="merged add Fines">
+      <created>1573000258635</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1573000258635</updated>
+    </task>
+    <task id="LOCAL-00038" summary="code reformat">
+      <created>1573000313180</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1573000313180</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,8 +399,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="merged in comments branch and encapsulated media branch to master" />
-    <MESSAGE value="encapsulated databas&#10;changed variable iD in borrowers to Long instead of String." />
     <MESSAGE value="encapsulated databas&#10;changed variable iD in borrowers to Long instead of String.&#10;begun addition of ability to checkout to media" />
     <MESSAGE value="currentCheckout changed to a list, as multiple people can have the book checked out." />
     <MESSAGE value="optomized imports" />
@@ -398,6 +422,8 @@
     <MESSAGE value="Created add user function" />
     <MESSAGE value="fixed nextInt errors" />
     <MESSAGE value="can now add adult account" />
-    <option name="LAST_COMMIT_MESSAGE" value="can now add adult account" />
+    <MESSAGE value="merged add Fines" />
+    <MESSAGE value="code reformat" />
+    <option name="LAST_COMMIT_MESSAGE" value="code reformat" />
   </component>
 </project>
