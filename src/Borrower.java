@@ -109,9 +109,8 @@ public abstract class Borrower {
     /**
      * getters
      *
-     * @return
+     * and setters
      */
-
 
     public String getEmail() {
         return email;
@@ -164,29 +163,39 @@ public abstract class Borrower {
         String fix = keyboard.nextLine();
         this.birthday = LocalDate.of(year, month, day);
     }
-
+      /*
+      sets ID of user
+       */
     public void setID() {
         System.out.print("Drivers License Number (just numbers): ");
         this.setID(keyboard.nextLong());
         String fix = keyboard.nextLine();
     }
-
+    /*
+     sets phone number of user
+     */
     public void setPhoneNum() {
         System.out.print("PhoneNum (no spaces or characters): ");
         phoneNum = keyboard.nextInt();
         String fix = keyboard.nextLine();
     }
-
+        /*
+         sets email of user
+        */
     public void setEmail() {
         System.out.print("Email: ");
         this.setEmail(keyboard.nextLine());
     }
-
+    /*
+      sets password of user
+     */
     public void setPassword() {
         System.out.print("Password: ");
         this.setPassword(keyboard.nextLine());
     }
-
+    /*
+      sets address of user
+     */
     public void setAddress() {
         System.out.print("Street: ");
         this.setStreet1(keyboard.nextLine());
@@ -201,15 +210,21 @@ public abstract class Borrower {
     public Long getID() {
         return ID;
     }
-
+    /*
+    sets ID
+     */
     public void setID(Long ID) {
         this.ID = ID;
     }
-
+   /*
+     returns bithday date
+    */
     public LocalDate getBirthday() {
         return birthday;
     }
-
+    /*
+      sets birthday of user
+     */
     public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
