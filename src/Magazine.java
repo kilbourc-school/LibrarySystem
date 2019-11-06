@@ -36,4 +36,8 @@ public class Magazine extends Media {
     public void setVolume(int volume) {
         this.volume = volume;
     }
+
+    public String toStringList() {
+        return "Magazine," + super.toStringList() + "," + volume+','+issue;
+    }
 }
