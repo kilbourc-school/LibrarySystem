@@ -1,8 +1,8 @@
 import java.util.LinkedList;
 
 public class Magazine extends Media {
-    int issue;
     int volume;
+    int issue;
     int checkOutLimit = 21;
 
     Magazine (){
@@ -39,7 +39,7 @@ public class Magazine extends Media {
 
     public void setVolume(){
         System.out.print("Volume #: ");
-        this.setIssue(keyboard.nextInt());
+        this.setVolume(keyboard.nextInt());
     }
 
     public void setVolume(int volume) {
