@@ -1,16 +1,23 @@
 import java.util.LinkedList;
 
 public class Magazine extends Media {
+    /*
+    attributes
+     */
     int volume;
     int issue;
     int checkOutLimit = 21;
-
+   /*
+   method to call setvolume, setissue, and super method
+    */
     Magazine (){
         super();
         setVolume();
         setIssue();
     }
-
+    /*
+    paramaterized constructor & super
+     */
     public Magazine(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs, LinkedList<Ratings> ratings, int volume, int issue) {
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon, currentBorrowerID, waitListBorrowerIDs, ratings);
         this.volume = volume;
@@ -18,6 +25,9 @@ public class Magazine extends Media {
     }
 
     @Override
+    /*
+    getter and setter for checkoutlimit and set issue
+     */
     public int getCheckoutLimit() {
         return checkOutLimit;
     }
@@ -35,7 +45,9 @@ public class Magazine extends Media {
         this.setIssue(keyboard.nextInt());
     }
 
-
+    /*
+    getter and setter for volume
+     */
     public int getVolume() {
         return volume;
     }
