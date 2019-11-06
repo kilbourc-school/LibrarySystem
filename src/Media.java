@@ -109,7 +109,7 @@ public abstract class Media {
                     System.out.println("your fines have been cleared. continuing with checkout");
                     currentBorrower.setFines(0);
                 } else {
-                    System.out.println("well,if you dont want to pay them then you get no media");
+                    System.out.println("well,if you dont want to pay them, then you get no media");
                     return;
                 }
             }
