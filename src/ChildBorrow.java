@@ -19,7 +19,7 @@ public class ChildBorrow extends Borrower {
 
     }
     //could initialize all variables to parent
-    public ChildBorrow(Borrower parent){
+    public ChildBorrow(){
         super();
         isAdmin = false;
 //        this.parent= parent;

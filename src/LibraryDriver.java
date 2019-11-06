@@ -83,9 +83,24 @@ public class LibraryDriver {
                     currentLibrary.saveMediaToFile();
                 }
                 if (input == 7) {
-                    AdultBorrow borrower = new AdultBorrow();
-                    currentLibrary.addAdultAccount(borrower);
+                    System.out.println("Which User Account would you like to add?");
+                    System.out.println("1: Adult\n2: Child\n3: Teacher");
+                    input = keyboard.nextInt();
+                    fix = keyboard.nextLine();
+                   if(input==1){
+                            AdultBorrow borrower = new AdultBorrow();
+                            currentLibrary.addAdultAccount(borrower);
+                   }else if(input==2) {
+                       ChildBorrow borrower = new ChildBorrow();
+                       currentLibrary.addChildAccount(borrower);
+                   }else if(input==3) {
+                       TeacherBorrow borrower = new TeacherBorrow();
+                       currentLibrary.addTeacherAccount(borrower);
+                   }else{System.out.println("Invalid Input");}
+
                 }
+
+
                 if (input == 0) {
                     currentLibrary.saveAccountsToFile();
                     currentLibrary.saveMediaToFile();
