@@ -228,7 +228,10 @@ public abstract class Media {
     }
 
     public void setCopies(int copies) {
-        this.copies = copies;
+        if (copies<0) {
+            System.out.println("Attempting to remove more copies than the Library contains, copies set to 0");
+            this.copies = 0;
+        } else {this.copies = copies;}
     }
 
     public void setCopies() {
