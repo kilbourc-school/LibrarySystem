@@ -71,17 +71,17 @@ public abstract class Media {
         this.ratings = ratings;
     }
 
-    public LocalDate getDueDate(Media media, Borrower borrower){
-       for(int i = 0; i<currentBorrowerID.size();i++){
-          if(media.currentBorrowerID.get(i).iD.equals(borrower.getID())){
-              return media.currentBorrowerID.get(i).dueDate;
-          }
-       }
-       return null;
+    public LocalDate getDueDate(Media media, Borrower borrower) {
+        for (int i = 0; i < currentBorrowerID.size(); i++) {
+            if (media.currentBorrowerID.get(i).iD.equals(borrower.getID())) {
+                return media.currentBorrowerID.get(i).dueDate;
+            }
+        }
+        return null;
     }
 
     public void checkOutMedia(Media media, Borrower currentBorrower, int copies) {
-        if (isEnoughMedia(media,copies)) {
+        if (isEnoughMedia(media, copies)) {
             System.out.println("Sorry, book is currently checked out.");
 
             addToWaitListBorrowerIDs(currentBorrower.getID(), copies, LocalDate.now());
@@ -109,18 +109,19 @@ public abstract class Media {
             currentBorrowerID.add(new iDandCopies(currentBorrower.getID(), copies, today.plusDays(media.getCheckoutLimit())));
             this.copies = this.copies - copies;
         }
-        System.out.println("The check out date of this media is "+(LocalDate.now().plusDays(media.getCheckoutLimit())));
+        System.out.println("The check out date of this media is " + (LocalDate.now().plusDays(media.getCheckoutLimit())));
 
     }
-  public abstract int getCheckoutLimit();
+
+    public abstract int getCheckoutLimit();
 
 
     public boolean isEnoughMedia(Media media, int copies) {
-        return media.getCopies()-copies > 0;
+        return media.getCopies() - copies > 0;
     }
 
     public void checkInMedia(Media media, Long iD, int copies, LocalDate due) {
-        iDandCopies found = new iDandCopies(iD, copies,due);
+        iDandCopies found = new iDandCopies(iD, copies, due);
         currentBorrowerID.remove(found);
         assignFromWaitList(copies);
         media.setCopies(media.getCopies() + copies);
@@ -217,10 +218,12 @@ public abstract class Media {
     }
 
     public void setCopies(int copies) {
-        if (copies<0) {
+        if (copies < 0) {
             System.out.println("Attempting to remove more copies than the Library contains, copies set to 0");
             this.copies = 0;
-        } else {this.copies = copies;}
+        } else {
+            this.copies = copies;
+        }
     }
 
     public void setCopies() {
@@ -307,7 +310,7 @@ public abstract class Media {
 
     public String toStringList() {
 
-        String current = ".0/0/"+LocalDate.now();
+        String current = ".0/0/" + LocalDate.now();
         if (currentBorrowerID.peek() != null)
             if (!(currentBorrowerID.size() <= 1)) {
                 current = "";
@@ -315,7 +318,7 @@ public abstract class Media {
                     current += currentBorrowerID.pop().toString();
                 }
             }
-        String wait = ".0/0/"+LocalDate.now();
+        String wait = ".0/0/" + LocalDate.now();
         if (waitListBorrowerIDs.peek() != null)
             if (!(waitListBorrowerIDs.size() <= 1)) {
                 wait = "";

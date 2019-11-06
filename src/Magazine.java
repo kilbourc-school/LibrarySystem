@@ -26,25 +26,27 @@ public class Magazine extends Media {
         return issue;
     }
 
-    public void setIssue(){
-        System.out.print("Issue #: ");
-        this.setIssue(keyboard.nextInt());
-    }
     public void setIssue(int issue) {
         this.issue = issue;
     }
+
+    public void setIssue() {
+        System.out.print("Issue #: ");
+        this.setIssue(keyboard.nextInt());
+    }
+
 
     public int getVolume() {
         return volume;
     }
 
-    public void setVolume(){
-        System.out.print("Volume #: ");
-        this.setVolume(keyboard.nextInt());
-    }
-
     public void setVolume(int volume) {
         this.volume = volume;
+    }
+
+    public void setVolume() {
+        System.out.print("Volume #: ");
+        this.setVolume(keyboard.nextInt());
     }
 
     /**
@@ -52,12 +54,12 @@ public class Magazine extends Media {
      * @return
      */
     public String toStringList() {
-        return "Magazine," + super.toStringList() + "," + volume+','+issue;
+        return "Magazine," + super.toStringList() + "," + volume + ',' + issue;
     }
     /**
      * object string override
      */
     public String toString() {
-        return title + " by: " + author + " genre: " + genre + " Volume: " + volume+ " Issue: " + issue +" copies: " + copies;
+        return title + " by: " + author + " genre: " + genre + " Volume: " + volume + " Issue: " + issue + " copies: " + copies;
     }
 }
