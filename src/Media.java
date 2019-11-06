@@ -84,8 +84,12 @@ public abstract class Media {
         if (isAllCheckedOut(media)) {
             System.out.println("Sorry, book is currently checked out.");
             addToWaitListBorrowerIDs(currentBorrower.getID(), copies);
-        } else if ((this.copies - copies) >= 0) {
 
+        } else if ((this.copies - copies) >= 0) {
+if (currentBorrower.getBorrowLimit() < copies){
+    System.out.println("that's too many copies! no media for you.");
+    return;
+}
 if (currentBorrower.getFines() >0){
     System.out.println("you have to pay a fine. Want to pay your fines?");
     String input = keyboard.nextLine();
@@ -94,8 +98,8 @@ if (currentBorrower.getFines() >0){
         currentBorrower.setFines(0);
     }
     else{
-        System.out.println("well, you still get them cleared. continuing with checkout");
-        currentBorrower.setFines(0);
+        System.out.println("well,if you dont want to pay them then you get no media");
+        return;
     }
 }
             if (currentBorrowerID == null)

@@ -18,9 +18,10 @@ public class AdminBorrow extends Borrower {
 
     }
 
+
     /*
-    returns the amount of variable borrowLimit
-    */
+        returns the amount of variable borrowLimit
+        */
     public int getBorrowLimit() {
         return borrowLimit;
     }
