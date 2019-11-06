@@ -167,23 +167,23 @@ public class Library {
         libraryDatabase.readInAccounts();
     }
 
-    public void addAdminAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin) {
-        libraryDatabase.addAdminAccount(name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin);
+    public void addAdminAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, boolean isAdmin, double fines) {
+        libraryDatabase.addAdminAccount(name, iD, birthday, pn, str1, cty, st, zp, em, pw, isAdmin, fines);
     }
 
-    public void addTeacherAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin) {
-        libraryDatabase.addTeacherAccount(name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin);
+    public void addTeacherAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, boolean isAdmin, double fines) {
+        libraryDatabase.addTeacherAccount(name, iD, birthday, pn, str1, cty, st, zp, em, pw, isAdmin, fines);
     }
 
-    public void addAdultAccount(String name, Long iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin) {
-        libraryDatabase.getAccountsDatabase().add(new AdultBorrow(name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin));
+    public void addAdultAccount(String name, Long iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, boolean isAdmin, double fines) {
+        libraryDatabase.getAccountsDatabase().add(new AdultBorrow(name, iD, birthday, pn, str1, cty, st, zp, em, pw, isAdmin, fines));
     }
     public void addAdultAccount(Borrower adultBorrower){
         libraryDatabase.getAccountsDatabase().add(adultBorrower);
     }
 
-    public void addChildAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, int cn, boolean isAdmin) {
-        libraryDatabase.getAccountsDatabase().add(new ChildBorrow(name, Long.parseLong(iD), birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin));
+    public void addChildAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, boolean isAdmin, double fines) {
+        libraryDatabase.getAccountsDatabase().add(new ChildBorrow(name, Long.parseLong(iD), birthday, pn, str1, cty, st, zp, em, pw, isAdmin, fines));
     }
 
 

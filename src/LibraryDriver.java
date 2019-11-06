@@ -1,4 +1,3 @@
-import java.time.LocalDate;
 import java.util.Scanner;
 
 public class LibraryDriver {
@@ -98,7 +97,7 @@ public class LibraryDriver {
                     System.out.println("enter how many copies you wish to check out");
                     int copies = keyboard.nextInt();
                     Media currentMedia = currentLibrary.getBookFromTitle(title);
-                    currentMedia.checkOutBook(currentMedia, currentLibrary.getCurrentUser().getID(), copies);
+                    currentMedia.checkOutMedia(currentMedia, currentLibrary.getCurrentUser(), copies);
                 }
 
                 if (input == 9) {

@@ -23,9 +23,10 @@ public abstract class Borrower {
     private int phoneNum;
     private String email;
     private String password;
-    private int cardNum;
     private String street1, city, state;
     private int zip;
+    private double fines;
+
 
     //Default builds an empty borrower
     public Borrower() {
@@ -35,14 +36,13 @@ public abstract class Borrower {
         setPhoneNum();
         setEmail();
         setPassword();
-        setCardNum();
         setAddress();
     }
 
     //Constructor. Params for name and ID of user.
     public Borrower(String name, Long iD, LocalDate birthday, int pn,
                     String str1, String cty, String st, int zp,
-                    String em, String pw, int cn, boolean isAdmin) {
+                    String em, String pw, boolean isAdmin, double fines) {
         this.name = name;
         ID = iD;
         this.birthday = birthday;
@@ -53,8 +53,8 @@ public abstract class Borrower {
         zip = zp;
         email = em;
         password = pw;
-        cardNum = cn;
         this.isAdmin = isAdmin;
+        this.fines = fines;
 
     }
 
@@ -69,13 +69,7 @@ public abstract class Borrower {
         this.phoneNum = phoneNum;
     }
 
-    public int getCardNum() {
-        return cardNum;
-    }
 
-    public void setCardNum(int cardNum) {
-        this.cardNum = cardNum;
-    }
 
     public String getStreet1() {
         return street1;
@@ -140,6 +134,9 @@ public abstract class Borrower {
         return name;
     }
 
+    public double getFines() {
+        return fines;
+    }
     /**
      * Borrower Setters
      */
@@ -177,10 +174,7 @@ public abstract class Borrower {
         System.out.print("Password: ");
         this.setPassword(keyboard.nextLine());
     }
-    public void setCardNum(){
-        cardNum= 1;
 
-    }
     public void setAddress(){
         System.out.print("Street: ");
         this.setStreet1(keyboard.nextLine());
@@ -192,6 +186,10 @@ public abstract class Borrower {
         this.setZip(keyboard.nextInt());
     }
 
+
+    public void setFines(double fines) {
+        this.fines = fines;
+    }
     public void setName(String name) {
         this.name = name;
     }
@@ -242,6 +240,8 @@ public abstract class Borrower {
     /*
     toString method from medium interface
      */
-    public abstract String toStringList();
+    public String toStringList(){
+      return  "," + getName() + "," + getID() + "," + getBirthday() + "," + getPhoneNum() + "," + getStreet1() + "," + getCity() + "," + getState() + "," + getZip() + "," + getEmail() + "," + getPassword() + "," + isAdmin+ ","+getFines();
+    }
 }
 

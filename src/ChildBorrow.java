@@ -14,8 +14,8 @@ public class ChildBorrow extends Borrower {
     */
     public ChildBorrow(String name, Long iD, LocalDate birthday, int pn,
                        String str1, String cty, String st, int zp,
-                       String em, String pw, int cn, boolean isAdmin) {
-        super(name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin);
+                       String em, String pw, boolean isAdmin, double fines) {
+        super(name, iD, birthday, pn, str1, cty, st, zp, em, pw, isAdmin,fines);
 
     }
     //could initialize all variables to parent
@@ -36,6 +36,6 @@ public class ChildBorrow extends Borrower {
     Converts objects to strings
     */
     public String toStringList() {
-        return borrowLimit + getName() + "," + getID() + "," + getBirthday() + "," + getPhoneNum() + "," + getStreet1() + "," + getCity() + "," + getState() + "," + getZip() + "," + getEmail() + "," + getPassword() + "," + getCardNum() + "," + isAdmin;
+        return borrowLimit + super.toStringList();
     }
 }

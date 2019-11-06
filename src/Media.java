@@ -80,20 +80,33 @@ public abstract class Media {
         this.waitListBorrowerIDs = waitListBorrowerIDs;
     }
 
-    public void checkOutBook(Media media, Long iD, int copies) {
+    public void checkOutMedia(Media media, Borrower currentBorrower, int copies) {
         if (isAllCheckedOut(media)) {
             System.out.println("Sorry, book is currently checked out.");
-            addToWaitListBorrowerIDs(iD, copies);
+            addToWaitListBorrowerIDs(currentBorrower.getID(), copies);
         } else if ((this.copies - copies) >= 0) {
+
+if (currentBorrower.getFines() >0){
+    System.out.println("you have to pay a fine. Want to pay your fines?");
+    String input = keyboard.nextLine();
+    if (input.equals("yes")){
+        System.out.println("your fines have been cleared. continuing with checkout");
+        currentBorrower.setFines(0);
+    }
+    else{
+        System.out.println("well, you still get them cleared. continuing with checkout");
+        currentBorrower.setFines(0);
+    }
+}
             if (currentBorrowerID == null)
                 currentBorrowerID = new LinkedList<>();
-            currentBorrowerID.add(new iDandCopies(iD, copies));
+            currentBorrowerID.add(new iDandCopies(currentBorrower.getID(), copies));
             this.copies = this.copies - copies;
         } else {
             if (waitListBorrowerIDs == null)
                 waitListBorrowerIDs = new LinkedList<>();
             System.out.println("Sorry, not enough books are in right now. Being placed on waitlist.");
-            addToWaitListBorrowerIDs(iD, copies);
+            addToWaitListBorrowerIDs(currentBorrower.getID(), copies);
         }
 
     }
