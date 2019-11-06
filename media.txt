@@ -1,3 +1,3 @@
 Book,Cat In The Hat,Zany Cat Wrecks a Family,Dr. Suess,Fiction,0,Children Book,1957,5,false,.0/0/2019-11-06,.0/0/2019-11-06,.0/0,0
 Book,To Kill a MockingBird,Southen Gothic Novel Dealing with Rascim,Harper Lee,Fiction,1,Coming of Age Fiction,1960,5,false,.0/0/2019-11-06,.0/0/2019-11-06,.0/0,0
-Book,Hitchiker's Guide to the Galaxy,Man gets abducted by aliens, hilarity ensues,Douglas Adams,Fiction,1,Comic Science Fiction,1979,5,false,.0/0/2019-11-06,.0/0/2019-11-06,.0/0,330258648
+Book,Hitchiker's Guide to the Galaxy,Man gets abducted by aliens hilarity ensues,Douglas Adams,Fiction,1,Comic Science Fiction,1979,5,false,.0/0/2019-11-06,.0/0/2019-11-06,.0/0,330258648
