@@ -42,6 +42,10 @@ public class AudioBook extends Media {
     }
 
 
+    public AudioBook() {
+        super();
+        setNarrator();
+    }
 
     @Override
     public int getCheckoutLimit() {
@@ -50,11 +54,6 @@ public class AudioBook extends Media {
 
     public void setCheckoutLimit(int checkoutLimit) {
         this.checkoutLimit = checkoutLimit;
-    }
-
-    public AudioBook() {
-        super();
-        setNarrator();
     }
 
     /*

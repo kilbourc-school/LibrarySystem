@@ -1,5 +1,3 @@
-import java.time.LocalDate;
-
 /**
  * This is the class that acts as the library, holding
  * the books and allowing interactions with the books
@@ -57,7 +55,7 @@ public class Library {
             String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
 
             if (bookTitle.toLowerCase().contains(title.toLowerCase())) {
-               return libraryDatabase.getMediaDatabase().get(i);
+                return libraryDatabase.getMediaDatabase().get(i);
             }
         }
         return null;
@@ -110,7 +108,8 @@ public class Library {
         EBook ebook = new EBook(); //null Book
         libraryDatabase.getMediaDatabase().add(ebook);
     }
-    public void addMagazine(){
+
+    public void addMagazine() {
         Magazine magazine = new Magazine();
         libraryDatabase.getMediaDatabase().add(magazine);
     }
@@ -154,12 +153,12 @@ public class Library {
     }
 
     public void addCopyByTitle(String title, int copies) {
-      Media media = getBookFromTitle(title);
-      if(media == null)
-          System.out.println("not found");
-      else media.setCopies((media.getCopies() + copies));
+        Media media = getBookFromTitle(title);
+        if (media == null)
+            System.out.println("not found");
+        else media.setCopies((media.getCopies() + copies));
 
-            }
+    }
 
     public void readInMedia() {
         libraryDatabase.readInMedia();
@@ -169,7 +168,9 @@ public class Library {
         libraryDatabase.readInAccounts();
     }
 
-    public void addTeacherAccount(Borrower borrower) { libraryDatabase.getAccountsDatabase().add(borrower); }
+    public void addTeacherAccount(Borrower borrower) {
+        libraryDatabase.getAccountsDatabase().add(borrower);
+    }
 
     public void addAdultAccount(Borrower borrower) {
         libraryDatabase.getAccountsDatabase().add(borrower);
