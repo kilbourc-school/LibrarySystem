@@ -147,12 +147,12 @@ public class LibraryDriver {
              */
             while (login && !currentLibrary.getCurrentUser().isAdmin()) {
                 System.out.println("\n\nWelcome User " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
-                System.out.println("1: Search Library\n2:Checkout media\n3:Checkin media\n4:Pay Fines\n0:Logout");
+                System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines\n0: Logout");
                 int input = keyboard.nextInt();
                 String fix = keyboard.nextLine();
                 switch (input) {
                     case 1:
-                        System.out.println("How would you like to search?\n1:Title\n2:Author\n3:Keyword");
+                        System.out.println("How would you like to search?\n1: Title\n2: Author\n3: Keyword");
                         input = keyboard.nextInt();
                         fix = keyboard.nextLine();
 
