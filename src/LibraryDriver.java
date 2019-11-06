@@ -60,7 +60,7 @@ public class LibraryDriver {
                 if (input == 1) {
                     //&& currentLibrary.getCurrentUser().isAdmin
                     System.out.println("Which media type would you like to add?");
-                    System.out.println("1: Book\n2: Audio Book\n3: DVD\n4: eBook");
+                    System.out.println("1: Book\n2: Audio Book\n3: DVD\n4: eBook\n5:Magazine");
                     input = keyboard.nextInt();
                     fix = keyboard.nextLine();
                     if (input == 1) {
@@ -71,6 +71,8 @@ public class LibraryDriver {
                         currentLibrary.addDVD();
                     } else if (input == 4) {
                         currentLibrary.addEBook();
+                    }else if (input == 5) {
+                        currentLibrary.addMagazine();
                     }
                 } else if (input == 2) {
                     currentLibrary.displayAllAccounts();

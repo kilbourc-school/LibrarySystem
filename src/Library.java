@@ -107,6 +107,10 @@ public class Library {
         EBook ebook = new EBook(); //null Book
         libraryDatabase.getMediaDatabase().add(ebook);
     }
+    public void addMagazine(){
+        Magazine magazine = new Magazine();
+        libraryDatabase.getMediaDatabase().add(magazine);
+    }
 
     /**
      * Method to determine if book in library is available.
