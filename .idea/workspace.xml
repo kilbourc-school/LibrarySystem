@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/LibraryDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/LibraryDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryDriver.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,9 +42,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
