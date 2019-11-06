@@ -11,14 +11,6 @@ public class iDandCopies {
         this.dueDate = dueDate;
     }
 
-    public LocalDate getDueDate() {
-        return dueDate;
-    }
-
-    public void setDueDate(LocalDate dueDate) {
-        this.dueDate = dueDate;
-    }
-
     public Long getiD() {
         return iD;
     }
@@ -37,6 +29,6 @@ public class iDandCopies {
 
     @Override
     public String toString() {
-        return "." + iD + "/" + copies;
+        return "." + iD + "/" + copies + "/"+dueDate;
     }
 }

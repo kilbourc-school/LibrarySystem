@@ -87,12 +87,8 @@ public abstract class Media {
     }
 
     public void checkOutMedia(Media media, Borrower currentBorrower, int copies) {
-        if (isEnoughMedia(media, copies)) {
-            System.out.println("Sorry, book is currently checked out.");
 
-            addToWaitListBorrowerIDs(currentBorrower.getID(), copies, LocalDate.now());
-
-        } else if ((this.copies - copies) >= 0) {
+        if ((this.copies - copies) >= 0) {
             if (currentBorrower.getBorrowLimit() < copies) {
                 System.out.println("that's too many copies! no media for you.");
                 return;
@@ -112,7 +108,9 @@ public abstract class Media {
                 currentBorrowerID = new LinkedList<>();
 
             LocalDate today = LocalDate.now();
+            System.out.println(currentBorrower.getID());
             currentBorrowerID.add(new iDandCopies(currentBorrower.getID(), copies, today.plusDays(media.getCheckoutLimit())));
+            System.out.println(currentBorrowerID.peekLast());
             this.copies = this.copies - copies;
         }
         System.out.println("The check out date of this media is " + (LocalDate.now().plusDays(media.getCheckoutLimit())));
@@ -317,24 +315,26 @@ public abstract class Media {
     public String toStringList() {
 
         String current = ".0/0/" + LocalDate.now();
-        if (currentBorrowerID.peek() != null)
-            if (!(currentBorrowerID.size() <= 1)) {
+
+            if (!(currentBorrowerID.size() <= 0)) {
                 current = "";
-                for (int i = 0; i <= currentBorrowerID.size(); i++) {
+                for (int i = 0; i < currentBorrowerID.size(); i++) {
+                    System.out.println("you must of had it checked out. "+currentBorrowerID.get(i).getiD());
                     current += currentBorrowerID.pop().toString();
                 }
             }
         String wait = ".0/0/" + LocalDate.now();
-        if (waitListBorrowerIDs.peek() != null)
-            if (!(waitListBorrowerIDs.size() <= 1)) {
+
+            if (!(waitListBorrowerIDs.size() <= 0)) {
                 wait = "";
                 for (int i = 0; i <= waitListBorrowerIDs.size(); i++) {
+                    System.out.println("you must of had it checked out. "+waitListBorrowerIDs.get(i).getiD());
                     wait += waitListBorrowerIDs.pop().toString();
                 }
             }
         String rating = ".0/0";
         if (ratings.peek() != null)
-            if (!(ratings.size() <= 1)) {
+            if (!(ratings.size() <= 0)) {
                  rating = "";
                 for (int i = 0; i <= ratings.size(); i++) {
                     wait += ratings.pop().toString();

@@ -188,7 +188,6 @@ public class LibraryDriver {
         }
     }
 
-    public static void search() {
-        System.out.println("Searching function to be added");
+    public static void search() { System.out.println("Searching function to be added");
     }
 }
