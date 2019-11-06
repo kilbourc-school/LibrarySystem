@@ -40,10 +40,12 @@ public class Database {
             while (scan.hasNextLine()) {
                 LinkedList<iDandCopies> current = new LinkedList<>();
                 LinkedList<iDandCopies> wait = new LinkedList<>();
+                LinkedList<Ratings> rating = new LinkedList<>();
                 String line = scan.nextLine();
                 String[] lineArray = line.split(",");
                 String[] currentCheckOut = lineArray[10].split(".");
                 String[] waitCheckOut = lineArray[11].split(".");
+                String[] ratingsplit = lineArray[12].split(".");
 
                 for (int i = 0; i < currentCheckOut.length; i++) {
                     String[] splitCurrentCheckout = currentCheckOut[i].split("/");
@@ -54,17 +56,22 @@ public class Database {
                     String[] splitWaitCheckout = waitCheckOut[i].split("/");
                     wait.add(new iDandCopies(Long.parseLong(splitWaitCheckout[0]), Integer.parseInt(splitWaitCheckout[1]), LocalDate.parse(splitWaitCheckout[2])));
                 }
+
+                for (int i = 0; i < ratingsplit.length; i++) {
+                    String[] splitRatingSplit = ratingsplit[i].split("/");
+                    rating.add(new Ratings(Integer.parseInt(splitRatingSplit[0]),splitRatingSplit[1]));
+                }
                 if (lineArray[0].equals("Book")) {
 
-                    getMediaDatabase().add(new Book(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait, Integer.parseInt(lineArray[12])));
+                    getMediaDatabase().add(new Book(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait, rating, Integer.parseInt(lineArray[13])));
                 } else if (lineArray[0].equals("AudioBook")) {
-                    getMediaDatabase().add(new AudioBook(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait, lineArray[12]));
+                    getMediaDatabase().add(new AudioBook(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait, rating, lineArray[13]));
                 } else if (lineArray[0].equals("DVD")) {
-                    getMediaDatabase().add(new DVD(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait));
+                    getMediaDatabase().add(new DVD(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait, rating));
                 } else if (lineArray[0].equals("EBook")) {
-                    getMediaDatabase().add(new EBook(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait, Integer.parseInt(lineArray[12])));
+                    getMediaDatabase().add(new EBook(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait, rating, Integer.parseInt(lineArray[13])));
                 } else if (lineArray[0].equals("Magazine")) {
-                    getMediaDatabase().add(new Magazine(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait, Integer.parseInt(lineArray[12]),Integer.parseInt(lineArray[13])));
+                    getMediaDatabase().add(new Magazine(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]), Integer.parseInt(lineArray[8]), Boolean.parseBoolean(lineArray[9]), current, wait,rating, Integer.parseInt(lineArray[13]),Integer.parseInt(lineArray[14])));
                 }
             }
         } catch (FileNotFoundException e) {

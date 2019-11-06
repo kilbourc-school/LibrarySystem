@@ -16,6 +16,7 @@ public abstract class Media {
     boolean comingSoon;
     LinkedList<iDandCopies> currentBorrowerID;
     LinkedList<iDandCopies> waitListBorrowerIDs;
+    LinkedList<Ratings> ratings;
 
     /**
      * Default constructor with all share variable for all media types
@@ -33,8 +34,10 @@ public abstract class Media {
 
         this.currentBorrowerID = new LinkedList<>();
         this.waitListBorrowerIDs = new LinkedList<>();
+        this.ratings = new LinkedList<>();
         currentBorrowerID.add(new iDandCopies((long) 0, 0,LocalDate.now()));
         waitListBorrowerIDs.add((new iDandCopies((long) 0, 0,LocalDate.now())));
+        ratings.add(new Ratings(0,""));
     }
 
     /**
@@ -50,25 +53,10 @@ public abstract class Media {
      * @param stars
      * @param comingSoon
      */
-    //most likely to be refactored out
-    Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon) {
-        this.title = title;
-        this.description = description;
-        this.author = author;
-        this.subject = subject;
-        this.copies = copies;
-        this.genre = genre;
-        this.releaseYear = releaseYear;
-        this.stars = stars;
-        this.comingSoon = comingSoon;
-        this.currentBorrowerID = new LinkedList<>();
-        this.waitListBorrowerIDs = new LinkedList<>();
-        currentBorrowerID.add(new iDandCopies((long) 0, 0, LocalDate.now()));
-        waitListBorrowerIDs.add((new iDandCopies((long) 0, 0, LocalDate.now())));
-    }
+
 
     //file I/O
-    public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs) {
+    public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs, LinkedList<Ratings> ratings) {
         this.title = title;
         this.description = description;
         this.author = author;
@@ -80,6 +68,7 @@ public abstract class Media {
         this.comingSoon = comingSoon;
         this.currentBorrowerID = currentBorrowerID;
         this.waitListBorrowerIDs = waitListBorrowerIDs;
+        this.ratings = ratings;
     }
 
     public LocalDate getDueDate(Media media, Borrower borrower){
@@ -331,7 +320,15 @@ public abstract class Media {
                     wait += waitListBorrowerIDs.pop().toString();
                 }
             }
-        return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + current + "," + wait;
+        String rating = ".0/0";
+        if (ratings.peek() != null)
+            if (!(ratings.size() <= 1)) {
+                 rating = "";
+                for (int i = 0; i <= ratings.size(); i++) {
+                    wait += ratings.pop().toString();
+                }
+            }
+        return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + current + "," + wait+ "," + rating;
     }
 
     public boolean isComingSoon() {
