@@ -66,41 +66,53 @@ public class LibraryDriver {
                     fix = keyboard.nextLine();
                     if (input == 1) {
                         currentLibrary.addBook();
-                    }
-                    if (input == 2) {
+                    }else if (input == 2) {
                         currentLibrary.addAudioBook();
-                    }
-                    if (input == 3) {
+                    }else if (input == 3) {
                         currentLibrary.addDVD();
-                    }
-                    if (input == 4) {
+                    }else if (input == 4) {
                         currentLibrary.addEBook();
                     }
                 }
-                if (input == 2) {
+                else if (input == 2) {
                     currentLibrary.displayAllAccounts();
                 }
-                if (input == 3) {
+                else if (input == 3) {
                     System.out.println("Enter the book title");
                     String title = keyboard.nextLine();
                     currentLibrary.browseTitle(title);
                 }
-                if (input == 4) {
+                else if (input == 4) {
                     System.out.println("Enter the book genre");
                     String genre = keyboard.nextLine();
                     currentLibrary.browseGenre(genre);
                 }
-                if (input == 5) {
+                else if (input == 5) {
                     currentLibrary.displayBooks();
                 }
-                if (input == 6) {
+                else if (input == 6) {
                     currentLibrary.saveAccountsToFile();
                     currentLibrary.saveMediaToFile();
                 }
-                if (input == 7) {
-                    AdultBorrow borrower = new AdultBorrow();
-                    currentLibrary.addAdultAccount(borrower);
+                else if (input == 7) {
+                    System.out.println("Which User Account would you like to add?");
+                    System.out.println("1: Adult\n2: Child\n3: Teacher");
+                    input = keyboard.nextInt();
+                    fix = keyboard.nextLine();
+                   if(input==1){
+                            AdultBorrow borrower = new AdultBorrow();
+                            currentLibrary.addAdultAccount(borrower);
+                   }else if(input==2) {
+                       ChildBorrow borrower = new ChildBorrow();
+                       currentLibrary.addChildAccount(borrower);
+                   }else if(input==3) {
+                       TeacherBorrow borrower = new TeacherBorrow();
+                       currentLibrary.addTeacherAccount(borrower);
+                   }else{System.out.println("Invalid Input");}
+
                 }
+
+
                 if (input == 0) {
                     currentLibrary.saveAccountsToFile();
                     currentLibrary.saveMediaToFile();
@@ -131,13 +143,35 @@ public class LibraryDriver {
              */
             while (login && !currentLibrary.getCurrentUser().isAdmin()) {
                 System.out.println("\n\nWelcome User "+ currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
-                System.out.println("1: Search Library\n0:Logout");
+                System.out.println("1: Search Library\n2:Checkout media\n3:Checkin media\n4:Pay Fines\n0:Logout");
                 int input = keyboard.nextInt();
                 String fix = keyboard.nextLine();
                 switch (input){
                     case 1:
                         search();
                         break;
+                    case 2:
+                        System.out.println("Enter media title you wish to check out");
+                        String title = keyboard.nextLine();
+                        System.out.println("enter how many copies you wish to check out");
+                        int copies = keyboard.nextInt();
+                        Media currentMedia = currentLibrary.getBookFromTitle(title);
+                        currentMedia.checkOutBook(currentMedia, currentLibrary.getCurrentUser().getID(), copies);
+                        break;
+                    case 3:
+                        System.out.println("Enter media title you wish to check in");
+                        title = keyboard.nextLine();
+                        currentMedia = currentLibrary.getBookFromTitle(title);
+                        System.out.println(currentMedia.getTitle());
+                        System.out.println("Enter how many copies you wish to return");
+                        copies = keyboard.nextInt();
+                        currentMedia.checkInMedia(currentMedia, currentLibrary.getCurrentUser().getID(), copies);
+                        break;
+                    case 4:
+                        System.out.println("Fines have been paid.");
+                        currentLibrary.getCurrentUser().setFines(0);
+                        break;
+
                     case 0:
                         login = false;
                         break;
