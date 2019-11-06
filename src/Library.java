@@ -147,12 +147,29 @@ public class Library {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
             String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
 
+            if (bookTitle.equalsIgnoreCase(title)){
+                System.out.println(libraryDatabase.getMediaDatabase().get(i));
+            }
+        }
+    }
+    public void browseAuthor(String title) {
+        for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
+            String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).getAuthor();
+
+            if (bookTitle.equalsIgnoreCase(title)){
+                System.out.println(libraryDatabase.getMediaDatabase().get(i));
+            }
+        }
+    }
+    public void browseKeyword (String title) {
+        for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
+            String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).toString();
+
             if (bookTitle.toLowerCase().contains(title.toLowerCase())) {
                 System.out.println(libraryDatabase.getMediaDatabase().get(i));
             }
         }
     }
-
 
     public void displayRatings(String title){
         Media currentMedia = getBookFromTitle(title);
