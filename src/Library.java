@@ -54,8 +54,11 @@ public class Library {
 
     public Media getBookFromTitle(String title) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
-            if (libraryDatabase.getMediaDatabase().get(i).getTitle().equals(title))
-                return libraryDatabase.getMediaDatabase().get(i);
+            String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
+
+            if (bookTitle.toLowerCase().contains(title.toLowerCase())) {
+               return libraryDatabase.getMediaDatabase().get(i);
+            }
         }
         return null;
     }
@@ -151,16 +154,12 @@ public class Library {
     }
 
     public void addCopyByTitle(String title, int copies) {
-        for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
-            String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
-            if (title.equals(bookTitle)) {
-                libraryDatabase.getMediaDatabase().get(i).setCopies(libraryDatabase.getMediaDatabase().get(i).getCopies()+copies);
-                break;
-            } else {
-                System.out.println("not found");
+      Media media = getBookFromTitle(title);
+      if(media == null)
+          System.out.println("not found");
+      else media.setCopies((media.getCopies() + copies));
+
             }
-        }
-    }
 
     public void readInMedia() {
         libraryDatabase.readInMedia();

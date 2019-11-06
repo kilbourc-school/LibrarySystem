@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/LibraryDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/LibraryDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="AddingFines" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,9 +38,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -106,6 +102,7 @@
       <workItem from="1572309243769" duration="654000" />
       <workItem from="1572460370355" duration="3836000" />
       <workItem from="1572544726058" duration="12370000" />
+      <workItem from="1573068787276" duration="1935000" />
     </task>
     <task id="LOCAL-00001" summary="made media type AudioBooks">
       <created>1571333916280</created>
@@ -394,7 +391,35 @@
       <option name="project" value="LOCAL" />
       <updated>1573003069401</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="fixed null file writing">
+      <created>1573068949783</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1573068949783</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fixed text issue">
+      <created>1573069250298</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1573069250298</updated>
+    </task>
+    <task id="LOCAL-00044" summary="added ratings object">
+      <created>1573070258502</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1573070258502</updated>
+    </task>
+    <task id="LOCAL-00045" summary="deleted media.txt, because updated to string">
+      <created>1573070306081</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1573070306081</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,10 +440,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="optomized imports" />
-    <MESSAGE value="added in checkin / checkout of book. still need to fix file I/O for recent media changes" />
-    <MESSAGE value="added a front end check in / checkout of books" />
-    <MESSAGE value="added a front end check in / checkout of media by title" />
     <MESSAGE value="fixed front end error" />
     <MESSAGE value="fixed file I/O for the check in and out" />
     <MESSAGE value="added in File I/O for changed check in and out" />
@@ -440,6 +461,10 @@
     <MESSAGE value="code reformat" />
     <MESSAGE value="added front end" />
     <MESSAGE value="added due dates" />
-    <option name="LAST_COMMIT_MESSAGE" value="added due dates" />
+    <MESSAGE value="fixed null file writing" />
+    <MESSAGE value="fixed text issue" />
+    <MESSAGE value="added ratings object" />
+    <MESSAGE value="deleted media.txt, because updated to string" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted media.txt, because updated to string" />
   </component>
 </project>
