@@ -160,8 +160,9 @@ public abstract class Borrower {
     }
 
     public void setID(){
-        System.out.print("Drivers Liscense Number (just numbers): ");
+        System.out.print("Drivers License Number (just numbers): ");
         this.setID(keyboard.nextLong());
+        String fix = keyboard.nextLine();
     }
     public void setPhoneNum(){
         System.out.print("PhoneNum (no spaces or characters): ");
@@ -177,7 +178,7 @@ public abstract class Borrower {
         this.setPassword(keyboard.nextLine());
     }
     public void setCardNum(){
-        cardNum=1;
+        cardNum= 1;
 
     }
     public void setAddress(){

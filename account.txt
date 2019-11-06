@@ -1,1 +1,2 @@
 500,Administrator,101010101,2019-10-28,803511,street,city,state,29045,admin@admin,admin,1199,true
+10Sc,27883883,1986-01-01,password,Str,City,SC,29150,s@gmail.com,password,1,false
