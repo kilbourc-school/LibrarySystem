@@ -1,10 +1,22 @@
+import java.time.LocalDate;
+
 public class iDandCopies {
     Long iD;
     int copies;
+    LocalDate dueDate;
 
-    public iDandCopies(Long iD, int copies) {
+    public iDandCopies(Long iD, int copies, LocalDate dueDate) {
         this.iD = iD;
         this.copies = copies;
+        this.dueDate = dueDate;
+    }
+
+    public LocalDate getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
     }
 
     public Long getiD() {

@@ -4,6 +4,7 @@
  * and availibility.
  */
 
+import java.time.LocalDate;
 import java.util.LinkedList;
 
 public class AudioBook extends Media {
@@ -17,10 +18,7 @@ public class AudioBook extends Media {
      * Params: String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, int iSBN){
     title, description, author, subject, copies, genre, releaseYear, stars, comingSoon
      */
-    public AudioBook(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, String narrator) {
-        super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon);
-        this.narrator = narrator;
-    }
+
 
     public AudioBook(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs, String narrator) {
         super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon, currentBorrowerID, waitListBorrowerIDs);
@@ -39,8 +37,8 @@ public class AudioBook extends Media {
         this.comingSoon = media.isComingSoon();
         this.currentBorrowerID = new LinkedList<>();
         this.waitListBorrowerIDs = new LinkedList<>();
-        currentBorrowerID.add(new iDandCopies((long) 0, 0));
-        waitListBorrowerIDs.add((new iDandCopies((long) 0, 0)));
+        currentBorrowerID.add(new iDandCopies((long) 0, 0, LocalDate.now()));
+        waitListBorrowerIDs.add((new iDandCopies((long) 0, 0, LocalDate.now())));
     }
 
 

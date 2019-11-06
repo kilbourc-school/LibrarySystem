@@ -47,12 +47,12 @@ public class Database {
 
                 for (int i = 0; i < currentCheckOut.length; i++) {
                     String[] splitCurrentCheckout = currentCheckOut[i].split("/");
-                    current.add(new iDandCopies(Long.parseLong(splitCurrentCheckout[0]), Integer.parseInt(splitCurrentCheckout[0])));
+                    current.add(new iDandCopies(Long.parseLong(splitCurrentCheckout[0]), Integer.parseInt(splitCurrentCheckout[1]), LocalDate.parse(splitCurrentCheckout[2])));
                 }
 
                 for (int i = 0; i < waitCheckOut.length; i++) {
                     String[] splitWaitCheckout = waitCheckOut[i].split("/");
-                    current.add(new iDandCopies(Long.parseLong(splitWaitCheckout[0]), Integer.parseInt(splitWaitCheckout[0])));
+                    wait.add(new iDandCopies(Long.parseLong(splitWaitCheckout[0]), Integer.parseInt(splitWaitCheckout[1]), LocalDate.parse(splitWaitCheckout[2])));
                 }
                 if (lineArray[0].equals("Book")) {
 

@@ -5,8 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AudioBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AudioBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DVD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iDandCopies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iDandCopies.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -379,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573000794183</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="added due dates">
+      <created>1573001904461</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1573001904461</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,7 +408,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="currentCheckout changed to a list, as multiple people can have the book checked out." />
     <MESSAGE value="optomized imports" />
     <MESSAGE value="added in checkin / checkout of book. still need to fix file I/O for recent media changes" />
     <MESSAGE value="added a front end check in / checkout of books" />
@@ -425,6 +432,7 @@
     <MESSAGE value="merged add Fines" />
     <MESSAGE value="code reformat" />
     <MESSAGE value="added front end" />
-    <option name="LAST_COMMIT_MESSAGE" value="added front end" />
+    <MESSAGE value="added due dates" />
+    <option name="LAST_COMMIT_MESSAGE" value="added due dates" />
   </component>
 </project>

@@ -33,8 +33,8 @@ public abstract class Media {
 
         this.currentBorrowerID = new LinkedList<>();
         this.waitListBorrowerIDs = new LinkedList<>();
-        currentBorrowerID.add(new iDandCopies((long) 0, 0));
-        waitListBorrowerIDs.add((new iDandCopies((long) 0, 0)));
+        currentBorrowerID.add(new iDandCopies((long) 0, 0,LocalDate.now()));
+        waitListBorrowerIDs.add((new iDandCopies((long) 0, 0,LocalDate.now())));
     }
 
     /**
@@ -50,6 +50,7 @@ public abstract class Media {
      * @param stars
      * @param comingSoon
      */
+    //most likely to be refactored out
     Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon) {
         this.title = title;
         this.description = description;
@@ -62,10 +63,11 @@ public abstract class Media {
         this.comingSoon = comingSoon;
         this.currentBorrowerID = new LinkedList<>();
         this.waitListBorrowerIDs = new LinkedList<>();
-        currentBorrowerID.add(new iDandCopies((long) 0, 0));
-        waitListBorrowerIDs.add((new iDandCopies((long) 0, 0)));
+        currentBorrowerID.add(new iDandCopies((long) 0, 0, LocalDate.now()));
+        waitListBorrowerIDs.add((new iDandCopies((long) 0, 0, LocalDate.now())));
     }
 
+    //file I/O
     public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs) {
         this.title = title;
         this.description = description;
@@ -80,10 +82,19 @@ public abstract class Media {
         this.waitListBorrowerIDs = waitListBorrowerIDs;
     }
 
+    public LocalDate getDueDate(Media media, Borrower borrower){
+       for(int i = 0; i<currentBorrowerID.size();i++){
+          if(media.currentBorrowerID.get(i).iD.equals(borrower.getID())){
+              return media.currentBorrowerID.get(i).dueDate;
+          }
+       }
+    }
+
     public void checkOutMedia(Media media, Borrower currentBorrower, int copies) {
-        if (isAllCheckedOut(media)) {
+        if (isEnoughMedia(media,copies)) {
             System.out.println("Sorry, book is currently checked out.");
-            addToWaitListBorrowerIDs(currentBorrower.getID(), copies);
+
+            addToWaitListBorrowerIDs(currentBorrower.getID(), copies, LocalDate.now());
 
         } else if ((this.copies - copies) >= 0) {
             if (currentBorrower.getBorrowLimit() < copies) {
@@ -103,34 +114,23 @@ public abstract class Media {
             }
             if (currentBorrowerID == null)
                 currentBorrowerID = new LinkedList<>();
-            currentBorrowerID.add(new iDandCopies(currentBorrower.getID(), copies));
-            this.copies = this.copies - copies;
-        } else {
-            if (waitListBorrowerIDs == null)
-                waitListBorrowerIDs = new LinkedList<>();
-            System.out.println("Sorry, not enough books are in right now. Being placed on waitlist.");
-            addToWaitListBorrowerIDs(currentBorrower.getID(), copies);
-        }
 
+            LocalDate today = LocalDate.now();
+            currentBorrowerID.add(new iDandCopies(currentBorrower.getID(), copies, today.plusDays(media.getCheckoutLimit())));
+            this.copies = this.copies - copies;
+        }
         System.out.println("The check out date of this media is "+(LocalDate.now().plusDays(media.getCheckoutLimit())));
 
     }
   public abstract int getCheckoutLimit();
 
-    public void setWaitListBorrowerIDs(LinkedList waitListBorrowerIDs) {
-        this.waitListBorrowerIDs = waitListBorrowerIDs;
+
+    public boolean isEnoughMedia(Media media, int copies) {
+        return media.getCopies()-copies > 0;
     }
 
-    public void setCurrentBorrowerID(Long currentBorrowerID, int copies) {
-        this.currentBorrowerID.add(new iDandCopies(currentBorrowerID, copies));
-    }
-
-    public boolean isAllCheckedOut(Media media) {
-        return media.getCopies() == 0;
-    }
-
-    public void checkInMedia(Media media, Long iD, int copies) {
-        iDandCopies found = new iDandCopies(iD, copies);
+    public void checkInMedia(Media media, Long iD, int copies, LocalDate due) {
+        iDandCopies found = new iDandCopies(iD, copies,due);
         currentBorrowerID.remove(found);
         assignFromWaitList(copies);
         media.setCopies(media.getCopies() + copies);
@@ -146,9 +146,9 @@ public abstract class Media {
         }
     }
 
-    public void addToWaitListBorrowerIDs(Long borrowerID, int copies) {
+    public void addToWaitListBorrowerIDs(Long borrowerID, int copies, LocalDate due) {
         if (waitListBorrowerIDs.size() <= 10) {
-            this.waitListBorrowerIDs.add(new iDandCopies(borrowerID, copies));
+            this.waitListBorrowerIDs.add(new iDandCopies(borrowerID, copies, due));
             System.out.println("you have been placed on the waitlist");
         } else
             System.out.println("wait list is full. you were not placed on the waitlist");
