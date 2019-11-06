@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * This is the class that acts as the library, holding
  * the books and allowing interactions with the books
@@ -150,6 +152,20 @@ public class Library {
                 System.out.println(libraryDatabase.getMediaDatabase().get(i));
             }
         }
+    }
+
+
+    public void displayRatings(String title){
+        Media currentMedia = getBookFromTitle(title);
+        for(int i=0;i<currentMedia.ratings.size();i++)
+        System.out.println(currentMedia.ratings.get(i));
+    }
+    public void giveRating(String title){
+        Scanner keyboard = new Scanner(System.in);
+        Media currentMedia = getBookFromTitle(title);
+        int stars = keyboard.nextInt();
+        String comment = keyboard.nextLine();
+        currentMedia.addRating(stars, comment);
     }
 
     public void addCopyByTitle(String title, int copies) {
