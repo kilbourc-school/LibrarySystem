@@ -17,6 +17,10 @@ public class AdultBorrow extends Borrower implements BorrowBehavior {
         super(name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin);
 
     }
+    public AdultBorrow(){
+        super();
+        isAdmin =false;
+    }
 
     /*
     returns borrowLimit value

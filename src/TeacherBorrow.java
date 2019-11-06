@@ -17,6 +17,10 @@ public class TeacherBorrow extends Borrower implements BorrowBehavior {
         super(name, iD, birthday, pn, str1, cty, st, zp, em, pw, cn, isAdmin);
 
     }
+    public TeacherBorrow(){
+        super();
+    }
+
 
     /*
    returns borrowLimit value

@@ -17,28 +17,7 @@ public class Library {
     private Borrower currentUser;
 
     public Library() {
-    }
 
-    private static Media adminAddMedia(Media media) {
-        Scanner keyboard = new Scanner(System.in);
-
-        System.out.print("Title: ");
-        media.setTitle(keyboard.nextLine());
-        System.out.print("Author: ");
-        media.setAuthor(keyboard.nextLine());
-        System.out.print("Description: ");
-        media.setDescription(keyboard.nextLine());
-        System.out.print("Subject: ");
-        media.setSubject(keyboard.nextLine());
-        System.out.print("Genre: ");
-        media.setGenre(keyboard.nextLine());
-        System.out.print("Number of Copies: ");
-        media.setCopies(keyboard.nextLine());
-        System.out.print("Release Year: ");
-        media.setReleaseYear(keyboard.nextLine());
-        System.out.print("Rating: ");
-        media.setStars(keyboard.nextLine());
-        return media;
     }
 
     public void saveAccountsToFile() {
@@ -110,21 +89,6 @@ public Media getBookFromTitle(String title){
             }
         }
         return false;
-    }
-
-    public String[] addMediaBase() {
-        Scanner keyboard = new Scanner(System.in);
-        String[] media = new String[9];
-        media[0] = keyboard.nextLine(); //title
-        media[1] = keyboard.nextLine();  //description
-        media[2] = keyboard.nextLine(); //author
-        media[3] = keyboard.nextLine(); //subject
-        media[4] = keyboard.nextLine(); //copies
-        media[5] = keyboard.nextLine(); //genre
-        media[6] = keyboard.nextLine(); //releaseYear
-        media[7] = keyboard.nextLine(); //stars
-        media[8] = keyboard.nextLine(); //comingSoon
-        return media;
     }
 
     public void addBook() {

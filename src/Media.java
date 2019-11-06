@@ -29,6 +29,11 @@ public abstract class Media {
         setReleaseYear();
         setStars();
         isComingSoon(releaseYear);
+
+        this.currentBorrowerID = new LinkedList<>();
+        this.waitListBorrowerIDs = new LinkedList<>();
+        currentBorrowerID.add(new iDandCopies((long) 0,0));
+        waitListBorrowerIDs.add((new iDandCopies((long) 0,0)));
     }
 
     /**

@@ -8,12 +8,15 @@ public class LibraryDriver {
         currentLibrary.readInMedia();
         currentLibrary.readInAccounts();
 
+        System.out.print("********** Welcome to CSCE 247 Library Project **********");
+
         boolean login = false;
         boolean exit = false;
 
         while (!exit) {
+
             while (!login) {
-                System.out.print("********** Welcome to CSCE 247 Library Project **********");
+
                 System.out.print("\n\nPlease login with your Library user email: ");
 
                 String username = keyboard.nextLine();
@@ -29,7 +32,9 @@ public class LibraryDriver {
                     System.out.println("Sorry, email and/or password were incorrect");
                 }
             }
-
+/**
+ * Admin login
+ */
             while (login /* && currentLibrary.getCurrentUser().isAdmin()*/) {
                 System.out.println("\n\nWelcome " +/* Administrator +*/ currentLibrary.getCurrentUser().getName() + ",\n\tWhat would you like to do?");
                 System.out.println("1: Add media\n2: See all accounts\n3: Search by title\n4: Search by genre" +
@@ -103,6 +108,12 @@ public class LibraryDriver {
                     int copies = keyboard.nextInt();
                     currentMedia.checkInMedia(currentMedia, currentLibrary.getCurrentUser().getID(), copies);
                 }
+            }
+            /**
+             * User login
+             */
+            while (login /* && currentLibrary.getCurrentUser().isAdmin()*/) {
+
             }
         }
     }

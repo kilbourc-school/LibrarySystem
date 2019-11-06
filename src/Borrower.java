@@ -7,9 +7,12 @@
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.Scanner;
 
 public abstract class Borrower {
+    Scanner keyboard = new Scanner(System.in);
     boolean isAdmin;
+
     //Use interface to modify borrow limits
     BorrowBehavior borrowBehavior;
     /*
@@ -27,6 +30,14 @@ public abstract class Borrower {
 
     //Default builds an empty borrower
     public Borrower() {
+        setName();
+        setBirthday();
+        setID();
+        setPhoneNum();
+        setEmail();
+        setPassword();
+        setCardNum();
+        setAddress();
     }
 
     //Constructor. Params for name and ID of user.
@@ -133,6 +144,51 @@ public abstract class Borrower {
      * Borrower Setters
      */
 
+    public void setName(){
+        System.out.print("Name: ");
+        this.setName(keyboard.nextLine());
+    }
+    public void setBirthday(){
+        System.out.print("Birthday Month (1-12): ");
+        int month = keyboard.nextInt();
+        System.out.print("Birthday date: ");
+        int day = keyboard.nextInt();
+        System.out.print("Birthday year: ");
+        int year = keyboard.nextInt();
+        this.birthday= LocalDate.of(year,month,day);
+    }
+
+    public void setID(){
+        System.out.print("Drivers Liscense Number (just numbers): ");
+        this.setID(keyboard.nextLong());
+    }
+    public void setPhoneNum(){
+        System.out.print("PhoneNum (no spaces or characters): ");
+        phoneNum = keyboard.nextInt();
+    }
+    public void setEmail(){
+        System.out.print("Email: ");
+        this.setEmail(keyboard.nextLine());
+    }
+    public void setPassword(){
+        System.out.print("Password: ");
+        this.setPassword(keyboard.nextLine());
+    }
+    public void setCardNum(){
+        cardNum=1;
+
+    }
+    public void setAddress(){
+        System.out.print("Street: ");
+        this.setStreet1(keyboard.nextLine());
+        System.out.print("City: ");
+        this.setCity(keyboard.nextLine());
+        System.out.print("State: ");
+        this.setState(keyboard.nextLine());
+        System.out.print("Zip:  ");
+        this.setZip(keyboard.nextInt());
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -164,6 +220,7 @@ public abstract class Borrower {
 
     // check age vs current time for child age
     // boolean or int years return, not sure which to use
+
     public boolean checkAge() {
         LocalDate today = LocalDate.now();
         return (Period.between(birthday, today).getYears() > 13);
@@ -185,3 +242,4 @@ public abstract class Borrower {
       */
     public abstract String toStringList();
 }
+
