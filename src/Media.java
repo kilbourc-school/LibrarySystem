@@ -4,7 +4,9 @@ import java.util.Scanner;
 
 public abstract class Media {
     Scanner keyboard = new Scanner(System.in);
-
+    /*
+    attributes
+     */
     String title;
     String description;
     String author;
