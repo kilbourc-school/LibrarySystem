@@ -109,7 +109,7 @@ public abstract class Media {
                     System.out.println("your fines have been cleared. continuing with checkout");
                     currentBorrower.setFines(0);
                 } else {
-                    System.out.println("well,if you dont want to pay them then you get no media");
+                    System.out.println("well,if you dont want to pay them, then you get no media");
                     return;
                 }
             }
@@ -315,7 +315,7 @@ public abstract class Media {
 
     public String toStringList() {
 
-        String current = ".0/0";
+        String current = ".0/0/"+LocalDate.now();
         if (currentBorrowerID.peek() != null)
             if (!(currentBorrowerID.size() <= 1)) {
                 current = "";
@@ -323,7 +323,7 @@ public abstract class Media {
                     current += currentBorrowerID.pop().toString();
                 }
             }
-        String wait = ".0/0";
+        String wait = ".0/0/"+LocalDate.now();
         if (waitListBorrowerIDs.peek() != null)
             if (!(waitListBorrowerIDs.size() <= 1)) {
                 wait = "";
