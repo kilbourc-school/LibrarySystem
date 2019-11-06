@@ -5,7 +5,7 @@ public class ChildBorrow extends Borrower {
    Amount set for how many books an ChildBorrower can checkout
     */
     int borrowLimit = 3;
-   // Borrower parent;
+    // Borrower parent;
 
     /*
     Constructor for Child Borrow
@@ -15,11 +15,12 @@ public class ChildBorrow extends Borrower {
     public ChildBorrow(String name, Long iD, LocalDate birthday, int pn,
                        String str1, String cty, String st, int zp,
                        String em, String pw, boolean isAdmin, double fines) {
-        super(name, iD, birthday, pn, str1, cty, st, zp, em, pw, isAdmin,fines);
+        super(name, iD, birthday, pn, str1, cty, st, zp, em, pw, isAdmin, fines);
 
     }
+
     //could initialize all variables to parent
-    public ChildBorrow(){
+    public ChildBorrow() {
         super();
         isAdmin = false;
 //        this.parent= parent;

@@ -1,4 +1,3 @@
-import java.time.LocalDate;
 import java.util.Scanner;
 
 public class LibraryDriver {
@@ -50,8 +49,8 @@ public class LibraryDriver {
 /**
  * Admin login
  */
-            while (login  && currentLibrary.getCurrentUser().isAdmin()) {
-                System.out.println("\n\nWelcome  Administrator "+ currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?\n");
+            while (login && currentLibrary.getCurrentUser().isAdmin()) {
+                System.out.println("\n\nWelcome  Administrator " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?\n");
                 System.out.println("1: Add media\n2: See all accounts\n3: Search by title\n4: Search by genre" +
                         "\n5: Display all books\n6: Save to file\n7: Add an account");
                 System.out.println("0: Logout");
@@ -66,49 +65,45 @@ public class LibraryDriver {
                     fix = keyboard.nextLine();
                     if (input == 1) {
                         currentLibrary.addBook();
-                    }else if (input == 2) {
+                    } else if (input == 2) {
                         currentLibrary.addAudioBook();
-                    }else if (input == 3) {
+                    } else if (input == 3) {
                         currentLibrary.addDVD();
-                    }else if (input == 4) {
+                    } else if (input == 4) {
                         currentLibrary.addEBook();
                     }
-                }
-                else if (input == 2) {
+                } else if (input == 2) {
                     currentLibrary.displayAllAccounts();
-                }
-                else if (input == 3) {
+                } else if (input == 3) {
                     System.out.println("Enter the book title");
                     String title = keyboard.nextLine();
                     currentLibrary.browseTitle(title);
-                }
-                else if (input == 4) {
+                } else if (input == 4) {
                     System.out.println("Enter the book genre");
                     String genre = keyboard.nextLine();
                     currentLibrary.browseGenre(genre);
-                }
-                else if (input == 5) {
+                } else if (input == 5) {
                     currentLibrary.displayBooks();
-                }
-                else if (input == 6) {
+                } else if (input == 6) {
                     currentLibrary.saveAccountsToFile();
                     currentLibrary.saveMediaToFile();
-                }
-                else if (input == 7) {
+                } else if (input == 7) {
                     System.out.println("Which User Account would you like to add?");
                     System.out.println("1: Adult\n2: Child\n3: Teacher");
                     input = keyboard.nextInt();
                     fix = keyboard.nextLine();
-                   if(input==1){
-                            AdultBorrow borrower = new AdultBorrow();
-                            currentLibrary.addAdultAccount(borrower);
-                   }else if(input==2) {
-                       ChildBorrow borrower = new ChildBorrow();
-                       currentLibrary.addChildAccount(borrower);
-                   }else if(input==3) {
-                       TeacherBorrow borrower = new TeacherBorrow();
-                       currentLibrary.addTeacherAccount(borrower);
-                   }else{System.out.println("Invalid Input");}
+                    if (input == 1) {
+                        AdultBorrow borrower = new AdultBorrow();
+                        currentLibrary.addAdultAccount(borrower);
+                    } else if (input == 2) {
+                        ChildBorrow borrower = new ChildBorrow();
+                        currentLibrary.addChildAccount(borrower);
+                    } else if (input == 3) {
+                        TeacherBorrow borrower = new TeacherBorrow();
+                        currentLibrary.addTeacherAccount(borrower);
+                    } else {
+                        System.out.println("Invalid Input");
+                    }
 
                 }
 
@@ -142,11 +137,11 @@ public class LibraryDriver {
              * User login
              */
             while (login && !currentLibrary.getCurrentUser().isAdmin()) {
-                System.out.println("\n\nWelcome User "+ currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
+                System.out.println("\n\nWelcome User " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
                 System.out.println("1: Search Library\n2:Checkout media\n3:Checkin media\n4:Pay Fines\n0:Logout");
                 int input = keyboard.nextInt();
                 String fix = keyboard.nextLine();
-                switch (input){
+                switch (input) {
                     case 1:
                         search();
                         break;
@@ -182,7 +177,8 @@ public class LibraryDriver {
             }
         }
     }
-    public static void search(){
+
+    public static void search() {
         System.out.println("Searching function to be added");
     }
 }

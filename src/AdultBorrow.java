@@ -14,12 +14,13 @@ public class AdultBorrow extends Borrower {
     public AdultBorrow(String name, Long iD, LocalDate birthday, int pn,
                        String str1, String cty, String st, int zp,
                        String em, String pw, boolean isAdmin, double fines) {
-        super(name, iD, birthday, pn, str1, cty, st, zp, em, pw, isAdmin,fines);
+        super(name, iD, birthday, pn, str1, cty, st, zp, em, pw, isAdmin, fines);
 
     }
-    public AdultBorrow(){
+
+    public AdultBorrow() {
         super();
-        isAdmin =false;
+        isAdmin = false;
     }
 
     /*
@@ -33,6 +34,6 @@ public class AdultBorrow extends Borrower {
     Converts objects into strings
      */
     public String toStringList() {
-        return borrowLimit+super.toStringList();
+        return borrowLimit + super.toStringList();
     }
 }

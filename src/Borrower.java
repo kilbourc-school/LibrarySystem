@@ -70,7 +70,6 @@ public abstract class Borrower {
     }
 
 
-
     public String getStreet1() {
         return street1;
     }
@@ -134,18 +133,28 @@ public abstract class Borrower {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public double getFines() {
         return fines;
     }
+
+    public void setFines(double fines) {
+        this.fines = fines;
+    }
+
     /**
      * Borrower Setters
      */
 
-    public void setName(){
+    public void setName() {
         System.out.print("Name: ");
         this.setName(keyboard.nextLine());
     }
-    public void setBirthday(){
+
+    public void setBirthday() {
         System.out.print("Birthday Month (1-12): ");
         int month = keyboard.nextInt();
         System.out.print("Birthday date: ");
@@ -153,29 +162,32 @@ public abstract class Borrower {
         System.out.print("Birthday year: ");
         int year = keyboard.nextInt();
         String fix = keyboard.nextLine();
-        this.birthday= LocalDate.of(year,month,day);
+        this.birthday = LocalDate.of(year, month, day);
     }
 
-    public void setID(){
+    public void setID() {
         System.out.print("Drivers License Number (just numbers): ");
         this.setID(keyboard.nextLong());
         String fix = keyboard.nextLine();
     }
-    public void setPhoneNum(){
+
+    public void setPhoneNum() {
         System.out.print("PhoneNum (no spaces or characters): ");
         phoneNum = keyboard.nextInt();
         String fix = keyboard.nextLine();
     }
-    public void setEmail(){
+
+    public void setEmail() {
         System.out.print("Email: ");
         this.setEmail(keyboard.nextLine());
     }
-    public void setPassword(){
+
+    public void setPassword() {
         System.out.print("Password: ");
         this.setPassword(keyboard.nextLine());
     }
 
-    public void setAddress(){
+    public void setAddress() {
         System.out.print("Street: ");
         this.setStreet1(keyboard.nextLine());
         System.out.print("City: ");
@@ -184,14 +196,6 @@ public abstract class Borrower {
         this.setState(keyboard.nextLine());
         System.out.print("Zip:  ");
         this.setZip(keyboard.nextInt());
-    }
-
-
-    public void setFines(double fines) {
-        this.fines = fines;
-    }
-    public void setName(String name) {
-        this.name = name;
     }
 
     public Long getID() {
@@ -240,8 +244,8 @@ public abstract class Borrower {
     /*
     toString method from medium interface
      */
-    public String toStringList(){
-      return  "," + getName() + "," + getID() + "," + getBirthday() + "," + getPhoneNum() + "," + getStreet1() + "," + getCity() + "," + getState() + "," + getZip() + "," + getEmail() + "," + getPassword() + "," + isAdmin+ ","+getFines();
+    public String toStringList() {
+        return "," + getName() + "," + getID() + "," + getBirthday() + "," + getPhoneNum() + "," + getStreet1() + "," + getCity() + "," + getState() + "," + getZip() + "," + getEmail() + "," + getPassword() + "," + isAdmin + "," + getFines();
     }
 }
 

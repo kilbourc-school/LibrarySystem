@@ -1,5 +1,4 @@
 import java.time.LocalDate;
-import java.util.Scanner;
 
 /**
  * This is the class that acts as the library, holding
@@ -174,23 +173,26 @@ public class Library {
     public void addTeacherAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, boolean isAdmin, double fines) {
         libraryDatabase.addTeacherAccount(name, iD, birthday, pn, str1, cty, st, zp, em, pw, isAdmin, fines);
     }
-    public void addTeacherAccount(Borrower borrower){
-        libraryDatabase.getAccountsDatabase().add(borrower);}
+
+    public void addTeacherAccount(Borrower borrower) {
+        libraryDatabase.getAccountsDatabase().add(borrower);
+    }
 
     public void addAdultAccount(String name, Long iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, boolean isAdmin, double fines) {
         libraryDatabase.getAccountsDatabase().add(new AdultBorrow(name, iD, birthday, pn, str1, cty, st, zp, em, pw, isAdmin, fines));
     }
-    public void addAdultAccount(Borrower borrower){
+
+    public void addAdultAccount(Borrower borrower) {
         libraryDatabase.getAccountsDatabase().add(borrower);
     }
 
     public void addChildAccount(String name, String iD, LocalDate birthday, int pn, String str1, String cty, String st, int zp, String em, String pw, boolean isAdmin, double fines) {
         libraryDatabase.getAccountsDatabase().add(new ChildBorrow(name, Long.parseLong(iD), birthday, pn, str1, cty, st, zp, em, pw, isAdmin, fines));
     }
-    public void addChildAccount(Borrower borrower){
-        libraryDatabase.getAccountsDatabase().add(borrower);}
 
-
+    public void addChildAccount(Borrower borrower) {
+        libraryDatabase.getAccountsDatabase().add(borrower);
+    }
 
 
     /**

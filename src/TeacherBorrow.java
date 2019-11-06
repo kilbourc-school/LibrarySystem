@@ -17,7 +17,8 @@ public class TeacherBorrow extends Borrower {
         super(name, iD, birthday, pn, str1, cty, st, zp, em, pw, isAdmin, fines);
 
     }
-    public TeacherBorrow(){
+
+    public TeacherBorrow() {
         super();
     }
 
@@ -33,6 +34,6 @@ public class TeacherBorrow extends Borrower {
     Converts objects into strings
      */
     public String toStringList() {
-        return borrowLimit +super.toStringList();
+        return borrowLimit + super.toStringList();
     }
 }

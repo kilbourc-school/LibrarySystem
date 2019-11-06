@@ -33,8 +33,8 @@ public abstract class Media {
 
         this.currentBorrowerID = new LinkedList<>();
         this.waitListBorrowerIDs = new LinkedList<>();
-        currentBorrowerID.add(new iDandCopies((long) 0,0));
-        waitListBorrowerIDs.add((new iDandCopies((long) 0,0)));
+        currentBorrowerID.add(new iDandCopies((long) 0, 0));
+        waitListBorrowerIDs.add((new iDandCopies((long) 0, 0)));
     }
 
     /**
@@ -86,22 +86,21 @@ public abstract class Media {
             addToWaitListBorrowerIDs(currentBorrower.getID(), copies);
 
         } else if ((this.copies - copies) >= 0) {
-if (currentBorrower.getBorrowLimit() < copies){
-    System.out.println("that's too many copies! no media for you.");
-    return;
-}
-if (currentBorrower.getFines() >0){
-    System.out.println("you have to pay a fine. Want to pay your fines?");
-    String input = keyboard.nextLine();
-    if (input.equals("yes")){
-        System.out.println("your fines have been cleared. continuing with checkout");
-        currentBorrower.setFines(0);
-    }
-    else{
-        System.out.println("well,if you dont want to pay them then you get no media");
-        return;
-    }
-}
+            if (currentBorrower.getBorrowLimit() < copies) {
+                System.out.println("that's too many copies! no media for you.");
+                return;
+            }
+            if (currentBorrower.getFines() > 0) {
+                System.out.println("you have to pay a fine. Want to pay your fines?");
+                String input = keyboard.nextLine();
+                if (input.equals("yes")) {
+                    System.out.println("your fines have been cleared. continuing with checkout");
+                    currentBorrower.setFines(0);
+                } else {
+                    System.out.println("well,if you dont want to pay them then you get no media");
+                    return;
+                }
+            }
             if (currentBorrowerID == null)
                 currentBorrowerID = new LinkedList<>();
             currentBorrowerID.add(new iDandCopies(currentBorrower.getID(), copies));
