@@ -152,7 +152,25 @@ public class LibraryDriver {
                 String fix = keyboard.nextLine();
                 switch (input) {
                     case 1:
-                        search();
+                        System.out.println("How would you like to search?\n1:Title\n2:Author\n3:Keyword");
+                        input = keyboard.nextInt();
+                        fix = keyboard.nextLine();
+
+                        if (input == 1){
+                            System.out.println("Enter the book title:");
+                            String title = keyboard.nextLine();
+                            currentLibrary.browseTitle(title);
+                        }
+                        else if (input == 2){System.out.println("Enter Author: ");
+                            String title = keyboard.nextLine();
+                            currentLibrary.browseAuthor(title);
+                        }
+                        else if (input == 3){System.out.println("Enter Keyword: ");
+                            String title = keyboard.nextLine();
+                            currentLibrary.browseKeyword(title);
+                        }
+                        else {System.out.println("Invalid input");
+                        }
                         break;
                     case 2:
                         System.out.println("Enter media title you wish to check out");
@@ -186,8 +204,5 @@ public class LibraryDriver {
                 }
             }
         }
-    }
-
-    public static void search() { System.out.println("Searching function to be added");
     }
 }
