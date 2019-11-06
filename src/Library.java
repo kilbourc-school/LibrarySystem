@@ -54,7 +54,7 @@ public class Library {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
             String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
 
-            if (bookTitle.toLowerCase().contains(title.toLowerCase())) {
+            if (bookTitle.toLowerCase().equals(title.toLowerCase())) {
                 return libraryDatabase.getMediaDatabase().get(i);
             }
         }
