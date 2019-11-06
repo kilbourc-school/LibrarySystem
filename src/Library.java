@@ -12,7 +12,6 @@ public class Library {
     private Borrower currentUser;
 
     public Library() {
-
     }
 
     public void saveAccountsToFile() {
