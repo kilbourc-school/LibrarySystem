@@ -155,6 +155,7 @@ public abstract class Borrower {
         int day = keyboard.nextInt();
         System.out.print("Birthday year: ");
         int year = keyboard.nextInt();
+        String fix = keyboard.nextLine();
         this.birthday= LocalDate.of(year,month,day);
     }
 
@@ -165,6 +166,7 @@ public abstract class Borrower {
     public void setPhoneNum(){
         System.out.print("PhoneNum (no spaces or characters): ");
         phoneNum = keyboard.nextInt();
+        String fix = keyboard.nextLine();
     }
     public void setEmail(){
         System.out.print("Email: ");
