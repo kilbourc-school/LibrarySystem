@@ -16,8 +16,9 @@ public class Book extends Media {
      * Constructor.
      * Params: Strings ISBN, title, author, genre.
      */
-    public Book(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs, LinkedList<Ratings> ratings, String ISBN) {
-        super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon, currentBorrowerID, waitListBorrowerIDs, ratings);
+
+    public Book(String title, String description, String author, String subject, int copies, String genre, int releaseYear, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs, LinkedList<Ratings> ratings, String ISBN) {
+        super(title, description, author, subject, copies, genre, releaseYear, comingSoon, currentBorrowerID, waitListBorrowerIDs, ratings);
         this.ISBN = ISBN;
     }
 
@@ -58,7 +59,7 @@ public class Book extends Media {
      converts objects into strings
       */
     public String toStringList() {
-        return "Book," + super.toStringList() + "," + ISBN;
+        return "Book," + super.toStringList()+","+ ISBN;
     }
 
     @Override

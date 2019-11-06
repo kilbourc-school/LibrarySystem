@@ -17,8 +17,8 @@ public class DVD extends Media {
        super: title, description, author, subject, copies, genre, releaseYear, stars, comingSoon (calls from borrower)
      */
 
-    public DVD(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs, LinkedList<Ratings> ratings) {
-        super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon, currentBorrowerID, waitListBorrowerIDs, ratings);
+    public DVD(String title, String description, String author, String subject, int copies, String genre, int releaseYear, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs, LinkedList<Ratings> ratings) {
+        super(title, description, author, subject, copies, genre, releaseYear, comingSoon, currentBorrowerID, waitListBorrowerIDs, ratings);
     }
 
     public DVD() {
@@ -29,7 +29,7 @@ public class DVD extends Media {
      converts objects into strings
      */
     public String toStringList() {
-        return "DVD," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + ",";
+        return "DVD," +super.toStringList();
     }
 
     @Override

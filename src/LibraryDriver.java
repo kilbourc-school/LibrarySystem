@@ -193,6 +193,14 @@ public class LibraryDriver {
                         System.out.println("Fines have been paid.");
                         currentLibrary.getCurrentUser().setFines(0);
                         break;
+                    case 5:
+                        System.out.println("Enter the title of the book you want to review");
+                        title = keyboard.nextLine();
+                        Media review = currentLibrary.getBookFromTitle(title);
+                        String comment = keyboard.nextLine();
+                        int star = keyboard.nextInt();
+                        fix = keyboard.nextLine();
+                        review.addRating(star,comment);
 
                     case 0:
                         currentLibrary.saveAccountsToFile();

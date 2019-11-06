@@ -14,7 +14,6 @@ public abstract class Media {
     int copies;
     String genre;
     int releaseYear;
-    int stars;
     boolean comingSoon;
     LinkedList<iDandCopies> currentBorrowerID;
     LinkedList<iDandCopies> waitListBorrowerIDs;
@@ -31,7 +30,6 @@ public abstract class Media {
         setCopies();
         setGenre();
         setReleaseYear();
-        setStars();
         isComingSoon(releaseYear);
 
         this.currentBorrowerID = new LinkedList<>();
@@ -52,13 +50,12 @@ public abstract class Media {
      * @param copies
      * @param genre
      * @param releaseYear
-     * @param stars
      * @param comingSoon
      */
 
 
     //file I/O
-    public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs, LinkedList<Ratings> ratings) {
+    public Media(String title, String description, String author, String subject, int copies, String genre, int releaseYear, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs, LinkedList<Ratings> ratings) {
         this.title = title;
         this.description = description;
         this.author = author;
@@ -66,7 +63,6 @@ public abstract class Media {
         this.copies = copies;
         this.genre = genre;
         this.releaseYear = releaseYear;
-        this.stars = stars;
         this.comingSoon = comingSoon;
         this.currentBorrowerID = currentBorrowerID;
         this.waitListBorrowerIDs = waitListBorrowerIDs;
@@ -267,24 +263,6 @@ public abstract class Media {
         this.setReleaseYear(keyboard.nextLine());
     }
 
-    public int getStars() {
-        return stars;
-    }
-
-    public void setStars(String stars) {
-        int x = 0;
-        try {
-            x = Integer.parseInt(stars);
-        } catch (Exception e) {
-            System.out.println("Input not of type int, stars set to 0");
-        }
-        this.stars = x;
-    }
-
-    public void setStars() {
-        System.out.print("Rating: ");
-        this.setStars(keyboard.nextLine());
-    }
 
     //Modifier method to mark book as unavailable.
     public void makeBorrowed() {
@@ -340,7 +318,7 @@ public abstract class Media {
                     wait += ratings.pop().toString();
                 }
             }
-        return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + current + "," + wait+ "," + rating;
+        return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear +  "," + comingSoon + "," + current + "," + wait+ "," + rating;
     }
 
     public boolean isComingSoon() {
