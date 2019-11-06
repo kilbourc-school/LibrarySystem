@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media.txt" beforeDir="false" afterPath="$PROJECT_DIR$/media.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AudioBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/AudioBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/DVD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/DVD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/EBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/EBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Media.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ratings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ratings.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
