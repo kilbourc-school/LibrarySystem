@@ -18,8 +18,8 @@ public class Magazine extends Media {
     /*
     paramaterized constructor & super
      */
-    public Magazine(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs, LinkedList<Ratings> ratings, int volume, int issue) {
-        super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon, currentBorrowerID, waitListBorrowerIDs, ratings);
+    public Magazine(String title, String description, String author, String subject, int copies, String genre, int releaseYear, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs, LinkedList<Ratings> ratings, int volume, int issue) {
+        super(title, description, author, subject, copies, genre, releaseYear, comingSoon, currentBorrowerID, waitListBorrowerIDs, ratings);
         this.volume = volume;
         this.issue = issue;
     }
@@ -66,7 +66,7 @@ public class Magazine extends Media {
      * @return
      */
     public String toStringList() {
-        return "Magazine," + super.toStringList() + "," + volume + ',' + issue;
+        return "Magazine," + super.toStringList()+"," + volume + ',' + issue;
     }
     /**
      * object string override

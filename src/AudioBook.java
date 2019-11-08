@@ -19,25 +19,9 @@ public class AudioBook extends Media {
     title, description, author, subject, copies, genre, releaseYear, stars, comingSoon
      */
 
-    public AudioBook(String title, String description, String author, String subject, int copies, String genre, int releaseYear, int stars, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs, LinkedList<Ratings> ratings, String narrator) {
-        super(title, description, author, subject, copies, genre, releaseYear, stars, comingSoon, currentBorrowerID, waitListBorrowerIDs, ratings);
+    public AudioBook(String title, String description, String author, String subject, int copies, String genre, int releaseYear, boolean comingSoon, LinkedList<iDandCopies> currentBorrowerID, LinkedList<iDandCopies> waitListBorrowerIDs, LinkedList<Ratings> ratings, String narrator) {
+        super(title, description, author, subject, copies, genre, releaseYear, comingSoon, currentBorrowerID, waitListBorrowerIDs, ratings);
         this.narrator = narrator;
-    }
-
-    public AudioBook(Media media) {
-        this.title = media.getTitle();
-        this.description = media.getDescription();
-        this.author = media.getAuthor();
-        this.subject = media.getSubject();
-        this.copies = media.getCopies();
-        this.genre = media.getGenre();
-        this.releaseYear = media.getReleaseYear();
-        this.stars = media.getStars();
-        this.comingSoon = media.isComingSoon();
-        this.currentBorrowerID = new LinkedList<>();
-        this.waitListBorrowerIDs = new LinkedList<>();
-        currentBorrowerID.add(new iDandCopies((long) 0, 0, LocalDate.now()));
-        waitListBorrowerIDs.add((new iDandCopies((long) 0, 0, LocalDate.now())));
     }
 
 
@@ -59,7 +43,7 @@ public class AudioBook extends Media {
     Converts objects to strings
     */
     public String toStringList() {
-        return "AudioBook," + title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear + "," + stars + "," + comingSoon + "," + narrator;
+        return "AudioBook," + super.toStringList()+"," + narrator;
     }
 
     public void setNarrator() {

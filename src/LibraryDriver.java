@@ -147,12 +147,30 @@ public class LibraryDriver {
              */
             while (login && !currentLibrary.getCurrentUser().isAdmin()) {
                 System.out.println("\n\nWelcome User " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
-                System.out.println("1: Search Library\n2:Checkout media\n3:Checkin media\n4:Pay Fines\n0:Logout");
+                System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines\n0: Logout");
                 int input = keyboard.nextInt();
                 String fix = keyboard.nextLine();
                 switch (input) {
                     case 1:
-                        search();
+                        System.out.println("How would you like to search?\n1: Title\n2: Author\n3: Keyword");
+                        input = keyboard.nextInt();
+                        fix = keyboard.nextLine();
+
+                        if (input == 1){
+                            System.out.println("Enter the book title:");
+                            String title = keyboard.nextLine();
+                            currentLibrary.browseTitle(title);
+                        }
+                        else if (input == 2){System.out.println("Enter Author: ");
+                            String title = keyboard.nextLine();
+                            currentLibrary.browseAuthor(title);
+                        }
+                        else if (input == 3){System.out.println("Enter Keyword: ");
+                            String title = keyboard.nextLine();
+                            currentLibrary.browseKeyword(title);
+                        }
+                        else {System.out.println("Invalid input");
+                        }
                         break;
                     case 2:
                         System.out.println("Enter media title you wish to check out");
@@ -175,6 +193,14 @@ public class LibraryDriver {
                         System.out.println("Fines have been paid.");
                         currentLibrary.getCurrentUser().setFines(0);
                         break;
+                    case 5:
+                        System.out.println("Enter the title of the book you want to review");
+                        title = keyboard.nextLine();
+                        Media review = currentLibrary.getBookFromTitle(title);
+                        String comment = keyboard.nextLine();
+                        int star = keyboard.nextInt();
+                        fix = keyboard.nextLine();
+                        review.addRating(star,comment);
 
                     case 0:
                         currentLibrary.saveAccountsToFile();
@@ -186,9 +212,5 @@ public class LibraryDriver {
                 }
             }
         }
-    }
-
-    public static void search() {
-        System.out.println("Searching function to be added");
     }
 }
