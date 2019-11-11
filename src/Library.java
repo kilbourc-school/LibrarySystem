@@ -33,23 +33,7 @@ public class Library {
         }
     }
 
-    //Prints out the teachers accounts
-    public void displayTeachersAccounts() {
 
-        for (Borrower account : libraryDatabase.getAccountsDatabase()) {
-            if (account.getBorrowLimit() == 50)
-                System.out.println(account);
-        }
-    }
-
-    //Prints out the teachers accounts
-    public void displayAdultAccounts() {
-
-        for (Borrower account : libraryDatabase.getAccountsDatabase()) {
-            if (account.getBorrowLimit() == 10)
-                System.out.println(account);
-        }
-    }
 
     public Media getBookFromTitle(String title) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
@@ -62,14 +46,7 @@ public class Library {
         return null;
     }
 
-    //Prints out the teachers accounts
-    public void displayChildAccounts() {
 
-        for (Borrower account : libraryDatabase.getAccountsDatabase()) {
-            if (account.getBorrowLimit() == 3)
-                System.out.println(account);
-        }
-    }
 
     public void displayAllAccounts() {
 
@@ -115,19 +92,7 @@ public class Library {
         libraryDatabase.getMediaDatabase().add(magazine);
     }
 
-    /**
-     * Method to determine if book in library is available.
-     * Param: String with title or ISBN of book.
-     * Return: String with status of book.
-     */
-    public void isAvailable(String input) {
-        if (findMedia(input) != null) {
-            if (findMedia(input).getAvailability())
-                System.out.println(input + " is available.");
-            else
-                System.out.println(input + " is not available.");
-        }
-    }
+
 
     /**
      * Method to display all books of a genre in the library.
@@ -179,7 +144,11 @@ public class Library {
     public void giveRating(String title){
         Scanner keyboard = new Scanner(System.in);
         Media currentMedia = getBookFromTitle(title);
+        currentMedia.showRatings();
+        System.out.print("type in amount of stars");
         int stars = keyboard.nextInt();
+        String fix = keyboard.nextLine();
+        System.out.print("type in your comment");
         String comment = keyboard.nextLine();
         currentMedia.addRating(stars, comment);
     }
@@ -190,6 +159,14 @@ public class Library {
             System.out.println("not found");
         else media.setCopies((media.getCopies() + copies));
 
+    }
+
+    public void displayCheckedOutBooks(Borrower currentUser){
+        for (int i = 0; i<libraryDatabase.getMediaDatabase().size();i++)
+            for (int j = 0; j< libraryDatabase.getMediaDatabase().get(i).getCurrentBorrowerID().size();j++)
+        if(libraryDatabase.getMediaDatabase().get(i).getCurrentBorrowerID().get(j).getiD().equals(currentUser.getID())){
+            System.out.println("Title: "+libraryDatabase.getMediaDatabase().get(i).getTitle()+" Due Date: "+libraryDatabase.getMediaDatabase().get(i).getCurrentBorrowerID().get(j).getDueDate());
+        }
     }
 
     public void readInMedia() {
@@ -210,22 +187,5 @@ public class Library {
 
     public void addChildAccount(Borrower borrower) {
         libraryDatabase.getAccountsDatabase().add(borrower);
-    }
-
-
-    /**
-     * Finds book object based on String. Basically converts
-     * from String to Book.
-     * Param: String containing title or ISBN
-     * Return: Book object with a title or ISBN matching the input.
-     */
-    public Media findMedia(String input) {
-        for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
-            String str = (libraryDatabase.getMediaDatabase().get(i)).getTitle();     //Gets title of book at index.
-
-            if (input.equals(str))
-                return libraryDatabase.getMediaDatabase().get(i);
-        }
-        return null;
     }
 }

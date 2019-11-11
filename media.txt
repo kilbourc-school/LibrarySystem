@@ -1,1 +1,1 @@
-Book,the cat in the hat,cat hat boring,seuss,kid,7,boring,1992,false,.0/0/2019-11-11,.0/0/2019-11-11,.0/0,235452
+Book,the cat in the hat,cat hat boring,seuss,kid,6,boring,1992,false,.0/0/2019-11-11,.0/0/2019-11-11,.0/0,235452

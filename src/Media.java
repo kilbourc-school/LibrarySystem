@@ -115,10 +115,10 @@ public abstract class Media {
 
     public abstract int getCheckoutLimit();
 
-
-    public boolean isEnoughMedia(Media media, int copies) {
-        return media.getCopies() - copies > 0;
+    public LinkedList<iDandCopies> getCurrentBorrowerID() {
+        return currentBorrowerID;
     }
+
 
     public void checkInMedia(Media media, Long iD, int copies, LocalDate due) {
         iDandCopies found = new iDandCopies(iD, copies, due);
@@ -137,14 +137,6 @@ public abstract class Media {
         }
     }
 
-    public void addToWaitListBorrowerIDs(Long borrowerID, int copies, LocalDate due) {
-        if (waitListBorrowerIDs.size() <= 10) {
-            this.waitListBorrowerIDs.add(new iDandCopies(borrowerID, copies, due));
-            System.out.println("you have been placed on the waitlist");
-        } else
-            System.out.println("wait list is full. you were not placed on the waitlist");
-    }
-
     /*
        Getters
         */
@@ -156,9 +148,6 @@ public abstract class Media {
         this.title = title;
     }
 
-    public String getDescription() {
-        return description;
-    }
 
     /*
            Setters
@@ -190,9 +179,6 @@ public abstract class Media {
         this.setTitle(keyboard.nextLine());
     }
 
-    public String getSubject() {
-        return subject;
-    }
 
     public void setSubject(String subject) {
         this.subject = subject;
@@ -244,9 +230,6 @@ public abstract class Media {
         this.setGenre(keyboard.nextLine());
     }
 
-    public int getReleaseYear() {
-        return releaseYear;
-    }
 
     public void setReleaseYear(String releaseYear) {
         int x = 0;
@@ -261,21 +244,6 @@ public abstract class Media {
     public void setReleaseYear() {
         System.out.print("Release Year: ");
         this.setReleaseYear(keyboard.nextLine());
-    }
-
-
-    //Modifier method to mark book as unavailable.
-    public void makeBorrowed() {
-        if (copies < 1) {
-            System.out.println("No copies for you to checkout.");
-        } else {
-            copies--;
-        }
-    }
-
-    //Modifier method to mark a media as availible.
-    public void makeReturned() {
-        copies++;
     }
 
 
@@ -321,7 +289,9 @@ public abstract class Media {
         return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear +  "," + comingSoon + "," + current + "," + wait+ "," + rating;
     }
 
-    public boolean isComingSoon() {
-        return comingSoon;
+
+    public void showRatings() {
+        for (int i = 0; i<ratings.size();i++)
+        System.out.println(this.ratings.get(i));
     }
 }

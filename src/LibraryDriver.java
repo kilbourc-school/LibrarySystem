@@ -150,6 +150,11 @@ public class LibraryDriver {
                 System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines\n0: Logout");
                 int input = keyboard.nextInt();
                 String fix = keyboard.nextLine();
+
+                //insert all current checked out books
+                currentLibrary.displayCheckedOutBooks(currentLibrary.getCurrentUser());
+
+
                 switch (input) {
                     case 1:
                         System.out.println("How would you like to search?\n1: Title\n2: Author\n3: Keyword");
@@ -178,7 +183,9 @@ public class LibraryDriver {
                         System.out.println("enter how many copies you wish to check out");
                         int copies = keyboard.nextInt();
                         Media currentMedia = currentLibrary.getBookFromTitle(title);
-                        currentMedia.checkOutMedia(currentMedia, currentLibrary.getCurrentUser(), copies);
+                        currentMedia.checkOutMedia(currentMedia,
+                                currentLibrary.getCurrentUser(),
+                                copies);
                         break;
                     case 3:
                         System.out.println("Enter media title you wish to check in");
@@ -196,11 +203,7 @@ public class LibraryDriver {
                     case 5:
                         System.out.println("Enter the title of the book you want to review");
                         title = keyboard.nextLine();
-                        Media review = currentLibrary.getBookFromTitle(title);
-                        String comment = keyboard.nextLine();
-                        int star = keyboard.nextInt();
-                        fix = keyboard.nextLine();
-                        review.addRating(star,comment);
+                        currentLibrary.giveRating(title);
 
                     case 0:
                         currentLibrary.saveAccountsToFile();
