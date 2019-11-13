@@ -298,7 +298,6 @@ public abstract class Media {
             if (!(ratings.size() <= 0)) {
                  rating = "";
                 for (int i = 0; i <= ratings.size(); i++) {
-                    System.out.println("i made it");
                     rating += ratings.pop().toString();
                 }
             }
