@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Scenario2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryDriver.java" afterDir="false" />
-    </list>
+    <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="merged scenario 2 into master" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -464,7 +460,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixed file I/O for the check in and out" />
     <MESSAGE value="added in File I/O for changed check in and out" />
     <MESSAGE value="fixed errors in File I/O" />
     <MESSAGE value="changed toString method to look better" />
@@ -489,6 +484,7 @@
     <MESSAGE value="merged scott branch" />
     <MESSAGE value="front end ratings + print out current checked out books and date at sign in" />
     <MESSAGE value="merged book on sign in" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged book on sign in" />
+    <MESSAGE value="merged scenario 2 into master" />
+    <option name="LAST_COMMIT_MESSAGE" value="merged scenario 2 into master" />
   </component>
 </project>
