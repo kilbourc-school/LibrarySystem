@@ -31,7 +31,9 @@ public class Database {
         return AccountsDatabase;
     }
 
-
+    /**
+     * takes in a file, adds all objects found to the media database
+     */
     public void readInMedia() {
         File file = new File("media.txt");
         Scanner scan;
@@ -48,22 +50,28 @@ public class Database {
                 String[] ratingsplit = lineArray[11].split(".");
 
 
+
                 for (int i = 0; i < currentCheckOut.length; i++) {
                     String[] splitCurrentCheckout = currentCheckOut[i].split("/");
                     current.add(new iDandCopies(Long.parseLong(splitCurrentCheckout[0]), Integer.parseInt(splitCurrentCheckout[1]), LocalDate.parse(splitCurrentCheckout[2])));
                 }
 
+                //creates the LinkedList for wait list
                 for (int i = 0; i < waitCheckOut.length; i++) {
                     String[] splitWaitCheckout = waitCheckOut[i].split("/");
                     wait.add(new iDandCopies(Long.parseLong(splitWaitCheckout[0]), Integer.parseInt(splitWaitCheckout[1]), LocalDate.parse(splitWaitCheckout[2])));
                 }
 
+                //creates the LinkedList for ratings
                 for (int i = 0; i < ratingsplit.length; i++) {
-
                     String[] splitRatingSplit = ratingsplit[i].split("/");
                     System.out.println(ratingsplit[i]);
                     rating.add(new Ratings(Integer.parseInt(splitRatingSplit[0]),splitRatingSplit[1]));
                 }
+
+                /**
+                 * adds the objects to the database
+                 */
                 if (lineArray[0].equals("Book")) {
                     getMediaDatabase().add(new Book(lineArray[1], lineArray[2], lineArray[3], lineArray[4], Integer.parseInt(lineArray[5]), lineArray[6], Integer.parseInt(lineArray[7]),Boolean.parseBoolean(lineArray[8]), current, wait, rating, lineArray[12]));
                 } else if (lineArray[0].equals("AudioBook")) {
@@ -83,6 +91,9 @@ public class Database {
 
     }
 
+    /**
+     * reads in accounts, adds all objects found to accounts database
+     */
     public void readInAccounts() {
         File file = new File("account.txt");
         Scanner scan;
@@ -91,6 +102,8 @@ public class Database {
             while (scan.hasNextLine()) {
                 String line = scan.nextLine();
                 String[] lineArray = line.split(",");
+
+                //adds objects to database
                 if (Integer.parseInt(lineArray[0]) == 3) {
                     getAccountsDatabase().add(new ChildBorrow(lineArray[1], Long.parseLong(lineArray[2]), LocalDate.parse(lineArray[3]), Integer.parseInt(lineArray[4]), lineArray[5], lineArray[6], lineArray[7], Integer.parseInt(lineArray[8]), lineArray[9], lineArray[10], Boolean.parseBoolean(lineArray[11]), Double.parseDouble(lineArray[12])));
                 } else if (Integer.parseInt(lineArray[0]) == 10) {
@@ -107,6 +120,9 @@ public class Database {
         }
     }
 
+    /**
+     * writes the current account database to file
+     */
     public void saveAccountsToFile() {
         try {
             PrintWriter writer = new PrintWriter("account.txt");
@@ -119,6 +135,9 @@ public class Database {
         }
     }
 
+    /**
+     * writes the current media database to file
+     */
     public void saveMediaToFile() {
         try {
             PrintWriter writer = new PrintWriter("media.txt");

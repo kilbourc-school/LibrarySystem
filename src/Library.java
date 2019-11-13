@@ -15,19 +15,30 @@ public class Library {
     public Library() {
     }
 
+    /**
+     *database save for accounts
+     */
     public void saveAccountsToFile() {
         libraryDatabase.saveAccountsToFile();
     }
 
+    /**
+     *database save for media
+     */
     public void saveMediaToFile() {
         libraryDatabase.saveMediaToFile();
     }
 
+    /**
+     * returns current user
+     */
     public Borrower getCurrentUser() {
         return currentUser;
     }
 
-    //Prints out the contents of the Library.
+    /**
+     * prints out all media
+     */
     public void displayMedias() {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
             System.out.println(libraryDatabase.getMediaDatabase().get(i));
@@ -35,7 +46,10 @@ public class Library {
     }
 
 
-
+    /**
+     * @param title of media
+     * @return media found from title given
+     */
     public Media getMediaFromTitle(String title) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
             String MediaTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
@@ -48,7 +62,9 @@ public class Library {
     }
 
 
-
+    /**
+     * prints out all accounts
+     */
     public void displayAllAccounts() {
 
         for (Borrower account : libraryDatabase.getAccountsDatabase()) {
@@ -57,6 +73,11 @@ public class Library {
     }
 
 
+    /**
+     * @param email - of potential account
+     * @param pass - of potential account
+     * @return true or false, if account is in database
+     */
     public boolean verifyAccount(String email, String pass) {
 
         for (Borrower account : libraryDatabase.getAccountsDatabase()) {
@@ -68,26 +89,41 @@ public class Library {
         return false;
     }
 
+    /**
+     * add Book to library database
+     */
     public void addBook() {
         Book book = new Book();
         libraryDatabase.getMediaDatabase().add(book);
     }
 
+    /**
+     * add AudioBook to library database
+     */
     public void addAudioBook() {
         AudioBook audioBook = new AudioBook();
         libraryDatabase.getMediaDatabase().add(audioBook);
     }
 
+    /**
+     * add DVD to library database
+     */
     public void addDVD() {
         DVD dvd = new DVD();
         libraryDatabase.getMediaDatabase().add(dvd);
     }
 
+    /**
+     * add EBook to library database
+     */
     public void addEBook() {
         EBook ebook = new EBook(); //null Book
         libraryDatabase.getMediaDatabase().add(ebook);
     }
 
+    /**
+     * add Magazine to library database
+     */
     public void addMagazine() {
         Magazine magazine = new Magazine();
         libraryDatabase.getMediaDatabase().add(magazine);
@@ -96,7 +132,7 @@ public class Library {
 
 
     /**
-     * Method to display all Medias of a genre in the library.
+     * Method to display all Medias of a specified genre in the library.
      * Param: String with the genre of a Media.
      * Return: List of Medias in the same genre.
      */
@@ -110,6 +146,11 @@ public class Library {
         }
     }
 
+    /**
+     * Method to display all Medias of a specified title in the library.
+     * Param: String with the title of a Media.
+     * Return: List of Medias in the same title.
+     */
     public void browseTitle(String title) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
             String MediaTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
@@ -119,6 +160,12 @@ public class Library {
             }
         }
     }
+
+    /**
+     * Method to display all Medias of a specified author in the library.
+     * Param: String with the author of a Media.
+     * Return: List of Medias in the same author.
+     */
     public void browseAuthor(String title) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
             String MediaTitle = (libraryDatabase.getMediaDatabase().get(i)).getAuthor();
@@ -128,6 +175,12 @@ public class Library {
             }
         }
     }
+
+    /**
+     * Method to display all Medias of a specified keyword in the library.
+     * Param: String with the keyword of a Media.
+     * Return: List of Medias in the same keyword.
+     */
     public void browseKeyword (String title) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
             String MediaTitle = (libraryDatabase.getMediaDatabase().get(i)).toString();
@@ -138,6 +191,10 @@ public class Library {
         }
     }
 
+    /**
+     * @param title - of specified media
+     * prints out all ratings of a given media
+     */
     public void displayRatings(String title){
         Media currentMedia = getMediaFromTitle(title);
         if (currentMedia.ratings.size() == 0){
@@ -147,7 +204,10 @@ public class Library {
         System.out.println(currentMedia.ratings.get(i));
     }
 
-
+    /**
+     * helper method for scenarios
+     * adds ratings
+     */
     public void autoRating(){
         Media currentMedia = getMediaFromTitle("Hitchhiker's Guide to the Galaxy");
         currentMedia.addRating(5, "best book ever");
@@ -155,6 +215,11 @@ public class Library {
         currentMedia.addRating(5, "SUPER AMAZING");
     }
 
+    /**
+     *
+     * @param title - of specified media
+     * assigns rating to a book
+     */
     public void giveRating(String title){
         Scanner keyboard = new Scanner(System.in);
         Media currentMedia = getMediaFromTitle(title);
@@ -172,6 +237,12 @@ public class Library {
         currentMedia.addRating(stars, comment);
     }
 
+    /**
+     *
+     * @param title - of given media
+     * @param copies - copies being added to the library
+     *  adds copies amount to the given media
+     */
     public void addCopyByTitle(String title, int copies) {
         Media media = getMediaFromTitle(title);
         if (media == null)
@@ -180,6 +251,10 @@ public class Library {
 
     }
 
+    /**
+     * @param currentUser
+     * displays all media checked out to current User
+     */
     public void displayCheckedOutMedias(Borrower currentUser){
         System.out.println("********** Current Checked Out Media **********");
         for (int i = 0; i<libraryDatabase.getMediaDatabase().size();i++)
@@ -189,7 +264,10 @@ public class Library {
         }
     }
 
-
+    /**
+     * helper method for scenarios
+     * @param media - media tht is being added to wait list
+     */
     public void assignToWaitList(Media media){
         media.waitListBorrowerIDs.add(new iDandCopies(Long. parseLong("234564"),1, LocalDate.now()));
     }
