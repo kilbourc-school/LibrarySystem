@@ -299,7 +299,7 @@ public abstract class Media {
             if (!(ratings.size() <= 0)) {
                  rating = "";
                 for (int i = 0; i <= ratings.size(); i++) {
-                    wait += ratings.pop().toString();
+                    wait += ratings.pop().toStringList();
                 }
             }
         return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear +  "," + comingSoon + "," + current + "," + wait+ "," + rating;

@@ -25,6 +25,10 @@ public class Ratings {
 
     @Override
     public String toString() {
+        return "Ratings: "+rating+" Comment:"+comment;
+    }
+
+    public String toStringList() {
         return "." + rating + "/" + comment;
     }
 }
