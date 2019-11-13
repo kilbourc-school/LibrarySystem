@@ -105,9 +105,9 @@ public abstract class Media {
                 currentBorrowerID = new LinkedList<>();
 
             LocalDate today = LocalDate.now();
-            System.out.println(currentBorrower.getID());
+
             currentBorrowerID.add(new iDandCopies(currentBorrower.getID(), copies, today.plusDays(media.getCheckoutLimit())));
-            System.out.println(currentBorrowerID.peekLast());
+
             this.copies = this.copies - copies;
         }
         else{
@@ -270,7 +270,7 @@ public abstract class Media {
             if (!(currentBorrowerID.size() <= 0)) {
                 current = "";
                 for (int i = 0; i < currentBorrowerID.size(); i++) {
-                    System.out.println("you must of had it checked out. "+currentBorrowerID.get(i).getiD());
+
                     current += currentBorrowerID.pop().toString();
                 }
             }
@@ -279,7 +279,7 @@ public abstract class Media {
             if (!(waitListBorrowerIDs.size() <= 0)) {
                 wait = "";
                 for (int i = 0; i <= waitListBorrowerIDs.size(); i++) {
-                    System.out.println("you must of had it checked out. "+waitListBorrowerIDs.get(i).getiD());
+
                     wait += waitListBorrowerIDs.pop().toString();
                 }
             }

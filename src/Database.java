@@ -120,7 +120,6 @@ public class Database {
         try {
             PrintWriter writer = new PrintWriter("media.txt");
             for (Media media : getMediaDatabase()) {
-                System.out.println(media.toStringList());
                 writer.println(media.toStringList());
             }
             writer.close();
