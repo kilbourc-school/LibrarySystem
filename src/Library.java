@@ -209,7 +209,7 @@ public class Library {
      * adds ratings
      */
     public void autoRating(){
-        Media currentMedia = getMediaFromTitle("Hitchhiker's Guide to the Galaxy");
+        Media currentMedia = getMediaFromTitle("Hitchhikers Guide to the Galaxy");
         currentMedia.addRating(5, "best book ever");
         currentMedia.addRating(5, "no book can compete");
         currentMedia.addRating(5, "SUPER AMAZING");
