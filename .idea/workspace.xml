@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ratings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ratings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenario1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenario1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media.txt" beforeDir="false" afterPath="$PROJECT_DIR$/media.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AudioBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/AudioBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/DVD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/DVD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/LibraryDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/LibraryDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Magazine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Magazine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Scenario1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Scenario1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Scenario2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Scenario2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryDriver.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,9 +51,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -127,20 +138,6 @@
       <workItem from="1572544726058" duration="12370000" />
       <workItem from="1573068787276" duration="1280000" />
       <workItem from="1573602767504" duration="907000" />
-    </task>
-    <task id="LOCAL-00007" summary="added account and media file writing">
-      <created>1571861338360</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1571861338361</updated>
-    </task>
-    <task id="LOCAL-00008" summary="added account and media file writing">
-      <created>1571863500994</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1571863500994</updated>
     </task>
     <task id="LOCAL-00009" summary="added amount of copies edit&#10;added contructor to library&#10;commented out login requirements for testing purposes">
       <created>1571864207154</created>
@@ -471,7 +468,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573607292255</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="fixed rating to string">
+      <created>1573607890451</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1573607890452</updated>
+    </task>
+    <task id="LOCAL-00057" summary="fixed ratings to string file I/O">
+      <created>1573607991459</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1573607991460</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,8 +503,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="removed error check messages" />
-    <MESSAGE value="merged checkout branch master" />
     <MESSAGE value="merged Scott's abstraction / UI updates branch" />
     <MESSAGE value="Encapsulated Borrowers" />
     <MESSAGE value="Created add user function" />
@@ -517,6 +526,8 @@
     <MESSAGE value="added waitlist conformation" />
     <MESSAGE value="fixed scenario 3 and 2" />
     <MESSAGE value="begun book to media refactorization" />
-    <option name="LAST_COMMIT_MESSAGE" value="begun book to media refactorization" />
+    <MESSAGE value="fixed rating to string" />
+    <MESSAGE value="fixed ratings to string file I/O" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed ratings to string file I/O" />
   </component>
 </project>

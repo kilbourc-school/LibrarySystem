@@ -85,7 +85,7 @@ public class LibraryDriver {
                     String genre = keyboard.nextLine();
                     currentLibrary.browseGenre(genre);
                 } else if (input == 5) {
-                    currentLibrary.displayBooks();
+                    currentLibrary.displayMedias();
                 } else if (input == 6) {
                     currentLibrary.saveAccountsToFile();
                     currentLibrary.saveMediaToFile();
@@ -128,14 +128,14 @@ public class LibraryDriver {
                     String title = keyboard.nextLine();
                     System.out.println("enter how many copies you wish to check out");
                     int copies = keyboard.nextInt();
-                    Media currentMedia = currentLibrary.getBookFromTitle(title);
+                    Media currentMedia = currentLibrary.getMediaFromTitle(title);
                     currentMedia.checkOutMedia(currentMedia, currentLibrary.getCurrentUser(), copies);
                 }
 
                 if (input == 9) {
                     System.out.println("Enter media title you wish to check in");
                     String title = keyboard.nextLine();
-                    Media currentMedia = currentLibrary.getBookFromTitle(title);
+                    Media currentMedia = currentLibrary.getMediaFromTitle(title);
                     System.out.println(currentMedia.getTitle());
                     System.out.println("Enter how many copies you wish to return");
                     int copies = keyboard.nextInt();
@@ -148,7 +148,7 @@ public class LibraryDriver {
             while (login && !currentLibrary.getCurrentUser().isAdmin()) {
 
                 //insert all current checked out books
-                currentLibrary.displayCheckedOutBooks(currentLibrary.getCurrentUser());
+                currentLibrary.displayCheckedOutMedias(currentLibrary.getCurrentUser());
 
 
                 System.out.println("\n\nWelcome User " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
@@ -187,7 +187,7 @@ public class LibraryDriver {
                         String title = keyboard.nextLine();
                         System.out.println("enter how many copies you wish to check out");
                         int copies = keyboard.nextInt();
-                        Media currentMedia = currentLibrary.getBookFromTitle(title);
+                        Media currentMedia = currentLibrary.getMediaFromTitle(title);
                         currentMedia.checkOutMedia(currentMedia,
                                 currentLibrary.getCurrentUser(),
                                 copies);
@@ -195,7 +195,7 @@ public class LibraryDriver {
                     case 3:
                         System.out.println("Enter media title you wish to check in");
                         title = keyboard.nextLine();
-                        currentMedia = currentLibrary.getBookFromTitle(title);
+                        currentMedia = currentLibrary.getMediaFromTitle(title);
                         System.out.println(currentMedia.getTitle());
                         System.out.println("Enter how many copies you wish to return");
                         copies = keyboard.nextInt();
