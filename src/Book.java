@@ -59,7 +59,7 @@ public class Book extends Media {
      converts objects into strings
       */
     public String toStringList() {
-        return "Book," + super.toStringList()+ ISBN;
+        return "Book," + super.toStringList()+","+ ISBN;
     }
 
     @Override
