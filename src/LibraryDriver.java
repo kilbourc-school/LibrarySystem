@@ -32,7 +32,7 @@ public class LibraryDriver {
                 }
             }
 /**
- * Admin login
+ * Admin login- has access to functions that a user would not, like adding users and media
  */
             while (login && currentLibrary.getCurrentUser().isAdmin()) {
                 int input;
@@ -40,14 +40,15 @@ public class LibraryDriver {
                 System.out.println("1: Add media\n2: See all accounts\n3: Search by title\n4: Search by genre" +
                         "\n5: Display all books\n6: Save to file\n7: Add an account\n8:Checkout\n9:Checkin\n10:change copies");
                 System.out.println("0: Logout");
+
                 try {
                     input = keyboard.nextInt();
                 } catch (Exception e){
                     System.out.println("Invalid input");
                     input = 99;
                 }
-
                 String fix = keyboard.nextLine();
+
                 if (input == 1) {
                     System.out.println("Which media type would you like to add?");
                     System.out.println("1: Book\n2: Audio Book\n3: DVD\n4: eBook\n5:Magazine");
@@ -57,7 +58,8 @@ public class LibraryDriver {
                         System.out.println("Invalid input, please enter an Integer.");
                         input = 99;
                         System.out.println("\n\nPress Enter key to continue.");
-                        fix = keyboard.nextLine();}
+                        fix = keyboard.nextLine();
+                    }
                     fix = keyboard.nextLine();
                     if (input == 1) {
                         currentLibrary.addBook();
@@ -69,6 +71,10 @@ public class LibraryDriver {
                         currentLibrary.addEBook();
                     } else if (input == 5) {
                         currentLibrary.addMagazine();
+                    } else {
+                        System.out.println(input + " not within the bounds of available options");
+                        System.out.println("\n\nPress Enter key to continue.");
+                        fix = keyboard.nextLine();
                     }
                 } else if (input == 2) {
                     currentLibrary.displayAllAccounts();
@@ -93,9 +99,16 @@ public class LibraryDriver {
                     fix = keyboard.nextLine();
 
                 } else if (input == 7) {
+                    /**
+                     * We add accounts this way due to the Borrower class being abstracted.
+                     */
                     System.out.println("Which User Account would you like to add?");
                     System.out.println("1: Adult\n2: Child\n3: Teacher");
-                    input = keyboard.nextInt();
+                    try {
+                        input = keyboard.nextInt();
+                    }catch(Exception e) {
+                        input = 0;
+                    }
                     fix = keyboard.nextLine();
                     if (input == 1) {
                         AdultBorrow borrower = new AdultBorrow();
@@ -116,13 +129,19 @@ public class LibraryDriver {
                     System.out.println("Please enter the amount the copies changes by (+/-):");
                     int copies = keyboard.nextInt();
                     fix = keyboard.nextLine();
-                    currentLibrary.addCopyByTitle(title, copies);
+                    try {
+                        currentLibrary.addCopyByTitle(title, copies);
+                    }catch (Exception e){
+                        System.out.println("Title not found");
+                    }
                 }
 
 
                 if (input == 0) {
                     currentLibrary.saveAccountsToFile();
                     currentLibrary.saveMediaToFile();
+                    System.out.println("\n\nYou have successfully logged out\nPress Enter key to continue.");
+                    fix = keyboard.nextLine();
                     login = false;
                 }
 
