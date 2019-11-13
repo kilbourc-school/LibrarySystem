@@ -1,2 +1,5 @@
-Book,The Cat in the Hat,Zany cat destroys house on a rainy day,Dr. Suess,Rule Breaking,2,Child,1957,false,.0/0/2019-11-13,.0/0/2019-11-13,.0/0,9788448843625
-Book,To Kill a Mockingbird,Small town deals with issues such as rape and racism,Harper Lee,Fiction,2,Southern Gothic,1960,false,.0/0/2019-11-13,.0/0/2019-11-13,.0/0,3-12-342-123231-23
+Book,The Cat in the Hat,cats wear hats,seuss,kiddie,3,kiddo,1974,false,.0/0/2019-11-13,.0/0/2019-11-13,.0/0,1927345
+Book,Hitchhikers Guide to the Galaxy,galaxies,somebody,adventure,3,coolio,1993,false,.0/0/2019-11-13,.0/0/2019-11-13,.0/0,124562
+Book,To Kill A Mockingbird,racism,some dude,judicial,3,jail,1864,false,.0/0/2019-11-13,.0/0/2019-11-13,.0/0,338582
+DVD,Dante's Peak,hills,dante,adventure,5,taco,1992,false,.0/0/2019-11-13,.0/0/2019-11-13,.0/0
+Magazine,Popular Machinics,machines,machine man,popular,3,machines are cool,1955,false,.0/0/2019-11-13,.0/0/2019-11-13,.0/0,2,7
