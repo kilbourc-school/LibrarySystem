@@ -258,7 +258,7 @@ public class LibraryDriver {
                         title = keyboard.nextLine();
                         try {
                             currentLibrary.displayRatings(title);
-                        }catch(Exception e){System.out.println("Title not found or had no existing reviews");
+                        }catch(Exception e){System.out.println("Title not found");
                             System.out.println("\nPress Enter key to continue.");
                             fix = keyboard.nextLine();}
                             break;

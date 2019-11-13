@@ -140,6 +140,9 @@ public class Library {
 
     public void displayRatings(String title){
         Media currentMedia = getMediaFromTitle(title);
+        if (currentMedia.ratings.size() == 0){
+            System.out.println("No Existing reviews for "+ currentMedia.getTitle());
+        }
         for(int i=0;i<currentMedia.ratings.size();i++)
         System.out.println(currentMedia.ratings.get(i));
     }
