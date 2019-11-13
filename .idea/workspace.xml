@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBorrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminBorrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdultBorrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdultBorrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChildBorrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChildBorrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DVD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenario3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenario3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryDriver.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +68,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Scenario2">
+  <component name="RunManager" selected="Application.LibraryDriver">
     <configuration name="LibraryDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LibraryDriver" />
       <module name="LibaryProject" />
@@ -88,9 +92,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LibraryDriver" />
         <item itemvalue="Application.Scenario2" />
         <item itemvalue="Application.Scenario3" />
-        <item itemvalue="Application.LibraryDriver" />
         <item itemvalue="Application.LibraryDriver" />
         <item itemvalue="Application.LibraryDriver" />
       </list>
@@ -120,13 +124,6 @@
       <workItem from="1572544726058" duration="12370000" />
       <workItem from="1573068787276" duration="1280000" />
       <workItem from="1573602767504" duration="907000" />
-    </task>
-    <task id="LOCAL-00005" summary="added file read in">
-      <created>1571860162763</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1571860162763</updated>
     </task>
     <task id="LOCAL-00006" summary="added admin read in for account">
       <created>1571860719539</created>
@@ -464,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573606408197</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="fixed scenario 3 and 2">
+      <created>1573606871866</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1573606871866</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,7 +489,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixed all check out." />
     <MESSAGE value="removed working 1 2 3 print messages" />
     <MESSAGE value="removed error check messages" />
     <MESSAGE value="merged checkout branch master" />
@@ -510,6 +513,7 @@
     <MESSAGE value="removed more error check lines" />
     <MESSAGE value="added assign from waitlist" />
     <MESSAGE value="added waitlist conformation" />
-    <option name="LAST_COMMIT_MESSAGE" value="added waitlist conformation" />
+    <MESSAGE value="fixed scenario 3 and 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed scenario 3 and 2" />
   </component>
 </project>

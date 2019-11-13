@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 /**
  * This is the class that acts as the library, holding
- * the books and allowing interactions with the books
+ * the medias and allowing interactions with the medias
  * using methods to add, remove, borrow, return, and
- * browse the books.
+ * browse the medias.
  */
 
 public class Library {
@@ -28,7 +28,7 @@ public class Library {
     }
 
     //Prints out the contents of the Library.
-    public void displayBooks() {
+    public void displayMedias() {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
             System.out.println(libraryDatabase.getMediaDatabase().get(i));
         }
@@ -36,11 +36,11 @@ public class Library {
 
 
 
-    public Media getBookFromTitle(String title) {
+    public Media getMediaFromTitle(String title) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
-            String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
+            String MediaTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
 
-            if (bookTitle.toLowerCase().equals(title.toLowerCase())) {
+            if (MediaTitle.toLowerCase().equals(title.toLowerCase())) {
                 return libraryDatabase.getMediaDatabase().get(i);
             }
         }
@@ -96,14 +96,14 @@ public class Library {
 
 
     /**
-     * Method to display all books of a genre in the library.
-     * Param: String with the genre of a book.
-     * Return: List of books in the same genre.
+     * Method to display all Medias of a genre in the library.
+     * Param: String with the genre of a Media.
+     * Return: List of Medias in the same genre.
      */
     public void browseGenre(String genre) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
-            String bookGenre = (libraryDatabase.getMediaDatabase().get(i)).getGenre();
-            if (genre.equals(bookGenre)) {
+            String MediaGenre = (libraryDatabase.getMediaDatabase().get(i)).getGenre();
+            if (genre.equals(MediaGenre)) {
                 System.out.println(libraryDatabase.getMediaDatabase().get(i));
             }
         }
@@ -111,40 +111,40 @@ public class Library {
 
     public void browseTitle(String title) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
-            String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
+            String MediaTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
 
-            if (bookTitle.equalsIgnoreCase(title)){
+            if (MediaTitle.equalsIgnoreCase(title)){
                 System.out.println(libraryDatabase.getMediaDatabase().get(i));
             }
         }
     }
     public void browseAuthor(String title) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
-            String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).getAuthor();
+            String MediaTitle = (libraryDatabase.getMediaDatabase().get(i)).getAuthor();
 
-            if (bookTitle.equalsIgnoreCase(title)){
+            if (MediaTitle.equalsIgnoreCase(title)){
                 System.out.println(libraryDatabase.getMediaDatabase().get(i));
             }
         }
     }
     public void browseKeyword (String title) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
-            String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).toString();
+            String MediaTitle = (libraryDatabase.getMediaDatabase().get(i)).toString();
 
-            if (bookTitle.toLowerCase().contains(title.toLowerCase())) {
+            if (MediaTitle.toLowerCase().contains(title.toLowerCase())) {
                 System.out.println(libraryDatabase.getMediaDatabase().get(i));
             }
         }
     }
 
     public void displayRatings(String title){
-        Media currentMedia = getBookFromTitle(title);
+        Media currentMedia = getMediaFromTitle(title);
         for(int i=0;i<currentMedia.ratings.size();i++)
         System.out.println(currentMedia.ratings.get(i));
     }
     public void giveRating(String title){
         Scanner keyboard = new Scanner(System.in);
-        Media currentMedia = getBookFromTitle(title);
+        Media currentMedia = getMediaFromTitle(title);
         currentMedia.showRatings();
         System.out.print("type in amount of stars");
         int stars = keyboard.nextInt();
@@ -155,14 +155,14 @@ public class Library {
     }
 
     public void addCopyByTitle(String title, int copies) {
-        Media media = getBookFromTitle(title);
+        Media media = getMediaFromTitle(title);
         if (media == null)
             System.out.println("not found");
         else media.setCopies((media.getCopies() + copies));
 
     }
 
-    public void displayCheckedOutBooks(Borrower currentUser){
+    public void displayCheckedOutMedias(Borrower currentUser){
         System.out.println("********** Current Checked Out Media **********");
         for (int i = 0; i<libraryDatabase.getMediaDatabase().size();i++)
             for (int j = 0; j< libraryDatabase.getMediaDatabase().get(i).getCurrentBorrowerID().size();j++)

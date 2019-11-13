@@ -90,7 +90,7 @@ public class Scenario1 {
                     String genre = keyboard.nextLine();
                     currentLibrary.browseGenre(genre);
                 } else if (input == 5) {
-                    currentLibrary.displayBooks();
+                    currentLibrary.displayMedias();
                 } else if (input == 6) {
                     currentLibrary.saveAccountsToFile();
                     currentLibrary.saveMediaToFile();
@@ -113,7 +113,7 @@ public class Scenario1 {
                     }
 
                 } else if (input == 10) {
-                    System.out.println("Enter the book title");
+                    System.out.println("Enter the Media title");
                     String title = keyboard.nextLine();
                     System.out.println("Please enter the amount the copies changes by (+/-):");
                     int copies = keyboard.nextInt();
@@ -131,14 +131,14 @@ public class Scenario1 {
                     String title = keyboard.nextLine();
                     System.out.println("enter how many copies you wish to check out");
                     int copies = keyboard.nextInt();
-                    Media currentMedia = currentLibrary.getBookFromTitle(title);
+                    Media currentMedia = currentLibrary.getMediaFromTitle(title);
                     currentMedia.checkOutMedia(currentMedia, currentLibrary.getCurrentUser(), copies);
                 }
 
                 if (input == 9) {
                     System.out.println("Enter media title you wish to check in");
                     String title = keyboard.nextLine();
-                    Media currentMedia = currentLibrary.getBookFromTitle(title);
+                    Media currentMedia = currentLibrary.getMediaFromTitle(title);
                     System.out.println(currentMedia.getTitle());
                     System.out.println("Enter how many copies you wish to return");
                     int copies = keyboard.nextInt();
@@ -157,8 +157,8 @@ public class Scenario1 {
                 System.out.println(input);
                 String fix = keyboard.nextLine();
 
-                //insert all current checked out books
-                currentLibrary.displayCheckedOutBooks(currentLibrary.getCurrentUser());
+                //insert all current checked out Medias
+                currentLibrary.displayCheckedOutMedias(currentLibrary.getCurrentUser());
 
 
                 switch (input) {
@@ -168,7 +168,7 @@ public class Scenario1 {
                         fix = keyboard.nextLine();
 
                         if (input == 1){
-                            System.out.println("Enter the book title:");
+                            System.out.println("Enter the Media title:");
                             String title = keyboard.nextLine();
                             currentLibrary.browseTitle(title);
                         }
@@ -192,7 +192,7 @@ public class Scenario1 {
                         stop = keyboard.nextLine();
                         int copies = 1;
                         System.out.println(copies);
-                        Media currentMedia = currentLibrary.getBookFromTitle(title);
+                        Media currentMedia = currentLibrary.getMediaFromTitle(title);
                         currentMedia.checkOutMedia(currentMedia,
                                 currentLibrary.getCurrentUser(),
                                 copies);
@@ -201,7 +201,7 @@ public class Scenario1 {
                         title = "Hitchhikers Guide to the Galaxy";
                         System.out.println("enter how many copies you wish to check out");
                         copies = 1;
-                        Media currentMedia1 = currentLibrary.getBookFromTitle(title);
+                        Media currentMedia1 = currentLibrary.getMediaFromTitle(title);
                         currentMedia1.checkOutMedia(currentMedia1,
                                 currentLibrary.getCurrentUser(),
                                 copies);
@@ -210,7 +210,7 @@ public class Scenario1 {
                         title = "To Kill a Mockingbird";
                         System.out.println("enter how many copies you wish to check out");
                         copies = 1;
-                        Media currentMedia2 = currentLibrary.getBookFromTitle(title);
+                        Media currentMedia2 = currentLibrary.getMediaFromTitle(title);
                         currentMedia2.checkOutMedia(currentMedia2,
                                 currentLibrary.getCurrentUser(),
                                 copies);
@@ -218,7 +218,7 @@ public class Scenario1 {
                     case 3:
                         System.out.println("Enter media title you wish to check in");
                         title = keyboard.nextLine();
-                        currentMedia = currentLibrary.getBookFromTitle(title);
+                        currentMedia = currentLibrary.getMediaFromTitle(title);
                         System.out.println(currentMedia.getTitle());
                         System.out.println("Enter how many copies you wish to return");
                         copies = keyboard.nextInt();
@@ -229,7 +229,7 @@ public class Scenario1 {
                         currentLibrary.getCurrentUser().setFines(0);
                         break;
                     case 5:
-                        System.out.println("Enter the title of the book you want to review");
+                        System.out.println("Enter the title of the Media you want to review");
                         title = keyboard.nextLine();
                         currentLibrary.giveRating(title);
 

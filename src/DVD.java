@@ -1,6 +1,6 @@
 
 /*
- * This is a class for book objects, which have unique
+ * This is a class for media objects, which have unique
  * attributes like titles, authors, physical states,
  * and availibility.
  */

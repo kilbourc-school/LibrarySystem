@@ -41,7 +41,7 @@ System.out.println("portia@portia");
              */
             while (login && !currentLibrary.getCurrentUser().isAdmin()) {
 
-                currentLibrary.displayCheckedOutBooks(currentLibrary.getCurrentUser());
+                currentLibrary.displayCheckedOutMedias(currentLibrary.getCurrentUser());
 
                 System.out.println("\n\nWelcome User " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
                 System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines\n0: Logout");
@@ -59,14 +59,14 @@ System.out.println("portia@portia");
                 stop = keyboard.nextLine();
                 System.out.println(1);
                         int copies = 1;
-                        Media currentMedia = currentLibrary.getBookFromTitle(title);
+                        Media currentMedia = currentLibrary.getMediaFromTitle(title);
                         currentMedia.checkOutMedia(currentMedia,
                                 currentLibrary.getCurrentUser(),
                                 copies);
 
 
-//next book
-                currentLibrary.displayCheckedOutBooks(currentLibrary.getCurrentUser());
+//next Media
+                currentLibrary.displayCheckedOutMedias(currentLibrary.getCurrentUser());
 
                 System.out.println("\n\nWelcome User " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
                 System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines\n0: Logout");
@@ -82,12 +82,12 @@ System.out.println("portia@portia");
                 stop = keyboard.nextLine();
                 System.out.println(1);
                 copies = 1;
-                currentMedia = currentLibrary.getBookFromTitle(title);
+                currentMedia = currentLibrary.getMediaFromTitle(title);
                 currentMedia.checkOutMedia(currentMedia, currentLibrary.getCurrentUser(), copies);
 
 
 
-                currentLibrary.displayCheckedOutBooks(currentLibrary.getCurrentUser());
+                currentLibrary.displayCheckedOutMedias(currentLibrary.getCurrentUser());
 
                 System.out.println("\n\nWelcome User " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
                 System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines\n0: Logout");

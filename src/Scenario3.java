@@ -92,7 +92,7 @@ public class Scenario3 {
                     String genre = keyboard.nextLine();
                     currentLibrary.browseGenre(genre);
                 } else if (input == 5) {
-                    currentLibrary.displayBooks();
+                    currentLibrary.displayMedias();
                 } else if (input == 6) {
                     currentLibrary.saveAccountsToFile();
                     currentLibrary.saveMediaToFile();
@@ -115,7 +115,7 @@ public class Scenario3 {
                     }
 
                 } else if (input == 10) {
-                    System.out.println("Enter the book title");
+                    System.out.println("Enter the Media title");
                     String title = "To Kill a Mockingbird";
                     System.out.println(title);
                     System.out.println("Please enter the amount the copies changes by (+/-):");
@@ -123,7 +123,7 @@ public class Scenario3 {
                     System.out.println(copies);
                     fix = keyboard.nextLine();
                     currentLibrary.addCopyByTitle(title, copies);
-                    Media media = currentLibrary.getBookFromTitle("To Kill a Mockingbird");
+                    Media media = currentLibrary.getMediaFromTitle("To Kill a Mockingbird");
                     currentLibrary.assignToWaitList(media);
                     login = false;
                 }
@@ -140,14 +140,14 @@ public class Scenario3 {
                     String title = keyboard.nextLine();
                     System.out.println("enter how many copies you wish to check out");
                     int copies = keyboard.nextInt();
-                    Media currentMedia = currentLibrary.getBookFromTitle(title);
+                    Media currentMedia = currentLibrary.getMediaFromTitle(title);
                     currentMedia.checkOutMedia(currentMedia, currentLibrary.getCurrentUser(), copies);
                 }
 
                 if (input == 9) {
                     System.out.println("Enter media title you wish to check in");
                     String title = keyboard.nextLine();
-                    Media currentMedia = currentLibrary.getBookFromTitle(title);
+                    Media currentMedia = currentLibrary.getMediaFromTitle(title);
                     System.out.println(currentMedia.getTitle());
                     System.out.println("Enter how many copies you wish to return");
                     int copies = keyboard.nextInt();
@@ -191,8 +191,8 @@ public class Scenario3 {
                 }
             }
             while (login && !currentLibrary.getCurrentUser().isAdmin()) {
-                //insert all current checked out books
-                currentLibrary.displayCheckedOutBooks(currentLibrary.getCurrentUser());
+                //insert all current checked out Medias
+                currentLibrary.displayCheckedOutMedias(currentLibrary.getCurrentUser());
 
 
                 for(int i=0;i<currentLibrary.libraryDatabase.getMediaDatabase().size();i++){

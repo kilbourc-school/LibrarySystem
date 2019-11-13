@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Database {
     /*
-    /Holds all books.
+    /Holds all medias.
      */
     ArrayList<Media> MediaDatabase = new ArrayList<>();
     /*
