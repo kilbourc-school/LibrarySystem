@@ -142,6 +142,17 @@ public abstract class Media {
         }
     }
 
+
+    private void assignFromWaitList(Media media) {
+        if (media.waitListBorrowerIDs.peek() != null) {
+            if (media.waitListBorrowerIDs.peek().getCopies() < this.copies)
+            media.currentBorrowerID.add(media.waitListBorrowerIDs.pop());
+            media.copies -= media.waitListBorrowerIDs.peek().getCopies();
+        } else {
+            media.copies += copies;
+        }
+    }
+
     /*
        Getters
         */

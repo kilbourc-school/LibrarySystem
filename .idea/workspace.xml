@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AdminBorrow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/AdminBorrow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AdultBorrow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/AdultBorrow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AudioBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/AudioBook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Borrower.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Borrower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/ChildBorrow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/ChildBorrow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/DVD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/DVD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/EBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/EBook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/LibraryDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/LibraryDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Magazine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Magazine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Ratings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Ratings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Scenario1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Scenario1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/TeacherBorrow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/TeacherBorrow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/iDandCopies.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/iDandCopies.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Media.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scenario1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenario1.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,20 +111,6 @@
       <workItem from="1572544726058" duration="12370000" />
       <workItem from="1573068787276" duration="1280000" />
       <workItem from="1573602767504" duration="907000" />
-    </task>
-    <task id="LOCAL-00001" summary="made media type AudioBooks">
-      <created>1571333916280</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1571333916280</updated>
-    </task>
-    <task id="LOCAL-00002" summary="made media type AudioBooks">
-      <created>1571333947774</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1571333947774</updated>
     </task>
     <task id="LOCAL-00003" summary="fixed small issues in EBook and Audiobook merge conflict">
       <created>1571857483210</created>
@@ -476,7 +441,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573604482299</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="removed error checking print lines">
+      <created>1573604880955</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1573604880956</updated>
+    </task>
+    <task id="LOCAL-00051" summary="removed more error check lines">
+      <created>1573604961377</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1573604961377</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,8 +476,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="changed toString method to look better" />
-    <MESSAGE value="edited book constructor to never have null Linked Lists" />
     <MESSAGE value="added other media types linked list constructor fix" />
     <MESSAGE value="more work with linked lists" />
     <MESSAGE value="fixed all check out." />
@@ -522,6 +499,8 @@
     <MESSAGE value="merged scenario 2 into master" />
     <MESSAGE value="added wait list addition" />
     <MESSAGE value="fixed code" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed code" />
+    <MESSAGE value="removed error checking print lines" />
+    <MESSAGE value="removed more error check lines" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed more error check lines" />
   </component>
 </project>
