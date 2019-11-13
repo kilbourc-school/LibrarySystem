@@ -17,21 +17,6 @@ public class Scenario2 {
         while (!exit) {
 
             while (!login) {
-                /**
-                 * String name = "admin";
-                 *                 String iD = "9";
-                 *                 LocalDate birthday = LocalDate.now();
-                 *                 int pn = 999;
-                 *                 String str1 = "str";
-                 *                 String cty = "cty";
-                 *                 String st = "st";
-                 *                 int zp = 202;
-                 *                 String em = "admin@admin";
-                 *                 String pw = "admin";
-                 *                 boolean isAdmin = true;
-                 *                 double fines = 0;
-                 *                 currentLibrary.addAdminAccount(name,iD,birthday,pn,str1,cty,st,zp,em,pw,isAdmin,fines);
-                 */
                 System.out.print("\n\nPlease login with your Library user email: ");
 
                 String stop = keyboard.nextLine();
@@ -99,6 +84,15 @@ System.out.println("portia@portia");
                 copies = 1;
                 currentMedia = currentLibrary.getBookFromTitle(title);
                 currentMedia.checkOutMedia(currentMedia, currentLibrary.getCurrentUser(), copies);
+
+
+
+                currentLibrary.displayCheckedOutBooks(currentLibrary.getCurrentUser());
+
+                System.out.println("\n\nWelcome User " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
+                System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines\n0: Logout");
+System.out.println(0);
+
 
             }
         }
