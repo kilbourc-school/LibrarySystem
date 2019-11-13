@@ -23,12 +23,13 @@ public class Ratings {
         this.comment = comment;
     }
 
-    @Override
-    public String toString() {
-        return "Ratings: "+rating+" Comment:"+comment;
+
+
+    public String toStringShow() {
+        return "Rating: "+rating+" Comment: "+comment;
     }
 
-    public String toStringList() {
+    public String toString() {
         return "." + rating + "/" + comment;
     }
 }

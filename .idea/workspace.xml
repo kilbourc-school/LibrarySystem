@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Scenario4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media.txt" beforeDir="false" afterPath="$PROJECT_DIR$/media.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ratings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ratings.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +71,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Scenario1">
+  <component name="RunManager" selected="Application.LibraryDriver">
     <configuration name="LibraryDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LibraryDriver" />
       <module name="LibaryProject" />
@@ -94,10 +102,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LibraryDriver" />
         <item itemvalue="Application.Scenario1" />
         <item itemvalue="Application.Scenario3" />
         <item itemvalue="Application.Scenario2" />
-        <item itemvalue="Application.LibraryDriver" />
         <item itemvalue="Application.LibraryDriver" />
       </list>
     </recent_temporary>
@@ -126,20 +134,6 @@
       <workItem from="1572544726058" duration="12370000" />
       <workItem from="1573068787276" duration="1280000" />
       <workItem from="1573602767504" duration="907000" />
-    </task>
-    <task id="LOCAL-00012" summary="encapsulated database">
-      <created>1572296174358</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1572296174358</updated>
-    </task>
-    <task id="LOCAL-00013" summary="encapsulated database">
-      <created>1572296523326</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1572296523326</updated>
     </task>
     <task id="LOCAL-00014" summary="merged in comments branch and encapsulated media branch to master">
       <created>1572460436324</created>
@@ -470,7 +464,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573608919895</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="edit File I/O">
+      <created>1573609244656</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1573609244656</updated>
+    </task>
+    <task id="LOCAL-00062" summary="fixed comma">
+      <created>1573609437996</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1573609437996</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +499,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created add user function" />
     <MESSAGE value="fixed nextInt errors" />
     <MESSAGE value="can now add adult account" />
     <MESSAGE value="merged add Fines" />
@@ -516,6 +523,7 @@
     <MESSAGE value="fixed ratings to string file I/O" />
     <MESSAGE value="fixed media.txt" />
     <MESSAGE value="edit File I/O" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit File I/O" />
+    <MESSAGE value="fixed comma" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed comma" />
   </component>
 </project>

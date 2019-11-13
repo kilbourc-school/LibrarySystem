@@ -47,6 +47,7 @@ public class Database {
                 String[] waitCheckOut = lineArray[10].split(".");
                 String[] ratingsplit = lineArray[11].split(".");
 
+
                 for (int i = 0; i < currentCheckOut.length; i++) {
                     String[] splitCurrentCheckout = currentCheckOut[i].split("/");
                     current.add(new iDandCopies(Long.parseLong(splitCurrentCheckout[0]), Integer.parseInt(splitCurrentCheckout[1]), LocalDate.parse(splitCurrentCheckout[2])));
@@ -58,7 +59,9 @@ public class Database {
                 }
 
                 for (int i = 0; i < ratingsplit.length; i++) {
+
                     String[] splitRatingSplit = ratingsplit[i].split("/");
+                    System.out.println(ratingsplit[i]);
                     rating.add(new Ratings(Integer.parseInt(splitRatingSplit[0]),splitRatingSplit[1]));
                 }
                 if (lineArray[0].equals("Book")) {
