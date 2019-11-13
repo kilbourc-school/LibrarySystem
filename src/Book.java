@@ -58,8 +58,8 @@ public class Book extends Media {
     /*
      converts objects into strings
       */
-    public String toStringList() {
-        return "Book," + super.toStringList()+","+ ISBN;
+    public String toStringList() { System.out.println(super.toStringList());
+        return "Book," + super.toStringList()+ ISBN;
     }
 
     @Override

@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ratings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ratings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/iDandCopies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/iDandCopies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Media.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,20 +126,6 @@
       <workItem from="1572544726058" duration="12370000" />
       <workItem from="1573068787276" duration="1280000" />
       <workItem from="1573602767504" duration="907000" />
-    </task>
-    <task id="LOCAL-00010" summary="implemented the exported txt files. fixed admin borrow toStringList">
-      <created>1571935756709</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1571935756709</updated>
-    </task>
-    <task id="LOCAL-00011" summary="encapsulated database">
-      <created>1572294162148</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1572294162148</updated>
     </task>
     <task id="LOCAL-00012" summary="encapsulated database">
       <created>1572296174358</created>
@@ -471,7 +456,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573608480861</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="edit File I/O">
+      <created>1573608806991</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1573608806991</updated>
+    </task>
+    <task id="LOCAL-00060" summary="edit File I/O">
+      <created>1573608919895</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1573608919895</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +491,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Encapsulated Borrowers" />
     <MESSAGE value="Created add user function" />
     <MESSAGE value="fixed nextInt errors" />
     <MESSAGE value="can now add adult account" />
@@ -517,6 +515,7 @@
     <MESSAGE value="fixed rating to string" />
     <MESSAGE value="fixed ratings to string file I/O" />
     <MESSAGE value="fixed media.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed media.txt" />
+    <MESSAGE value="edit File I/O" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit File I/O" />
   </component>
 </project>
