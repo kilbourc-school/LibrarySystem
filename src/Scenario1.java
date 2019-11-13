@@ -42,7 +42,9 @@ public class Scenario1 {
                     break; //exit program
                 }
                 System.out.print("Enter your password: ");
-                String password = keyboard.nextLine();
+                stop = keyboard.nextLine();
+                System.out.println("user");
+                String password = "user";
                 if (currentLibrary.verifyAccount(username, password)) {
                     login = true;
                 } else {
@@ -121,8 +123,6 @@ public class Scenario1 {
 
 
                 if (input == 0) {
-                    currentLibrary.saveAccountsToFile();
-                    currentLibrary.saveMediaToFile();
                     login = false;
                 }
 
@@ -151,7 +151,10 @@ public class Scenario1 {
             while (login && !currentLibrary.getCurrentUser().isAdmin()) {
                 System.out.println("\n\nWelcome User " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
                 System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines\n0: Logout");
-                int input = keyboard.nextInt();
+                String stop = keyboard.nextLine();
+
+                int input = 2;
+                System.out.println(input);
                 String fix = keyboard.nextLine();
 
                 //insert all current checked out books
@@ -182,11 +185,32 @@ public class Scenario1 {
                         break;
                     case 2:
                         System.out.println("Enter media title you wish to check out");
-                        String title = keyboard.nextLine();
+                        stop = keyboard.nextLine();
+                        String title = "The Cat in the Hat";
+                        System.out.println(title);
                         System.out.println("enter how many copies you wish to check out");
-                        int copies = keyboard.nextInt();
+                        stop = keyboard.nextLine();
+                        int copies = 1;
+                        System.out.println(copies);
                         Media currentMedia = currentLibrary.getBookFromTitle(title);
                         currentMedia.checkOutMedia(currentMedia,
+                                currentLibrary.getCurrentUser(),
+                                copies);
+System.out.print("\n\n****error check****\n\n");
+                        System.out.println("Enter media title you wish to check out");
+                        title = "Hitchhikers Guide to the Galaxy";
+                        System.out.println("enter how many copies you wish to check out");
+                        copies = 1;
+                        Media currentMedia1 = currentLibrary.getBookFromTitle(title);
+                        currentMedia1.checkOutMedia(currentMedia1,
+                                currentLibrary.getCurrentUser(),
+                                copies);
+                        System.out.println("Enter media title you wish to check out");
+                        title = "To Kill a Mockingbird";
+                        System.out.println("enter how many copies you wish to check out");
+                        copies = 1;
+                        Media currentMedia2 = currentLibrary.getBookFromTitle(title);
+                        currentMedia2.checkOutMedia(currentMedia2,
                                 currentLibrary.getCurrentUser(),
                                 copies);
                         break;

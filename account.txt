@@ -1,3 +1,3 @@
 500,admin,9,2019-11-05,999,str,cty,st,202,admin@admin,admin,true,0.0
-10,Sarah,234564,1959-01-01,34575,str,city,state,29345,user@user,user,false,0.0
+10,Sarah,234564,1959-01-01,34575,str,city,state,29345,user@user,user,false,10.0
 50,Portia,2456321,1989-01-12,1239832,Blossom Street,Columbia,SC,29100,portia@portia,portia,false,0.0
