@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/AdminBorrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminBorrow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdultBorrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdultBorrow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChildBorrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChildBorrow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DVD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ratings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ratings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scenario1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenario1.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,9 +64,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LibraryDriver">
+  <component name="RunManager" selected="Application.Scenario1">
     <configuration name="LibraryDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LibraryDriver" />
+      <module name="LibaryProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scenario1" />
       <module name="LibaryProject" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -92,9 +95,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LibraryDriver" />
-        <item itemvalue="Application.Scenario2" />
+        <item itemvalue="Application.Scenario1" />
         <item itemvalue="Application.Scenario3" />
+        <item itemvalue="Application.Scenario2" />
         <item itemvalue="Application.LibraryDriver" />
         <item itemvalue="Application.LibraryDriver" />
       </list>
@@ -124,13 +127,6 @@
       <workItem from="1572544726058" duration="12370000" />
       <workItem from="1573068787276" duration="1280000" />
       <workItem from="1573602767504" duration="907000" />
-    </task>
-    <task id="LOCAL-00006" summary="added admin read in for account">
-      <created>1571860719539</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1571860719539</updated>
     </task>
     <task id="LOCAL-00007" summary="added account and media file writing">
       <created>1571861338360</created>
@@ -468,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573606871866</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="begun book to media refactorization">
+      <created>1573607292254</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1573607292255</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,7 +492,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="removed working 1 2 3 print messages" />
     <MESSAGE value="removed error check messages" />
     <MESSAGE value="merged checkout branch master" />
     <MESSAGE value="merged Scott's abstraction / UI updates branch" />
@@ -514,6 +516,7 @@
     <MESSAGE value="added assign from waitlist" />
     <MESSAGE value="added waitlist conformation" />
     <MESSAGE value="fixed scenario 3 and 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed scenario 3 and 2" />
+    <MESSAGE value="begun book to media refactorization" />
+    <option name="LAST_COMMIT_MESSAGE" value="begun book to media refactorization" />
   </component>
 </project>
