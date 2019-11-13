@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media.txt" beforeDir="false" afterPath="$PROJECT_DIR$/media.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryDriver.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +66,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Scenario1">
+  <component name="RunManager" selected="Application.LibraryDriver">
     <configuration name="LibraryDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LibraryDriver" />
       <module name="LibaryProject" />
@@ -94,10 +97,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LibraryDriver" />
         <item itemvalue="Application.Scenario1" />
         <item itemvalue="Application.Scenario3" />
         <item itemvalue="Application.Scenario2" />
-        <item itemvalue="Application.LibraryDriver" />
         <item itemvalue="Application.LibraryDriver" />
       </list>
     </recent_temporary>

@@ -195,7 +195,12 @@ public class LibraryDriver {
                     case 3:
                         System.out.println("Enter media title you wish to check in");
                         title = keyboard.nextLine();
-                        currentMedia = currentLibrary.getMediaFromTitle(title);
+                        try {
+                            currentMedia= currentLibrary.getMediaFromTitle(title);
+                        }catch(Exception e){
+                            System.out.println("Title not found");
+                            break;
+                        }
                         System.out.println(currentMedia.getTitle());
                         System.out.println("Enter how many copies you wish to return");
                         copies = keyboard.nextInt();
@@ -208,7 +213,11 @@ public class LibraryDriver {
                     case 5:
                         System.out.println("Enter the title of the book you want to review: ");
                         title = keyboard.nextLine();
-                        currentLibrary.giveRating(title);
+                        try {
+                            currentLibrary.giveRating(title);
+                        }catch(Exception e){
+                            System.out.println("Title not found");
+                        }
                         break;
                     case 6:
                         System.out.println("Enter the title of the book you want to read reviews: ");
