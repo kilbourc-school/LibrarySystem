@@ -16,21 +16,6 @@ public class LibraryDriver {
         while (!exit) {
 
             while (!login) {
-                /**
-                 *                 String name = "admin";
-                 *                 String iD = "9";
-                 *                 LocalDate birthday = LocalDate.now();
-                 *                 int pn = 999;
-                 *                 String str1 = "str";
-                 *                 String cty = "cty";
-                 *                 String st = "st";
-                 *                 int zp = 202;
-                 *                 String em = "admin@admin";
-                 *                 String pw = "admin";
-                 *                 boolean isAdmin = true;
-                 *                 double fines = 0;
-                 *                 currentLibrary.addAdminAccount(name,iD,birthday,pn,str1,cty,st,zp,em,pw,isAdmin,fines);
-                 */
                 System.out.print("\n\nPlease login with your Library user email ('exit' to logout): ");
 
                 String username = keyboard.nextLine();
