@@ -1,1 +1,3 @@
-Book,the cat in the hat,cat hat boring,seuss,kid,6,boring,1992,false,.0/0/2019-11-11,.0/0/2019-11-11,.0/0,235452
+Book,The Cat in the Hat,cat hat boring,seuss,kid,6,boring,1992,false,.0/0/2019-11-12,.0/0/2019-11-12,.0/0,235452
+Book,Hitchhikers Guide to the Galaxy,Wheeeee,Douglas Adams,Fiction,2,Comic Science Fiction,1979,false,.0/0/2019-11-12,.0/0/2019-11-12,.0/0,0-330-25864-8
+Book,To Kill A Mockingbird,Rascism ,Harper Lee,Fiction,0,Southern Gothic,1960,false,.0/0/2019-11-12,.0/0/2019-11-12,.0/0,9780446310789
