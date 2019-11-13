@@ -2,7 +2,7 @@ import java.time.LocalDate;
 
 public class ChildBorrow extends Borrower {
     /*
-   Amount set for how many books an ChildBorrower can checkout
+   Amount set for how many medias an ChildBorrower can checkout
     */
     int borrowLimit = 3;
     // Borrower parent;

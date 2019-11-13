@@ -11,7 +11,7 @@ public class AudioBook extends Media {
     String narrator;
 
 
-    int checkoutLimit = 21;//subtract from current date based on expected date for if late
+    int checkoutLimit = 30;//subtract from current date based on expected date for if late
 
     /*
      * Constructor.

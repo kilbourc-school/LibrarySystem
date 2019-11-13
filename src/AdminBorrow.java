@@ -2,7 +2,7 @@ import java.time.LocalDate;
 
 public class AdminBorrow extends Borrower {
     /*
-    Amount set for how many books an AdminBorrower can checkout
+    Amount set for how many medias an AdminBorrower can checkout
      */
     int borrowLimit = 500;
 

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class LibraryDriver {
+public class Scenario3 {
     public static void main(String[] args) {
         Library currentLibrary = new Library();
         Scanner keyboard = new Scanner(System.in);
@@ -17,7 +17,7 @@ public class LibraryDriver {
 
             while (!login) {
                 /**
-                 *                 String name = "admin";
+                 * String name = "admin";
                  *                 String iD = "9";
                  *                 LocalDate birthday = LocalDate.now();
                  *                 int pn = 999;
@@ -31,31 +31,38 @@ public class LibraryDriver {
                  *                 double fines = 0;
                  *                 currentLibrary.addAdminAccount(name,iD,birthday,pn,str1,cty,st,zp,em,pw,isAdmin,fines);
                  */
-                System.out.print("\n\nPlease login with your Library user email ('exit' to logout): ");
+                System.out.print("\n\nPlease login with your Library user email: ");
 
-                String username = keyboard.nextLine();
+                String stop = keyboard.nextLine();
+                System.out.println("admin@admin");
+                String username = "admin@admin";
+
                 if (username.equalsIgnoreCase("exit")) {
                     exit = true;
                     break; //exit program
                 }
                 System.out.print("Enter your password: ");
-                String password = keyboard.nextLine();
+                stop = keyboard.nextLine();
+                System.out.println("admin");
+                String password = "admin";
                 if (currentLibrary.verifyAccount(username, password)) {
                     login = true;
                 } else {
                     System.out.println("Sorry, email and/or password were incorrect");
                 }
             }
-/**
- * Admin login
- */
+
+            /**
+             * User login
+             */
             while (login && currentLibrary.getCurrentUser().isAdmin()) {
                 System.out.println("\n\nWelcome  Administrator " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?\n");
                 System.out.println("1: Add media\n2: See all accounts\n3: Search by title\n4: Search by genre" +
                         "\n5: Display all books\n6: Save to file\n7: Add an account\n8:Checkout\n9:Checkin\n10:change copies");
                 System.out.println("0: Logout");
 
-                int input = keyboard.nextInt();
+                int input = 10;
+                System.out.println(input);
                 String fix = keyboard.nextLine();
                 if (input == 1) {
                     //&& currentLibrary.getCurrentUser().isAdmin
@@ -108,12 +115,17 @@ public class LibraryDriver {
                     }
 
                 } else if (input == 10) {
-                    System.out.println("Enter the book title");
-                    String title = keyboard.nextLine();
+                    System.out.println("Enter the Media title");
+                    String title = "To Kill a Mockingbird";
+                    System.out.println(title);
                     System.out.println("Please enter the amount the copies changes by (+/-):");
-                    int copies = keyboard.nextInt();
+                    int copies = 1;
+                    System.out.println(copies);
                     fix = keyboard.nextLine();
                     currentLibrary.addCopyByTitle(title, copies);
+                    Media media = currentLibrary.getMediaFromTitle("To Kill a Mockingbird");
+                    currentLibrary.assignToWaitList(media);
+                    login = false;
                 }
 
 
@@ -142,98 +154,62 @@ public class LibraryDriver {
                     currentMedia.checkInMedia(currentMedia, currentLibrary.getCurrentUser().getID(), copies, currentMedia.getDueDate(currentMedia, currentLibrary.getCurrentUser()));
                 }
             }
-             /**
-             * User login
-             */
-            while (login && !currentLibrary.getCurrentUser().isAdmin()) {
+            while (!login) {
+                /**
+                 * String name = "admin";
+                 *                 String iD = "9";
+                 *                 LocalDate birthday = LocalDate.now();
+                 *                 int pn = 999;
+                 *                 String str1 = "str";
+                 *                 String cty = "cty";
+                 *                 String st = "st";
+                 *                 int zp = 202;
+                 *                 String em = "admin@admin";
+                 *                 String pw = "admin";
+                 *                 boolean isAdmin = true;
+                 *                 double fines = 0;
+                 *                 currentLibrary.addAdminAccount(name,iD,birthday,pn,str1,cty,st,zp,em,pw,isAdmin,fines);
+                 */
+                System.out.print("\n\nPlease login with your Library user email: ");
 
-                //insert all current checked out books
+                String stop = keyboard.nextLine();
+                System.out.println("user@user");
+                String username = "user@user";
+
+                if (username.equalsIgnoreCase("exit")) {
+                    exit = true;
+                    break; //exit program
+                }
+                System.out.print("Enter your password: ");
+                stop = keyboard.nextLine();
+                System.out.println("user");
+                String password = "user";
+                if (currentLibrary.verifyAccount(username, password)) {
+                    login = true;
+                } else {
+                    System.out.println("Sorry, email and/or password were incorrect");
+                }
+            }
+            while (login && !currentLibrary.getCurrentUser().isAdmin()) {
+                //insert all current checked out Medias
                 currentLibrary.displayCheckedOutMedias(currentLibrary.getCurrentUser());
 
 
+                for(int i=0;i<currentLibrary.libraryDatabase.getMediaDatabase().size();i++){
+                    if (currentLibrary.libraryDatabase.getMediaDatabase().get(i).waitListBorrowerIDs != null){
+                for(int j=0;j<currentLibrary.libraryDatabase.getMediaDatabase().get(i).waitListBorrowerIDs.size();j++){
+if (currentLibrary.libraryDatabase.getMediaDatabase().get(i).waitListBorrowerIDs.get(j).getiD().equals(currentLibrary.getCurrentUser().getID())){
+    System.out.println("Your media "+currentLibrary.libraryDatabase.getMediaDatabase().get(i).getTitle()+" is ready for checkout!");
+                }}}}
+
                 System.out.println("\n\nWelcome User " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
-                System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines"+
-                        "\n5: Give Media a Rating\n6: Read Reviews for a Media\n0: Logout");
+                System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines\n0: Logout");
                 int input = keyboard.nextInt();
                 String fix = keyboard.nextLine();
 
-
-
-
-                switch (input) {
-                    case 1:
-                        System.out.println("How would you like to search?\n1: Title\n2: Author\n3: Keyword");
-                        input = keyboard.nextInt();
-                        fix = keyboard.nextLine();
-
-                        if (input == 1){
-                            System.out.println("Enter the book title:");
-                            String title = keyboard.nextLine();
-                            currentLibrary.browseTitle(title);
-                        }
-                        else if (input == 2){System.out.println("Enter Author: ");
-                            String title = keyboard.nextLine();
-                            currentLibrary.browseAuthor(title);
-                        }
-                        else if (input == 3){System.out.println("Enter Keyword: ");
-                            String title = keyboard.nextLine();
-                            currentLibrary.browseKeyword(title);
-                        }
-                        else {System.out.println("Invalid input");
-                        }
-                        break;
-                    case 2:
-                        System.out.println("Enter media title you wish to check out");
-                        String title = keyboard.nextLine();
-                        System.out.println("enter how many copies you wish to check out");
-                        int copies = keyboard.nextInt();
-                        Media currentMedia = currentLibrary.getMediaFromTitle(title);
-                        currentMedia.checkOutMedia(currentMedia,
-                                currentLibrary.getCurrentUser(),
-                                copies);
-                        break;
-                    case 3:
-                        System.out.println("Enter media title you wish to check in");
-                        title = keyboard.nextLine();
-                        try {
-                            currentMedia= currentLibrary.getMediaFromTitle(title);
-                        }catch(Exception e){
-                            System.out.println("Title not found");
-                            break;
-                        }
-                        System.out.println(currentMedia.getTitle());
-                        System.out.println("Enter how many copies you wish to return");
-                        copies = keyboard.nextInt();
-                        currentMedia.checkInMedia(currentMedia, currentLibrary.getCurrentUser().getID(), copies, currentMedia.getDueDate(currentMedia, currentLibrary.getCurrentUser()));
-                        break;
-                    case 4:
-                        System.out.println("Fines have been paid.");
-                        currentLibrary.getCurrentUser().setFines(0);
-                        break;
-                    case 5:
-                        System.out.println("Enter the title of the book you want to review: ");
-                        title = keyboard.nextLine();
-                        try {
-                            currentLibrary.giveRating(title);
-                        }catch(Exception e){
-                            System.out.println("Title not found");
-                        }
-                        break;
-                    case 6:
-                        System.out.println("Enter the title of the book you want to read reviews: ");
-                        title = keyboard.nextLine();
-                        currentLibrary.displayRatings(title);
-                        break;
-
-                    case 0:
-                        currentLibrary.saveAccountsToFile();
-                        currentLibrary.saveMediaToFile();
-                        login = false;
-                        break;
-                    default:
-                        break;
-                }
+               login=false;
             }
+            exit = false;
         }
     }
 }

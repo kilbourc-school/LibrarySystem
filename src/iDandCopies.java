@@ -11,6 +11,10 @@ public class iDandCopies {
         this.dueDate = dueDate;
     }
 
+    public LocalDate getDueDate() {
+        return dueDate;
+    }
+
     public Long getiD() {
         return iD;
     }

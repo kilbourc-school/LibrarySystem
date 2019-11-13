@@ -1,10 +1,11 @@
+import java.time.LocalDate;
 import java.util.Scanner;
 
 /**
  * This is the class that acts as the library, holding
- * the books and allowing interactions with the books
+ * the medias and allowing interactions with the medias
  * using methods to add, remove, borrow, return, and
- * browse the books.
+ * browse the medias.
  */
 
 public class Library {
@@ -27,49 +28,26 @@ public class Library {
     }
 
     //Prints out the contents of the Library.
-    public void displayBooks() {
+    public void displayMedias() {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
             System.out.println(libraryDatabase.getMediaDatabase().get(i));
         }
     }
 
-    //Prints out the teachers accounts
-    public void displayTeachersAccounts() {
 
-        for (Borrower account : libraryDatabase.getAccountsDatabase()) {
-            if (account.getBorrowLimit() == 50)
-                System.out.println(account);
-        }
-    }
 
-    //Prints out the teachers accounts
-    public void displayAdultAccounts() {
-
-        for (Borrower account : libraryDatabase.getAccountsDatabase()) {
-            if (account.getBorrowLimit() == 10)
-                System.out.println(account);
-        }
-    }
-
-    public Media getBookFromTitle(String title) {
+    public Media getMediaFromTitle(String title) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
-            String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
+            String MediaTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
 
-            if (bookTitle.toLowerCase().equals(title.toLowerCase())) {
+            if (MediaTitle.toLowerCase().equals(title.toLowerCase())) {
                 return libraryDatabase.getMediaDatabase().get(i);
             }
         }
         return null;
     }
 
-    //Prints out the teachers accounts
-    public void displayChildAccounts() {
 
-        for (Borrower account : libraryDatabase.getAccountsDatabase()) {
-            if (account.getBorrowLimit() == 3)
-                System.out.println(account);
-        }
-    }
 
     public void displayAllAccounts() {
 
@@ -115,29 +93,17 @@ public class Library {
         libraryDatabase.getMediaDatabase().add(magazine);
     }
 
-    /**
-     * Method to determine if book in library is available.
-     * Param: String with title or ISBN of book.
-     * Return: String with status of book.
-     */
-    public void isAvailable(String input) {
-        if (findMedia(input) != null) {
-            if (findMedia(input).getAvailability())
-                System.out.println(input + " is available.");
-            else
-                System.out.println(input + " is not available.");
-        }
-    }
+
 
     /**
-     * Method to display all books of a genre in the library.
-     * Param: String with the genre of a book.
-     * Return: List of books in the same genre.
+     * Method to display all Medias of a genre in the library.
+     * Param: String with the genre of a Media.
+     * Return: List of Medias in the same genre.
      */
     public void browseGenre(String genre) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
-            String bookGenre = (libraryDatabase.getMediaDatabase().get(i)).getGenre();
-            if (genre.equals(bookGenre)) {
+            String MediaGenre = (libraryDatabase.getMediaDatabase().get(i)).getGenre();
+            if (genre.equals(MediaGenre)) {
                 System.out.println(libraryDatabase.getMediaDatabase().get(i));
             }
         }
@@ -145,51 +111,81 @@ public class Library {
 
     public void browseTitle(String title) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
-            String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
+            String MediaTitle = (libraryDatabase.getMediaDatabase().get(i)).getTitle();
 
-            if (bookTitle.equalsIgnoreCase(title)){
+            if (MediaTitle.equalsIgnoreCase(title)){
                 System.out.println(libraryDatabase.getMediaDatabase().get(i));
             }
         }
     }
     public void browseAuthor(String title) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
-            String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).getAuthor();
+            String MediaTitle = (libraryDatabase.getMediaDatabase().get(i)).getAuthor();
 
-            if (bookTitle.equalsIgnoreCase(title)){
+            if (MediaTitle.equalsIgnoreCase(title)){
                 System.out.println(libraryDatabase.getMediaDatabase().get(i));
             }
         }
     }
     public void browseKeyword (String title) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
-            String bookTitle = (libraryDatabase.getMediaDatabase().get(i)).toString();
+            String MediaTitle = (libraryDatabase.getMediaDatabase().get(i)).toString();
 
-            if (bookTitle.toLowerCase().contains(title.toLowerCase())) {
+            if (MediaTitle.toLowerCase().contains(title.toLowerCase())) {
                 System.out.println(libraryDatabase.getMediaDatabase().get(i));
             }
         }
     }
 
     public void displayRatings(String title){
-        Media currentMedia = getBookFromTitle(title);
+        Media currentMedia = getMediaFromTitle(title);
         for(int i=0;i<currentMedia.ratings.size();i++)
         System.out.println(currentMedia.ratings.get(i));
     }
+
+
+    public void autoRating(){
+        Media currentMedia = getMediaFromTitle("Hitchhiker's Guide to the Galaxy");
+        currentMedia.addRating(5, "best book ever");
+        currentMedia.addRating(5, "no book can compete");
+        currentMedia.addRating(5, "SUPER AMAZING");
+    }
+
     public void giveRating(String title){
         Scanner keyboard = new Scanner(System.in);
-        Media currentMedia = getBookFromTitle(title);
-        int stars = keyboard.nextInt();
+        Media currentMedia = getMediaFromTitle(title);
+        currentMedia.showRatings();
+        int stars;
+        do{
+        System.out.print("Type in amount of stars (1-5): ");
+        stars = keyboard.nextInt();
+        }while(stars<0 || stars>5);
+        String fix = keyboard.nextLine();
+        System.out.print("Type in your comment: ");
         String comment = keyboard.nextLine();
         currentMedia.addRating(stars, comment);
     }
 
     public void addCopyByTitle(String title, int copies) {
-        Media media = getBookFromTitle(title);
+        Media media = getMediaFromTitle(title);
         if (media == null)
             System.out.println("not found");
         else media.setCopies((media.getCopies() + copies));
 
+    }
+
+    public void displayCheckedOutMedias(Borrower currentUser){
+        System.out.println("********** Current Checked Out Media **********");
+        for (int i = 0; i<libraryDatabase.getMediaDatabase().size();i++)
+            for (int j = 0; j< libraryDatabase.getMediaDatabase().get(i).getCurrentBorrowerID().size();j++)
+        if(libraryDatabase.getMediaDatabase().get(i).getCurrentBorrowerID().get(j).getiD().equals(currentUser.getID())){
+            System.out.println("Title: "+libraryDatabase.getMediaDatabase().get(i).getTitle()+" Due Date: "+libraryDatabase.getMediaDatabase().get(i).getCurrentBorrowerID().get(j).getDueDate());
+        }
+    }
+
+
+    public void assignToWaitList(Media media){
+        media.waitListBorrowerIDs.add(new iDandCopies(Long. parseLong("234564"),1, LocalDate.now()));
     }
 
     public void readInMedia() {
@@ -210,22 +206,5 @@ public class Library {
 
     public void addChildAccount(Borrower borrower) {
         libraryDatabase.getAccountsDatabase().add(borrower);
-    }
-
-
-    /**
-     * Finds book object based on String. Basically converts
-     * from String to Book.
-     * Param: String containing title or ISBN
-     * Return: Book object with a title or ISBN matching the input.
-     */
-    public Media findMedia(String input) {
-        for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
-            String str = (libraryDatabase.getMediaDatabase().get(i)).getTitle();     //Gets title of book at index.
-
-            if (input.equals(str))
-                return libraryDatabase.getMediaDatabase().get(i);
-        }
-        return null;
     }
 }

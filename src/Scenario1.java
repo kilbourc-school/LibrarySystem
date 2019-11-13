@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class LibraryDriver {
+public class Scenario1 {
     public static void main(String[] args) {
         Library currentLibrary = new Library();
         Scanner keyboard = new Scanner(System.in);
@@ -17,7 +17,7 @@ public class LibraryDriver {
 
             while (!login) {
                 /**
-                 *                 String name = "admin";
+                 * String name = "admin";
                  *                 String iD = "9";
                  *                 LocalDate birthday = LocalDate.now();
                  *                 int pn = 999;
@@ -31,15 +31,20 @@ public class LibraryDriver {
                  *                 double fines = 0;
                  *                 currentLibrary.addAdminAccount(name,iD,birthday,pn,str1,cty,st,zp,em,pw,isAdmin,fines);
                  */
-                System.out.print("\n\nPlease login with your Library user email ('exit' to logout): ");
+                System.out.print("\n\nPlease login with your Library user email: ");
 
-                String username = keyboard.nextLine();
+                String stop = keyboard.nextLine();
+                System.out.println("user@user");
+                String username = "user@user";
+
                 if (username.equalsIgnoreCase("exit")) {
                     exit = true;
                     break; //exit program
                 }
                 System.out.print("Enter your password: ");
-                String password = keyboard.nextLine();
+                stop = keyboard.nextLine();
+                System.out.println("user");
+                String password = "user";
                 if (currentLibrary.verifyAccount(username, password)) {
                     login = true;
                 } else {
@@ -108,7 +113,7 @@ public class LibraryDriver {
                     }
 
                 } else if (input == 10) {
-                    System.out.println("Enter the book title");
+                    System.out.println("Enter the Media title");
                     String title = keyboard.nextLine();
                     System.out.println("Please enter the amount the copies changes by (+/-):");
                     int copies = keyboard.nextInt();
@@ -118,8 +123,6 @@ public class LibraryDriver {
 
 
                 if (input == 0) {
-                    currentLibrary.saveAccountsToFile();
-                    currentLibrary.saveMediaToFile();
                     login = false;
                 }
 
@@ -142,22 +145,20 @@ public class LibraryDriver {
                     currentMedia.checkInMedia(currentMedia, currentLibrary.getCurrentUser().getID(), copies, currentMedia.getDueDate(currentMedia, currentLibrary.getCurrentUser()));
                 }
             }
-             /**
+            /**
              * User login
              */
             while (login && !currentLibrary.getCurrentUser().isAdmin()) {
-
-                //insert all current checked out books
-                currentLibrary.displayCheckedOutMedias(currentLibrary.getCurrentUser());
-
-
                 System.out.println("\n\nWelcome User " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
-                System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines"+
-                        "\n5: Give Media a Rating\n6: Read Reviews for a Media\n0: Logout");
-                int input = keyboard.nextInt();
+                System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines\n0: Logout");
+                String stop = keyboard.nextLine();
+
+                int input = 2;
+                System.out.println(input);
                 String fix = keyboard.nextLine();
 
-
+                //insert all current checked out Medias
+                currentLibrary.displayCheckedOutMedias(currentLibrary.getCurrentUser());
 
 
                 switch (input) {
@@ -167,7 +168,7 @@ public class LibraryDriver {
                         fix = keyboard.nextLine();
 
                         if (input == 1){
-                            System.out.println("Enter the book title:");
+                            System.out.println("Enter the Media title:");
                             String title = keyboard.nextLine();
                             currentLibrary.browseTitle(title);
                         }
@@ -184,23 +185,40 @@ public class LibraryDriver {
                         break;
                     case 2:
                         System.out.println("Enter media title you wish to check out");
-                        String title = keyboard.nextLine();
+                        stop = keyboard.nextLine();
+                        String title = "The Cat in the Hat";
+                        System.out.println(title);
                         System.out.println("enter how many copies you wish to check out");
-                        int copies = keyboard.nextInt();
+                        stop = keyboard.nextLine();
+                        int copies = 1;
+                        System.out.println(copies);
                         Media currentMedia = currentLibrary.getMediaFromTitle(title);
                         currentMedia.checkOutMedia(currentMedia,
+                                currentLibrary.getCurrentUser(),
+                                copies);
+
+                        System.out.println("Enter media title you wish to check out");
+                        title = "Hitchhikers Guide to the Galaxy";
+                        System.out.println("enter how many copies you wish to check out");
+                        copies = 1;
+                        Media currentMedia1 = currentLibrary.getMediaFromTitle(title);
+                        currentMedia1.checkOutMedia(currentMedia1,
+                                currentLibrary.getCurrentUser(),
+                                copies);
+                        
+                        System.out.println("Enter media title you wish to check out");
+                        title = "To Kill a Mockingbird";
+                        System.out.println("enter how many copies you wish to check out");
+                        copies = 1;
+                        Media currentMedia2 = currentLibrary.getMediaFromTitle(title);
+                        currentMedia2.checkOutMedia(currentMedia2,
                                 currentLibrary.getCurrentUser(),
                                 copies);
                         break;
                     case 3:
                         System.out.println("Enter media title you wish to check in");
                         title = keyboard.nextLine();
-                        try {
-                            currentMedia= currentLibrary.getMediaFromTitle(title);
-                        }catch(Exception e){
-                            System.out.println("Title not found");
-                            break;
-                        }
+                        currentMedia = currentLibrary.getMediaFromTitle(title);
                         System.out.println(currentMedia.getTitle());
                         System.out.println("Enter how many copies you wish to return");
                         copies = keyboard.nextInt();
@@ -211,19 +229,9 @@ public class LibraryDriver {
                         currentLibrary.getCurrentUser().setFines(0);
                         break;
                     case 5:
-                        System.out.println("Enter the title of the book you want to review: ");
+                        System.out.println("Enter the title of the Media you want to review");
                         title = keyboard.nextLine();
-                        try {
-                            currentLibrary.giveRating(title);
-                        }catch(Exception e){
-                            System.out.println("Title not found");
-                        }
-                        break;
-                    case 6:
-                        System.out.println("Enter the title of the book you want to read reviews: ");
-                        title = keyboard.nextLine();
-                        currentLibrary.displayRatings(title);
-                        break;
+                        currentLibrary.giveRating(title);
 
                     case 0:
                         currentLibrary.saveAccountsToFile();
@@ -232,6 +240,7 @@ public class LibraryDriver {
                         break;
                     default:
                         break;
+
                 }
             }
         }
