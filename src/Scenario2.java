@@ -91,6 +91,7 @@ System.out.println("portia@portia");
 
                 System.out.println("\n\nWelcome User " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
                 System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines\n0: Logout");
+                stop = keyboard.nextLine();
 System.out.println(0);
 System.exit(0);
 

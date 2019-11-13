@@ -124,7 +124,7 @@ public class Scenario3 {
                     fix = keyboard.nextLine();
                     currentLibrary.addCopyByTitle(title, copies);
                     Media media = currentLibrary.getBookFromTitle("To Kill a Mockingbird");
-                    currentLibrary.assignToWaitList(currentLibrary.getCurrentUser(),media);
+                    currentLibrary.assignToWaitList(media);
                     login = false;
                 }
 
@@ -196,11 +196,11 @@ public class Scenario3 {
 
 
                 for(int i=0;i<currentLibrary.libraryDatabase.getMediaDatabase().size();i++){
-                    if (currentLibrary.libraryDatabase.getMediaDatabase().get(i).waitListBorrowerIDs != null)
+                    if (currentLibrary.libraryDatabase.getMediaDatabase().get(i).waitListBorrowerIDs != null){
                 for(int j=0;j<currentLibrary.libraryDatabase.getMediaDatabase().get(i).waitListBorrowerIDs.size();j++){
 if (currentLibrary.libraryDatabase.getMediaDatabase().get(i).waitListBorrowerIDs.get(j).getiD().equals(currentLibrary.getCurrentUser().getID())){
     System.out.println("Your media "+currentLibrary.libraryDatabase.getMediaDatabase().get(i).getTitle()+" is ready for checkout!");
-                }}}
+                }}}}
 
                 System.out.println("\n\nWelcome User " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
                 System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines\n0: Logout");

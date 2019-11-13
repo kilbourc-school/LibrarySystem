@@ -163,6 +163,7 @@ public class Library {
     }
 
     public void displayCheckedOutBooks(Borrower currentUser){
+        System.out.println("********** Current Checked Out Media **********");
         for (int i = 0; i<libraryDatabase.getMediaDatabase().size();i++)
             for (int j = 0; j< libraryDatabase.getMediaDatabase().get(i).getCurrentBorrowerID().size();j++)
         if(libraryDatabase.getMediaDatabase().get(i).getCurrentBorrowerID().get(j).getiD().equals(currentUser.getID())){
@@ -171,8 +172,8 @@ public class Library {
     }
 
 
-    public void assignToWaitList(Borrower curr, Media media){
-        media.waitListBorrowerIDs.add(new iDandCopies(curr.getID(),1, LocalDate.now()));
+    public void assignToWaitList(Media media){
+        media.waitListBorrowerIDs.add(new iDandCopies(Long. parseLong("234564"),1, LocalDate.now()));
     }
 
     public void readInMedia() {

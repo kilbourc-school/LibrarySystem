@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AdminBorrow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AdultBorrow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AudioBook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Borrower.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/ChildBorrow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/DVD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Database.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/EBook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/LibraryDriver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Magazine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Ratings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Scenario1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/TeacherBorrow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/iDandCopies.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Media.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scenario3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scenario3.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,7 +64,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LibraryDriver">
+  <component name="RunManager" selected="Application.Scenario2">
     <configuration name="LibraryDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LibraryDriver" />
       <module name="LibaryProject" />
@@ -99,10 +79,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scenario3" />
+      <module name="LibaryProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LibraryDriver" />
         <item itemvalue="Application.Scenario2" />
+        <item itemvalue="Application.Scenario3" />
         <item itemvalue="Application.LibraryDriver" />
         <item itemvalue="Application.LibraryDriver" />
         <item itemvalue="Application.LibraryDriver" />
@@ -133,13 +120,6 @@
       <workItem from="1572544726058" duration="12370000" />
       <workItem from="1573068787276" duration="1280000" />
       <workItem from="1573602767504" duration="907000" />
-    </task>
-    <task id="LOCAL-00004" summary="added in creates for other media types.">
-      <created>1571857856972</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1571857856972</updated>
     </task>
     <task id="LOCAL-00005" summary="added file read in">
       <created>1571860162763</created>
@@ -477,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573605287868</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="added waitlist conformation">
+      <created>1573606408197</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1573606408197</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +485,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="more work with linked lists" />
     <MESSAGE value="fixed all check out." />
     <MESSAGE value="removed working 1 2 3 print messages" />
     <MESSAGE value="removed error check messages" />
@@ -523,6 +509,7 @@
     <MESSAGE value="removed error checking print lines" />
     <MESSAGE value="removed more error check lines" />
     <MESSAGE value="added assign from waitlist" />
-    <option name="LAST_COMMIT_MESSAGE" value="added assign from waitlist" />
+    <MESSAGE value="added waitlist conformation" />
+    <option name="LAST_COMMIT_MESSAGE" value="added waitlist conformation" />
   </component>
 </project>
