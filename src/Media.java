@@ -86,7 +86,8 @@ public abstract class Media {
 
         if ((this.copies - copies) >= 0) {
             if (currentBorrower.getBorrowLimit() < copies) {
-                System.out.println("that's too many copies! no media for you.");
+                System.out.println("that's too many copies! You have been placed on the wait list");
+                waitListBorrowerIDs.add(new iDandCopies(currentBorrower.getID(),copies,LocalDate.now()));
                 return;
             }
             if (currentBorrower.getFines() > 0) {
@@ -108,6 +109,10 @@ public abstract class Media {
             currentBorrowerID.add(new iDandCopies(currentBorrower.getID(), copies, today.plusDays(media.getCheckoutLimit())));
             System.out.println(currentBorrowerID.peekLast());
             this.copies = this.copies - copies;
+        }
+        else{
+            System.out.println("Not enough copies are in at the moment. you have been added to the wait list.");
+            waitListBorrowerIDs.add(new iDandCopies(currentBorrower.getID(),copies,LocalDate.now()));
         }
         System.out.println("The check out date of this media is " + (LocalDate.now().plusDays(media.getCheckoutLimit())));
 
