@@ -35,18 +35,29 @@ public class LibraryDriver {
  * Admin login
  */
             while (login && currentLibrary.getCurrentUser().isAdmin()) {
-                System.out.println("\n\nWelcome  Administrator " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?\n");
+                int input;
+                System.out.println("\n\nAdministrator " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?\n");
                 System.out.println("1: Add media\n2: See all accounts\n3: Search by title\n4: Search by genre" +
                         "\n5: Display all books\n6: Save to file\n7: Add an account\n8:Checkout\n9:Checkin\n10:change copies");
                 System.out.println("0: Logout");
+                try {
+                    input = keyboard.nextInt();
+                } catch (Exception e){
+                    System.out.println("Invalid input");
+                    input = 99;
+                }
 
-                int input = keyboard.nextInt();
                 String fix = keyboard.nextLine();
                 if (input == 1) {
-                    //&& currentLibrary.getCurrentUser().isAdmin
                     System.out.println("Which media type would you like to add?");
                     System.out.println("1: Book\n2: Audio Book\n3: DVD\n4: eBook\n5:Magazine");
-                    input = keyboard.nextInt();
+                    try {
+                        input = keyboard.nextInt();
+                    }catch(Exception e){
+                        System.out.println("Invalid input, please enter an Integer.");
+                        input = 99;
+                        System.out.println("\n\nPress Enter key to continue.");
+                        fix = keyboard.nextLine();}
                     fix = keyboard.nextLine();
                     if (input == 1) {
                         currentLibrary.addBook();
@@ -71,9 +82,16 @@ public class LibraryDriver {
                     currentLibrary.browseGenre(genre);
                 } else if (input == 5) {
                     currentLibrary.displayMedias();
+                    System.out.println("\n\nPress Enter key to continue.");
+                    fix = keyboard.nextLine();
                 } else if (input == 6) {
                     currentLibrary.saveAccountsToFile();
+                    System.out.println("Accounts saved");
                     currentLibrary.saveMediaToFile();
+                    System.out.println("Library saved");
+                    System.out.println("\n\nPress Enter key to continue.");
+                    fix = keyboard.nextLine();
+
                 } else if (input == 7) {
                     System.out.println("Which User Account would you like to add?");
                     System.out.println("1: Adult\n2: Child\n3: Teacher");
@@ -148,7 +166,12 @@ public class LibraryDriver {
                 switch (input) {
                     case 1:
                         System.out.println("How would you like to search?\n1: Title\n2: Author\n3: Keyword");
-                        input = keyboard.nextInt();
+                        try {
+                            input = keyboard.nextInt();
+                        }catch(Exception e ) {
+                            System.out.println("Invalid input");
+                            input = 99;
+                        }
                         fix = keyboard.nextLine();
 
                         if (input == 1){
@@ -156,7 +179,8 @@ public class LibraryDriver {
                             String title = keyboard.nextLine();
                             currentLibrary.browseTitle(title);
                         }
-                        else if (input == 2){System.out.println("Enter Author: ");
+                        else if (input == 2){
+                            System.out.println("Enter Author: ");
                             String title = keyboard.nextLine();
                             currentLibrary.browseAuthor(title);
                         }
@@ -164,18 +188,30 @@ public class LibraryDriver {
                             String title = keyboard.nextLine();
                             currentLibrary.browseKeyword(title);
                         }
-                        else {System.out.println("Invalid input");
+                        else {
+                            System.out.println("Invalid input");
                         }
                         break;
                     case 2:
                         System.out.println("Enter media title you wish to check out");
                         String title = keyboard.nextLine();
-                        System.out.println("enter how many copies you wish to check out");
-                        int copies = keyboard.nextInt();
                         Media currentMedia = currentLibrary.getMediaFromTitle(title);
-                        currentMedia.checkOutMedia(currentMedia,
-                                currentLibrary.getCurrentUser(),
-                                copies);
+                        if (currentMedia != null) {
+                            System.out.println("enter how many copies you wish to check out");
+                            int copies;
+                            try {
+                                copies = keyboard.nextInt();
+                            }catch (Exception e){
+                                System.out.println("Please enter an integer next time");
+                                break;
+                            }
+                            currentMedia.checkOutMedia(currentMedia,
+                                    currentLibrary.getCurrentUser(),
+                                    copies);
+
+                        }else{System.out.println("Title not found, Please type exact title");}
+
+
                         break;
                     case 3:
                         System.out.println("Enter media title you wish to check in");
@@ -186,10 +222,23 @@ public class LibraryDriver {
                             System.out.println("Title not found");
                             break;
                         }
-                        System.out.println(currentMedia.getTitle());
-                        System.out.println("Enter how many copies you wish to return");
-                        copies = keyboard.nextInt();
-                        currentMedia.checkInMedia(currentMedia, currentLibrary.getCurrentUser().getID(), copies, currentMedia.getDueDate(currentMedia, currentLibrary.getCurrentUser()));
+                        if(currentMedia != null) {
+                            int copies;
+                            System.out.println(currentMedia.getTitle());
+                            System.out.println("Enter how many copies you wish to return");
+                            try {
+                                copies = keyboard.nextInt();
+                            } catch (Exception e) {
+                                System.out.println("Please enter an integer, Return Failed, Please try again");
+                                System.out.println("\n\nPress Enter key to continue.");
+                                fix = keyboard.nextLine();
+                                copies = 0;
+                            }
+                            if (copies > 0) {
+                                currentMedia.checkInMedia(currentMedia, currentLibrary.getCurrentUser().getID(), copies, currentMedia.getDueDate(currentMedia, currentLibrary.getCurrentUser()));
+
+                            }
+                        }
                         break;
                     case 4:
                         System.out.println("Fines have been paid.");
@@ -207,13 +256,19 @@ public class LibraryDriver {
                     case 6:
                         System.out.println("Enter the title of the book you want to read reviews: ");
                         title = keyboard.nextLine();
-                        currentLibrary.displayRatings(title);
-                        break;
+                        try {
+                            currentLibrary.displayRatings(title);
+                        }catch(Exception e){System.out.println("Title not found or had no existing reviews");
+                            System.out.println("\nPress Enter key to continue.");
+                            fix = keyboard.nextLine();}
+                            break;
 
                     case 0:
                         currentLibrary.saveAccountsToFile();
                         currentLibrary.saveMediaToFile();
                         login = false;
+                        System.out.println("\n\nYou have successfully logged out\nPress Enter key to continue.");
+                        fix = keyboard.nextLine();
                         break;
                     default:
                         break;

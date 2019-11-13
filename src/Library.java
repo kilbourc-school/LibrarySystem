@@ -100,6 +100,7 @@ public class Library {
      * Param: String with the genre of a Media.
      * Return: List of Medias in the same genre.
      */
+
     public void browseGenre(String genre) {
         for (int i = 0; i < libraryDatabase.getMediaDatabase().size(); i++) {
             String MediaGenre = (libraryDatabase.getMediaDatabase().get(i)).getGenre();
@@ -158,7 +159,9 @@ public class Library {
         int stars;
         do{
         System.out.print("Type in amount of stars (1-5): ");
-        stars = keyboard.nextInt();
+        try {
+            stars = keyboard.nextInt();
+        }catch (Exception e){stars = 99;}
         }while(stars<0 || stars>5);
         String fix = keyboard.nextLine();
         System.out.print("Type in your comment: ");

@@ -1,0 +1,2 @@
+Book,The Cat in the Hat,Zany cat destroys house on a rainy day,Dr. Suess,Rule Breaking,2,Child,1957,false,.0/0/2019-11-13,.0/0/2019-11-13,.0/0,9788448843625
+Book,To Kill a Mockingbird,Small town deals with issues such as rape and racism,Harper Lee,Fiction,2,Southern Gothic,1960,false,.0/0/2019-11-13,.0/0/2019-11-13,.0/0,3-12-342-123231-23
