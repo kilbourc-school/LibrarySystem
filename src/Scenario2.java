@@ -53,8 +53,8 @@ System.out.println("portia@portia");
 
                         System.out.println("Enter media title you wish to check out");
                 stop = keyboard.nextLine();
-                        System.out.println("dante's peak");
-                        String title = "dante's peak";
+                        System.out.println("Dante's Peak");
+                        String title = "Dante's Peak";
                         System.out.println("enter how many copies you wish to check out");
                 stop = keyboard.nextLine();
                 System.out.println(1);
@@ -77,7 +77,7 @@ System.out.println("portia@portia");
                 System.out.println("Enter media title you wish to check out");
                 stop = keyboard.nextLine();
                 System.out.println("popular machinics");
-                title = "popular machinics";
+                title = "Popular Machinics";
                 System.out.println("enter how many copies you wish to check out");
                 stop = keyboard.nextLine();
                 System.out.println(1);
@@ -92,7 +92,7 @@ System.out.println("portia@portia");
                 System.out.println("\n\nWelcome User " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
                 System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines\n0: Logout");
 System.out.println(0);
-
+System.exit(0);
 
             }
         }
