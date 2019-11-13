@@ -146,13 +146,17 @@ public class LibraryDriver {
              * User login
              */
             while (login && !currentLibrary.getCurrentUser().isAdmin()) {
+
+                //insert all current checked out books
+                currentLibrary.displayCheckedOutBooks(currentLibrary.getCurrentUser());
+
+
                 System.out.println("\n\nWelcome User " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
                 System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines\n0: Logout");
                 int input = keyboard.nextInt();
                 String fix = keyboard.nextLine();
 
-                //insert all current checked out books
-                currentLibrary.displayCheckedOutBooks(currentLibrary.getCurrentUser());
+
 
 
                 switch (input) {

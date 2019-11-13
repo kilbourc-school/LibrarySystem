@@ -6,7 +6,7 @@ public class Magazine extends Media {
      */
     int volume;
     int issue;
-    int checkOutLimit = 21;
+    int checkOutLimit = 14;
    /*
    method to call setvolume, setissue, and super method
     */

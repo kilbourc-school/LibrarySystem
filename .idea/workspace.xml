@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Scenario1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Database.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/EBook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/LibraryDriver.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scenario2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryDriver.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="showbooksonsignin" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,7 +64,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Scenario2">
     <configuration name="LibraryDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LibraryDriver" />
       <module name="LibaryProject" />
@@ -74,9 +72,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scenario2" />
+      <module name="LibaryProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LibraryDriver" />
+        <item itemvalue="Application.Scenario2" />
         <item itemvalue="Application.LibraryDriver" />
         <item itemvalue="Application.LibraryDriver" />
         <item itemvalue="Application.LibraryDriver" />
@@ -107,6 +112,7 @@
       <workItem from="1572460370355" duration="3836000" />
       <workItem from="1572544726058" duration="12370000" />
       <workItem from="1573068787276" duration="1280000" />
+      <workItem from="1573602767504" duration="907000" />
     </task>
     <task id="LOCAL-00001" summary="made media type AudioBooks">
       <created>1571333916280</created>
@@ -430,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573502626170</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="merged book on sign in">
+      <created>1573593488015</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1573593488015</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,7 +464,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixed front end error" />
     <MESSAGE value="fixed file I/O for the check in and out" />
     <MESSAGE value="added in File I/O for changed check in and out" />
     <MESSAGE value="fixed errors in File I/O" />
@@ -476,6 +488,7 @@
     <MESSAGE value="fixed text issue" />
     <MESSAGE value="merged scott branch" />
     <MESSAGE value="front end ratings + print out current checked out books and date at sign in" />
-    <option name="LAST_COMMIT_MESSAGE" value="front end ratings + print out current checked out books and date at sign in" />
+    <MESSAGE value="merged book on sign in" />
+    <option name="LAST_COMMIT_MESSAGE" value="merged book on sign in" />
   </component>
 </project>

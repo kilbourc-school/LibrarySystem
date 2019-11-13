@@ -8,7 +8,7 @@
 import java.util.LinkedList;
 
 public class DVD extends Media {
-    int checkoutLimit = 21;//subtract from current date based on expected date for if late
+    int checkoutLimit = 7;//subtract from current date based on expected date for if late
 
 
 /*
