@@ -1,4 +1,0 @@
-Book,The Cat in the Hat,cat hat boring,seuss,kid,6,boring,1992,false,.0/0/2019-11-12,.0/0/2019-11-12,.0/0,235452
-Book,To Kill A Mockingbird,Rascism ,Harper Lee,Fiction,0,Southern Gothic,1960,false,.0/0/2019-11-12,.0/0/2019-11-12,.0/0,4753
-Book,Dante's Peak,its a book about a hill,somebody,adventure,3,adventure,1994,false,.0/0/2019-11-12,.0/0/2019-11-12,.0/0,12356673
-Magazine,Popular Machinics,best,somebody,tools,2,people,1956,false,.0/0/2019-11-12,.0/0/2019-11-12,.0/0,2,7

@@ -142,6 +142,15 @@ public class Library {
         for(int i=0;i<currentMedia.ratings.size();i++)
         System.out.println(currentMedia.ratings.get(i));
     }
+
+
+    public void autoRating(){
+        Media currentMedia = getMediaFromTitle("Hitchhiker's Guide to the Galaxy");
+        currentMedia.addRating(5, "best book ever");
+        currentMedia.addRating(5, "no book can compete");
+        currentMedia.addRating(5, "SUPER AMAZING");
+    }
+
     public void giveRating(String title){
         Scanner keyboard = new Scanner(System.in);
         Media currentMedia = getMediaFromTitle(title);

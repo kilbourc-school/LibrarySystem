@@ -295,11 +295,11 @@ public abstract class Media {
                 }
             }
         String rating = ".0/0";
-        if (ratings.peek() != null)
             if (!(ratings.size() <= 0)) {
                  rating = "";
                 for (int i = 0; i <= ratings.size(); i++) {
-                    rating += ratings.pop().toStringList();
+                    System.out.println("i made it");
+                    rating += ratings.pop().toString();
                 }
             }
         return title + "," + description + "," + author + "," + subject + "," + copies + "," + genre + "," + releaseYear +  "," + comingSoon + "," + current + "," + wait+ "," + rating;
@@ -308,6 +308,6 @@ public abstract class Media {
 
     public void showRatings() {
         for (int i = 0; i<ratings.size();i++)
-        System.out.println(this.ratings.get(i));
+        System.out.println(this.ratings.get(i).toStringShow());
     }
 }
