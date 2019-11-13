@@ -2,7 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AdminBorrow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AdultBorrow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AudioBook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Book.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Borrower.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/ChildBorrow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/DVD.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Database.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/EBook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/LibraryDriver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Magazine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Ratings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Scenario1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Scenario2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Scenario3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Scenario4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/TeacherBorrow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/iDandCopies.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -133,13 +153,6 @@
       <workItem from="1573068787276" duration="1280000" />
       <workItem from="1573602767504" duration="907000" />
       <workItem from="1573672934420" duration="525000" />
-    </task>
-    <task id="LOCAL-00016" summary="currentCheckout changed to a list, as multiple people can have the book checked out.">
-      <created>1572545864505</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1572545864505</updated>
     </task>
     <task id="LOCAL-00017" summary="optomized imports">
       <created>1572545901023</created>
@@ -477,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573674648376</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="fixed scenario 4, added comments to media">
+      <created>1573675114578</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1573675114579</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +518,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="merged add Fines" />
     <MESSAGE value="code reformat" />
     <MESSAGE value="added front end" />
     <MESSAGE value="added due dates" />
@@ -523,6 +542,7 @@
     <MESSAGE value="fixed comma" />
     <MESSAGE value="added helper methods" />
     <MESSAGE value="Library and Database commented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Library and Database commented" />
+    <MESSAGE value="fixed scenario 4, added comments to media" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed scenario 4, added comments to media" />
   </component>
 </project>
