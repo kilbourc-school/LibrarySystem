@@ -146,10 +146,13 @@ public class Library {
         Scanner keyboard = new Scanner(System.in);
         Media currentMedia = getMediaFromTitle(title);
         currentMedia.showRatings();
-        System.out.print("type in amount of stars");
-        int stars = keyboard.nextInt();
+        int stars;
+        do{
+        System.out.print("Type in amount of stars (1-5): ");
+        stars = keyboard.nextInt();
+        }while(stars<0 || stars>5);
         String fix = keyboard.nextLine();
-        System.out.print("type in your comment");
+        System.out.print("Type in your comment: ");
         String comment = keyboard.nextLine();
         currentMedia.addRating(stars, comment);
     }
