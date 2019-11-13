@@ -123,6 +123,8 @@ public class Scenario3 {
                     System.out.println(copies);
                     fix = keyboard.nextLine();
                     currentLibrary.addCopyByTitle(title, copies);
+                    Media media = currentLibrary.getBookFromTitle("To Kill a Mockingbird");
+                    currentLibrary.assignToWaitList(currentLibrary.getCurrentUser(),media);
                     login = false;
                 }
 
@@ -189,9 +191,22 @@ public class Scenario3 {
                 }
             }
             while (login && !currentLibrary.getCurrentUser().isAdmin()) {
-/**
- * insert waitinglist message here
- */
+                //insert all current checked out books
+                currentLibrary.displayCheckedOutBooks(currentLibrary.getCurrentUser());
+
+
+                for(int i=0;i<currentLibrary.libraryDatabase.getMediaDatabase().size();i++){
+                    if (currentLibrary.libraryDatabase.getMediaDatabase().get(i).waitListBorrowerIDs != null)
+                for(int j=0;j<currentLibrary.libraryDatabase.getMediaDatabase().get(i).waitListBorrowerIDs.size();j++){
+if (currentLibrary.libraryDatabase.getMediaDatabase().get(i).waitListBorrowerIDs.get(j).getiD().equals(currentLibrary.getCurrentUser().getID())){
+    System.out.println("Your media "+currentLibrary.libraryDatabase.getMediaDatabase().get(i).getTitle()+" is ready for checkout!");
+                }}}
+
+                System.out.println("\n\nWelcome User " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
+                System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines\n0: Logout");
+                int input = keyboard.nextInt();
+                String fix = keyboard.nextLine();
+
                login=false;
             }
             exit = false;

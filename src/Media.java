@@ -143,7 +143,7 @@ public abstract class Media {
     }
 
 
-    private void assignFromWaitList(Media media) {
+    public void assignFromWaitList(Media media) {
         if (media.waitListBorrowerIDs.peek() != null) {
             if (media.waitListBorrowerIDs.peek().getCopies() < this.copies)
             media.currentBorrowerID.add(media.waitListBorrowerIDs.pop());

@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.Scanner;
 
 /**
@@ -167,6 +168,11 @@ public class Library {
         if(libraryDatabase.getMediaDatabase().get(i).getCurrentBorrowerID().get(j).getiD().equals(currentUser.getID())){
             System.out.println("Title: "+libraryDatabase.getMediaDatabase().get(i).getTitle()+" Due Date: "+libraryDatabase.getMediaDatabase().get(i).getCurrentBorrowerID().get(j).getDueDate());
         }
+    }
+
+
+    public void assignToWaitList(Borrower curr, Media media){
+        media.waitListBorrowerIDs.add(new iDandCopies(curr.getID(),1, LocalDate.now()));
     }
 
     public void readInMedia() {
