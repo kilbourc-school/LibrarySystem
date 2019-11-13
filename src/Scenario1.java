@@ -196,7 +196,7 @@ public class Scenario1 {
                         currentMedia.checkOutMedia(currentMedia,
                                 currentLibrary.getCurrentUser(),
                                 copies);
-System.out.print("\n\n****error check****\n\n");
+
                         System.out.println("Enter media title you wish to check out");
                         title = "Hitchhikers Guide to the Galaxy";
                         System.out.println("enter how many copies you wish to check out");
@@ -205,6 +205,7 @@ System.out.print("\n\n****error check****\n\n");
                         currentMedia1.checkOutMedia(currentMedia1,
                                 currentLibrary.getCurrentUser(),
                                 copies);
+                        
                         System.out.println("Enter media title you wish to check out");
                         title = "To Kill a Mockingbird";
                         System.out.println("enter how many copies you wish to check out");
