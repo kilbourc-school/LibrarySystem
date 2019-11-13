@@ -33,6 +33,6 @@ public class iDandCopies {
 
     @Override
     public String toString() {
-        return "." + iD + "/" + copies + "/"+dueDate;
+        return "." + iD + "/" + copies + "/"+dueDate+",";
     }
 }

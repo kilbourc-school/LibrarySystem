@@ -29,6 +29,6 @@ public class Ratings {
     }
 
     public String toStringList() {
-        return "." + rating + "/" + comment;
+        return "." + rating + "/" + comment+",";
     }
 }
