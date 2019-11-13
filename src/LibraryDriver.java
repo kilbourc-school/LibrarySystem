@@ -17,7 +17,7 @@ public class LibraryDriver {
 
             while (!login) {
                 /**
-                 * String name = "admin";
+                 *                 String name = "admin";
                  *                 String iD = "9";
                  *                 LocalDate birthday = LocalDate.now();
                  *                 int pn = 999;
@@ -31,7 +31,7 @@ public class LibraryDriver {
                  *                 double fines = 0;
                  *                 currentLibrary.addAdminAccount(name,iD,birthday,pn,str1,cty,st,zp,em,pw,isAdmin,fines);
                  */
-                System.out.print("\n\nPlease login with your Library user email: ");
+                System.out.print("\n\nPlease login with your Library user email ('exit' to logout): ");
 
                 String username = keyboard.nextLine();
                 if (username.equalsIgnoreCase("exit")) {
@@ -142,7 +142,7 @@ public class LibraryDriver {
                     currentMedia.checkInMedia(currentMedia, currentLibrary.getCurrentUser().getID(), copies, currentMedia.getDueDate(currentMedia, currentLibrary.getCurrentUser()));
                 }
             }
-            /**
+             /**
              * User login
              */
             while (login && !currentLibrary.getCurrentUser().isAdmin()) {
@@ -152,7 +152,8 @@ public class LibraryDriver {
 
 
                 System.out.println("\n\nWelcome User " + currentLibrary.getCurrentUser().getName() + ",\nWhat would you like to do?");
-                System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines\n0: Logout");
+                System.out.println("1: Search Library\n2: Checkout media\n3: Checkin media\n4: Pay Fines"+
+                        "\n5: Give Media a Rating\n6: Read Reviews for a Media\n0: Logout");
                 int input = keyboard.nextInt();
                 String fix = keyboard.nextLine();
 
@@ -205,9 +206,15 @@ public class LibraryDriver {
                         currentLibrary.getCurrentUser().setFines(0);
                         break;
                     case 5:
-                        System.out.println("Enter the title of the book you want to review");
+                        System.out.println("Enter the title of the book you want to review: ");
                         title = keyboard.nextLine();
                         currentLibrary.giveRating(title);
+                        break;
+                    case 6:
+                        System.out.println("Enter the title of the book you want to read reviews: ");
+                        title = keyboard.nextLine();
+                        currentLibrary.displayRatings(title);
+                        break;
 
                     case 0:
                         currentLibrary.saveAccountsToFile();
