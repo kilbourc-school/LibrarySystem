@@ -1,4 +1,6 @@
 import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
@@ -27,6 +29,14 @@ class LibraryTest {
     @BeforeEach
     void setUp() {
         Library currentLibrary = new Library();
+    }
+
+    @AfterAll
+    static void oneTimeTearDown() {
+    }
+
+    @AfterEach
+    void tearDown() {
     }
 
 
