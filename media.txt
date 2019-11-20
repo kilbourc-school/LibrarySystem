@@ -1,5 +1,5 @@
-Book,The Cat in the Hat,cats wear hats,seuss,kiddie,3,kiddo,1974,false,.0/0/2019-11-13,.0/0/0,.0/0,1927345
-Book,Hitchhikers Guide to the Galaxy,galaxies,somebody,adventure,3,coolio,1993,false,.0/0/0,.0/0/2019-11-13,.0/0,124562
-Book,To Kill A Mockingbird,racism,some dude,judicial,0,jail,1864,false,.0/0/0,.0/0/0,.0/0,338582
-DVD,Dante's Peak,hills,dante,adventure,5,taco,1992,false,.0/0/2019-11-13,.0/0/0,.0/0
-Magazine,Popular Machinics,machines,machine man,popular,3,machines are cool,1955,false,.0/0/2019-11-13,.0/0/0,.0/0,2,7
+Book,The Cat in the Hat,cats wear hats,seuss,kiddie,2,kiddo,1974,false,.234564/1/2019-12-04,.0/0/2019-11-13,.0/0,1927345
+Book,Hitchhikers Guide to the Galaxy,galaxies,somebody,adventure,3,coolio,1993,false,.0/0/2019-11-13,.0/0/2019-11-13,.0/0,124562
+Book,To Kill A Mockingbird,racism,some dude,judicial,0,jail,1864,false,.0/0/2019-11-13,.0/0/2019-11-13,.0/0,338582
+DVD,Dante's Peak,hills,dante,adventure,5,taco,1992,false,.0/0/2019-11-13,.0/0/2019-11-13,.0/0
+Magazine,Popular Machinics,machines,machine man,popular,3,machines are cool,1955,false,.0/0/2019-11-13,.0/0/2019-11-13,.0/0,2,7
