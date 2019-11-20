@@ -55,7 +55,8 @@ currentLibrary.autoRating();
 
                         System.out.println("Enter the title of the book you want to review: ");
                         stop = keyboard.nextLine();
-                        String title = "Hitchhiker's Guide to the Galaxy";
+                        System.out.println("Hitchhikers Guide to the Galaxy");
+                        String title = "Hitchhikers Guide to the Galaxy";
                         currentLibrary.giveRating(title);
 
                 }

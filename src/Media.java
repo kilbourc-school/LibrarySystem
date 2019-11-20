@@ -69,6 +69,12 @@ public abstract class Media {
         this.ratings = ratings;
     }
 
+    /**
+     *
+     * @param media - media trying to be checked out
+     * @param borrower - borrower trying to check out media
+     * @return - date that it must be returned
+     */
     public LocalDate getDueDate(Media media, Borrower borrower) {
         for (int i = 0; i < currentBorrowerID.size(); i++) {
             if (media.currentBorrowerID.get(i).iD.equals(borrower.getID())) {
@@ -78,10 +84,21 @@ public abstract class Media {
         return null;
     }
 
+    /**
+     * adds a rating to a media
+     * @param stars - the user wishes to assign
+     * @param comment - the user wishes to assign
+     */
     public void addRating(int stars, String comment) {
        this.ratings.add(new Ratings(stars,comment));
     }
 
+    /**
+     *
+     * @param media - trying to be checked out
+     * @param currentBorrower - trying to check out mentioned media
+     * @param copies - copies trying to be checked out
+     */
     public void checkOutMedia(Media media, Borrower currentBorrower, int copies) {
 
         if ((this.copies - copies) >= 0) {
@@ -298,7 +315,6 @@ public abstract class Media {
             if (!(ratings.size() <= 0)) {
                  rating = "";
                 for (int i = 0; i <= ratings.size(); i++) {
-                    System.out.println("i made it");
                     rating += ratings.pop().toString();
                 }
             }
