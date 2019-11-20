@@ -1,6 +1,5 @@
 import org.junit.jupiter.api.*;
 import java.time.LocalDate;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class BorrowerTest {
@@ -40,9 +39,9 @@ class BorrowerTest {
     @Test
     void setPhoneNum(){
         AdultBorrow user = new AdultBorrow(name, ID, birthday, phoneNum, street1, city, state, zip, email, password, false, fines);
-        int change = 5;
-        user.setPhoneNum(change);
-        assertEquals(user.getName(), change);
+        int changePhone = 5;
+        user.setPhoneNum(changePhone);
+        assertEquals(user.getPhoneNum(), changePhone);
     }
 
     @Test
@@ -53,9 +52,9 @@ class BorrowerTest {
     @Test
     void setStreet1(){
         AdultBorrow user = new AdultBorrow(name, ID, birthday, phoneNum, street1, city, state, zip, email, password, false, fines);
-        String change = "John Jacob Jingle Hemmer Schmidt";
-        user.setStreet1(change);
-        assertEquals(user.getName(), change);
+        String changeStreet = "John Jacob Jingle Hemmer Schmidt";
+        user.setStreet1(changeStreet);
+        assertEquals(user.getStreet1(), changeStreet);
     }
 
     @Test
@@ -66,9 +65,9 @@ class BorrowerTest {
     @Test
     void setCity(){
         AdultBorrow user = new AdultBorrow(name, ID, birthday, phoneNum, street1, city, state, zip, email, password, false, fines);
-        String change = "John Jacob Jingle Hemmer Schmidt";
-        user.setCity(change);
-        assertEquals(user.getName(), change);
+        String changeCity = "John Jacob Jingle Hemmer Schmidt";
+        user.setCity(changeCity);
+        assertEquals(user.getCity(), changeCity);
     }
 
     @Test
@@ -79,9 +78,9 @@ class BorrowerTest {
     @Test
     void setState(){
         AdultBorrow user = new AdultBorrow(name, ID, birthday, phoneNum, street1, city, state, zip, email, password, false, fines);
-        String change = "John Jacob Jingle Hemmer Schmidt";
-        user.setState(change);
-        assertEquals(user.getName(), change);
+        String changeState = "John Jacob Jingle Hemmer Schmidt";
+        user.setState(changeState);
+        assertEquals(user.getState(), changeState);
     }
 
     @Test
@@ -92,13 +91,21 @@ class BorrowerTest {
     @Test
     void setZip(){
         AdultBorrow user = new AdultBorrow(name, ID, birthday, phoneNum, street1, city, state, zip, email, password, false, fines);
-        int change = 5;
-        user.setZip(change);
-        assertEquals(user.getName(), change);
+        int changeZip = 5;
+        user.setZip(changeZip);
+        assertEquals(user.getZip(), changeZip);
     }
 
     @Test
-    void isAdmin() {
+    void isAdminTrue() {
+        AdminBorrow user = new AdminBorrow(name, ID, birthday, phoneNum, street1, city, state, zip, email, password, true, fines);
+        assertEquals(true,user.isAdmin);
+    }
+
+    @Test
+    void isAdminFalse() {
+        AdultBorrow user = new AdultBorrow(name, ID, birthday, phoneNum, street1, city, state, zip, email, password, false, fines);
+    assertNotEquals(true,user.isAdmin);
     }
 
     @Test
@@ -109,9 +116,9 @@ class BorrowerTest {
     @Test
     void setEmail(){
         AdultBorrow user = new AdultBorrow(name, ID, birthday, phoneNum, street1, city, state, zip, email, password, false, fines);
-        String change = "John Jacob Jingle Hemmer Schmidt";
-        user.setEmail(change);
-        assertEquals(user.getName(), change);
+        String changeEmail = "John Jacob Jingle Hemmer Schmidt";
+        user.setEmail(changeEmail);
+        assertEquals(user.getEmail(), changeEmail);
     }
 
     @Test
@@ -122,9 +129,9 @@ class BorrowerTest {
     @Test
     void setPassword(){
         AdultBorrow user = new AdultBorrow(name, ID, birthday, phoneNum, street1, city, state, zip, email, password, false, fines);
-        String change = "John Jacob Jingle Hemmer Schmidt";
-        user.setPassword(change);
-        assertEquals(user.getName(), change);
+        String changePassword = "John Jacob Jingle Hemmer Schmidt";
+        user.setPassword(changePassword);
+        assertEquals(user.getPassword(), changePassword);
     }
 
     @Test
@@ -135,22 +142,22 @@ class BorrowerTest {
     @Test
     void setName(){
         AdultBorrow user = new AdultBorrow(name, ID, birthday, phoneNum, street1, city, state, zip, email, password, false, fines);
-        String change = "John Jacob Jingle Hemmer Schmidt";
-        user.setName(change);
-        assertEquals(user.getName(), change);
+        String changeName = "John Jacob Jingle Hemmer Schmidt";
+        user.setName(changeName);
+        assertEquals(user.getName(), changeName);
     }
 
     @Test
     void getFines() {
         AdultBorrow user = new AdultBorrow(name,ID,birthday,phoneNum,street1,city,state,zip,email,password,false,fines);
-        assertEquals( user.getFines(), fines;
+        assertEquals( user.getFines(), fines);
     }
     @Test
     void setFines(){
         AdultBorrow user = new AdultBorrow(name, ID, birthday, phoneNum, street1, city, state, zip, email, password, false, fines);
-        double change = 5.0;
-        user.setFines(change);
-        assertEquals(user.getName(), change);
+        double changeFine = 5.0;
+        user.setFines(changeFine);
+        assertEquals(user.getFines(), changeFine);
     }
 
     @Test
