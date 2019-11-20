@@ -1,50 +1,39 @@
-import org.junit.Test;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
+import java.time.LocalDate;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
 
+
+
     @org.junit.jupiter.api.Test
-    void getCurrentUser() {
-       some way to make a user, also set.
-
-        assertTrue(userObject,currentLibrary.getCurrentUser());
-    }
-
-    @Test
     void getMediaFromTitle() {
         Library currentLibrary = new Library();
-
+currentLibrary.readInMedia();
+Media test = currentLibrary.getMediaFromTitle("The Cat in the Hat");
+assertEquals( test.getTitle(),"The Cat in the Hat");
     }
-
-    @BeforeAll
-    static void oneTimeSetUp() {
-
-    }
-
-    @BeforeEach
-    void setUp() {
-        Library currentLibrary = new Library();
-    }
-
-    @AfterAll
-    static void oneTimeTearDown() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
 
     @org.junit.jupiter.api.Test
     void TestCorrectVerifyAccount() {
         Library currentLibrary = new Library();
-        currentLibrary.addAdultAccount();
-        Boolean check = currentLibrary.verifyAccount(username, password);
-        assertTrue(true,check);
+        AdultBorrow adultAcc = new AdultBorrow("name",1L, LocalDate.now(),1,"str", "cty","st",29229,
+                "e@e","pw", false,0.0);
+        currentLibrary.addAdultAccount(adultAcc);
+        Boolean check = currentLibrary.verifyAccount(adultAcc.getEmail(), adultAcc.getPassword());
+        assertEquals(true,check);
     }
+    @org.junit.jupiter.api.Test
+    void getCurrentUser() {
+        Library currentLibrary = new Library();
+        AdultBorrow adultAcc = new AdultBorrow("name",1L, LocalDate.now(),1,"str", "cty","st",29229,
+                "e@e","pw", false,0.0);
+        currentLibrary.addAdultAccount(adultAcc);
+        Boolean check = currentLibrary.verifyAccount(adultAcc.getEmail(), adultAcc.getPassword());
+        if(adultAcc.equals(currentLibrary.getCurrentUser())) assertTrue(true);
+    assertEquals(adultAcc,currentLibrary.getCurrentUser());
+    }
+
 }
