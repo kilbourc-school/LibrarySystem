@@ -153,13 +153,6 @@
       <workItem from="1573672934420" duration="525000" />
       <workItem from="1574277399906" duration="1631000" />
     </task>
-    <task id="LOCAL-00024" summary="edited book constructor to never have null Linked Lists">
-      <created>1572879335782</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1572879335782</updated>
-    </task>
     <task id="LOCAL-00025" summary="added other media types linked list constructor fix">
       <created>1572891310322</created>
       <option name="number" value="00025" />
@@ -496,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574279628614</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="borrower test fix">
+      <created>1574279993015</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1574279993015</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +517,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixed text issue" />
     <MESSAGE value="merged scott branch" />
     <MESSAGE value="front end ratings + print out current checked out books and date at sign in" />
     <MESSAGE value="merged book on sign in" />
@@ -542,6 +541,7 @@
     <MESSAGE value="begun unit testing" />
     <MESSAGE value="media test" />
     <MESSAGE value="borrower test" />
-    <option name="LAST_COMMIT_MESSAGE" value="borrower test" />
+    <MESSAGE value="borrower test fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="borrower test fix" />
   </component>
 </project>
