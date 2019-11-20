@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="098422bb-c3d1-4491-a44e-25c5e5a43c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AdminBorrow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AdultBorrow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/AudioBook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Borrower.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/ChildBorrow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/DVD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Database.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/EBook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Library.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/LibraryDriver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Magazine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Media.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Ratings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Scenario1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Scenario2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Scenario3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/Scenario4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/TeacherBorrow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LibaryProject/iDandCopies.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LibraryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +16,7 @@
       <list>
         <option value="package-info" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -53,8 +35,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -63,6 +53,12 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
@@ -153,13 +149,7 @@
       <workItem from="1573068787276" duration="1280000" />
       <workItem from="1573602767504" duration="907000" />
       <workItem from="1573672934420" duration="525000" />
-    </task>
-    <task id="LOCAL-00017" summary="optomized imports">
-      <created>1572545901023</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1572545901023</updated>
+      <workItem from="1574277399906" duration="340000" />
     </task>
     <task id="LOCAL-00018" summary="added in checkin / checkout of book. still need to fix file I/O for recent media changes">
       <created>1572546257909</created>
@@ -497,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573675114579</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="updated media.txt">
+      <created>1573675535400</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1573675535400</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,7 +515,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="code reformat" />
     <MESSAGE value="added front end" />
     <MESSAGE value="added due dates" />
     <MESSAGE value="fixed null file writing" />
@@ -543,6 +539,7 @@
     <MESSAGE value="added helper methods" />
     <MESSAGE value="Library and Database commented" />
     <MESSAGE value="fixed scenario 4, added comments to media" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed scenario 4, added comments to media" />
+    <MESSAGE value="updated media.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated media.txt" />
   </component>
 </project>
