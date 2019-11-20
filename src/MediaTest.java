@@ -36,51 +36,17 @@ class MediaTest {
     }
 
     @Test
-    void getDueDate() {
-        LinkedList<iDandCopies> currentBorrowerID = new LinkedList<iDandCopies>();
-        LinkedList<iDandCopies> waitListBorrowerIDs = new LinkedList<iDandCopies>();
-        LinkedList<Ratings> ratings = new LinkedList<Ratings>();
-        Book book = new Book (title,description,author,subject,copies,genre,releaseYear,comingSoon,ISBN);
-        assertEqual(book.getDueDate(),localDate.now );
-    }
-
-    @Test
     void checkOutMedia() {
     }
 
-    @Test
-    void getCheckoutLimit() {
-        LinkedList<iDandCopies> currentBorrowerID = new LinkedList<iDandCopies>();
-        LinkedList<iDandCopies> waitListBorrowerIDs = new LinkedList<iDandCopies>();
-        LinkedList<Ratings> ratings = new LinkedList<Ratings>();
-        Book book = new Book (title,  description,  author,  subject,  copies,  genre,  releaseYear, comingSoon,ISBN);
-        assertEqual();
-    }
-
-    @Test
-    void getCurrentBorrowerID() {
-        LinkedList<iDandCopies> currentBorrowerID = new LinkedList<iDandCopies>();
-        LinkedList<iDandCopies> waitListBorrowerIDs = new LinkedList<iDandCopies>();
-        LinkedList<Ratings> ratings = new LinkedList<Ratings>();
-        Book book = new Book (title,description,author,subject,copies,genre,releaseYear,comingSoon,ISBN);
-        assertEqual(book.getCurrentBorrowerID(),);
-    }
-
-    @Test
-    void checkInMedia() {
-        LinkedList<iDandCopies> currentBorrowerID = new LinkedList<iDandCopies>();
-        LinkedList<iDandCopies> waitListBorrowerIDs = new LinkedList<iDandCopies>();
-        LinkedList<Ratings> ratings = new LinkedList<Ratings>();
-        Book book = new Book ( title,  description,  author,  subject,  copies,  genre,  releaseYear, comingSoon,ISBN);
-    }
 
     @Test
     void getTitle() {
         LinkedList<iDandCopies> currentBorrowerID = new LinkedList<iDandCopies>();
         LinkedList<iDandCopies> waitListBorrowerIDs = new LinkedList<iDandCopies>();
         LinkedList<Ratings> ratings = new LinkedList<Ratings>();
-        Book book = new Book ( title,  description,  author,  subject,  copies,  genre,  releaseYear, comingSoon,ISBN);
-        assertEqual(book.getTitle(),"The Cat in the Hat");
+        Book book = new Book ( title,description,author,subject,copies,genre,releaseYear, comingSoon, currentBorrowerID,waitListBorrowerIDs,ratings, ISBN);
+        assertEquals(book.getTitle(),"The Cat in the Hat");
     }
 
     @Test
@@ -88,8 +54,8 @@ class MediaTest {
         LinkedList<iDandCopies> currentBorrowerID = new LinkedList<iDandCopies>();
         LinkedList<iDandCopies> waitListBorrowerIDs = new LinkedList<iDandCopies>();
         LinkedList<Ratings> ratings = new LinkedList<Ratings>();
-        Book book = new Book ( title,  description,  author,  subject,  copies,  genre,  releaseYear, comingSoon,ISBN);
-        assertEqual(book.getTitle(),"seuss");
+        Book book = new Book ( title,description,author,subject,copies,genre,releaseYear, comingSoon, currentBorrowerID,waitListBorrowerIDs,ratings, ISBN);
+        assertEquals(book.getAuthor(),"seuss");
     }
 
     @Test
@@ -97,8 +63,8 @@ class MediaTest {
         LinkedList<iDandCopies> currentBorrowerID = new LinkedList<iDandCopies>();
         LinkedList<iDandCopies> waitListBorrowerIDs = new LinkedList<iDandCopies>();
         LinkedList<Ratings> ratings = new LinkedList<Ratings>();
-        Book book = new Book ( title,  description,  author,  subject,  copies,  genre,  releaseYear, comingSoon,ISBN);
-        assertEqual(book.getCopies(),3);
+        Book book = new Book (title,description,author,subject,copies,genre,releaseYear, comingSoon, currentBorrowerID,waitListBorrowerIDs,ratings, ISBN);
+        assertEquals(book.getCopies(),3);
     }
 
     @Test
@@ -106,20 +72,8 @@ class MediaTest {
         LinkedList<iDandCopies> currentBorrowerID = new LinkedList<iDandCopies>();
         LinkedList<iDandCopies> waitListBorrowerIDs = new LinkedList<iDandCopies>();
         LinkedList<Ratings> ratings = new LinkedList<Ratings>();
-        Book book = new Book ( title,  description,  author,  subject,  copies,  genre,  releaseYear, comingSoon,ISBN);
-        assertEqual(book.getGenre(),"kiddo");
+        Book book = new Book ( title,description,author,subject,copies,genre,releaseYear, comingSoon, currentBorrowerID,waitListBorrowerIDs,ratings, ISBN);
+        assertEquals(book.getGenre(),"kiddo");
     }
 
-    @Test
-    void getAvailability() {
-        LinkedList<iDandCopies> currentBorrowerID = new LinkedList<iDandCopies>();
-        LinkedList<iDandCopies> waitListBorrowerIDs = new LinkedList<iDandCopies>();
-        LinkedList<Ratings> ratings = new LinkedList<Ratings>();
-        Book book = new Book ( title,  description,  author,  subject,  copies,  genre,  releaseYear, comingSoon,ISBN);
-        assertEqual(book.getAvailability(),);
-    }
-
-    @Test
-    void toStringList() {
-    }
 }
